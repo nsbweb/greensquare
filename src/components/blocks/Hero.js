@@ -1,6 +1,5 @@
 "use client"; // Ensure Hero.js is treated as a client component
 
-import { useHeader } from "@/context/HeaderContext"; // Import useHeader
 import Container from "@/components/layout/Container";
 import Link from "next/link";
 
