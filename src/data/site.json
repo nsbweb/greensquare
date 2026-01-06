@@ -1,0 +1,160 @@
+{
+  "site": {
+    "name": "Blue Blocks",
+    "logo": "/icon/logo.svg",
+    "announcements": [
+      { "text": "ADMISSIONS OPEN — JOIN OUR NEXT MONTESSORI ADMISSION WORKSHOP. LIMITED SEATS AVAILABLE!" },
+      { "text": "INDIA’S FIRST MONTESSORI + INNOVATION ECOSYSTEM — EMPOWERING LEARNERS FROM BIRTH TO 18." }
+    ],
+    "nav": [
+      { "label": "Home", "href": "/" },
+      { "label": "What do we do", "href": "/about" },
+      {
+        "label": "Programs",
+        "href": "/academics",
+        "children": [
+          { "label": "Nido & Toddlers", "href": "/programs/nido" },
+          { "label": "Children’s House", "href": "/programs/childrens-house" },
+          { "label": "Elementary", "href": "/programs/elementary" },
+          { "label": "Adolescent", "href": "/programs/adolescent" }
+        ]
+      },
+      { "label": "Innovations", "href": "/about#innovations" },
+      { "label": "Careers", "href": "/contact#careers" }
+    ]
+  },
+  "footer": {
+    "aboutText": "Blue Blocks is a research-led learning ecosystem focused on authentic Montessori and child development.",
+    "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
+    "quickLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Our Team", "href": "/about#team" },
+      { "label": "The Research Institute", "href": "/about#research" },
+      { "label": "Careers", "href": "/contact#careers" }
+    ],
+    "programs": [
+      { "label": "Nido & Toddlers (0–3)", "href": "/academics#nido" },
+      { "label": "Children’s House (3–6)", "href": "/academics#childrens-house" },
+      { "label": "Elementary (6–12)", "href": "/academics#elementary" },
+      { "label": "Adolescent (12–18)", "href": "/academics#adolescent" }
+    ],
+    "intelligence": [
+      { "label": "Research Papers", "href": "/about#papers" },
+      { "label": "Student Projects", "href": "/about#projects" },
+      { "label": "Books & Publications", "href": "/about#publications" },
+      { "label": "Events & Workshops", "href": "/about#events" }
+    ],
+    "connect": [
+      { "label": "Admissions Enquiry", "href": "/contact" },
+      { "label": "School Observations", "href": "/contact#observe" },
+      { "label": "Alumni Network", "href": "/contact#alumni" }
+    ],
+    "contact": {
+      "phone": "+91 9000955050",
+      "whatsapp": "+91 9000955053",
+      "email": "info@blueblocks.in"
+    },
+    "socials": [
+      { "label": "Instagram", "href": "#" },
+      { "label": "Facebook", "href": "#" },
+      { "label": "YouTube", "href": "#" },
+      { "label": "LinkedIn", "href": "#" }
+    ]
+  },
+  "pages": {
+    "home": {
+      "sections": [
+        {
+          "type": "hero",
+          "props": {
+            "title": "THE UNSCRIPTED CHILD.",
+            "subtitle": "Authentic Montessori Education | 15 Months – 18 Years",
+            "note": "Powered by the Blue Blocks Research Institute.",
+            "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
+            "secondaryCta": { "label": "Book a Campus Tour", "href": "/contact" },
+            "bgImageUrl": "/home/homepage-banner-01.jpg"
+          }
+        },
+        {
+          "type": "imageText",
+          "props": {
+            "title": "OBSERVATION OVER\nINSTRUCTION",
+            "text": [
+              "We do not view children as vessels to be filled. We view them as phenomena to be observed.",
+              "While others race to finish a curriculum, we apply scientific rigor to the child’s education — not as a series of tests, but as a carefully guided construction of the human being."
+            ],
+            "imageUrl": "/home/kids-being-part-sunday-school.jpg"
+          }
+        },
+        {
+          "type": "journeyCards",
+          "props": {
+            "title": "A DISRUPTION-FREE JOURNEY",
+            "cards": [
+              { "tag": "15 Mo – 3Y", "title": "Nido & Toddler", "cta": { "label": "Explore this Community", "href": "/academics#nido" }, "tone": "peach" },
+              { "tag": "3 – 6Y", "title": "Children’s House", "cta": { "label": "Explore this Community", "href": "/academics#childrens-house" }, "tone": "yellow" },
+              { "tag": "6 – 12Y", "title": "Elementary", "cta": { "label": "Explore this Community", "href": "/academics#elementary" }, "tone": "sky" },
+              { "tag": "12 – 18Y", "title": "Adolescent", "cta": { "label": "Explore this Community", "href": "/academics#adolescent" }, "tone": "navy" }
+            ]
+          }
+        },
+        {
+          "type": "featureGrid",
+          "props": {
+            "headline": "WE DON'T FOLLOW TRENDS.\nWE FOLLOW HUMAN NATURE.",
+            "items": [
+              { "title": "The Cognitive Continuum", "icon":"/icon/icon-capa.svg", "text": "A seamless 16-year journey. No jarring transitions between grades; just natural, uninterrupted evolution." },
+              { "title": "Synaptic Fusion", "icon":"/icon/icon-synaptic-fusion.svg", "text": "We don't teach subjects in silos. Biology meets History; Math meets Art. It creates “System Thinkers” for 2050." },
+              { "title": "AMI-Trained Scientists", "icon":"/icon/icon-AMI.svg", "text": "Our mentors are not just teachers; they are trained observers. Their job is to read data and remove obstacles." },
+              { "title": "Documented Outcomes", "icon":"/icon/icon-documented.svg", "text": "We don't guess. We track. Every developmental arc is logged and supported by data from our Research Institute." }
+            ]
+          }
+        },
+        {
+          "type": "insights",
+          "props": {
+            "title": "PEDAGOGICAL INSIGHTS",
+            "subtitle": "Evidence-based parenting and innovation.",
+            "items": [
+              { "pill": "The Philosophy", "title": "Why We Stopped Teaching “Answers”", "meta": "A short read on guidance over instruction." },
+              { "pill": "The Evidence", "title": "InnoVision 2050: The Unscripted Learner", "meta": "How learning evolves for the next decade." },
+              { "pill": "The Handbook", "title": "Lining the Nest (0–6 Years)", "meta": "Practical guidance for early years." }
+            ]
+          }
+        },
+        {
+          "type": "recognizedBy",
+          "props": {
+            "title": "RECOGNIZED BY THE WORLD",
+            "items": [
+               { "title": "EXAMIWORKS", "icon":"/icon/IIT_Hyderabad_Insignia.svg", "width":"125","height":"138"},
+               { "title": "CAMBRIDGE", "icon":"/icon/cambridge.svg", "width":"433","height":"74"},
+               { "title": "AMI", "icon":"/icon/AMI.svg", "width":"158","height":"121"}
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "props": {
+            "title": "Frequently asked questions",
+            "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+            "items": [
+              { "q": "Why do you mix ages in one classroom?", "a": "Mixed-age environments help peer learning, leadership, empathy, and steady social growth. Younger children learn by watching; older children learn by mentoring." },
+              { "q": "How is a “Research-Led School” different?", "a": "We track learning behaviors and development patterns over time, then refine environments and methods based on evidence—not assumptions." },
+              { "q": "Do Montessori children survive the “Real World”?", "a": "Yes. Montessori builds independence, focus, emotional regulation, and problem-solving—skills that transfer well into higher education and life." }
+            ]
+          }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Book an Admission Workshop | Seats are filled on a first-come basis.",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "image": "/building-image-01.png"
+          }
+        }
+      ]
+    }
+  }
+}
