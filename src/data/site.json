@@ -36,7 +36,7 @@
         },
         {
           "title": "Nursery, PP1, PP2",
-          "href": "/programs/nursery-school.png",
+          "href": "/programs/nursery-school",
           "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
           "image": "/programs/thumb-nursery.png"
         },
@@ -186,9 +186,159 @@
           "type": "ctaBanner",
           "props": {
             "title": "Experience Learning\nthe Blue Blocks Way.",
-            "text": "Book an Admission Workshop | Seats are filled on a first-come basis.",
+            "text": "Seats are filled on a first-come basis.",
             "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-            "image": "/building-image-01.png"
+            "image": "/icon/building.png",
+            "imageAlt": "Campus building",
+            "align": "left",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
+    "admissions": {
+      "banner": {
+        "title": "Admissions",
+        "bgLeft": "/decor/rainbow-left.png",
+        "bgRight": "/decor/rainbow-right.png"
+      },
+      "sections": [
+        {
+          "type": "admissionsIntro",
+          "props": {
+            "eyebrow": "ADMISSIONS",
+            "title": "A Partnership, Not\nJust a Placement",
+            "text": [
+              "Choosing a Montessori school is not a transaction — it is a long-term relationship.",
+              "We take time to understand families who align with our philosophy, values, and commitment to childhood as a formative journey, not a race.",
+              "Our admissions process is designed to ensure that every child, family, and educator grows together — intentionally and authentically."
+            ],
+            "sideHeadline": {
+              "line1": "Hands. Heart.",
+              "line2": "Head.",
+              "line3": "In Harmony"
+            },
+            "image": "/building-image-01.png",
+            "bgShape": "/ui/admissions-shape.png"
+          }
+        },
+        {
+          "type": "admissionsJourney",
+          "props": {
+            "eyebrow": "THE PROCESS",
+            "title": "Our Admissions\nJourney",
+            "items": [
+              {
+                "icon": "/icon/journey-discovery.svg",
+                "title": "Discovery",
+                "text": "Begin with an interactive workshop where we explore Montessori principles, our approach, and what learning looks like at Blue Blocks."
+              },
+              {
+                "icon": "/icon/journey-observe.svg",
+                "title": "Observe",
+                "text": "Spend time understanding the environment, guides, and materials to see how independence is nurtured daily."
+              },
+              {
+                "icon": "/icon/journey-interact.svg",
+                "title": "Interact",
+                "text": "A family interaction helps us align on expectations, readiness, and how we partner in the child’s growth."
+              },
+              {
+                "icon": "/icon/journey-onboard.svg",
+                "title": "Onboard",
+                "text": "We guide you through the transition with clarity and support — so the child begins with confidence."
+              }
+            ]
+          }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Book Admission Workshop",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "align": "center",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
+    "contact": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Contact",
+            "breadcrumb": ["Home", "Contact"],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "contactDetails",
+          "props": {
+            "eyebrow": "Have A Question?",
+            "heading": "Contact Details",
+            "items": [
+              { "label": "EMAIL", "value": "info@blueblocks.in", "href": "mailto:info@blueblocks.in" },
+              { "label": "PHONE", "value": "+91 9000955050", "href": "tel:+919000955050" },
+              { "label": "WHATSAPP", "value": "+91 9000955053", "href": "https://wa.me/919000955053" }
+            ],
+            "form": {
+              "fields": [
+                { "name": "name", "placeholder": "Name", "type": "text" },
+                { "name": "email", "placeholder": "Email", "type": "email" },
+                { "name": "phone", "placeholder": "Contact Number", "type": "text" },
+                { "name": "message", "placeholder": "Message", "type": "textarea" }
+              ],
+              "buttonLabel": "Submit →"
+            }
+          }
+        },
+        {
+          "type": "locationsGrid",
+          "props": {
+            "bg": "#F3E3CF",
+            "locations": [
+              {
+                "title": "Blue Blocks Preschool",
+                "address": "MIG 3, Lane opposite to DLF, Gachibowli, Hyderabad, Telangana",
+                "mapEmbedUrl": "https://www.google.com/maps?q=Gachibowli%20Hyderabad&output=embed"
+              },
+              {
+                "title": "Blue Blocks school",
+                "address": "Tellapur, Hyderabad, Telangana",
+                "mapEmbedUrl": "https://www.google.com/maps?q=Tellapur%20Hyderabad&output=embed"
+              }
+            ]
+          }
+        },
+        {
+          "type": "positionsOpen",
+          "props": {
+            "eyebrow": "Careers with BlueBlocks",
+            "heading": "Positions open",
+            "intro": "At Blue Blocks, education is not a job — it’s a responsibility. We are a community of educators, mentors, and lifelong learners committed to honoring childhood and supporting human development with intention.",
+            "jobs": [
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              },
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              },
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              }
+            ]
           }
         }
       ]
