@@ -5,6 +5,7 @@ import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
 import siteData from "@/data/site.json";
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const { site } = siteData;
@@ -72,7 +73,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="bg-[#FFFFFF]/30 text-white backdrop-blur">
-        <Container className="py-4 flex items-center justify-between">
+        <Container className="py-4 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/">
             <Image
@@ -85,7 +86,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          {/* <nav className="hidden md:flex items-center gap-6 text-sm">
             {site.nav.map((item, idx) =>
               item.children ? (
                 <div key={idx} className="relative group">
@@ -116,7 +117,27 @@ export default function Header() {
                 </Link>
               )
             )}
-          </nav>
+          </nav> */}
+
+          <div className="hidden md:flex items-center gap-10 text-sm text-white font-medium text-slate-800">
+          {site.nav.map((item) => {
+            if (item.label === siteData.megaMenu?.programs?.label) {
+              return (
+                <ProgramsMegaMenu
+                  key={item.label}
+                  mega={siteData.megaMenu.programs}
+                  socials={siteData.footer?.socials || []}
+                />
+              );
+            }
+
+            return (
+              <Link key={item.label} href={item.href} className="hover:text-gray-300 transition">
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
 
           {/* Mobile Toggle */}
           <button
@@ -150,6 +171,140 @@ export default function Header() {
           </div>
         )}
       </header>
+    </div>
+  );
+}
+
+/* ---------- PROGRAMS MEGA MENU (DESKTOP ONLY) ---------- */
+
+function ProgramsMegaMenu({ mega, socials }) {
+  const [open, setOpen] = useState(false);
+
+  const items = mega?.items || [];
+  const viewAll = mega?.viewAll;
+  const ctaCard = mega?.ctaCard;
+
+  return (
+    <div
+      className="flex h-full items-center"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className="flex items-center gap-1 text-sm font-medium text-white hover:text-indigo-100 transition"
+      >
+        {mega?.label || "Programs"}
+        <span className="text-lg">▾</span>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+            className="absolute left-1/2 top-full z-[60] mt-0 w-[min(1152px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl border border-slate-100 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.16)]"
+          >
+            <div className="grid grid-cols-[4fr_2fr] gap-0">
+              {/* LEFT */}
+              <div>
+                <div className="mb-2 p-5 pb-0 flex items-center justify-between gap-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    {viewAll?.label || "Our Programs"}{" "}
+                    {viewAll?.href ? (
+                      <Link
+                        href={viewAll.href}
+                        className="text-xs font-medium text-[#0E4AA2] hover:underline"
+                      >
+                        →
+                      </Link>
+                    ) : null}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 border-t border-slate-100">
+                  {items.map((program) => (
+                    <Link
+                      key={program.href}
+                      href={program.href}
+                      className="flex gap-3 p-5 sm:p-6 hover:bg-slate-50 border-r border-slate-100 last:border-r-0"
+                    >
+                      <div className="relative h-16 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-slate-200">
+                        {program.image ? (
+                          <Image
+                            src={program.image}
+                            alt={program.title}
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <span className="flex h-full w-full items-center justify-center text-xs text-slate-500">
+                            img
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="space-y-1">
+                        <div className="text-sm font-semibold text-slate-900">
+                          {program.title}
+                        </div>
+                        <p className="line-clamp-2 text-xs text-slate-600">
+                          {program.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* RIGHT */}
+              <div className="flex justify-between gap-4 p-5 sm:p-6 border-l border-slate-100">
+                <div className="flex flex-col justify-between space-y-2 bg-[#F3E3CF] rounded-2xl p-5 w-full">
+                  <div>
+                    <p className="text-[1.2rem] mb-4 font-semibold text-slate-900">
+                      {ctaCard?.title}
+                    </p>
+                    <p className="text-[0.75rem] text-slate-600">{ctaCard?.text}</p>
+                  </div>
+
+                  {ctaCard?.button?.href ? (
+                    <Link
+                      href={ctaCard.button.href}
+                      className="inline-flex w-full items-center justify-center rounded-full bg-[#0F52BA] px-4 py-2 text-xs font-medium text-white hover:bg-[#0D47A1]"
+                    >
+                      {ctaCard.button.label}
+                    </Link>
+                  ) : null}
+                </div>
+
+                <div className="mt-2 flex flex-col gap-2">
+                  {(socials || []).map((s) => (
+                    <Link
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#000000]/5 text-xs font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
+                      aria-label={s.label}
+                    >
+                      
+                      <Image
+                        src={s.icon}
+                        alt={s.lable?.slice(0, 2)}
+                        width={34}
+                        height={34}
+                        className="object-cover"
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

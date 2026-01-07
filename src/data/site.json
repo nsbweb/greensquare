@@ -23,6 +23,43 @@
       { "label": "Careers", "href": "/contact#careers" }
     ]
   },
+  "megaMenu": {
+    "programs": {
+      "label": "Programs",
+      "viewAll": { "label": "Our Programs", "href": "/programs/our-programs" },
+      "items": [
+        {
+          "title": "Playgroup",
+          "href": "/programs/playgroup",
+          "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
+          "image": "/programs/thumb-playgroup.png"
+        },
+        {
+          "title": "Nursery, PP1, PP2",
+          "href": "/programs/nursery-school.png",
+          "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
+          "image": "/programs/thumb-nursery.png"
+        },
+        {
+          "title": "Primary School – Class 1 to 6",
+          "href": "/programs/primary-school-elementary",
+          "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
+          "image": "/programs/thumb-primary.png"
+        },
+        {
+          "title": "Secondary School – Class 7 to 10",
+          "href": "/programs/secondary-school",
+          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "image": "/programs/thumb-secondary.png"
+        }
+      ],
+      "ctaCard": {
+        "title": "Start Your Child’s Montessori Journey",
+        "text": "Explore programs designed for independence, curiosity, and growth.",
+        "button": { "label": "Explore Programs →", "href": "/programs/our-programs" }
+      }
+    }
+  },
   "footer": {
     "aboutText": "Blue Blocks is a research-led learning ecosystem focused on authentic Montessori and child development.",
     "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
@@ -55,10 +92,10 @@
       "email": "info@blueblocks.in"
     },
     "socials": [
-      { "label": "Instagram", "href": "#" },
-      { "label": "Facebook", "href": "#" },
-      { "label": "YouTube", "href": "#" },
-      { "label": "LinkedIn", "href": "#" }
+      { "label": "Instagram", "href": "#", "icon":"/icon/icon-insta.svg"},
+      { "label": "Facebook", "href": "#", "icon":"/icon/icon-fb.svg"},
+      { "label": "YouTube", "href": "#", "icon":"/icon/icon-youtube.svg"},
+      { "label": "LinkedIn", "href": "#", "icon":"/icon/icon-linkdin.svg"}
     ]
   },
   "pages": {
