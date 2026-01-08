@@ -18,7 +18,7 @@ export default function FAQAccordion({ title, subtitle, items = [] }) {
           ) : null}
         </div>
 
-        <div className="mt-8 max-w-3xl mx-auto space-y-3">
+        <div className="mt-8 mx-auto space-y-3">
           {items.map((it, idx) => {
             const isOpen = idx === openIndex;
             return (

@@ -1,18 +1,67 @@
 {
   "site": {
-    "name": "GreenSquare",
-    "announcementLeft": "ADMISSIONS OPEN — JOIN OUR NEXT MONTESSORI ADMISSION WORKSHOP. LIMITED SEATS AVAILABLE!",
-    "announcementRight": "INDIA’S FIRST MONTESSORI • INNOVATION ECOSYSTEM — EMPOWERING LEARNERS FROM BIRTH TO 18.",
+    "name": "Blue Blocks",
+    "logo": "/icon/logo.svg",
+    "announcements": [
+      { "text": "ADMISSIONS OPEN — JOIN OUR NEXT MONTESSORI ADMISSION WORKSHOP. LIMITED SEATS AVAILABLE!" },
+      { "text": "INDIA’S FIRST MONTESSORI + INNOVATION ECOSYSTEM — EMPOWERING LEARNERS FROM BIRTH TO 18." }
+    ],
     "nav": [
       { "label": "Home", "href": "/" },
       { "label": "What do we do", "href": "/about" },
-      { "label": "Programs", "href": "/academics" },
+      {
+        "label": "Programs",
+        "href": "/academics",
+        "children": [
+          { "label": "Nido & Toddlers", "href": "/programs/nido" },
+          { "label": "Children’s House", "href": "/programs/childrens-house" },
+          { "label": "Elementary", "href": "/programs/elementary" },
+          { "label": "Adolescent", "href": "/programs/adolescent" }
+        ]
+      },
       { "label": "Innovations", "href": "/about#innovations" },
       { "label": "Careers", "href": "/contact#careers" }
     ]
   },
+  "megaMenu": {
+    "programs": {
+      "label": "Programs",
+      "viewAll": { "label": "Our Programs", "href": "/programs/our-programs" },
+      "items": [
+        {
+          "title": "Playgroup",
+          "href": "/programs/playgroup",
+          "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
+          "image": "/programs/thumb-playgroup.png"
+        },
+        {
+          "title": "Nursery, PP1, PP2",
+          "href": "/programs/nursery-school",
+          "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
+          "image": "/programs/thumb-nursery.png"
+        },
+        {
+          "title": "Primary School – Class 1 to 6",
+          "href": "/programs/primary-school-elementary",
+          "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
+          "image": "/programs/thumb-primary.png"
+        },
+        {
+          "title": "Secondary School – Class 7 to 10",
+          "href": "/programs/secondary-school",
+          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "image": "/programs/thumb-secondary.png"
+        }
+      ],
+      "ctaCard": {
+        "title": "Start Your Child’s Montessori Journey",
+        "text": "Explore programs designed for independence, curiosity, and growth.",
+        "button": { "label": "Explore Programs →", "href": "/programs/our-programs" }
+      }
+    }
+  },
   "footer": {
-    "aboutText": "GreenSquare is a research-led learning ecosystem focused on authentic Montessori and child development.",
+    "aboutText": "Blue Blocks is a research-led learning ecosystem focused on authentic Montessori and child development.",
     "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
     "quickLinks": [
       { "label": "About Us", "href": "/about" },
@@ -40,13 +89,13 @@
     "contact": {
       "phone": "+91 9000955050",
       "whatsapp": "+91 9000955053",
-      "email": "info@greensquare.in"
+      "email": "info@blueblocks.in"
     },
     "socials": [
-      { "label": "Instagram", "href": "#" },
-      { "label": "Facebook", "href": "#" },
-      { "label": "YouTube", "href": "#" },
-      { "label": "LinkedIn", "href": "#" }
+      { "label": "Instagram", "href": "#", "icon":"/icon/icon-insta.svg"},
+      { "label": "Facebook", "href": "#", "icon":"/icon/icon-fb.svg"},
+      { "label": "YouTube", "href": "#", "icon":"/icon/icon-youtube.svg"},
+      { "label": "LinkedIn", "href": "#", "icon":"/icon/icon-linkdin.svg"}
     ]
   },
   "pages": {
@@ -57,10 +106,10 @@
           "props": {
             "title": "THE UNSCRIPTED CHILD.",
             "subtitle": "Authentic Montessori Education | 15 Months – 18 Years",
-            "note": "Powered by the GreenSquare Research Institute.",
+            "note": "Powered by the Blue Blocks Research Institute.",
             "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
             "secondaryCta": { "label": "Book a Campus Tour", "href": "/contact" },
-            "bgImageUrl": ""
+            "bgImageUrl": "/home/homepage-banner-01.jpg"
           }
         },
         {
@@ -71,7 +120,7 @@
               "We do not view children as vessels to be filled. We view them as phenomena to be observed.",
               "While others race to finish a curriculum, we apply scientific rigor to the child’s education — not as a series of tests, but as a carefully guided construction of the human being."
             ],
-            "imageUrl": ""
+            "imageUrl": "/home/kids-being-part-sunday-school.jpg"
           }
         },
         {
@@ -79,8 +128,8 @@
           "props": {
             "title": "A DISRUPTION-FREE JOURNEY",
             "cards": [
-              { "tag": "15 Mo – 3Y", "title": "Nido &\nToddler", "cta": { "label": "Explore this Community", "href": "/academics#nido" }, "tone": "peach" },
-              { "tag": "3 – 6Y", "title": "Children’s\nHouse", "cta": { "label": "Explore this Community", "href": "/academics#childrens-house" }, "tone": "yellow" },
+              { "tag": "15 Mo – 3Y", "title": "Nido & Toddler", "cta": { "label": "Explore this Community", "href": "/academics#nido" }, "tone": "peach" },
+              { "tag": "3 – 6Y", "title": "Children’s House", "cta": { "label": "Explore this Community", "href": "/academics#childrens-house" }, "tone": "yellow" },
               { "tag": "6 – 12Y", "title": "Elementary", "cta": { "label": "Explore this Community", "href": "/academics#elementary" }, "tone": "sky" },
               { "tag": "12 – 18Y", "title": "Adolescent", "cta": { "label": "Explore this Community", "href": "/academics#adolescent" }, "tone": "navy" }
             ]
@@ -91,10 +140,10 @@
           "props": {
             "headline": "WE DON'T FOLLOW TRENDS.\nWE FOLLOW HUMAN NATURE.",
             "items": [
-              { "title": "The Cognitive Continuum", "text": "A seamless 16-year journey. No jarring transitions between grades; just natural, uninterrupted evolution." },
-              { "title": "Synaptic Fusion", "text": "We don't teach subjects in silos. Biology meets History; Math meets Art. It creates “System Thinkers” for 2050." },
-              { "title": "AMI-Trained Scientists", "text": "Our mentors are not just teachers; they are trained observers. Their job is to read data and remove obstacles." },
-              { "title": "Documented Outcomes", "text": "We don't guess. We track. Every developmental arc is logged and supported by data from our Research Institute." }
+              { "title": "The Cognitive Continuum", "icon":"/icon/icon-capa.svg", "text": "A seamless 16-year journey. No jarring transitions between grades; just natural, uninterrupted evolution." },
+              { "title": "Synaptic Fusion", "icon":"/icon/icon-synaptic-fusion.svg", "text": "We don't teach subjects in silos. Biology meets History; Math meets Art. It creates “System Thinkers” for 2050." },
+              { "title": "AMI-Trained Scientists", "icon":"/icon/icon-AMI.svg", "text": "Our mentors are not just teachers; they are trained observers. Their job is to read data and remove obstacles." },
+              { "title": "Documented Outcomes", "icon":"/icon/icon-documented.svg", "text": "We don't guess. We track. Every developmental arc is logged and supported by data from our Research Institute." }
             ]
           }
         },
@@ -114,7 +163,11 @@
           "type": "recognizedBy",
           "props": {
             "title": "RECOGNIZED BY THE WORLD",
-            "items": ["EXAMIWORKS", "CAMBRIDGE", "AMI"]
+            "items": [
+               { "title": "EXAMIWORKS", "icon":"/icon/IIT_Hyderabad_Insignia.svg", "width":"125","height":"138"},
+               { "title": "CAMBRIDGE", "icon":"/icon/cambridge.svg", "width":"433","height":"74"},
+               { "title": "AMI", "icon":"/icon/AMI.svg", "width":"158","height":"121"}
+            ]
           }
         },
         {
@@ -132,9 +185,160 @@
         {
           "type": "ctaBanner",
           "props": {
-            "title": "Experience Learning\nthe GreenSquare Way.",
-            "text": "Book an Admission Workshop | Seats are filled on a first-come basis.",
-            "cta": { "label": "Book Admission Workshop", "href": "/contact" }
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Seats are filled on a first-come basis.",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "image": "/icon/building.png",
+            "imageAlt": "Campus building",
+            "align": "left",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
+    "admissions": {
+      "banner": {
+        "title": "Admissions",
+        "bgLeft": "/decor/rainbow-left.png",
+        "bgRight": "/decor/rainbow-right.png"
+      },
+      "sections": [
+        {
+          "type": "admissionsIntro",
+          "props": {
+            "eyebrow": "ADMISSIONS",
+            "title": "A Partnership, Not\nJust a Placement",
+            "text": [
+              "Choosing a Montessori school is not a transaction — it is a long-term relationship.",
+              "We take time to understand families who align with our philosophy, values, and commitment to childhood as a formative journey, not a race.",
+              "Our admissions process is designed to ensure that every child, family, and educator grows together — intentionally and authentically."
+            ],
+            "sideHeadline": {
+              "line1": "Hands. Heart.",
+              "line2": "Head.",
+              "line3": "In Harmony"
+            },
+            "image": "/building-image-01.png",
+            "bgShape": "/ui/admissions-shape.png"
+          }
+        },
+        {
+          "type": "admissionsJourney",
+          "props": {
+            "eyebrow": "THE PROCESS",
+            "title": "Our Admissions\nJourney",
+            "items": [
+              {
+                "icon": "/icon/journey-discovery.svg",
+                "title": "Discovery",
+                "text": "Begin with an interactive workshop where we explore Montessori principles, our approach, and what learning looks like at Blue Blocks."
+              },
+              {
+                "icon": "/icon/journey-observe.svg",
+                "title": "Observe",
+                "text": "Spend time understanding the environment, guides, and materials to see how independence is nurtured daily."
+              },
+              {
+                "icon": "/icon/journey-interact.svg",
+                "title": "Interact",
+                "text": "A family interaction helps us align on expectations, readiness, and how we partner in the child’s growth."
+              },
+              {
+                "icon": "/icon/journey-onboard.svg",
+                "title": "Onboard",
+                "text": "We guide you through the transition with clarity and support — so the child begins with confidence."
+              }
+            ]
+          }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Book Admission Workshop",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "align": "center",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
+    "contact": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Contact",
+            "breadcrumb": ["Home", "Contact"],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "contactDetails",
+          "props": {
+            "eyebrow": "Have A Question?",
+            "heading": "Contact Details",
+            "items": [
+              { "label": "EMAIL", "value": "info@blueblocks.in", "href": "mailto:info@blueblocks.in" },
+              { "label": "PHONE", "value": "+91 9000955050", "href": "tel:+919000955050" },
+              { "label": "WHATSAPP", "value": "+91 9000955053", "href": "https://wa.me/919000955053" }
+            ],
+            "form": {
+              "fields": [
+                { "name": "name", "placeholder": "Name", "type": "text" },
+                { "name": "email", "placeholder": "Email", "type": "email" },
+                { "name": "phone", "placeholder": "Contact Number", "type": "text" },
+                { "name": "message", "placeholder": "Message", "type": "textarea" }
+              ],
+              "buttonLabel": "Submit →"
+            }
+          }
+        },
+        {
+          "type": "locationsGrid",
+          "props": {
+            "bg": "#F3E3CF",
+            "locations": [
+              {
+                "title": "Blue Blocks Preschool",
+                "address": "MIG 3, Lane opposite to DLF, Gachibowli, Hyderabad, Telangana",
+                "mapEmbedUrl": "https://www.google.com/maps?q=Gachibowli%20Hyderabad&output=embed"
+              },
+              {
+                "title": "Blue Blocks school",
+                "address": "Tellapur, Hyderabad, Telangana",
+                "mapEmbedUrl": "https://www.google.com/maps?q=Tellapur%20Hyderabad&output=embed"
+              }
+            ]
+          }
+        },
+        {
+          "type": "positionsOpen",
+          "props": {
+            "eyebrow": "Careers with BlueBlocks",
+            "heading": "Positions open",
+            "intro": "At Blue Blocks, education is not a job — it’s a responsibility. We are a community of educators, mentors, and lifelong learners committed to honoring childhood and supporting human development with intention.",
+            "jobs": [
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              },
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              },
+              {
+                "title": "Montessori Guide – Primary (3–6 Years)",
+                "text": "Support children during their most formative years by guiding independence, curiosity, and foundational skills in a prepared Montessori environment.",
+                "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
+              }
+            ]
           }
         }
       ]

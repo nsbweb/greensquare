@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client"; // Ensure Hero.js is treated as a client component
+
 import Container from "@/components/layout/Container";
+import Link from "next/link";
 
 export default function Hero({
   title,
@@ -9,6 +11,9 @@ export default function Hero({
   secondaryCta,
   bgImageUrl
 }) {
+
+  // Dynamically calculate padding top
+
   const bgStyle = bgImageUrl
     ? { backgroundImage: `url(${bgImageUrl})` }
     : {
@@ -18,8 +23,8 @@ export default function Hero({
 
   return (
     <section
-      className="relative min-h-[520px] md:min-h-[560px] bg-cover bg-center text-white"
-      style={bgStyle}
+      style={{ ...bgStyle }}  // Apply dynamic padding
+      className="relative min-h-[520px] md:min-h-[560px] bg-cover bg-center text-white z-2 pt-35"
     >
       <Container className="min-h-[520px] md:min-h-[560px] flex items-center">
         <div className="max-w-2xl">

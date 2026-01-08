@@ -1,4 +1,5 @@
 import Container from "@/components/layout/Container";
+import Image from "next/image";
 
 export default function ImageText({ title, text = [], imageUrl = "" }) {
   return (
@@ -7,7 +8,7 @@ export default function ImageText({ title, text = [], imageUrl = "" }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden bg-slate-100 border">
             <div className="aspect-[16/10] flex items-center justify-center text-sm text-slate-500">
-              {imageUrl ? "Image" : "Image Placeholder"}
+              {imageUrl ? <Image src={imageUrl}  alt="" width={815} height={555} className="object-contain" /> : "Image Placeholder"}
             </div>
           </div>
 

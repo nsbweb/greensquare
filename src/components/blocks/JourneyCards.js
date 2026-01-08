@@ -22,15 +22,17 @@ export default function JourneyCards({ title, cards = [] }) {
               key={c.title}
               className={`rounded-2xl p-5 ${toneClass[c.tone] || "bg-white"} shadow-sm`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="text-xl font-semibold whitespace-pre-line">
-                  {c.title}
-                </h3>
+              <div className="flex justify-end gap-3 pb-1">
                 {c.tag ? (
                   <span className="text-xs rounded-full px-3 py-1 bg-white/60 text-slate-700">
                     {c.tag}
                   </span>
                 ) : null}
+              </div>
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-xl font-semibold whitespace-pre-line">
+                  {c.title}
+                </h3>
               </div>
 
               <div className="mt-3 text-sm opacity-80">
