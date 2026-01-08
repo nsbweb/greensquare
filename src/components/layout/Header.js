@@ -7,26 +7,27 @@ import Image from "next/image";
 import siteData from "@/data/site.json";
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Header() {
+export default function Header({ variant = "dark" }) {
   const { site } = siteData;
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isAnnouncementClosed, setIsAnnouncementClosed] = useState(false);
+  const [isAnnouncementClosed, setIsAnnouncementClosed] = useState(true);
+
+  // Read announcement close state
+  useEffect(() => {
+    const closed = sessionStorage.getItem("announcementClosed") === "true";
+    setIsAnnouncementClosed(closed);
+  }, []);
+
+  const isLight = variant === "light" && !scrolled;
 
   const toggleMenu = () => setMenuOpen((v) => !v);
 
   const closeAnnouncementBar = () => {
     setIsAnnouncementClosed(true);
-    localStorage.setItem("announcementClosed", "true");
+    sessionStorage.setItem("announcementClosed", "true");
   };
-
-  // Read announcement close state
-  useEffect(() => {
-    if (localStorage.getItem("announcementClosed") === "true") {
-      setIsAnnouncementClosed(true);
-    }
-  }, []);
 
   // Scroll background change (simple + stable)
   useEffect(() => {
@@ -39,7 +40,7 @@ export default function Header() {
   return (
     <div
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-black" : ""
+        scrolled ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
       {/* Announcement Bar */}
@@ -72,7 +73,7 @@ export default function Header() {
       )}
 
       {/* Main Header */}
-      <header className="bg-[#FFFFFF]/30 text-white backdrop-blur">
+      <header className="bg-[#FFFFFF]/30 backdrop-blur">
         <Container className="py-4 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/">
@@ -86,40 +87,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          {/* <nav className="hidden md:flex items-center gap-6 text-sm">
-            {site.nav.map((item, idx) =>
-              item.children ? (
-                <div key={idx} className="relative group">
-                  <button className="flex items-center gap-1">
-                    {item.label}
-                    <span>▼</span>
-                  </button>
-
-                  <div className="absolute top-full left-0 hidden group-hover:block bg-white text-black rounded-lg shadow-lg mt-2 min-w-[220px] z-[60]">
-                    {item.children.map((child, cIdx) => (
-                      <Link
-                        key={cIdx}
-                        href={child.href}
-                        className="block px-4 py-2 hover:bg-gray-100"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={idx}
-                  href={item.href}
-                  className="hover:text-gray-300"
-                >
-                  {item.label}
-                </Link>
-              )
-            )}
-          </nav> */}
-
-          <div className="hidden md:flex items-center gap-10 text-sm text-white font-medium text-slate-800">
+          <nav className={`hidden md:flex items-center gap-10 text-sm font-medium text-slate-800 hidden md:flex gap-8 text-sm font-medium transition-colors ${isLight ? "text-white" : "text-[#131313]"}`}>
           {site.nav.map((item) => {
             if (item.label === siteData.megaMenu?.programs?.label) {
               return (
@@ -127,6 +95,7 @@ export default function Header() {
                   key={item.label}
                   mega={siteData.megaMenu.programs}
                   socials={siteData.footer?.socials || []}
+                  isLight={isLight}
                 />
               );
             }
@@ -137,11 +106,11 @@ export default function Header() {
               </Link>
             );
           })}
-        </div>
+        </nav>
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-white"
+            className={`md:hidden ${isLight ? "text-white" : "text-[#131313]"}`}
             onClick={toggleMenu}
           >
             {menuOpen ? "✖" : "☰"}
@@ -177,7 +146,7 @@ export default function Header() {
 
 /* ---------- PROGRAMS MEGA MENU (DESKTOP ONLY) ---------- */
 
-function ProgramsMegaMenu({ mega, socials }) {
+function ProgramsMegaMenu({ mega, socials, isLight }) {
   const [open, setOpen] = useState(false);
 
   const items = mega?.items || [];
@@ -192,7 +161,7 @@ function ProgramsMegaMenu({ mega, socials }) {
     >
       <button
         type="button"
-        className="flex items-center gap-1 text-sm font-medium text-white hover:text-indigo-100 transition"
+        className={`flex items-center gap-1 text-sm font-medium hover:text-indigo-100 transition ${isLight ? "text-white" : "text-[#131313]"}`}
       >
         {mega?.label || "Programs"}
         <span className="text-lg">▾</span>
@@ -292,7 +261,7 @@ function ProgramsMegaMenu({ mega, socials }) {
                       
                       <Image
                         src={s.icon}
-                        alt={s.lable?.slice(0, 2)}
+                        alt={(s.label || "").slice(0, 2)}
                         width={34}
                         height={34}
                         className="object-cover"

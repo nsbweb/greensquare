@@ -19,8 +19,8 @@
           { "label": "Adolescent", "href": "/programs/adolescent" }
         ]
       },
-      { "label": "Innovations", "href": "/about#innovations" },
-      { "label": "Careers", "href": "/contact#careers" }
+      { "label": "Innovations", "href": "/innovation" },
+      { "label": "Careers", "href": "/careers" }
     ]
   },
   "megaMenu": {
@@ -102,7 +102,7 @@
     "home": {
       "sections": [
         {
-          "type": "hero",
+          "type": "homeHero",
           "props": {
             "title": "THE UNSCRIPTED CHILD.",
             "subtitle": "Authentic Montessori Education | 15 Months – 18 Years",
@@ -188,8 +188,11 @@
             "title": "Experience Learning\nthe Blue Blocks Way.",
             "text": "Seats are filled on a first-come basis.",
             "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-            "image": "/icon/building.png",
+            "image": "/building-image-01.png",
             "imageAlt": "Campus building",
+            "imageWidth": "566",
+            "imageHeight": "506",
+            "customTopSpacing":"sm:pt-70",
             "align": "left",
             "theme": "dark"
           }
@@ -199,8 +202,8 @@
     "admissions": {
       "banner": {
         "title": "Admissions",
-        "bgLeft": "/decor/rainbow-left.png",
-        "bgRight": "/decor/rainbow-right.png"
+        "bgLeft": "/ui/arc-left.png",
+        "bgRight": "/ui/arc-right.png"
       },
       "sections": [
         {
@@ -339,6 +342,493 @@
                 "apply": { "label": "Apply Now ↗", "href": "/contact#careers" }
               }
             ]
+          }
+        }
+      ]
+    },
+    "researchInstitute": {
+      "sections": [
+        {
+          "type": "researchHero",
+          "props": {
+            "image": "/research/hero.jpg",
+            "title": "Blue Blocks Research Institute",
+            "subtitle": "Advancing the Science of Innovation Development in Childhood and Adolescence",
+            "description": "Blue Blocks Research Institute conducts rigorous longitudinal research on how children develop innovative thinking capacities from birth through age 18. Our work bridges developmental psychology, Montessori pedagogy, and innovation science to answer a fundamental question: How does the capacity for original thought emerge, develop, and flourish across childhood?",
+            "link": {
+              "label": "Read more",
+              "href": "/research/about"
+            },
+            "points": [
+              "Cognitive architecture of innovation across developmental stages (0–3, 3–6, 6–12, 12–18)",
+              "Hand-brain integration and its role in creative problem-solving",
+              "Emotional and ethical dimensions of innovative capacity",
+              "Material-based learning environments and innovation outcomes",
+              "Longitudinal pathways from early exploration to applied innovation"
+            ]
+          }
+        },
+        {
+          "type": "researchMission",
+          "props": {
+            "id": "mission",
+            "title": "Our Mission",
+            "text": [
+              "To generate rigorous, replicable knowledge about how innovative thinking develops in children and adolescents, thereby informing educational practice worldwide and establishing evidence-based frameworks for nurturing innovation capacity from the earliest years. "
+            ],
+            "callout": "We exist to fill a critical gap: while institutions like MIT Media Lab and Stanford d.school advance innovation pedagogy for adults and university students, systematic research on innovation development across the full 0-18 developmental span remains sparse. Blue Blocks Research Institute addresses this gap through sustained, ethical, longitudinal inquiry. "
+          }
+        },
+        {
+          "type": "philosophyCards",
+          "props": {
+            "title": "Research Philosophy",
+            "items": [
+              { "icon": "/icon/EV.svg", "title": "Ecological Validity", "text": "We study innovation where it naturally occurs—in carefully prepared learning environments where children engage with authentic problems, real materials, and meaningful challenges. Our data emerges from naturalistic observation rather than artificial laboratory conditions." },
+              { "icon": "/icon/DC.svg", "title": "Developmental Continuity", "text": "Rather than isolated snapshots, we track the same children over years, documenting how innovation capacities emerge, consolidate, and transform across developmental transitions. This longitudinal approach reveals patterns invisible." },
+              { "icon": "/icon/EI.svg", "title": "Ethical Integration", "text": "We hold that innovation without conscience is incomplete. Our research examines not only cognitive and technical dimensions of innovation but also the ethical reasoning and emotional development that shape how children apply their creative capacities." }
+            ]
+          }
+        },
+        {
+        "type": "methodFramework",
+        "props": {
+          "title": "Methodological Framework",
+          "sections": [
+            {
+              "left": {
+                "title": "Observation Protocols",
+                "text": "Our trained observers employ systematic observation methods adapted for educational research settings. We utilize structured observation cards with pictorial coding systems to ensure reliability across observers with varying literacy levels, following inter-rater reliability protocols."
+              },
+              "right": {
+                "label": "Data Collection We gather multi-modal data including:",
+                "items": [
+                  "Structured behavioral observations with time-stamped annotations",
+                  "Photographic and video documentation of innovation processes",
+                  "Longitudinal case narratives tracking individual developmental trajectories",
+                  "Emotional arc documentation during problem-solving sequences",
+                  "Material substitution and adaptive thinking incidents",
+                  "Social interaction patterns during collaborative innovation"
+                ]
+              }
+            },
+            {
+              "left": {
+                "title": "Retrospective Coding",
+                "text": "Our archival data undergoes rigorous retrospective coding using ethnographic methods, converting eight years of observational records, photographs, and field notes into systematically analyzable datasets."
+              },
+              "right": {
+                "label": "Ethical Standards All research activities operate under IRB-compliant protocols. We maintain:",
+                "items": [
+                  "Informed consent procedures following international standards",
+                  "Age-appropriate assent protocols for child participants",
+                  "Secure data management with strict confidentiality protections",
+                  "Transparent communication with families regarding research purposes and findings",
+                  "Clear boundaries between educational practice and research activities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+        {
+          "type": "researchStats",
+          "props": {
+            "title": "The Blue Blocks Longitudinal Study",
+            "subtitle": "TThe Blue Blocks Longitudinal Study represents one of the most sustained investigations into innovation development across childhood. Initiated in 2017, the study tracks cohorts of children through their educational journeys, documenting the emergence and evolution of innovative thinking capacities.",
+            "stats": [
+              { "value": "8", "label": "Research Pods" },
+              { "value": "250+", "label": "Observations" },
+              { "value": "25+", "label": "Datasets" }
+            ]
+          }
+        },
+        {
+          "type": "outcomesPatents",
+          "props": {
+            "title": "Outcomes & Patents",
+            "leftCard": { "image": "/research/patent.jpg", "caption": "Patent" },
+            "rightStack": [
+              { "image": "/research/space-mission.jpg", "caption": "Space Missions" },
+              {
+                "title": "Outcomes",
+                "bullets": [
+                  "Outcome-led program refinement",
+                  "Student innovation artifacts",
+                  "Publication-ready data snapshots",
+                  "Evidence-based curriculum iteration"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "publicationsGrid",
+          "props": {
+            "title": "Publications & Open Science",
+            "subtitle": "Peer-informed, transparent research publishing with data access where possible.",
+            "items": [
+              {
+                "image": "/research/pub1.jpg",
+                "title": "Flagship Publication (In Development)",
+                "meta": "",
+                "href": "#",
+                "downloadHref": "#",
+                "downloadLabel": "Download from Zenodo",
+                "desc": "A Longitudinal Study of Innovation Development from Birth to Age 18"
+              },
+              {
+                "image": "/research/pub2.jpg",
+                "title": "Research Briefs",
+                "meta": "",
+                "href": "#",
+                "downloadHref": "#",
+                "downloadLabel": "Download from Zenodo",
+                "desc": "Shorter publications addressing specific research questions, designed for accessibility to practitioner audiences."
+              },
+              {
+                "image": "/research/pub2.jpg",
+                "title": "Methodological Contributions",
+                "meta": "",
+                "href": "#",
+                "downloadHref": "#",
+                "downloadLabel": "Download from Zenodo",
+                "desc": "Documentation of our observation protocols, coding systems, and analytical approaches, offered as resources for researchers seeking to conduct similar work."
+              }
+            ]
+          }
+        },
+        {
+          "type": "partnersStrip",
+          "props": {
+            "title": "Strategic Research Partners",
+            "logos": [
+              { "src": "/icon/IIT_Hyderabad_Insignia.svg", "alt": "IIT Hyderabad", "width": 125, "height": 137 },
+              { "src": "/icon/ISRO.svg", "alt": "ISRO", "width": 140, "height": 140 },
+              { "src": "/icon/google.svg", "alt": "Google", "width": 216, "height": 73 },
+              { "src": "/icon/IIT_Hyderabad_Insignia.svg", "alt": "IIT Hyderabad", "width": 125, "height": 137 },
+              { "src": "/icon/ISRO.svg", "alt": "ISRO", "width": 160, "height": 140 },
+              { "src": "/icon/google.svg", "alt": "Google", "width": 216, "height": 73 }
+            ]
+          }
+        },
+        {
+          "type": "councilCarousel",
+          "props": {
+            "title": "The Council",
+            "items": [
+              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
+              { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
+              { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
+              { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" },
+              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
+              { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
+              { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
+              { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" },
+              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
+              { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
+              { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
+              { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" }
+            ]
+          }
+        },
+        {
+          "type": "ethicsGovernance",
+          "props": {
+            "title": "Ethics & Governance",
+            "items": [
+              { "label": "Informed Consent", "title": "Informed Consent", "text": "We follow a clear, parent-first consent workflow aligned with privacy and research ethics." },
+              { "label": "Safety Protocols", "title": "Safety Protocols", "text": "School-first protocols ensure learner wellbeing and safe study conduct." },
+              { "label": "Data Centre", "title": "Data Centre", "text": "Secure storage, controlled access, and anonymized datasets by default." }
+            ]
+          }
+        }
+      ]
+    },
+    "parents": {
+      "hero": {
+        "title": "For Parents",
+        "breadcrumb": [
+          { "label": "Home", "href": "/" },
+          { "label": "For Parents" }
+        ],
+        "bg": {
+          "base": "#F3E3CF",
+          "leftArc": "/ui/arc-left.png",
+          "rightArc": "/ui/arc-right.png"
+        }
+      },
+      "sections": [
+        {
+          "type": "books",
+          "props": {
+            "title": "Foundational Reads for\nConscious Parenting",
+            "subtitle": "Explore recommended books that deepen your understanding of Montessori philosophy, child psychology, and developmental stages from early childhood...",
+            "items": [
+              {
+                "title": "Maria Montessori",
+                "desc": "A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "image": "/parents/book-1.png",
+                "cta": { "label": "Read Now ↗", "href": "/parents/books/maria-montessori" }
+              },
+              {
+                "title": "Maria Montessori",
+                "desc": "A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "image": "/parents/book-2.png",
+                "cta": { "label": "Read Now ↗", "href": "/parents/books/maria-montessori-2" }
+              },
+              {
+                "title": "Maria Montessori",
+                "desc": "A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "image": "/parents/book-3.png",
+                "cta": { "label": "Read Now ↗", "href": "/parents/books/maria-montessori-3" }
+              }
+            ]
+          }
+        },
+        {
+          "type": "insightsCarousel",
+          "props": {
+            "title": "Insights on Learning &\nDevelopment",
+            "subtitle": "Short, research-backed articles addressing common parenting questions, classroom practices, and the “why” behind Montessori methods.",
+            "items": [
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-1.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/1" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-2.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/2" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-3.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/3" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-1.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/1" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-2.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/2" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-3.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/3" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-1.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/1" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-2.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/2" }
+              },
+              {
+                "title": "A foundational Montessori text...",
+                "image": "/parents/insight-3.jpg",
+                "description":"A foundational Montessori text exploring how children naturally learn and absorb their environment during the early years.",
+                "cta": { "label": "Read Now →", "href": "/parents/insights/3" }
+              }
+            ]
+          }
+        },
+        {
+          "type": "tabbedFaq",
+          "props": {
+            "title": "Frequently asked questions",
+            "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+            "tabs": [
+              {
+                "label": "School Facilities",
+                "items": [
+                  { "q": "When can I start my course or workshop?", "a": "You can start..." },
+                  { "q": "Do you provide a certificate of completion?", "a": "Yes..." }
+                ]
+              },
+              {
+                "label": "School Recognition",
+                "items": [
+                  { "q": "Is Montessori recognized globally?", "a": "Yes..." }
+                ]
+              },
+              {
+                "label": "Team",
+                "items": [
+                  { "q": "When can I start my course or workshop?", "a": "You can start your course or workshop instantly after completing your purchase. Our free course can be started directly after signing up to SuperHi. You can then access your courses and workshops through your SuperHi dashboard whenever you’d like, and learn at your own pace with lifetime access to your purchases!" },
+                  { "q": "Do you provide a certificate of completion?", "a": "Yes..." },
+                  { "q": "What will I be able to create after taking your courses?", "a": "Yes..." }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "innovation": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Innovation",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Innovation" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "innovationMediaHero",
+          "props": {
+            "image": "/innovation/innov_hero.jpg",
+            "title": "The Cognitive Architecture of\nInnovation",
+            "subtitle": "Research can be scalable, a pedagogy can be operational, and innovation can be taught. We build it like a system: Sense \u2192 Experiment \u2192 Research \u2192 Application \u2192 Innovation.",
+            "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
+            "secondaryCta": { "label": "Book a Campus Tour", "href": "/contact" }
+          }
+        },
+        {
+          "type": "innovationAgeCards",
+          "props": {
+            "eyebrow": "CHILDREN",
+            "title": "From Sensorial Explorer to\nPatent Holder",
+            "cards": [
+              { "tag": "0\u20136", "text": "Sensorial and motor development as the foundation of invention.", "tone": "navy" },
+              { "tag": "6\u201312", "text": "Research loops: observation, hypothesis, validation, iteration.", "tone": "mint" },
+              { "tag": "12\u201318", "text": "Applied engineering, system thinking, and real-world creation.", "tone": "coral" }
+            ],
+            "footnote": "The \u2018Research Loop\u2019 Pedagogy \u2014 Experience \u2192 Experiment \u2192 Research \u2192 Application \u2192 Innovation"
+          }
+        },
+        {
+          "type": "innovationLogoStrip",
+          "props": {
+            "text": "Mentorship from industry leaders (IIT, ISRO, NID) rather than just textbooks.",
+            "logos": [
+              { "src": "/icon/IIT_Hyderabad_Insignia.svg", "alt": "IIT" },
+              { "src": "/icon/ISRO.svg", "alt": "ISRO" },
+              { "src": "/icon/google.svg", "alt": "Google" }
+            ]
+          }
+        },
+        {
+          "type": "innovationHabitSplit",
+          "props": {
+            "image": "/innovation/innov_classroom.jpg",
+            "eyebrow": "The Prepared Environment",
+            "title": "A Habit for \u2018Permission-less\u2019 Creation",
+            "bullets": [
+              { "title": "The \u2018Prepared Agency\u2019", "text": "Tools and materials live in the environment\u2014ready to be used without asking." },
+              { "title": "Systems Thinking\u2014Everyday", "text": "Children connect cause-effect, constraints and trade-offs across projects." },
+              { "title": "The \u2018Failure Club\u2019", "text": "A culture where iteration is celebrated, not punished." }
+            ]
+          }
+        },
+        {
+          "type": "montessoriToMars",
+          "props": {
+            "image": "/innovation/innov_collage.jpg",
+            "eyebrow": "INNOVATION",
+            "title": "From Montessori\nto Mars",
+            "text": "Curiosity, observation, and engineering combine into real missions with external mentorship.",
+            "cta": { "label": "Explore CubeSat Mission", "href": "/research-institute" },
+            "cards": [
+              { "title": "The CubeSat Mission", "text": "Research-backed engineering in partnership with ISRO + partners.", "icon": "/icon/google.svg" },
+              { "title": "Systems Thinking", "text": "Designing for the most complex environment known to man, where \u2018help\u2019 is impossible.", "icon": "/icon/google.svg" }
+            ]
+          }
+        },
+        {
+          "type": "billionYears",
+          "props": {
+            "title": "3.8 Billion Years Of R&D",
+            "image": "/innovation/innov_hex.jpg",
+            "items": [
+              { "title": "The \u2018Real\u2019 Architecture", "text": "A layered ecosystem that evolves\u2014observed, documented, refined." },
+              { "title": "The Continuum Creates the Mentor", "text": "Mentors model how to think, not what to think." },
+              { "title": "Student Case Studies", "text": "Projects become evidence: documentation, iteration, outcomes." }
+            ],
+            "callout": "At the heart: a research centre and a prepared environment that make innovation inevitable."
+          }
+        },
+        {
+          "type": "highStakes",
+          "props": {
+            "eyebrow": "CUBE SAT",
+            "title": "High-Stakes\nEngineering &\nResilience",
+            "image": "/innovation/innov_drone.png",
+            "items": [
+              { "title": "The \u2018Hard\u2019 Architecture", "text": "Structured constraints that push real engineering outcomes." },
+              { "title": "The Continuum Matters on Mars", "text": "Long-horizon thinking\u2014where errors are expensive." },
+              { "title": "Student Case Studies", "text": "From classroom prototypes to mission-grade learning." }
+            ]
+          }
+        },
+        {
+          "type": "innovationGallery",
+          "props": {
+            "eyebrow": "CLASSROOM PROJECTS",
+            "title": "From Classroom Project to\nCommercial Entity",
+            "images": [
+              "/innovation/innov_gallery_01.jpg",
+              "/innovation/innov_gallery_02.jpg",
+              "/innovation/innov_gallery_03.jpg",
+              "/innovation/innov_gallery_04.jpg",
+              "/innovation/innov_gallery_05.jpg",
+              "/innovation/innov_gallery_06.jpg",
+              "/innovation/innov_gallery_07.jpg",
+              "/innovation/innov_gallery_08.jpg",
+              "/innovation/innov_gallery_09.jpg",
+              "/innovation/innov_gallery_10.jpg",
+              "/innovation/innov_gallery_11.jpg",
+              "/innovation/innov_gallery_12.jpg"
+            ]
+          }
+        },
+        {
+          "type": "innovationCtaDrone",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Seats are filled on a first-come basis.",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "image": "/innovation/innov_cta_drone.png"
+          }
+        },
+        {
+          "type": "innovationContactSplit",
+          "props": {
+            "image": "/footer-map-img.png",
+            "title": "Get in touch",
+            "form": {
+              "fields": [
+                { "name": "name", "placeholder": "Name" },
+                { "name": "email", "type": "email", "placeholder": "Email" },
+                { "name": "phone", "placeholder": "Phone" },
+                { "name": "message", "type": "textarea", "placeholder": "Message" }
+              ],
+              "buttonLabel": "Submit"
+            }
           }
         }
       ]
