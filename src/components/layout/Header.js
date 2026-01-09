@@ -119,7 +119,7 @@ export default function Header({ variant = "dark" }) {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[#1f2a44] px-6 py-4 space-y-3">
+          <div className="md:hidden bg-[#1f2a44] text-white px-6 py-4 space-y-3">
             {site.nav.map((item, idx) => (
               <div key={idx}>
                 <Link href={item.href} className="block">

@@ -36,7 +36,7 @@ export default function AdmissionsIntro({
           <div className="relative">
             {/* Background shape */}
             {bgShape ? (
-              <div className="absolute -right-6 -top-6 w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] pointer-events-none">
+              <div className="absolute hidden sm:flex sm:-right-6 sm:-top-6 w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] pointer-events-none">
                 <Image
                   src={bgShape}
                   alt=""
@@ -49,7 +49,7 @@ export default function AdmissionsIntro({
 
             {/* Headline */}
             {sideHeadline ? (
-              <div className="absolute right-6 top-2 text-right leading-[1.05]">
+              <div className="absolute right-6 -top-4 sm:top-0 text-right leading-[1.05]">
                 <div className="text-2xl sm:text-3xl font-semibold text-[#F4B942]">
                   {sideHeadline.line1}
                 </div>
