@@ -1,20 +1,18 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Container from "@/components/layout/Container";
 import Image from "next/image";
+import CarouselTrack from "@/components/ui/carousel/CarouselTrack";
 
 export default function AdmissionsJourney({ eyebrow, title, items = [] }) {
-  const [active, setActive] = useState(0);
-
   const safeItems = useMemo(() => items.filter(Boolean), [items]);
   const total = safeItems.length;
-
-  const goTo = (idx) => setActive(Math.max(0, Math.min(idx, total - 1)));
 
   return (
     <section className="bg-white">
       <Container className="py-12 sm:py-16">
+        {/* Header */}
         <div className="text-center">
           {eyebrow ? (
             <div className="inline-flex rounded-full bg-[#E7E8FF] px-4 py-1 text-[10px] font-semibold tracking-wider text-[#2C2F8F]">
@@ -27,43 +25,51 @@ export default function AdmissionsJourney({ eyebrow, title, items = [] }) {
           </h2>
         </div>
 
-        {/* Desktop: static row */}
-        <div className="hidden lg:grid mt-10 grid-cols-4 gap-6">
+        {/* DESKTOP (static) */}
+        <div className="hidden lg:grid mt-10 grid-cols-4 gap-6 items-stretch">
           {safeItems.map((card, idx) => (
-            <JourneyCard key={idx} {...card} />
+            <JourneyCard key={`desktop-${idx}`} {...card} />
           ))}
         </div>
 
-        {/* Mobile/Tablet: carousel */}
-        <div className="lg:hidden mt-10">
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-300 ease-out"
-                style={{ transform: `translateX(-${active * 100}%)` }}
-              >
-                {safeItems.map((card, idx) => (
-                  <div key={idx} className="w-full flex-shrink-0 px-1">
-                    <JourneyCard {...card} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Dots */}
-            <div className="mt-4 flex items-center justify-center gap-2">
-              {Array.from({ length: total }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goTo(i)}
-                  aria-label={`Go to slide ${i + 1}`}
-                  className={`h-2 w-2 rounded-full transition ${
-                    i === active ? "bg-[#1f3b82]" : "bg-slate-300"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+        {/* MOBILE / TABLET (exact old behavior, but via CarouselTrack) */}
+        <div className="lg:hidden mt-10 relative">
+          <CarouselTrack
+            total={total}
+            initialIndex={0}
+            swipeThreshold={60}
+            rubberBand={true}
+            perView={{ base: 1, md: 1, lg: 1 }}
+            gap={0}
+            paddingX={0}
+            mode="page"
+            arrows={{
+              show: false
+            }}
+            dots={{
+              show: total > 1,
+              showOn: "mobile",
+              count: total,
+              className: "mt-4 flex items-center justify-center gap-2",
+              dotClassName: "h-2 w-2",
+              activeClassName: "bg-[#1f3b82]",
+              inactiveClassName: "bg-slate-300",
+              focusRingClassName: "focus:ring-[#1f3b82]/30",
+            }}
+            className="overflow-hidden"
+          >
+            {() =>
+              safeItems.map((card, idx) => (
+                <div
+                  key={`mobile-${idx}`}
+                  className="w-full shrink-0 px-10 flex"
+                >
+                  {/* px-10 exactly like your old viewport */}
+                  <JourneyCard {...card} />
+                </div>
+              ))
+            }
+          </CarouselTrack>
         </div>
       </Container>
     </section>
@@ -72,22 +78,23 @@ export default function AdmissionsJourney({ eyebrow, title, items = [] }) {
 
 function JourneyCard({ icon, title, text }) {
   return (
-    <div className="rounded-2xl bg-[#F3E3CF] px-6 py-6 h-[190px] flex flex-col justify-between">
+    <div className="rounded-2xl bg-[#F3E3CF] px-6 py-6 h-full w-full flex flex-col justify-between">
       <div className="flex items-center justify-center">
         <div className="relative h-10 w-10">
           {icon ? (
-            <Image src={icon} alt={title || ""} fill className="object-contain" />
+            <Image
+              src={icon}
+              alt={title || ""}
+              fill
+              className="object-contain"
+            />
           ) : null}
         </div>
       </div>
 
       <div className="text-center">
-        <div className="mt-2 text-sm font-semibold text-slate-800">
-          {title}
-        </div>
-        <p className="mt-2 text-xs leading-5 text-slate-600">
-          {text}
-        </p>
+        <div className="mt-2 text-sm font-semibold text-slate-800">{title}</div>
+        <p className="mt-2 text-xs leading-5 text-slate-600">{text}</p>
       </div>
     </div>
   );
