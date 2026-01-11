@@ -20,7 +20,7 @@
         ]
       },
       { "label": "Innovations", "href": "/innovations" },
-      { "label": "Careers", "href": "/careers" }
+      { "label": "Careers", "href": "/contact#careers" }
     ]
   },
   "megaMenu": {
@@ -71,7 +71,7 @@
     "quickLinks": [
       { "label": "About Us", "href": "/about" },
       { "label": "Our Team", "href": "/about#team" },
-      { "label": "The Research Institute", "href": "/about#research" },
+      { "label": "The Research Institute", "href": "/research-institute" },
       { "label": "Careers", "href": "/contact#careers" }
     ],
     "programs": [
