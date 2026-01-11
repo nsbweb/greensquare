@@ -1204,28 +1204,19 @@
           }
         },
         {
-          "type": "innovationCtaDrone",
+          "type": "ctaBanner",
           "props": {
             "title": "Experience Learning\nthe Blue Blocks Way.",
             "text": "Seats are filled on a first-come basis.",
             "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-            "image": "/innovation/drone.png"
-          }
-        },
-        {
-          "type": "innovationContactSplit",
-          "props": {
-            "image": "/footer-map-img.png",
-            "title": "Get in touch",
-            "form": {
-              "fields": [
-                { "name": "name", "placeholder": "Name" },
-                { "name": "email", "type": "email", "placeholder": "Email" },
-                { "name": "phone", "placeholder": "Phone" },
-                { "name": "message", "type": "textarea", "placeholder": "Message" }
-              ],
-              "buttonLabel": "Submit"
-            }
+            "image": "/innovation/drone.png",
+            "imageAlt": "Campus building",
+            "imageWidth": "566",
+            "imageHeight": "506",
+            "imagePositionTopRight":"sm:-right-10 sm:-top-40",
+            "customTopSpacing":"sm:pt-00",
+            "align": "left",
+            "theme": "dark"
           }
         }
       ]

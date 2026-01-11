@@ -91,10 +91,6 @@ export default function SectionRenderer({ sections = [] }) {
             return <HighStakes key={key} {...props} />;
           case "innovationGallery":
             return <InnovationGallery key={key} {...props} />;
-          case "innovationCtaDrone":
-            return <InnovationCtaDrone key={key} {...props} />;
-          case "innovationContactSplit":
-            return <InnovationContactSplit key={key} {...props} />;
 
           // Research-Institute
           case "researchHero":
