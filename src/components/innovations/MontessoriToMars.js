@@ -17,7 +17,7 @@ export default function MontessoriToMars({
         <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
           {/* Left Section: Large Image with Play Button */}
           <div className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-3xl bg-white/10 aspect-[16/11] h-[410px] w-full">
+            <div className="relative overflow-hidden rounded-3xl bg-white/10 sm:aspect-[16/11] h-[410px] w-full">
               <Image
                 src={image}
                 alt={title || "From Montessori to Mars"}

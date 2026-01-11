@@ -13,11 +13,11 @@ export default function InnovationLogoStrip({ text, logos = [] }) {
         ) : null}
 
         {/* Logos in a flex row */}
-        <div className="flex justify-center items-center gap-16">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-16">
           {logos.map((l, idx) => (
             <div
               key={idx}
-              className="relative h-10 sm:h-12 w-[100px] sm:w-[120px] opacity-90 flex justify-center items-center"
+              className="relative w-[100px] sm:w-[120px] opacity-90 flex justify-center items-center"
             >
               <Image
                 src={l.src}

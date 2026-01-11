@@ -27,9 +27,9 @@ export default function BillionYears({
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:items-start">
           {/* Left Section: Hexagonal Images */}
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-2 gap-0 sm:grid-cols-3 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-0 sm:grid-cols-3 lg:grid-cols-3 w-[200] sm:w-full m-auto sm:m-0">
                 <div
-                  className="relative overflow-hidden absolute top-40 left-25"
+                  className="relative overflow-hidden absolute sm:top-40 sm:left-25"
                   style={{
                     height: "200px", // Set a height for the hexagons
                     width: "100%", // Ensure the width is 100% of the container
@@ -68,7 +68,7 @@ export default function BillionYears({
                 </div>
                 
                 <div
-                  className="relative overflow-hidden absolute top-40 right-25"
+                  className="relative overflow-hidden absolute sm:top-40 sm:right-25"
                   style={{
                     height: "200px", // Set a height for the hexagons
                     width: "100%", // Ensure the width is 100% of the container
@@ -90,7 +90,7 @@ export default function BillionYears({
           <div className="lg:col-span-6">
             <div className="mt-8 space-y-6">
               {bulletPoints.map((point, idx) => (
-                <div key={idx} className="flex flex-col max-w-[70%] gap-4">
+                <div key={idx} className="flex sm:flex-col max-w-[70%] gap-4">
                   <div className="flex-shrink-0 h-[54] w-[54] flex items-center justify-center text-[#2D9CDB]">
                     <Image
                       src={point.icon}
