@@ -43,6 +43,10 @@ import ProgramIntroSplit from "@/components/blocks/ProgramIntroSplit";
 
 import CardsGridSection from "@/components/research/CardsGridSection";
 
+import AcademicsIntro from "@/components/blocks/AcademicsIntro";
+import EducationAidToLife from "@/components/blocks/EducationAidToLife";
+import ProgramsGrid from "@/components/blocks/ProgramsGrid";
+
 export default function SectionRenderer({ sections = [] }) {
   return (
     <>
@@ -53,12 +57,20 @@ export default function SectionRenderer({ sections = [] }) {
         switch (type) {
           // ADD:
           // PROGRAMS
+          case "academicsIntro":
+            return <AcademicsIntro key={key} {...props} />;
+          case "educationAidToLife":
+            return <EducationAidToLife key={key} {...props} />;
+          case "programsGrid":
+            return <ProgramsGrid key={key} {...props} />;
+
+          // PROGRAMS
           case "programsPageHero":
-          return <PageHero key={key} {...props} />;
+            return <PageHero key={key} {...props} />;
           case "programIntroSplit":
-          return <ProgramIntroSplit key={key} {...props} />;
+            return <ProgramIntroSplit key={key} {...props} />;
           case "AreasofDevelopment":
-          return <CardsGridSection key={key} {...props} />;
+            return <CardsGridSection key={key} {...props} />;
           case "programsctaBanner":
             return <CtaBanner key={key} {...props} />;
           

@@ -204,6 +204,218 @@
         }
       ]
     },
+    "academics": {
+      "sections": [
+        {
+          "type": "programsPageHero",
+          "props": {
+            "title": "Academics",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Academics" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "academicsIntro",
+          "props": {
+            "image": { "src": "/academics/hero.jpg", "alt": "Academics" },
+            "eyebrow": "OUR PROGRAMS",
+            "title": "THE COGNITIVE\nCONTINUUM",
+            "subtitle": "A Scientifically Mapped Journey from Infancy to Adolescence (0–16 Years)",
+            "promiseTitle": "The Promise",
+            "promiseItems": [
+              {
+                "icon": "/icon/certificate-color.svg",
+                "title": "One Philosophy",
+                "text": "AMI Montessori"
+              },
+              {
+                "icon": "/icon/certificate-color.svg",
+                "title": "One Campus",
+                "text": "1 to 16 Years"
+              },
+              {
+                "icon": "/icon/certificate-color.svg",
+                "title": "One Goal",
+                "text": "The Complete Development of the Human Being"
+              }
+            ],
+            "bg": "#ffffff",
+            "promiseBg": "#F3E3CF",
+            "promiseCardBg": "#F7EADB"
+          }
+        },
+        {
+          "type": "educationAidToLife",
+          "props": {
+            "bg": "#F3E3CF",
+            "eyebrow": "PHILOSOPHY",
+            "title": "EDUCATION AS AN AID\nTO LIFE",
+            "paragraphs": [
+              "At Blue Blocks, we do not group children by age strictly for convenience; we group them by Psychological Phase. Dr. Maria Montessori observed that human beings go through distinct \"Planes of Development,\" each requiring a different environment and a different approach.",
+              "We have designed our campus to mirror these natural stages. It is not a school; it is a Living Ecosystem that evolves as your child evolves."
+            ],
+            "pyramidImage":"/academics/pyramid.png",
+            "pyramid": {
+              "top": {
+                "age": "0-6",
+                "label": "The Absorbent\nMind",
+                "sublabel": "(Construction\nof the Self)"
+              },
+              "middle": {
+                "age": "6-12",
+                "label": "The Reasoning Mind",
+                "sublabel": "(Construction of the\nIntellect)"
+              },
+              "bottom": {
+                "age": "12-18",
+                "label": "The Social Self",
+                "sublabel": "(Construction of Society)"
+              }
+            }
+          }
+        },
+        {
+          "type": "programsGrid",
+          "props": {
+            "eyebrow": "OUR PROGRAMS",
+            "title": "THE PROGRAMS",
+            "subtitle": "Discover structured learning experiences tailored to each age group — Playgroup, Nursery, Primary, and Secondary.",
+            "items": [
+              {
+                "id": "toddler",
+                "badge": "Nido (15 Months – 3 Years)",
+                "cardTitle": "THE TODDLER COMMUNITY",
+                "focusLabel": "Focus",
+                "focusText": "Functional Independence",
+                "environmentText": "A space of movement, language, and order. Here, the child learns to trust themselves and the world. They master the care of self—eating, dressing, and toileting—with dignity",
+                "parentText": "“I never knew my two-year-old could be this calm and capable.”",
+                "cta": { "label": "Explore The Toddler Community", "href": "/programs/playgroup" },
+                "theme": {
+                  "bg": "#F6A995",
+                  "text": "#131313",
+                  "pillBg": "rgba(255,255,255,0.78)",
+                  "pillText": "#131313",
+                  "focusBg": "rgba(0,0,0,0.06)",
+                  "focusText": "#131313",
+                  "subtleText": "rgba(19,19,19,0.70)",
+                  "ctaText": "#131313"
+                }
+              },
+              {
+                "id": "childhouse",
+                "badge": "Nido (3 – 6 Years)",
+                "cardTitle": "THE CHILDREN'S HOUSE",
+                "focusLabel": "Focus",
+                "focusText": "The Conscious Mind",
+                "environmentText": "The home of the “Work Cycle.” Through Practical Life, Sensorial, and Math materials, the child builds the foundation of concentration and logical thinking.",
+                "parentText": "“My child isn’t just learning to read; they are learning to love learning.”",
+                "cta": { "label": "Explore The Primary Environment", "href": "/programs/childrens-house" },
+                "theme": {
+                  "bg": "#F3DF83",
+                  "text": "#131313",
+                  "pillBg": "rgba(255,255,255,0.78)",
+                  "pillText": "#131313",
+                  "focusBg": "rgba(0,0,0,0.06)",
+                  "focusText": "#131313",
+                  "subtleText": "rgba(19,19,19,0.70)",
+                  "ctaText": "#131313"
+                }
+              },
+              {
+                "id": "elementary",
+                "badge": "Nido (6 – 12 Years)",
+                "cardTitle": "THE ELEMENTARY\nENVIRONMENT",
+                "focusLabel": "Focus",
+                "focusText": "The Reasoning Mind",
+                "environmentText": "The age of “Why?” and “How?”. We offer Cosmic Education—a curriculum where History, Biology, and Math are woven into a grand narrative. Children work in groups, conduct research, and explore the universe.",
+                "parentText": "“They don’t ask for the answers anymore; they ask where to find them.”",
+                "cta": { "label": "Explore The Elementary Environment", "href": "/programs/elementary" },
+                "theme": {
+                  "bg": "#A8D9EF",
+                  "text": "#131313",
+                  "pillBg": "rgba(255,255,255,0.78)",
+                  "pillText": "#131313",
+                  "focusBg": "rgba(0,0,0,0.06)",
+                  "focusText": "#131313",
+                  "subtleText": "rgba(19,19,19,0.70)",
+                  "ctaText": "#131313"
+                }
+              },
+              {
+                "id": "adolescent",
+                "badge": "Nido (12 – 16 Years)",
+                "cardTitle": "THE ADOLESCENT\nCOMMUNITY",
+                "focusLabel": "Focus",
+                "focusText": "Social Independence",
+                "environmentText": "A “School of Experience.” Adolescents engage in real work—managing economies, running businesses, and serving the community. They prepare for adulthood not just academically, but socially and economically.",
+                "parentText": "“My teenager has found a sense of purpose and belonging I didn’t think was possible in high school.”",
+                "cta": { "label": "Explore The Adolescent Community", "href": "/programs/adolescent" },
+                "theme": {
+                  "bg": "#243B74",
+                  "text": "#FFFFFF",
+                  "pillBg": "rgba(255,255,255,0.80)",
+                  "pillText": "#131313",
+                  "focusBg": "rgba(255,255,255,0.12)",
+                  "focusText": "#FFFFFF",
+                  "subtleText": "rgba(255,255,255,0.78)",
+                  "ctaText": "rgba(255,255,255,0.92)"
+                }
+              }
+            ]
+          }
+        },
+        {
+        "type": "AreasofDevelopment",
+        "props": {
+          "bg": "#F5E9DA",
+          "eyebrow": "",
+          "title": "Who Is Blue Blocks For?",
+          "description": "",
+          "headerAlign": "left",
+
+          "cols": { "base": 1, "sm": 2, "lg": 4 },
+          "maxWidth": "max-w-6xl",
+          "gap": "gap-6",
+
+          "cardBg": "#273C75",
+          "cardRadius": "rounded-[18px]",
+          "cardPadding": "px-6 py-7",
+          "cardMinHeight": 320,
+
+          "iconSize": "60",
+          "iconWrapClassName": "h-10 w-10",
+
+          "items": [
+            { "icon": "/icon/rocket.svg", "title": "Potential Over Percentiles", "text": "We value curiosity, effort, and growth over test scores and comparisons." },
+            { "icon": "/icon/hand.svg", "title": "Willingness to Unlearn", "text": "Families open to rethinking traditional schooling and trusting a child-led learning journey thrive here." },
+            { "icon": "/icon/community.svg", "title": "Community-Focused Families", "text": "Those who believe education is collaborative — between child, family, and school — find belonging at Blue Blocks." }
+          ]
+        }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Ready to start the conversation?",
+            "text": "If our philosophy resonates with you, we’d love to learn more about your family and your child.",
+            "cta": { "label": "Register Interest", "href": "/contact" },
+            "image": "/building-image-01.png",
+            "imageAlt": "Campus building",
+            "imageWidth": "566",
+            "imageHeight": "506",
+            "customTopSpacing":"sm:pt-70",
+            "align": "left",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
     "programs": {
       "sections": [
         {
@@ -268,8 +480,8 @@
             { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
           ]
         }
-      },
-      {
+        },
+        {
           "type": "ctaBanner",
           "props": {
             "title": "Experience Learning\nthe Blue Blocks Way.",
