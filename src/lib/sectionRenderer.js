@@ -21,7 +21,6 @@ import TabbedFaq from "@/components/parents/TabbedFaq";
 
 import ResearchHero from "@/components/research/ResearchHero";
 import ResearchMission from "@/components/research/ResearchMission";
-import PhilosophyCards from "@/components/research/PhilosophyCards";
 import MethodFramework from "@/components/research/MethodFramework";
 import ResearchStats from "@/components/research/ResearchStats";
 import OutcomesPatents from "@/components/research/OutcomesPatents";
@@ -40,6 +39,9 @@ import HighStakes from "@/components/innovations/HighStakes";
 import InnovationGallery from "@/components/innovations/InnovationGallery";
 import InnovationCtaDrone from "@/components/innovations/InnovationCtaDrone";
 import InnovationContactSplit from "@/components/innovations/InnovationContactSplit";
+import ProgramIntroSplit from "@/components/blocks/ProgramIntroSplit";
+
+import CardsGridSection from "@/components/research/CardsGridSection";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -50,6 +52,16 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          // PROGRAMS
+          case "programsPageHero":
+          return <PageHero key={key} {...props} />;
+          case "programIntroSplit":
+          return <ProgramIntroSplit key={key} {...props} />;
+          case "AreasofDevelopment":
+          return <CardsGridSection key={key} {...props} />;
+          case "programsctaBanner":
+            return <CtaBanner key={key} {...props} />;
+          
           // INNOVATION
           case "innovationMediaHero":
             return <Hero key={key} {...props} />;
@@ -78,7 +90,7 @@ export default function SectionRenderer({ sections = [] }) {
           case "researchMission":
             return <ResearchMission key={key} {...props} />;
           case "philosophyCards":
-            return <PhilosophyCards key={key} {...props} />;
+            return <CardsGridSection key={key} {...props} />;
           case "methodFramework":
             return <MethodFramework key={key} {...props} />;
           case "researchStats":
