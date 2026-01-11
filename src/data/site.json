@@ -419,7 +419,7 @@
     "programs": {
       "sections": [
         {
-          "type": "programsPageHero",
+          "type": "pageHero",
           "props": {
             "title": "Programs",
             "breadcrumb": [
@@ -499,12 +499,22 @@
       ]
     },
     "admissions": {
-      "banner": {
-        "title": "Admissions",
-        "bgLeft": "/ui/arc-left.png",
-        "bgRight": "/ui/arc-right.png"
-      },
       "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Admissions",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Admissions" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
         {
           "type": "admissionsIntro",
           "props": {
@@ -571,7 +581,10 @@
           "type": "pageHero",
           "props": {
             "title": "Contact",
-            "breadcrumb": ["Home", "Contact"],
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Contact" }
+            ],
             "bg": {
               "base": "#F3E3CF",
               "leftArc": "/ui/arc-left.png",
@@ -847,7 +860,7 @@
     "parents": {
       "sections": [
         {
-          "type": "Parentshero",
+          "type": "pageHero",
           "props": {
             "title": "For Parents",
             "breadcrumb": [

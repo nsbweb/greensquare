@@ -56,7 +56,7 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
-          // PROGRAMS
+          // ACADEMICS
           case "academicsIntro":
             return <AcademicsIntro key={key} {...props} />;
           case "educationAidToLife":
@@ -65,8 +65,6 @@ export default function SectionRenderer({ sections = [] }) {
             return <ProgramsGrid key={key} {...props} />;
 
           // PROGRAMS
-          case "programsPageHero":
-            return <PageHero key={key} {...props} />;
           case "programIntroSplit":
             return <ProgramIntroSplit key={key} {...props} />;
           case "AreasofDevelopment":
@@ -115,23 +113,20 @@ export default function SectionRenderer({ sections = [] }) {
             return <EthicsGovernance key={key} {...props} />;
           
           // Parents
-          case "Parentshero":
-            return <PageHero key={key} {...props} />;
           case "books":
             return <ParentsBooks key={key} {...props} />;
           case "insightsCarousel":
             return <InsightsCarousel key={key} {...props} />;
-
           case "tabbedFaq":
             return <TabbedFaq key={key} {...props} />;
 
+          // ADMISSIONS
           case "admissionsIntro":
             return <AdmissionsIntro key={key} {...props} />;
           case "admissionsJourney":
             return <AdmissionsJourney key={key} {...props} />;
             
-          case "pageHero":
-            return <PageHero key={key} {...props} />;
+          // CONTACT
           case "contactDetails":
             return <ContactDetails key={key} {...props} />;
           case "locationsGrid":
@@ -139,6 +134,7 @@ export default function SectionRenderer({ sections = [] }) {
           case "positionsOpen":
             return <PositionsOpen key={key} {...props} />;
 
+          // HOME
           case "homeHero":
             return <Hero key={key} {...props} />;
           case "imageText":
@@ -153,6 +149,10 @@ export default function SectionRenderer({ sections = [] }) {
             return <RecognizedBy key={key} {...props} />;
           case "faq":
             return <FAQAccordion key={key} {...props} />;
+
+          //COMMON
+          case "pageHero":
+            return <PageHero key={key} {...props} />;
           case "ctaBanner":
             return <CtaBanner key={key} {...props} />;
           default:
