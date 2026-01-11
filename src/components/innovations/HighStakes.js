@@ -2,62 +2,73 @@ import Image from "next/image";
 import Container from "@/components/layout/Container";
 
 export default function HighStakes({
-  eyebrow,
   title,
-  image,
-  items = [],
+  subheading,
+  featureSections = [],
+  droneImage,
 }) {
   return (
-    <section className="bg-[#f7e7d5]">
-      <Container className="py-12 sm:py-16">
-        {eyebrow ? (
-          <div className="flex justify-center">
-            <span className="rounded-full bg-white/70 px-3 py-1 text-[10px] font-semibold tracking-[0.18em] text-slate-700">
-              {eyebrow}
-            </span>
-          </div>
-        ) : null}
-
-        {title ? (
-          <h2 className="mt-4 text-center text-2xl sm:text-3xl font-medium text-slate-900">
-            {title}
-          </h2>
-        ) : null}
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-center">
+    <section className="bg-[#F5E9DA] py-12 sm:py-16">
+      <Container>
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+          {/* Left Section: Title and Subheading */}
           <div className="lg:col-span-6">
-            <div className="space-y-6">
-              {items.map((it, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <span className="mt-1 inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-600">
-                    <span className="h-2 w-2 rounded-full bg-slate-400" />
-                  </span>
-                  <div>
-                    <div className="text-sm font-semibold text-slate-900">
-                      {it.title}
-                    </div>
-                    {it.text ? (
-                      <p className="mt-1 text-sm text-slate-600 leading-relaxed">
-                        {it.text}
-                      </p>
-                    ) : null}
-                  </div>
-                </div>
-              ))}
-            </div>
+            {subheading && (
+              <div className="inline-flex rounded-full bg-[#2727E6]/15 px-6 py-2 text-xs font-semibold tracking-wider text-[#2C2F8F]">
+                {subheading}
+              </div>
+            )}
+
+            {title && (
+              <h2 className="mt-4 text-3xl sm:text-[4rem] font-semibold leading-tight text-[#131313]">
+                {title}
+              </h2>
+            )}
           </div>
 
+          {/* Right Section: Drone Image */}
           <div className="lg:col-span-6">
-            <div className="relative mx-auto max-w-md">
+            <div className="relative h-[300px] sm:h-[400px] lg:h-[500px]">
               <Image
-                src={image}
-                alt=""
-                width={520}
-                height={420}
-                className="h-auto w-full object-contain"
+                src={droneImage}
+                alt="Drone Image"
+                fill
+                className="object-contain"
+                sizes="(min-width: 1024px) 40vw, 100vw"
               />
             </div>
           </div>
+        </div>
+
+        {/* Feature Sections */}
+        <div className="mt-12 grid gap-4 sm:grid-cols-1 lg:grid-cols-3">
+          {featureSections.map((section, idx) => (
+            <div
+              key={idx}
+              className="rounded-2xl bg-[#F5E1C7] p-6 flex flex-col justify-start"
+            >
+              {section.icon && (
+                <div className="mb-4 text-[#2D9CDB]">
+                  <Image
+                    src={section.icon}
+                    alt={section.title}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
+                </div>
+              )}
+
+              <div className="text-[1.75] font-semibold text-[#333333]">
+                {section.title}
+              </div>
+              {section.text && (
+                <p className="mt-3 text-[1.25] text-[#414141] leading-relaxed">
+                  {section.text}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </Container>
     </section>

@@ -41,11 +41,15 @@ export default function CarouselTrack({
   className = "",
   children, // (ctx) => nodes
 
-  // ✅ NEW: optional callback to expose controller outside (for below-arrows UI, etc.)
+  // optional callback to expose controller outside
   onControllerChange,
 }) {
   const wrapRef = useRef(null);
   const [wrapW, setWrapW] = useState(0);
+
+  // ✅ NEW: gate pointer move unless user is actively dragging
+  const isPointerDownRef = useRef(false);
+  const pointerIdRef = useRef(null);
 
   // Internal carousel engine
   const carousel = useCarousel({
@@ -90,12 +94,10 @@ export default function CarouselTrack({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [maxIndexComputed]);
 
-  const goPrev = () =>
-    carousel.goTo(clamp(carousel.active - 1, 0, maxIndexComputed));
-  const goNext = () =>
-    carousel.goTo(clamp(carousel.active + 1, 0, maxIndexComputed));
+  const goPrev = () => carousel.goTo(clamp(carousel.active - 1, 0, maxIndexComputed));
+  const goNext = () => carousel.goTo(clamp(carousel.active + 1, 0, maxIndexComputed));
 
-  // ✅ NEW: expose controller to parent (for arrows below, custom controls, etc.)
+  // expose controller
   useEffect(() => {
     if (!onControllerChange) return;
 
@@ -126,6 +128,44 @@ export default function CarouselTrack({
   // Arrows config
   const showArrows = Boolean(arrows?.show) && total > 1;
 
+  // ✅ Wrapped pointer handlers (fixes “hover move” bug)
+  const handlePointerDown = (e) => {
+    // Desktop mouse: only left click should initiate drag
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+
+    isPointerDownRef.current = true;
+    pointerIdRef.current = e.pointerId;
+
+    // capture pointer so we keep receiving move events
+    try {
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+    } catch (_) {}
+
+    carousel.onPointerDown(e, { captureTarget: wrapRef.current });
+  };
+
+  const handlePointerMove = (e) => {
+    // ✅ KEY FIX: ignore pointermove unless dragging started
+    if (!isPointerDownRef.current) return;
+    if (pointerIdRef.current != null && e.pointerId !== pointerIdRef.current) return;
+
+    carousel.onPointerMove(e);
+  };
+
+  const endPointer = (e) => {
+    if (!isPointerDownRef.current) return;
+    if (pointerIdRef.current != null && e.pointerId !== pointerIdRef.current) return;
+
+    isPointerDownRef.current = false;
+    pointerIdRef.current = null;
+
+    try {
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
+    } catch (_) {}
+
+    carousel.onPointerUp(e);
+  };
+
   return (
     <div className={className}>
       <div ref={wrapRef} className="w-full">
@@ -135,18 +175,20 @@ export default function CarouselTrack({
         >
           {/* TRACK */}
           <div
-            className="flex touch-pan-y"
+            className="flex touch-pan-y cursor-grab active:cursor-grabbing"
             style={{
               gap,
               transform: `translateX(${-(carousel.active * stepPx) + carousel.dragX}px)`,
               transition: carousel.dragging ? "none" : "transform 350ms ease-out",
             }}
-            onPointerDown={(e) =>
-              carousel.onPointerDown(e, { captureTarget: wrapRef.current })
-            }
-            onPointerMove={carousel.onPointerMove}
-            onPointerUp={carousel.onPointerUp}
-            onPointerCancel={carousel.onPointerUp}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={endPointer}
+            onPointerCancel={endPointer}
+            onPointerLeave={(e) => {
+              // if mouse leaves while dragging, stop drag
+              if (e.pointerType === "mouse") endPointer(e);
+            }}
           >
             {typeof children === "function"
               ? children({
@@ -215,11 +257,7 @@ export default function CarouselTrack({
                   rounded-full cursor-pointer transition hover:opacity-80
                   focus:outline-none focus:ring-2
                   ${dots?.focusRingClassName ?? "focus:ring-black/20"}
-                  ${
-                    isActive
-                      ? dots?.activeClassName ?? "bg-black"
-                      : dots?.inactiveClassName ?? "bg-slate-300"
-                  }
+                  ${isActive ? dots?.activeClassName ?? "bg-black" : dots?.inactiveClassName ?? "bg-slate-300"}
                 `}
               />
             );

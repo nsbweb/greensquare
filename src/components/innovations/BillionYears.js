@@ -1,62 +1,125 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/components/layout/Container";
 
 export default function BillionYears({
+  eyebrow,
   title,
-  image,
-  items = [],
-  callout,
+  subtitle,
+  bulletPoints = [],
+  hexImages1,
+  hexImages2,
+  hexImages3,
+  footerText,
 }) {
   return (
-    <section className="bg-white">
-      <Container className="py-12 sm:py-16">
-        {title ? (
-          <h2 className="text-center text-2xl sm:text-3xl font-medium text-slate-900">
-            {title}
-          </h2>
-        ) : null}
-
-        <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-center">
+    <section className="bg-white py-12 sm:py-16">
+      <Container>
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div className="lg:col-span-12">
+            {title && (
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[#131313]">
+                {title}
+              </h2>
+            )}
+          </div>
+        </div>
+        <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:items-start">
+          {/* Left Section: Hexagonal Images */}
           <div className="lg:col-span-6">
-            <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl bg-slate-100">
-              <Image
-                src={image}
-                alt={title || "R&D"}
-                width={420}
-                height={420}
-                className="h-auto w-full object-cover"
-              />
+            <div className="grid grid-cols-2 gap-0 sm:grid-cols-3 lg:grid-cols-3">
+                <div
+                  className="relative overflow-hidden absolute top-40 left-25"
+                  style={{
+                    height: "200px", // Set a height for the hexagons
+                    width: "100%", // Ensure the width is 100% of the container
+                    clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagonal shape
+                    backgroundColor: "#273C75", // Set a background color for the hexagon
+                  }}
+                >
+                  <Image
+                    src={hexImages1.src}
+                    alt={hexImages1.alt || "Hexagonal Image"}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              
+                <div
+                  className="relative overflow-hidden"
+                  style={{
+                    height: "200px", // Set a height for the hexagons
+                    width: "100%", // Ensure the width is 100% of the container
+                    clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagonal shape
+                    backgroundColor: "#f3f4f6", // Set a background color for the hexagon
+                  }}
+                >
+                  <Image
+                    src={hexImages2.src}
+                    alt={hexImages2.alt || "Hexagonal Image"}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                    <button className="p-2 flex align-items-center justify-center w-[42] h-[42] bg-white rounded-full">
+                      <span className="text-xl text-black">▶</span>
+                    </button>
+                  </div>
+                </div>
+                
+                <div
+                  className="relative overflow-hidden absolute top-40 right-25"
+                  style={{
+                    height: "200px", // Set a height for the hexagons
+                    width: "100%", // Ensure the width is 100% of the container
+                    clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagonal shape
+                    backgroundColor: "#f3f4f6", // Set a background color for the hexagon
+                  }}
+                >
+                  <Image
+                    src={hexImages3.src}
+                    alt={hexImages3.alt || "Hexagonal Image"}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
             </div>
           </div>
 
+          {/* Right Section: Bullet Points */}
           <div className="lg:col-span-6">
-            <div className="space-y-5">
-              {items.map((it, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <span className="mt-1 inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
-                    <span className="h-2 w-2 rounded-full bg-slate-400" />
-                  </span>
+            <div className="mt-8 space-y-6">
+              {bulletPoints.map((point, idx) => (
+                <div key={idx} className="flex flex-col max-w-[70%] gap-4">
+                  <div className="flex-shrink-0 h-[54] w-[54] flex items-center justify-center text-[#2D9CDB]">
+                    <Image
+                      src={point.icon}
+                      alt={point.title}
+                      width={44}
+                      height={44}
+                      className="object-contain"
+                    />
+                  </div>
                   <div>
-                    <div className="text-sm font-semibold text-slate-900">
-                      {it.title}
+                    <div className="text-lg font-semibold text-[#333333]">
+                      {point.title}
                     </div>
-                    {it.text ? (
-                      <p className="mt-1 text-sm text-slate-600 leading-relaxed">
-                        {it.text}
-                      </p>
-                    ) : null}
+                    <p className="mt-2 text-lg text-[#6B6F7D] leading-relaxed">
+                      {point.text}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
-
-            {callout ? (
-              <div className="mt-8 rounded-2xl bg-[#d8f0de] px-5 py-4 text-xs sm:text-sm text-slate-700">
-                {callout}
-              </div>
-            ) : null}
           </div>
         </div>
+
+        {/* Footer Section */}
+        {footerText && (
+          <div className="mt-12 p-6 bg-[#8BBF9F] rounded-xl font-medium">
+            <p className="text-[1.4erm] text-[#FFFFFF]">{footerText}</p>
+          </div>
+        )}
       </Container>
     </section>
   );

@@ -52,7 +52,7 @@ export default function SectionRenderer({ sections = [] }) {
           // ADD:
           // INNOVATION
           case "innovationMediaHero":
-            return <InnovationMediaHero key={key} {...props} />;
+            return <Hero key={key} {...props} />;
           case "innovationAgeCards":
             return <InnovationAgeCards key={key} {...props} />;
           case "innovationLogoStrip":
@@ -72,6 +72,7 @@ export default function SectionRenderer({ sections = [] }) {
           case "innovationContactSplit":
             return <InnovationContactSplit key={key} {...props} />;
 
+          // Research-Institute
           case "researchHero":
             return <ResearchHero key={key} {...props} />;
           case "researchMission":
@@ -92,8 +93,9 @@ export default function SectionRenderer({ sections = [] }) {
             return <CouncilCarousel key={key} {...props} />;
           case "ethicsGovernance":
             return <EthicsGovernance key={key} {...props} />;
-            
-          case "hero":
+          
+          // Parents
+          case "Parentshero":
             return <PageHero key={key} {...props} />;
           case "books":
             return <ParentsBooks key={key} {...props} />;

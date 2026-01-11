@@ -61,6 +61,11 @@
     }
   },
   "footer": {
+    "gallery": [
+      { "src": "/footer/footer-1.png", "alt": "Campus aerial view" },
+      { "src": "/footer/footer-2.png", "alt": "Campus grounds" },
+      { "src": "/footer/footer-3.png", "alt": "Learning spaces" }
+    ],
     "aboutText": "Blue Blocks is a research-led learning ecosystem focused on authentic Montessori and child development.",
     "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
     "quickLinks": [
@@ -546,19 +551,22 @@
       ]
     },
     "parents": {
-      "hero": {
-        "title": "For Parents",
-        "breadcrumb": [
-          { "label": "Home", "href": "/" },
-          { "label": "For Parents" }
-        ],
-        "bg": {
-          "base": "#F3E3CF",
-          "leftArc": "/ui/arc-left.png",
-          "rightArc": "/ui/arc-right.png"
-        }
-      },
       "sections": [
+        {
+          "type": "Parentshero",
+          "props": {
+            "title": "For Parents",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "For Parents" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },        
         {
           "type": "books",
           "props": {
@@ -701,11 +709,16 @@
         {
           "type": "innovationMediaHero",
           "props": {
-            "image": "/innovation/innov_hero.jpg",
             "title": "The Cognitive Architecture of\nInnovation",
-            "subtitle": "Research can be scalable, a pedagogy can be operational, and innovation can be taught. We build it like a system: Sense \u2192 Experiment \u2192 Research \u2192 Application \u2192 Innovation.",
-            "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
-            "secondaryCta": { "label": "Book a Campus Tour", "href": "/contact" }
+            "subtitle": "Innovation is not a subject. It is a biological stage of development. We don't just teach technology; we nurture the 'First Principles' thinking that created it.",
+            "bgImageUrl": "/innovation/innov_hero.jpg",
+            "primaryCta": { "label": "Watch Our Story", "href": "/about" },
+            "secondaryCta": { "label": "Book Admission Workshop", "href": "/contact" },
+
+            "align": "center",
+            "height": "innovation",
+            "overlay": "dark",
+            "showArcs": true
           }
         },
         {
@@ -714,11 +727,26 @@
             "eyebrow": "CHILDREN",
             "title": "From Sensorial Explorer to\nPatent Holder",
             "cards": [
-              { "tag": "0\u20136", "text": "Sensorial and motor development as the foundation of invention.", "tone": "navy" },
-              { "tag": "6\u201312", "text": "Research loops: observation, hypothesis, validation, iteration.", "tone": "mint" },
-              { "tag": "12\u201318", "text": "Applied engineering, system thinking, and real-world creation.", "tone": "coral" }
+              {
+                "tag": "0–6",
+                "text": "Sensorial and motor development as the foundation of invention.",
+                "tone": "navy",
+                "icon": "/icon/EV.svg"
+              },
+              {
+                "tag": "6–12",
+                "text": "Research loops: observation, hypothesis, validation, iteration.",
+                "tone": "mint",
+                "icon": "/icon/EV.svg"
+              },
+              {
+                "tag": "12–18",
+                "text": "Applied engineering, system thinking, and real-world creation.",
+                "tone": "coral",
+                "icon": "/icon/EV.svg"
+              }
             ],
-            "footnote": "The \u2018Research Loop\u2019 Pedagogy \u2014 Experience \u2192 Experiment \u2192 Research \u2192 Application \u2192 Innovation"
+            "footnote": "The ‘Research Loop’ Pedagogy — Experience → Experiment → Research → Application → Innovation"
           }
         },
         {
@@ -726,62 +754,137 @@
           "props": {
             "text": "Mentorship from industry leaders (IIT, ISRO, NID) rather than just textbooks.",
             "logos": [
-              { "src": "/icon/IIT_Hyderabad_Insignia.svg", "alt": "IIT" },
-              { "src": "/icon/ISRO.svg", "alt": "ISRO" },
-              { "src": "/icon/google.svg", "alt": "Google" }
+              { "src": "/icon/IIT_Hyderabad_Insignia-color.svg", "alt": "IIT" },
+              { "src": "/icon/ISRO-color.svg", "alt": "ISRO" },
+              { "src": "/icon/google-color.svg", "alt": "Google" }
             ]
           }
         },
         {
           "type": "innovationHabitSplit",
           "props": {
-            "image": "/innovation/innov_classroom.jpg",
+            "image": "#",
             "eyebrow": "The Prepared Environment",
-            "title": "A Habit for \u2018Permission-less\u2019 Creation",
+            "title": "A Habit for ‘Permission-less’ Creation",
             "bullets": [
-              { "title": "The \u2018Prepared Agency\u2019", "text": "Tools and materials live in the environment\u2014ready to be used without asking." },
-              { "title": "Systems Thinking\u2014Everyday", "text": "Children connect cause-effect, constraints and trade-offs across projects." },
-              { "title": "The \u2018Failure Club\u2019", "text": "A culture where iteration is celebrated, not punished." }
+              {
+                "icon":"/icon/certificate.svg",
+                "title": "The ‘Prepared Agency’",
+                "text": "Tools and materials live in the environment—ready to be used without asking."
+              },
+              {
+                "icon":"/icon/rounding.svg",
+                "title": "Systems Thinking—Everyday",
+                "text": "Children connect cause-effect, constraints, and trade-offs across projects."
+              },
+              {
+                "icon":"/icon/magnific-icon.svg",
+                "title": "The ‘Failure Club’",
+                "text": "A culture where iteration is celebrated, not punished."
+              }
+            ],
+            "images": [
+              {
+                "icon": "/innovation/slider-image-1.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/innovation/slider-image-2.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/innovation/slider-image-3.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/innovation/slider-image-4.jpg",
+                "title": "",
+                "text": ""
+              }
             ]
           }
         },
         {
           "type": "montessoriToMars",
           "props": {
-            "image": "/innovation/innov_collage.jpg",
+            "image": "/innovation/innov_collage-4.jpg",
             "eyebrow": "INNOVATION",
             "title": "From Montessori\nto Mars",
             "text": "Curiosity, observation, and engineering combine into real missions with external mentorship.",
             "cta": { "label": "Explore CubeSat Mission", "href": "/research-institute" },
+            "smallImages": [
+              "/innovation/innov_collage-1.jpg",
+              "/innovation/innov_collage-2.jpg"
+            ],
             "cards": [
-              { "title": "The CubeSat Mission", "text": "Research-backed engineering in partnership with ISRO + partners.", "icon": "/icon/google.svg" },
-              { "title": "Systems Thinking", "text": "Designing for the most complex environment known to man, where \u2018help\u2019 is impossible.", "icon": "/icon/google.svg" }
+              { "title": "The CubeSat Mission", "text": "Research-backed engineering in partnership with ISRO + partners.", "icon": "/icon/ISRO.svg" },
+              { "title": "Systems Thinking", "text": "Designing for the most complex environment known to man, where ‘help’ is impossible.", "icon": "/icon/ISRO.svg" }
             ]
           }
         },
         {
           "type": "billionYears",
           "props": {
+            "eyebrow": "SPACE MISSION",
             "title": "3.8 Billion Years Of R&D",
-            "image": "/innovation/innov_hex.jpg",
-            "items": [
-              { "title": "The \u2018Real\u2019 Architecture", "text": "A layered ecosystem that evolves\u2014observed, documented, refined." },
-              { "title": "The Continuum Creates the Mentor", "text": "Mentors model how to think, not what to think." },
-              { "title": "Student Case Studies", "text": "Projects become evidence: documentation, iteration, outcomes." }
+            "subtitle": "Connecting 'Cosmic Education' (The Universe Story) to 'Orbital Mechanics' (CubeSat Payloads)",
+            "hexImages1": {
+              "src": "/innovation/hive-architecture.jpg",
+              "alt": "The Hive Architecture"
+            },
+            "hexImages2": {
+              "src": "/innovation/curriculum-nature-mentor.jpg",
+              "alt": "Nature as Mentor"
+            },
+            "hexImages3": {
+              "src": "/innovation/student-case-studies.jpg",
+              "alt": "Student Case Studies"
+            },
+            "bulletPoints": [
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "The 'Hive' Architecture",
+                "text": "A space designed to mimic nature (Hexagonal structures) to stimulate 'Naturalistic Thinking'."
+              },
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "The Curriculum: Nature as Mentor",
+                "text": "Moving from 'Nature Walks' to 'Scientific Observation' (Sound Maps, Texture Hunts)."
+              },
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "Student Case Studies",
+                "text": "The Seed Bank Project and 'Regenerative Design' prototypes (e.g., Gecko Tape, Kingfisher Bullet Train)."
+              }
             ],
-            "callout": "At the heart: a research centre and a prepared environment that make innovation inevitable."
+            "footerText": "Why This Matters for Your Child: Because we measure what we do, we can personalize. We don't guess at your child's development — we track it with research-grade precision."
           }
         },
         {
           "type": "highStakes",
           "props": {
-            "eyebrow": "CUBE SAT",
-            "title": "High-Stakes\nEngineering &\nResilience",
-            "image": "/innovation/innov_drone.png",
-            "items": [
-              { "title": "The \u2018Hard\u2019 Architecture", "text": "Structured constraints that push real engineering outcomes." },
-              { "title": "The Continuum Matters on Mars", "text": "Long-horizon thinking\u2014where errors are expensive." },
-              { "title": "Student Case Studies", "text": "From classroom prototypes to mission-grade learning." }
+            "title": "High-Stakes Engineering & Resilience",
+            "subheading": "DRONE LAB",
+            "droneImage": "/innovation/drone.png",
+            "featureSections": [
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "The 'Hive' Architecture",
+                "text": "A space designed to mimic nature (Hexagonal structures) to stimulate 'Naturalistic Thinking'."
+              },
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "The Curriculum: Nature as Mentor",
+                "text": "Moving from 'Nature Walks' to 'Scientific Observation' (Sound Maps, Texture Hunts)."
+              },
+              {
+                "icon": "/icon/bulb.svg",
+                "title": "Student Case Studies",
+                "text": "The Seed Bank Project and 'Regenerative Design' prototypes (e.g., Gecko Tape, Kingfisher Bullet Train)."
+              }
             ]
           }
         },
@@ -791,18 +894,18 @@
             "eyebrow": "CLASSROOM PROJECTS",
             "title": "From Classroom Project to\nCommercial Entity",
             "images": [
-              "/innovation/innov_gallery_01.jpg",
-              "/innovation/innov_gallery_02.jpg",
-              "/innovation/innov_gallery_03.jpg",
-              "/innovation/innov_gallery_04.jpg",
-              "/innovation/innov_gallery_05.jpg",
-              "/innovation/innov_gallery_06.jpg",
-              "/innovation/innov_gallery_07.jpg",
-              "/innovation/innov_gallery_08.jpg",
-              "/innovation/innov_gallery_09.jpg",
-              "/innovation/innov_gallery_10.jpg",
-              "/innovation/innov_gallery_11.jpg",
-              "/innovation/innov_gallery_12.jpg"
+              "/innovation/classroom-1.jpg",
+              "/innovation/classroom-2.jpg",
+              "/innovation/classroom-3.jpg",
+              "/innovation/classroom-4.jpg",
+              "/innovation/classroom-5.jpg",
+              "/innovation/classroom-6.jpg",
+              "/innovation/classroom-7.jpg",
+              "/innovation/classroom-8.jpg",
+              "/innovation/classroom-9.jpg",
+              "/innovation/classroom-10.jpg",
+              "/innovation/classroom-11.jpg",
+              "/innovation/classroom-12.jpg"
             ]
           }
         },
@@ -812,7 +915,7 @@
             "title": "Experience Learning\nthe Blue Blocks Way.",
             "text": "Seats are filled on a first-come basis.",
             "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-            "image": "/innovation/innov_cta_drone.png"
+            "image": "/innovation/drone.png"
           }
         },
         {
