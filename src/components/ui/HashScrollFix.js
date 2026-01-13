@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const FLAG_KEY = "bb_hash_click";
 
 function getHeaderHeight() {
-  const header = document.getElementById("site-header") || document.querySelector("header");
+  const header =
+    document.getElementById("site-header") || document.querySelector("header");
   if (!header) return 0;
   const rect = header.getBoundingClientRect();
   return Math.ceil(rect.height);
@@ -28,14 +29,15 @@ function scrollToHashTarget(hash, extraGap = 12) {
 
 export default function HashScrollFix({ extraGap = 12 }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
+  // mark when user clicks an anchor link anywhere
   useEffect(() => {
     const onClick = (e) => {
       const a = e.target?.closest?.("a");
       if (!a) return;
 
       const href = a.getAttribute("href") || "";
+      // handle "/contact#careers" OR "#careers"
       if (href.includes("#")) {
         sessionStorage.setItem(FLAG_KEY, "1");
       }
@@ -45,6 +47,7 @@ export default function HashScrollFix({ extraGap = 12 }) {
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
+  // when route changes, adjust scroll ONLY if it was a hash-click navigation
   useEffect(() => {
     const wasHashClick = sessionStorage.getItem(FLAG_KEY) === "1";
     if (!wasHashClick) return;
@@ -54,13 +57,15 @@ export default function HashScrollFix({ extraGap = 12 }) {
     const hash = window.location.hash;
     if (!hash) return;
 
+    // wait for page + sections to render
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         scrollToHashTarget(hash, extraGap);
       });
     });
-  }, [pathname, searchParams, extraGap]);
+  }, [pathname, extraGap]);
 
+  // when hash changes on same page (#careers), also apply offset
   useEffect(() => {
     const onHashChange = () => {
       const wasHashClick = sessionStorage.getItem(FLAG_KEY) === "1";

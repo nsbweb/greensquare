@@ -24,9 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-slate-900">
-        <HashScrollFix extraGap={0} />
-        <NavigationLoader minMs={450} />
         <HeaderShell />
+
+        {/* Global utilities */}
+        <NavigationLoader minMs={450} />
+        <HashScrollFix extraGap={12} />
+
         <main>{children}</main>
         <Footer />
       </body>
