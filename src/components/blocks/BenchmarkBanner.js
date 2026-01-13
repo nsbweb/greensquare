@@ -46,7 +46,7 @@ export default function BenchmarkBanner({
             {/* Desktop: wrap/center */}
             <div className="hidden sm:flex flex-wrap items-center justify-center gap-10 opacity-60">
               {logos.map((l, idx) => (
-                <Logo key={l.src || idx} {...l} altFallback={logoAltFallback} />
+                <Logo key={`${l.src || "logo"}-${idx}`} {...l} altFallback={logoAltFallback} />
               ))}
             </div>
 
@@ -54,7 +54,7 @@ export default function BenchmarkBanner({
             <div className="sm:hidden -mx-4 px-4 overflow-x-auto">
               <div className="flex items-center gap-10 min-w-max opacity-60">
                 {logos.map((l, idx) => (
-                  <Logo key={l.src || idx} {...l} altFallback={logoAltFallback} />
+                  <Logo key={`${l.src || "logo"}-${idx}`} {...l} altFallback={logoAltFallback} />
                 ))}
               </div>
             </div>

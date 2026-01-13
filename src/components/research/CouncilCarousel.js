@@ -67,14 +67,7 @@ export default function CouncilCarousel({
                   style={{ width: cardW }}
                   className="shrink-0"
                 >
-                  <div
-                    className="
-                      rounded-[22px] bg-white
-                      border border-[#E1E9EE]
-                      hover:border-[#C97B4E]
-                      focus-within:border-[#C97B4E]
-                      transition
-                    "
+                  <div className="rounded-[22px] bg-white border border-[#E1E9EE] hover:border-[#C97B4E] focus-within:border-[#C97B4E] transition"
                   >
                     <div className="p-5">
                       <div className="relative h-[335px] w-full overflow-hidden rounded-[18px] bg-[#EAF6FF]">

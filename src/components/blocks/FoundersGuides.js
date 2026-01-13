@@ -1,7 +1,7 @@
 export default function FoundersGuides({
-  pill = "OUR FOUNDERS",
-  title = "GUIDES, NOT JUST TEACHERS",
-  description = "We do not view teaching as instruction, but as a scientific discipline. Our faculty—comprising PhDs, Engineers, and Psychologists—are AMI-trained \"Prepared Adults.\" Their expertise lies not in molding the child, but in the rigorous art of observation. They possess the discipline to step back so your child can step forward.",
+  pill,
+  title,
+  description,
   items = [],
   bgClass = "bg-[#F3E3CF]", // light beige like screenshot
 }) {
