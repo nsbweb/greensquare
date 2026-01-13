@@ -7,6 +7,11 @@ export default function InnovationHabitSplit({
   image,
   eyebrow,
   title,
+  description,
+  descriptionClassName,
+  bg = "#FFFFFF",
+  subdescription,
+  className,
   bullets = [],
   images = [],
 }) {
@@ -14,7 +19,7 @@ export default function InnovationHabitSplit({
   const total = safeItems.length;
 
   return (
-    <section className="bg-[#FFFFFF] relative">
+    <section className={`bg-${bg} relative`}>
       {/* Background cut-out effect */}
       <div className="absolute inset-0 bg-[#F7E7D5] -z-10">
         <div className="h-full w-full bg-[#F7E7D5] before:content-[''] before:absolute before:left-0 before:top-0 before:w-[50%] before:h-full before:bg-[#F7E7D5] before:clip-path-polygon-[0_0%,0_100%,100%_100%]"></div>
@@ -75,6 +80,18 @@ export default function InnovationHabitSplit({
               </h2>
             ) : null}
 
+            {description ? (
+              <p className={`mt-4 sm:text-[1.2rem] ${descriptionClassName}`}>
+                {description}
+              </p>
+            ) : null}
+
+            {subdescription ? (
+              <p className="mt-6 sm:text-[1.2rem] text-[#414141]">
+                {subdescription}
+              </p>
+            ) : null}
+
             <div className="mt-5 space-y-6">
               {bullets.map((b, idx) => (
                 <div key={idx} className="flex gap-3 items-center">
@@ -87,7 +104,7 @@ export default function InnovationHabitSplit({
                       className="object-contain"
                     />
                   </span>
-                  <div>
+                  <div className={`${className}`}>
                     <div className="text-[1.5rem] text-[#1B1B1B]">
                       {b.title}
                     </div>

@@ -40,6 +40,8 @@ export default function CardsGridSection({
   eyebrow,
   title,
   description,
+  subdescription,
+  subtitle,
   headerAlign = "center", // "center" | "left"
   eyebrowBg = "#E7E8FF",
   eyebrowText = "#2C2F8F",
@@ -96,6 +98,18 @@ export default function CardsGridSection({
             {description ? (
               <p className={`mx-auto ${descriptionClassName}`}>
                 {description}
+              </p>
+            ) : null}
+            
+            {subdescription ? (
+              <p className={`mx-auto ${descriptionClassName}`}>
+                {subdescription}
+              </p>
+            ) : null}
+
+            {subtitle ? (
+              <p className={`mx-auto font-semibold ${descriptionClassName}`}>
+                {subtitle}
               </p>
             ) : null}
           </div>

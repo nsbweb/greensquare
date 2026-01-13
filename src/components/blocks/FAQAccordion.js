@@ -1,48 +1,54 @@
-"use client";
-
-import { useState } from "react";
 import Container from "@/components/layout/Container";
+import Accordion from "@/components/ui/Accordion";
 
-export default function FAQAccordion({ title, subtitle, items = [] }) {
-  const [openIndex, setOpenIndex] = useState(0);
+export default function FAQAccordion({
+  // content
+  title,
+  subtitle,
+  items = [],
 
+  // JSON-driven UI controls
+  bg = "#F3E3CF",
+  defaultOpenIndex = 0,
+  allowToggleAllClosed = true,
+
+  // layout controls
+  panelMaxWidth = "max-w-4xl",
+  containerClassName = "py-14 sm:py-16",
+
+  // typography controls (optional)
+  titleClassName = "text-2xl sm:text-4xl font-medium text-slate-900",
+  subtitleClassName = "mt-3 text-xs sm:text-sm text-slate-700/70 max-w-2xl mx-auto",
+
+  // accordion style controls (optional)
+  rowGapClassName = "space-y-3",
+  openItemClassName = "bg-white shadow-sm",
+  closedItemClassName = "bg-transparent",
+  itemClassName = "",
+  buttonClassName = "",
+  contentClassName = "",
+  iconClassName = "",
+}) {
   return (
-    <section className="bg-[#f5efe6]">
-      <Container className="py-14">
+    <section style={{ backgroundColor: bg }}>
+      <Container className={containerClassName}>
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold">{title}</h2>
-          {subtitle ? (
-            <p className="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">
-              {subtitle}
-            </p>
-          ) : null}
+          {title ? <h2 className={titleClassName}>{title}</h2> : null}
+          {subtitle ? <p className={subtitleClassName}>{subtitle}</p> : null}
         </div>
 
-        <div className="mt-8 mx-auto space-y-3">
-          {items.map((it, idx) => {
-            const isOpen = idx === openIndex;
-            return (
-              <div
-                key={it.q}
-                className="rounded-2xl bg-white/70 border border-black/5 overflow-hidden"
-              >
-                <button
-                  type="button"
-                  className="w-full px-5 py-4 flex items-center justify-between gap-4 text-left"
-                  onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                >
-                  <span className="font-medium">{it.q}</span>
-                  <span className="text-xl leading-none">{isOpen ? "×" : "+"}</span>
-                </button>
-
-                {isOpen ? (
-                  <div className="px-5 pb-5 text-sm text-slate-700 leading-relaxed">
-                    {it.a}
-                  </div>
-                ) : null}
-              </div>
-            );
-          })}
+        <div className={`mt-10 mx-auto w-full ${panelMaxWidth}`}>
+          <Accordion
+            items={items}
+            defaultOpenIndex={defaultOpenIndex}
+            allowToggleAllClosed={allowToggleAllClosed}
+            openItemClassName={openItemClassName}
+            closedItemClassName={closedItemClassName}
+            itemClassName={itemClassName}
+            buttonClassName={buttonClassName}
+            contentClassName={contentClassName}
+            iconClassName={iconClassName}
+          />
         </div>
       </Container>
     </section>

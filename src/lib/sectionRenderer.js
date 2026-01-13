@@ -47,6 +47,13 @@ import AcademicsIntro from "@/components/blocks/AcademicsIntro";
 import EducationAidToLife from "@/components/blocks/EducationAidToLife";
 import ProgramsGrid from "@/components/blocks/ProgramsGrid";
 
+import OurStory from "@/components/blocks/OurStory";
+import FoundersGuides from "@/components/blocks/FoundersGuides";
+import VerifiedAchievements from "@/components/blocks/VerifiedAchievements";
+import SeekVsDeliver from "@/components/blocks/SeekVsDeliver";
+import BenchmarkBanner from "@/components/blocks/BenchmarkBanner";
+import HexaInfrastructure from "@/components/blocks/HexaInfrastructure";
+
 export default function SectionRenderer({ sections = [] }) {
   return (
     <>
@@ -56,6 +63,20 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          //ABOUT US
+          case "ourStory":
+            return <OurStory key={key} {...props} />;
+          case "foundersGuides":
+            return <FoundersGuides key={key} {...props} />;
+          case "verifiedAchievements":
+            return <VerifiedAchievements key={key} {...props} />;
+          case "seekVsDeliver":
+            return <SeekVsDeliver key={key} {...props} />;
+          case "benchmarkBanner":
+            return <BenchmarkBanner key={key} {...props} />;
+          case "hexaInfrastructure":
+            return <HexaInfrastructure key={key} {...props} />;
+
           // ACADEMICS
           case "academicsIntro":
             return <AcademicsIntro key={key} {...props} />;

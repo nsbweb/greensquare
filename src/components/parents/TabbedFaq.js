@@ -2,24 +2,82 @@
 
 import { useMemo, useState } from "react";
 import Container from "@/components/layout/Container";
-import { AnimatePresence, motion } from "framer-motion";
+import Accordion from "@/components/ui/Accordion";
 
-export default function TabbedFaq({ title, subtitle, tabs = [] }) {
+/**
+ * Supports both formats:
+ *
+ * OLD:
+ * tabs: [{ label: "Tab", items: [{ q, a }, ...] }]
+ *
+ * NEW (with headings inside a tab):
+ * tabs: [{
+ *   label: "Tab",
+ *   sections: [
+ *     { heading: "Admission Process", items: [{ q, a }, ...] },
+ *     { heading: "About Us", items: [{ q, a }, ...] }
+ *   ]
+ * }]
+ */
+export default function TabbedFaq({
+  bg = "#F3E3CF",
+  title,
+  subtitle,
+  tabs = [],
+
+  // optional styling controls
+  tabActiveBg = "bg-[#4281E9] text-white",
+  accordionOpenBg = "bg-white",
+  containerClassName = "py-14 sm:py-16",
+  tabsWrapClassName = "mt-10 flex flex-wrap items-center justify-center gap-3",
+
+  // section heading style controls
+  sectionHeadingClassName = "text-lg sm:text-xl font-medium text-slate-900",
+  sectionWrapClassName = "mt-10",
+  sectionDividerClassName = "mt-10 border-t border-slate-900/10 pt-10",
+}) {
   const [active, setActive] = useState(0);
   const current = useMemo(() => tabs[active] || {}, [tabs, active]);
-  const [openIndex, setOpenIndex] = useState(0); // first open by default
 
-  // important: reset open accordion when tab changes
-  const onTabChange = (i) => {
-    setActive(i);
-    setOpenIndex(0);
-  };
+  const onTabChange = (i) => setActive(i);
+
+  // Normalize data so rendering is consistent:
+  // If sections exist -> use them
+  // else fallback to a single implicit section using current.items
+  const sections = useMemo(() => {
+    if (Array.isArray(current.sections) && current.sections.length) {
+      return current.sections
+        .filter(Boolean)
+        .map((s) => ({
+          heading: s.heading || "",
+          items: Array.isArray(s.items) ? s.items.filter(Boolean) : [],
+        }))
+        .filter((s) => s.heading || (s.items && s.items.length));
+    }
+
+    const fallbackItems = Array.isArray(current.items)
+      ? current.items.filter(Boolean)
+      : [];
+
+    // Only return a fallback section if items exist
+    if (fallbackItems.length) {
+      return [{ heading: "", items: fallbackItems }];
+    }
+
+    return [];
+  }, [current.sections, current.items]);
 
   return (
-    <section className="bg-[#F3E3CF]">
-      <Container className="py-14 sm:py-16">
+    <section style={{ backgroundColor: bg }}>
+      <Container className={containerClassName}>
+        {/* Title */}
         <div className="text-center">
-          <h2 className="text-2xl sm:text-4xl font-medium text-slate-900">{title}</h2>
+          {title ? (
+            <h2 className="text-2xl sm:text-4xl font-medium text-slate-900">
+              {title}
+            </h2>
+          ) : null}
+
           {subtitle ? (
             <p className="mt-3 text-xs sm:text-sm text-slate-700/80 max-w-2xl mx-auto">
               {subtitle}
@@ -28,70 +86,61 @@ export default function TabbedFaq({ title, subtitle, tabs = [] }) {
         </div>
 
         {/* Tabs */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {tabs.map((t, i) => (
-            <button
-              key={t.label}
-              onClick={() => onTabChange(i)}
-              className={`h-9 px-4 rounded-sm text-xs font-medium transition min-w-[220] ${
-                i === active
-                  ? "bg-[#4281E9] text-white"
-                  : "bg-white/60 text-slate-700 hover:bg-white"
-              }`}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
+        {tabs?.length ? (
+          <div className={tabsWrapClassName}>
+            {tabs.map((t, i) => (
+              <button
+                key={t.label || i}
+                type="button"
+                onClick={() => onTabChange(i)}
+                className={`h-9 px-4 rounded-sm text-xs font-medium transition min-w-[220px] ${
+                  i === active
+                    ? `${tabActiveBg}` 
+                    : "bg-white/60 text-slate-700 hover:bg-white"
+                }`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
 
-        {/* Accordion */}
-        <div className="mt-8 space-y-3">
-          {(current.items || []).map((item, index) => (
-            <AccordionItem
-              key={index}
-              q={item.q}
-              a={item.a}
-              open={openIndex === index}
-              onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-            />
-          ))}
+        {/* Sections + Accordions */}
+        <div className="mt-8">
+          {sections.length ? (
+            sections.map((sec, idx) => {
+              const wrapClass =
+                idx === 0 ? sectionWrapClassName : sectionDividerClassName;
+
+              return (
+                <div key={`${sec.heading || "section"}-${idx}`} className={wrapClass}>
+                  {sec.heading ? (
+                    <h3 className={sectionHeadingClassName}>{sec.heading}</h3>
+                  ) : null}
+
+                  <div className={sec.heading ? "mt-4" : ""}>
+                    <Accordion
+                      items={sec.items || []}
+                      defaultOpenIndex={0}
+                      allowToggleAllClosed={true}
+                      openItemClassName={`${accordionOpenBg} shadow-sm`} 
+                      closedItemClassName="bg-transparent"
+                      itemClassName=""
+                      buttonClassName=""
+                      contentClassName=""
+                      iconClassName=""
+                    />
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div className="text-sm text-slate-700/70 text-center py-10">
+              No FAQs available for this tab.
+            </div>
+          )}
         </div>
       </Container>
     </section>
-  );
-}
-
-function AccordionItem({ q, a, open, onToggle }) {
-  return (
-    <div
-      className={`rounded-2xl transition-colors ${
-        open ? "bg-white shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-4 text-left"
-      >
-        <span className="text-sm font-medium text-slate-900">{q}</span>
-        <span className="text-xl text-slate-500">{open ? "×" : "+"}</span>
-      </button>
-
-      <AnimatePresence initial={false}>
-        {open ? (
-          <motion.div
-            key="content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="overflow-hidden"
-          >
-            <div className="px-5 sm:px-7 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {a}
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-    </div>
   );
 }

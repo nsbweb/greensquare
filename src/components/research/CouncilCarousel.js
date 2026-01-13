@@ -4,15 +4,39 @@ import Image from "next/image";
 import Container from "@/components/layout/Container";
 import CarouselTrack from "@/components/ui/carousel/CarouselTrack";
 
-export default function CouncilCarousel({ title, items = [] }) {
+export default function CouncilCarousel({ 
+  bg="bg-[#F3E3CF]",
+  eyebrow, 
+  eyebrowBg = "#E7E8FF",  
+  eyebrowText = "#2C2F8F", 
+  title, 
+  description, 
+  descriptionClassName = "mt-4 max-w-2xl text-[0.875rem] sm:text-[0.9375rem] leading-6 text-slate-500",
+  items = [] 
+}) {
   const total = items?.length || 0;
 
   return (
-    <section className="bg-[#F3E3CF]">
+    <section className={`${bg}`}>
       <Container className="py-16 sm:py-20">
+        {eyebrow ? (
+          <div
+            className="inline-flex rounded-full px-4 py-1 text-[0.625rem] font-semibold tracking-[0.18em] uppercase"
+            style={{ backgroundColor: eyebrowBg, color: eyebrowText }}
+          >
+            {eyebrow}
+          </div>
+        ) : null}
+
         <h2 className="text-[2.25rem] sm:text-[3rem] leading-[1.08] font-medium text-[#131313]">
           {title}
         </h2>
+
+        {description ? (
+          <p className={`${descriptionClassName}`}>
+            {description}
+          </p>
+        ) : null}
 
         <div className="mt-10">
           <CarouselTrack

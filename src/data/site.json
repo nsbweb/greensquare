@@ -184,6 +184,9 @@
         {
           "type": "faq",
           "props": {
+            "bg": "#F3E3CF",
+            "defaultOpenIndex": 0,
+            "panelMaxWidth": "max-w-4xl",
             "title": "Frequently asked questions",
             "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
             "items": [
@@ -245,24 +248,28 @@
         {
           "type": "innovationHabitSplit",
           "props": {
+            "bg": "#FFFFFF",
+            "className": "inline",
             "image": "#",
-            "eyebrow": "The Prepared Environment",
-            "title": "A Habit for ‘Permission-less’ Creation",
+            "eyebrow": "",
+            "title": "WHO WE ARE",
+            "description":"Every child carries an inner spark. Our work is to protect it, observe it, and help it flourish. From the quiet concentration of our toddler environments to the bustling collaboration of our adolescent engineering labs, Blue Blocks is where children find their voice, their passion, and their purpose.",
+            "subdescription":"We are not a factory for grades. We are a greenhouse for character — where independence, resilience, curiosity, and empathy take root naturally.",
             "bullets": [
               {
                 "icon":"/icon/certificate.svg",
-                "title": "The ‘Prepared Agency’",
-                "text": "Tools and materials live in the environment—ready to be used without asking."
+                "title": "Authenticity: ",
+                "text": "AMI-standard Montessori practice, without dilution or compromise."
               },
               {
                 "icon":"/icon/rounding.svg",
-                "title": "Systems Thinking—Everyday",
-                "text": "Children connect cause-effect, constraints, and trade-offs across projects."
+                "title": "Continuum: ",
+                "text": "One of the few institutions in India offering a seamless 0-18 developmental journey."
               },
               {
                 "icon":"/icon/magnific-icon.svg",
-                "title": "The ‘Failure Club’",
-                "text": "A culture where iteration is celebrated, not punished."
+                "title": "Evidence: ",
+                "text": "Every claim we make is backed by documented outcomes. "
               }
             ],
             "images": [
@@ -290,31 +297,62 @@
           }
         },
         {
+          "type": "ourStory",
+          "props": {
+            "eyebrow": "OUR STORY",
+            "title": "A Journey of Observation and Possibility (2009–Present)",
+            "paragraphs": [
+              "Blue Blocks began with a single commitment: understand the child before teaching the child.",
+              "For 15 years, we have followed children with care, respect, and scientific precision. What started as one classroom has grown into one of India's few complete 0–18 Montessori environments.",
+              "As the children grew, our vision expanded with them. Their questions became prototypes. Their explorations became projects. Their curiosity became innovation."
+            ],
+            "cta": { "label": "Explore", "href": "/about" },
+            "timeline": [
+              {
+                "year": "2009",
+                "colorClass": "text-orange-300",
+                "text": "Founded in Hyderabad with first Montessori environment"
+              },
+              {
+                "year": "2012",
+                "colorClass": "text-sky-300",
+                "text": "Expanded to full 3–12 program"
+              },
+              {
+                "year": "2015",
+                "colorClass": "text-yellow-300",
+                "text": "Established adolescent program (12–18)"
+              }
+            ]
+          }
+        },
+        {
           "type": "educationAidToLife",
           "props": {
             "bg": "#F3E3CF",
-            "eyebrow": "PHILOSOPHY",
-            "title": "EDUCATION AS AN AID\nTO LIFE",
+            "eyebrow": "",
+            "title": "THE BLUE BLOCKS ADVANTAGE",
             "paragraphs": [
-              "At Blue Blocks, we do not group children by age strictly for convenience; we group them by Psychological Phase. Dr. Maria Montessori observed that human beings go through distinct \"Planes of Development,\" each requiring a different environment and a different approach.",
-              "We have designed our campus to mirror these natural stages. It is not a school; it is a Living Ecosystem that evolves as your child evolves."
+              "DEVELOPMENTAL INNOVATION PEDAGOGY (DIP)",
+              "Our Core Intellectual Framework\nOver eight years of systematic observation, Blue Blocks has developed a proprietary pedagogical framework: Developmental Innovation Pedagogy (DIP). ",
+              "The Core Insight: Innovation is not a single skill taught at age 16. It is the integration of multiple thinking capacities that develop across childhood. "
             ],
-            "pyramidImage":"/academics/pyramid.png",
+            "pyramidImage":"/about-us/pyramid.png",
             "pyramid": {
               "top": {
                 "age": "0-6",
-                "label": "The Absorbent\nMind",
-                "sublabel": "(Construction\nof the Self)"
+                "label": "First Plane",
+                "sublabel": ""
               },
               "middle": {
                 "age": "6-12",
-                "label": "The Reasoning Mind",
-                "sublabel": "(Construction of the\nIntellect)"
+                "label": "Second Plane",
+                "sublabel": ""
               },
               "bottom": {
                 "age": "12-18",
-                "label": "The Social Self",
-                "sublabel": "(Construction of Society)"
+                "label": "Third  Plane",
+                "sublabel": ""
               }
             }
           }
@@ -323,13 +361,15 @@
           "type": "AreasofDevelopment",
           "props": {
             "bg": "#FFFFFF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
+            "eyebrow": "",
+            "title": "WHO WE ARE",
+            "description": "Raising Conscious, Capable Citizens for 2050",
+            "subdescription":"The world of 2050 will need more than intelligence. It will need clarity, compassion, and a deep moral compass. Most schools ask: 'How do we make children smarter?'",
+            "subtitle":"We ask: 'How do we help children become fully human?'",
             "headerAlign": "center",
 
             "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
+            "maxWidth": "max-w-6xl place-content-center",
             "gap": "gap-6",
 
             "cardBg": "#273C75",
@@ -348,19 +388,47 @@
           }
         },
         {
+        "type": "foundersGuides",
+        "props": {
+          "pill": "OUR FOUNDERS",
+          "title": "GUIDES, NOT JUST TEACHERS",
+          "description": "We do not view teaching as instruction, but as a scientific discipline...",
+          "items": [
+            {
+              "name": "Pavan Goyal",
+              "roleLabel": "Founder, Lead - Innovation Program",
+              "roleColor": "#E08B64",
+              "image": "/team/pavan.png",
+              "imageAlt": "Pavan Goyal",
+              "bio": "AMI, Netherlands certified for 0–3, 3–6, 6–12. Currently pursuing 12–15 Erd Kinder training.",
+              "readMoreHref": "/founders/pavan-goyal"
+            },
+            {
+              "name": "Munira Hussain",
+              "roleLabel": "Co-founder & Director",
+              "roleColor": "#57B3CE",
+              "image": "/team/munira.png",
+              "imageAlt": "Munira Hussain",
+              "bio": "Graduate in Psychology, AMI, Netherlands certified for 3–6 and 6–12.",
+              "readMoreHref": "/founders/munira-hussain"
+            }
+          ]
+        }
+      },
+        {
           "type": "councilCarousel",
           "props": {
-            "title": "The Council",
+            "bg":"bg-[#FFFFFF]",
+            "eyebrow": "OUR Teams",
+            "title": "The Teaching Team",
+            "description": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
             "items": [
-              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
               { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
               { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
               { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" },
-              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
               { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
               { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
               { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" },
-              { "name": "Pavel Doval", "role": "", "position": "Founder, Lead – Innovation Program", "image": "/team/pavel.jpg", "tag": "Founder" },
               { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
               { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
               { "name": "Ms Krithinavee", "role": "", "position": "Founder, Lead – Innovation & Partnerships", "image": "/team/krithi.jpg", "tag": "Lead" }
@@ -371,43 +439,29 @@
           "type": "innovationHabitSplit",
           "props": {
             "image": "#",
-            "eyebrow": "The Prepared Environment",
-            "title": "A Habit for ‘Permission-less’ Creation",
-            "bullets": [
-              {
-                "icon":"/icon/certificate.svg",
-                "title": "The ‘Prepared Agency’",
-                "text": "Tools and materials live in the environment—ready to be used without asking."
-              },
-              {
-                "icon":"/icon/rounding.svg",
-                "title": "Systems Thinking—Everyday",
-                "text": "Children connect cause-effect, constraints, and trade-offs across projects."
-              },
-              {
-                "icon":"/icon/magnific-icon.svg",
-                "title": "The ‘Failure Club’",
-                "text": "A culture where iteration is celebrated, not punished."
-              }
-            ],
+            "eyebrow": "",
+            "title": "THE SCIENCE BEHIND THE SUCCESS",
+            "description":"We don't guess. We observe.",
+            "subdescription":"Every child is unique, but their development follows universal laws. At Blue Blocks, we are not just a school; we are a Pedagogical Center of Excellence. Led by Pavan Goyal, our research team supports the classroom by documenting your child's milestones to ensure their environment is perfectly tailored to their needs—not the other way around.",
+            "descriptionClassName":"text-[#717171]",
             "images": [
               {
-                "icon": "/innovation/slider-image-1.jpg",
+                "icon": "/about-us/slider-image-1.png",
                 "title": "",
                 "text": ""
               },
               {
-                "icon": "/innovation/slider-image-2.jpg",
+                "icon": "/about-us/slider-image-2.png",
                 "title": "",
                 "text": ""
               },
               {
-                "icon": "/innovation/slider-image-3.jpg",
+                "icon": "/about-us/slider-image-3.png",
                 "title": "",
                 "text": ""
               },
               {
-                "icon": "/innovation/slider-image-4.jpg",
+                "icon": "/about-us/slider-image-4.png",
                 "title": "",
                 "text": ""
               }
@@ -418,19 +472,21 @@
           "type": "AreasofDevelopment",
           "props": {
             "bg": "#FFFFFF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
+            "eyebrow": "",
+            "title": "The 3 Pillars (The Approach)",
+            "description": "",
             "headerAlign": "center",
 
-            "cols": { "base": 1, "sm": 2, "lg": 3 },
-            "maxWidth": "max-w-6xl",
+            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "maxWidth": "max-w-6xl place-content-center",
             "gap": "gap-6",
 
-            "cardBg": "#273C75",
+            "cardBg": "#F5E9DA",
             "cardRadius": "rounded-[18px]",
             "cardPadding": "px-6 py-7",
             "cardMinHeight": 220,
+            "cardTitleClassName":"mt-5 text-[1.05rem] sm:text-[1.1rem] font-medium leading-[1.18] text-[#414141]",
+            "cardTextClassName":"mt-4 text-[0.8125rem] leading-6 text-[#414141]",
 
             "iconSize": "60",
             "iconWrapClassName": "h-10 w-10",
@@ -456,6 +512,168 @@
             "customTopSpacing":"sm:pt-00",
             "align": "left",
             "theme": "dark"
+          }
+        },
+        {
+          "type": "verifiedAchievements",
+          "props": {
+            "title": "These are not aspirations. They are verified achievements",
+            "description": "At Blue Blocks, we do not measure success by report cards alone. We measure it by the real-world impact our students create before they even graduate. Our \"Unscripted Learners\" are not just preparing for the future; they are actively inventing it.",
+            "items": [
+              {
+                "image": "/achievements/patents.jpg",
+                "imageAlt": "Patents",
+                "title": "Patents by 11-Year-Olds.",
+                "text": "In a traditional school, students replicate science experiments. In our Innovation Lab, they invent new technology.",
+                "href": "/research/patents",
+                "bg": "#F7E28D"
+              },
+              {
+                "image": "/achievements/sbb1.jpg",
+                "imageAlt": "Mission SBB-1",
+                "title": "Mission SBB-1 (Authorized by ISRO/IN-SPACE).",
+                "text": "In a traditional school, students replicate science experiments. In our Innovation Lab, they invent new technology.",
+                "href": "/research/sbb-1",
+                "bg": "#78C4E5"
+              },
+              {
+                "image": "/achievements/world-stage.jpg",
+                "imageAlt": "Recognized on the world stage",
+                "title": "Recognized on the World Stage.",
+                "text": "Our pedagogy has been invited to the world’s most prestigious forums.",
+                "href": "/newsroom/recognitions",
+                "bg": "#F6A894"
+              }
+            ]
+          }
+        },
+        {
+          "type": "seekVsDeliver",
+          "props": {
+            "title": "If you seek... vs We deliver...",
+            "leftHeader": "If You Seek",
+            "rightHeader": "We Deliver",
+            "rows": [
+              {
+                "left": "Authentic Montessori",
+                "right": "Pure AMI Standards\n(Led by 0–18 Diploma Expert)",
+                "bg": "#EFE7DD"
+              },
+              {
+                "left": "Real Outcomes",
+                "right": "Student Patents\n& ISRO-Authorized Missions",
+                "bg": "#F2DCD6"
+              },
+              {
+                "left": "Engineering",
+                "right": "Innovation Labs\n(Partnered with IIIT Hyderabad)",
+                "bg": "#E3EBDD"
+              },
+              {
+                "left": "Data-Backed Care",
+                "right": "The Research Institute\n(15 Years of Longitudinal Data)",
+                "bg": "#DCE9EA"
+              },
+              {
+                "left": "Stability",
+                "right": "The Continuum\n(One Campus: 0–16 Years)",
+                "bg": "#E7E4E1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "benchmarkBanner",
+          "props": {
+            "bg": "#233B77",
+            "title": "THE GLOBAL BENCHMARK FOR 2050",
+            "text": "What does the future of education look like? The world is looking to Blue Blocks to find out. We are the first institution to simultaneously hold the trust of the US Department of State, the endorsement of the Association Montessori Internationale, and a premiere invitation from the Nobel Peace Center. From publishing open-science data on Zenodo to establishing India’s first K-12 innovation lab with IIT Hyderabad, we are moving beyond “schooling.” We are defining the global standard for the Zero-Shot Learner.",
+            "cta": { "label": "Read More", "href": "/about" },
+            "logos": [
+              { "src": "/logos/nobel-peace-center.png", "alt": "Nobel Peace Center" },
+              { "src": "/logos/unesco.png", "alt": "UNESCO" },
+              { "src": "/logos/ami.png", "alt": "AMI" },
+              { "src": "/logos/us-dept-of-state.png", "alt": "US Department of State" },
+              { "src": "/logos/seal.png", "alt": "Seal" },
+              { "src": "/logos/nobel-peace-center.png", "alt": "Nobel Peace Center" },
+              { "src": "/logos/unesco.png", "alt": "UNESCO" },
+              { "src": "/logos/ami.png", "alt": "AMI" }
+            ]
+          }
+        },
+        {
+          "type": "hexaInfrastructure",
+          "props": {
+            "title": "Infrastructure for Innovation (0–18): Designed for the Developing Mind.",
+            "text": "At Blue Blocks, we believe architecture is not just a container for learning; it is an active participant in it. Our campus is designed as a “Living Laboratory,” where every angle, texture, and transition is engineered to stimulate specific neural pathways.",
+            "items": [
+              {
+                "title": "Octagonal\nClassrooms",
+                "image": "/infra/octagonal-1.jpg",
+                "href": "/infrastructure/octagonal-classrooms",
+                "overlay": "bg-black/20"
+              },
+              {
+                "title": "The Wooden\nStaircase &\nTactile Design",
+                "image": "/infra/wooden-staircase.jpg",
+                "href": "/infrastructure/wooden-staircase",
+                "overlay": "bg-black/20"
+              },
+              {
+                "title": "The Innovation\nInfrastructure\n(0–18)",
+                "image": "/infra/innovation.jpg",
+                "href": "/infrastructure/innovation-infrastructure",
+                "overlay": "bg-black/20"
+              },
+              {
+                "title": "Octagonal\nClassrooms",
+                "image": "/infra/octagonal-2.jpg",
+                "href": "/infrastructure/octagonal-classrooms-2",
+                "overlay": "bg-black/20"
+              },
+              {
+                "title": "Octagonal\nClassrooms",
+                "image": "/infra/octagonal-3.jpg",
+                "href": "/infrastructure/octagonal-classrooms-3",
+                "overlay": "bg-black/20"
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "props": {
+            "bg": "#F3E3CF",
+            "title": "Frequently asked questions",
+            "subtitle": "Decoding the Culture of Blue Blocks.",
+            "defaultOpenIndex": 0,
+            "panelMaxWidth": "",
+            "items": [
+              {
+                "q": "Why is Blue Blocks called a \"Research Institute\" and not just a school?",
+                "a": "A traditional school focuses on delivering a curriculum to a child. A Research Institute focuses on discovering the child. At Blue Blocks, we operate like a scientific lab—observing, documenting, and refining learning over time."
+              },
+              {
+                "q": "Why do you hire PhDs and industry professionals as guides?",
+                "a": "Because Montessori education demands precision, observation, and deep subject knowledge. Our guides bring real-world expertise while remaining faithful to AMI pedagogy."
+              },
+              {
+                "q": "Does 'Stepping Back' mean the teachers don't teach?",
+                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+              },
+              {
+                "q": "How does a Montessori education prepare my child for Board Exams (IGCSE)?",
+                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+              },
+              {
+                "q": "Why are children of different ages grouped together?",
+                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+              },
+              {
+                "q": " What is an 'Unscripted Learner'?",
+                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+              }
+            ]
           }
         }
       ]
@@ -1472,6 +1690,7 @@
         {
           "type": "tabbedFaq",
           "props": {
+            "bg": "#F3E3CF",
             "title": "Frequently asked questions",
             "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
             "tabs": [
@@ -1737,6 +1956,248 @@
             "theme": "dark"
           }
         }
+      ]
+    },
+    "faq":{
+      "sections":[
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "FAQ",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "FAQ" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+        "type": "tabbedFaq",
+        "props": {
+          "bg": "#FFFFFF",
+          "tabActiveBg":"bg-[#F3E3CF] text-black",
+          "accordionOpenBg": "bg-[#F3E3CF]",
+          "title": "Frequently Asked Questions",
+          "tabs": [
+            {
+              "label": "Admission and About Us",
+              "sections": [
+                {
+                  "heading": "Admission Process",
+                  "items": [
+                    {
+                      "q": "Are the admissions done all year round?",
+                      "a": "Yes. You can enquire for the same as soon as your child comes of age to fit any of the programmes we offer."
+                    },
+                    {
+                      "q": "What will the school tour include?",
+                      "a": "Both parents visit the school. Our Parent Coordinator will take the parents through the various spaces in the campus and explain how the Montessori environment supports each child at different stages of development. The tour will be a hands-on experience where parents can see first-hand how the Montessori materials will hone the various senses of the children to help their intellectual and emotional development."
+                    },
+                    {
+                      "q": "What is Admission Workshop?",
+                      "a": "Following the school tour, all visiting parents attend a group session where they are given details of the Montessori way of learning, the philosophy and pedagogy we follow at Blue Blocks and how it caters to the needs of children. Parents are taken through the journey their child will make at Blue Blocks and how it supports academic and overall development."
+                    },
+                    {
+                      "q": "Do you have branches?",
+                      "a": "Yes. Our Gachibowli campus has the Toddler and Primary environments while our Osman Nagar campus has Primary, Elementary (Grade 1 to 6) environments and High School (Grade 7 to 10) – Erdkinder Adolescent Program."
+                    },
+                    {
+                      "q": "Do you provide transport?",
+                      "a": "Yes."
+                    },
+                    {
+                      "q": "Do you provide food for children?",
+                      "a": "No."
+                    },
+                    {
+                      "q": "How do I know the fee structure?",
+                      "a": "Once the admission workshop is completed, the school brochure along with the fee structure is shared with the parents."
+                    }
+                  ]
+                },
+                {
+                  "heading": "About Us",
+                  "items": [
+                    {
+                      "q": "How old is the school?",
+                      "a": "The school was established in 2009."
+                    },
+                    {
+                      "q": "How many campuses do you have?",
+                      "a": "We have two campuses — our primary school campus in Gachibowli caters to Play Group and Nursery, while our complete school campus in Osman Nagar, Tellapur runs Nursery, PP1, PP2 and Grades 1 to 10."
+                    },
+                    {
+                      "q": "Is Blue Blocks recognised?",
+                      "a": "We are recognised by the state government of Telangana."
+                    },
+                    {
+                      "q": "Are you affiliated to any board?",
+                      "a": "We are affiliated to Cambridge International."
+                    },
+                    {
+                      "q": "Are your teachers trained?",
+                      "a": "Yes. All our teachers are trained by the Association Montessori International, Netherlands."
+                    },
+                    {
+                      "q": "What is the student-teacher ratio?",
+                      "a": "In Primary, the teacher-student ratio is 2:20. In Elementary, it is 1:25 with the provision of a trained assistant in both."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Montessori System",
+                  "items": [
+                    {
+                      "q": "Is it all self-learning or do you teach?",
+                      "a": "Montessori teachers act as guides to a child’s independence. They present concepts using specially designed materials, after which the child explores independently through self-correction. Observation helps teachers plan future lessons."
+                    },
+                    {
+                      "q": "Is it true that Montessori is all play and no work?",
+                      "a": "Maria Montessori believed that play is the work of the child. Through curiosity, children explore their environment and work with materials at their own pace."
+                    },
+                    {
+                      "q": "Will the children only learn using materials?",
+                      "a": "Montessori moves the child from concrete to abstract learning. Materials engage all senses and form the foundation for complex abstract work later, including work on paper."
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              "label": "Playgroup, Nursery, PP1, PP2",
+              "sections": [
+                {
+                  "heading": "Playgroup",
+                  "items": [
+                    {
+                      "q": "What age do children join this Play Group?",
+                      "a": "As soon as your child is able to walk — typically around 1 to 1.5 years of age."
+                    },
+                    {
+                      "q": "How long are children in this program?",
+                      "a": "They remain in the Play Group until they are 2.5 years of age."
+                    },
+                    {
+                      "q": "Do you toilet train the child?",
+                      "a": "Yes, we do."
+                    },
+                    {
+                      "q": "Do you offer food to the children?",
+                      "a": "No."
+                    },
+                    {
+                      "q": "Do you have child-friendly infrastructure?",
+                      "a": "Yes. All furniture, materials, cutlery and learning tools are child-sized and designed specifically for children."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Nursery & Pri-primary (PP1, PP2)",
+                  "items": [
+                    {
+                      "q": "What is different from a traditional pre-school?",
+                      "a": "Montessori learning is based on children learning through the five senses, at their own pace, using hands-on materials rather than textbooks."
+                    },
+                    {
+                      "q": "Are Montessori children able to transition to traditional school?",
+                      "a": "Yes. Children can readily join traditional schools in Grade 1 after completing our Primary program."
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              "label": "Grades 1–6 & 7–10",
+              "sections": [
+                {
+                  "heading": "Grades 1 – 6",
+                  "items": [
+                    {
+                      "q": "What are the timings of the school?",
+                      "a": "8.30 am to 3.30 pm."
+                    },
+                    {
+                      "q": "Up to what grade do you offer?",
+                      "a": "Our Elementary program is for Grades 1 to 6 for children aged 6 to 12 years."
+                    },
+                    {
+                      "q": "Can a non-Montessori child join at Grade 1?",
+                      "a": "Yes, subject to observation of the child by the teacher."
+                    },
+                    {
+                      "q": "Do you have exams?",
+                      "a": "We do not have traditional examinations. Progress is tracked through observations and proficiency-based learning. Cambridge checkpoints may be conducted after ten years of age."
+                    }
+                  ]
+                },
+                {
+                  "heading": "Grades 7 – 10",
+                  "items": [
+                    {
+                      "q": "What is Erd Kinder?",
+                      "a": "Erd Kinder is the Montessori adolescent program for ages 12 to 18, based on a farm school concept where children learn academics while managing their own ecosystem."
+                    },
+                    {
+                      "q": "How will Cambridge education fit in here?",
+                      "a": "Children follow the Cambridge curriculum and textbooks while applying learning to real-life responsibilities and daily work."
+                    },
+                    {
+                      "q": "Will it be a residential school?",
+                      "a": "It will be semi-residential."
+                    },
+                    {
+                      "q": "How are admissions processed?",
+                      "a": "Prospective parents register for an Admission Workshop held on Saturdays. All admissions are processed during this workshop."
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              "label": "Innovations",
+              "sections": [
+                {
+                  "heading": "Innovation Program",
+                  "items": [
+                    {
+                      "q": "What age do you start this programme?",
+                      "a": "The program begins at 6 years of age when children move to Grade 1."
+                    },
+                    {
+                      "q": "Will it continue to be part of the curriculum in higher classes?",
+                      "a": "Yes, innovation remains integrated as children move into higher classes."
+                    },
+                    {
+                      "q": "Is it backed by science?",
+                      "a": "Yes. Every experiment and model is supported by scientific concepts and theory."
+                    },
+                    {
+                      "q": "Do you integrate it with subjects?",
+                      "a": "Yes. Innovation activities are closely linked with classroom learning and extend beyond age-level expectations."
+                    },
+                    {
+                      "q": "Do children make models?",
+                      "a": "Yes. Children build models and prototypes for the concepts they learn."
+                    },
+                    {
+                      "q": "Is there a mentor for this work?",
+                      "a": "Yes. Dedicated mentors support innovation and drone programs. Mentors include postgraduates in chemistry and aeronautical engineers from IIT, trained as AMI Elementary Assistants."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+
       ]
     }
   }
