@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 
-export default function PositionsOpen({ eyebrow, heading, intro, jobs = [] }) {
+export default function PositionsOpen({ sectionId, eyebrow, heading, intro, jobs = [] }) {
   return (
-    <section className="bg-white">
+    <section id={sectionId} className="bg-white">
       <Container className="py-14 sm:py-16">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div>

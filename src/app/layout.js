@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderShell from "@/components/layout/HeaderShell";
 import Footer from "@/components/layout/Footer";
+import NavigationLoader from "@/components/ui/NavigationLoader";
+import HashScrollFix from "@/components/ui/HashScrollFix";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +24,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-slate-900">
+        <HashScrollFix extraGap={0} />
+        <NavigationLoader minMs={450} />
         <HeaderShell />
         <main>{children}</main>
         <Footer />
