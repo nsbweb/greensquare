@@ -29,7 +29,6 @@ import PartnersStrip from "@/components/research/PartnersStrip";
 import CouncilCarousel from "@/components/research/CouncilCarousel";
 import EthicsGovernance from "@/components/research/EthicsGovernance";
 
-import InnovationMediaHero from "@/components/innovations/InnovationMediaHero";
 import InnovationAgeCards from "@/components/innovations/InnovationAgeCards";
 import InnovationLogoStrip from "@/components/innovations/InnovationLogoStrip";
 import InnovationHabitSplit from "@/components/innovations/InnovationHabitSplit";
@@ -37,8 +36,6 @@ import MontessoriToMars from "@/components/innovations/MontessoriToMars";
 import BillionYears from "@/components/innovations/BillionYears";
 import HighStakes from "@/components/innovations/HighStakes";
 import InnovationGallery from "@/components/innovations/InnovationGallery";
-import InnovationCtaDrone from "@/components/innovations/InnovationCtaDrone";
-import InnovationContactSplit from "@/components/innovations/InnovationContactSplit";
 import ProgramIntroSplit from "@/components/blocks/ProgramIntroSplit";
 
 import CardsGridSection from "@/components/research/CardsGridSection";
@@ -53,6 +50,7 @@ import VerifiedAchievements from "@/components/blocks/VerifiedAchievements";
 import SeekVsDeliver from "@/components/blocks/SeekVsDeliver";
 import BenchmarkBanner from "@/components/blocks/BenchmarkBanner";
 import HexaInfrastructure from "@/components/blocks/HexaInfrastructure";
+import MontessoriForSuccess from "@/components/blocks/montessoriForSuccessSlider.js";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -63,6 +61,10 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          //About US > Montessori For Success 
+          case "montessoriForSuccess":
+            return <MontessoriForSuccess key={key} {...props} />;
+          
           //ABOUT US
           case "ourStory":
             return <OurStory key={key} {...props} />;

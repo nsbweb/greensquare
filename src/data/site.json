@@ -8,45 +8,93 @@
     ],
     "nav": [
       { "label": "Home", "href": "/" },
-      { "label": "What do we do", "href": "/about-us" },
-      {
-        "label": "Programs",
-        "href": "/academics",
-        "children": [
-          { "label": "Nido & Toddlers", "href": "/programs/nido" },
-          { "label": "Children’s House", "href": "/programs/childrens-house" },
-          { "label": "Elementary", "href": "/programs/elementary" },
-          { "label": "Adolescent", "href": "/programs/adolescent" }
-        ]
-      },
+      { "label": "What do we do"},
+      { "label": "Programs"},
       { "label": "Innovations", "href": "/innovations" },
       { "label": "Careers", "href": "/contact#careers" }
     ]
   },
   "megaMenu": {
+    "whatDoWeDo": {
+      "label": "What do we do",
+      "viewAll": { "label": "What do we do", "href": "/about-us" },
+      "items": [
+        {
+          "id": "about-us",
+          "title": "About Us",
+          "href": "/about-us",
+          "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
+          "image": "/programs/thumb-playgroup.png"
+        },
+        {
+          "id": "montessori",
+          "title": "Montessori",
+          "href": "/about-us/montessori-system",
+          "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
+          "image": "/programs/thumb-nursery.png"
+        },
+        {
+          "id": "campus",
+          "title": "Campus",
+          "href": "",
+          "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
+          "image": "/programs/thumb-primary.png"
+        },
+        {
+          "id": "faq",
+          "title": "FAQs",
+          "href": "/faq",
+          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "image": "/programs/thumb-secondary.png"
+        },
+        {
+          "id": "videos",
+          "title": "Videos",
+          "href": "",
+          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "image": "/programs/thumb-secondary.png"
+        },
+        {
+          "id": "pdfs",
+          "title": "PDFs",
+          "href": "",
+          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "image": "/programs/thumb-secondary.png"
+        }
+      ],
+      "ctaCard": {
+        "title": "Start Your Child’s Montessori Journey",
+        "text": "Explore programs designed for independence, curiosity, and growth.",
+        "button": { "label": "Explore Programs →", "href": "/admissions" }
+      }
+    },
     "programs": {
       "label": "Programs",
       "viewAll": { "label": "Our Programs", "href": "/academics" },
       "items": [
         {
+          "id": "playgroup-school",
           "title": "Playgroup",
           "href": "/programs/playgroup",
           "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
           "image": "/programs/thumb-playgroup.png"
         },
         {
+          "id": "nursery-school",
           "title": "Nursery, PP1, PP2",
           "href": "/programs/nursery-school",
           "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
           "image": "/programs/thumb-nursery.png"
         },
         {
+          "id": "primary-school",
           "title": "Primary School – Class 1 to 6",
           "href": "/programs/primary-school-elementary",
           "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
           "image": "/programs/thumb-primary.png"
         },
         {
+          "id": "secondary-school",
           "title": "Secondary School – Class 7 to 10",
           "href": "/programs/secondary-school",
           "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
@@ -56,7 +104,7 @@
       "ctaCard": {
         "title": "Start Your Child’s Montessori Journey",
         "text": "Explore programs designed for independence, curiosity, and growth.",
-        "button": { "label": "Explore Programs →", "href": "/programs/our-programs" }
+        "button": { "label": "Explore Programs →", "href": "/admissions" }
       }
     }
   },
@@ -70,21 +118,14 @@
     "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
     "quickLinks": [
       { "label": "About Us", "href": "/about-us" },
-      { "label": "Our Team", "href": "/about-us#team" },
       { "label": "The Research Institute", "href": "/research-institute" },
-      { "label": "Careers", "href": "/contact#careers" }
+      { "label": "Careers", "href": "/careers" }
     ],
     "programs": [
-      { "label": "Nido & Toddlers (0–3)", "href": "/academics#nido" },
-      { "label": "Children’s House (3–6)", "href": "/academics#childrens-house" },
-      { "label": "Elementary (6–12)", "href": "/academics#elementary" },
-      { "label": "Adolescent (12–18)", "href": "/academics#adolescent" }
-    ],
-    "intelligence": [
-      { "label": "Research Papers", "href": "/about-us#papers" },
-      { "label": "Student Projects", "href": "/about-us#projects" },
-      { "label": "Books & Publications", "href": "/about-us#publications" },
-      { "label": "Events & Workshops", "href": "/about-us#events" }
+      { "label": "Playgroup", "href": "/programs/playgroup" },
+      { "label": "Nursery, PP1, PP2", "href": "/programs/nursery-school" },
+      { "label": "Primary School – Class 1 to 6", "href": "/programs/primary-school-elementary" },
+      { "label": "Secondary School – Class 7 to 10", "href": "/programs/secondary-school" }
     ],
     "connect": [
       { "label": "Admissions Enquiry", "href": "/contact" },
@@ -368,7 +409,7 @@
             "subtitle":"We ask: 'How do we help children become fully human?'",
             "headerAlign": "center",
 
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "cols": { "base": 1, "sm": 2, "lg": 3 },
             "maxWidth": "max-w-6xl place-content-center",
             "gap": "gap-6",
 
@@ -477,7 +518,7 @@
             "description": "",
             "headerAlign": "center",
 
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "cols": { "base": 1, "sm": 2, "lg": 3 },
             "maxWidth": "max-w-6xl place-content-center",
             "gap": "gap-6",
 
@@ -677,6 +718,234 @@
           }
         }
       ]
+    },
+    "aboutUsDetail":{
+      "montessori-system": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Montessori System",
+              "breadcrumb": [
+                { "label": "About Us", "href": "/about" },
+                { "label": "Montessori System" }
+              ],
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
+            }
+          },
+          {
+            "type": "innovationMediaHero",
+            "props": {
+              "title": "“One test of the correctness of educational procedure is the happiness of the child.”",
+              "subtitle": "-Maria Montessori",
+              "bgImageUrl": "/innovation/innov_hero.jpg",
+              "primaryCta": "",
+              "secondaryCta": "",
+
+              "align": "center",
+              "height": "innovation",
+              "overlay": "dark",
+              "showArcs": true
+            }
+          },
+          {
+            "type": "imageText",
+            "props": {
+              "title": "",
+              "text": [
+                "Maria Montessori was a visionary who disabused the traditional methods of education for being too constrictive and non child friendly. In her lifelong work with children first as a pediatric doctor and then as researcher and educator Maria Montessori stumbled up on the secret to not just retaining children’s attention but to successfully divert it for productive work.",
+                "Maria Montessori believed that education is an aid for life. Her education philosophy can be summed up in her own words- Never help a child with a task at which he feels he can succeed. She believed the happiness you see in a child is directly proportional to the education he received. She spread her schooling philosophy far and wide to ensure that the first six years of every child lay the best possible foundations for an enriching future."
+              ],
+              "imageUrl": "/home/kids-being-part-sunday-school.jpg"
+            }
+          },
+          {
+            "type": "researchMission",
+            "props": {
+              "bgClassName":"bg-[#FFFFFF]",
+              "sectionTopPadd":"sm:pb-20",
+              "calloutWidth":"",
+              "calloutTitleClass" : "text-[1.2rem] sm:text-[1.4rem] font-medium",
+              "calloutClass": "text-[0.95rem] sm:text-[1rem] leading-relaxed text-slate-700",
+              "id": "mission",
+              "title": "",
+              "text": [],
+              "calloutTitle":"HOW DOES MONTESSORI WORK",
+              "callout": "The Montessori philosophy believes that every child is born with a creative mind and a drive to learn. These qualities can be best developed in a free environment. A constructive and proactive methodology, Montessori gives your child the freedom to develop varied interests and the competence needed to get her ready for life."
+            }
+          },
+          {
+          "type": "AreasofDevelopment",
+          "props": {
+            "bg": "#F3E3CF",
+            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
+            "title": "Areas of Development",
+            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
+            "headerAlign": "center",
+
+            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "maxWidth": "max-w-6xl",
+            "gap": "gap-6",
+
+            "cardBg": "#273C75",
+            "cardRadius": "rounded-[18px]",
+            "cardPadding": "px-6 py-7",
+            "cardMinHeight": 220,
+
+            "iconSize": "60",
+            "iconWrapClassName": "h-10 w-10",
+
+            "items": [
+              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+
+              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
+            ]
+          }
+          },
+          {
+            "type": "montessoriForSuccess",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "MONTESSORI FOR\nSUCCESS",
+              "items": [
+                {
+                  "name": "LARRY PAGE AND\nSERGEY BRIN",
+                  "role": "Founders, Google",
+                  "quote": "Both went to Montessori schools and credit the Montessori education of “being self motivated, questioning what’s going on in the world, doing things a bit differently,” for being responsible for their success to a large extent."
+                },
+                {
+                  "name": "JEFF BEZOS",
+                  "role": "Founder, Amazon",
+                  "quote": "Montessori is often referenced for encouraging independence and long-term thinking early."
+                }
+              ]
+            }
+          },
+          {
+            "type": "tabbedFaq",
+            "props": {
+              "bg": "#F3E3CF",
+              "title": "Frequently asked questions",
+              "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+              "tabs": [
+                {
+                  "label": "School Facilities",
+                  "items": [
+                    { "q": "When can I start my course or workshop?", "a": "You can start..." },
+                    { "q": "Do you provide a certificate of completion?", "a": "Yes..." }
+                  ]
+                },
+                {
+                  "label": "School Recognition",
+                  "items": [
+                    { "q": "Is Montessori recognized globally?", "a": "Yes..." }
+                  ]
+                },
+                {
+                  "label": "Team",
+                  "items": [
+                    { "q": "When can I start my course or workshop?", "a": "You can start your course or workshop instantly after completing your purchase. Our free course can be started directly after signing up to SuperHi. You can then access your courses and workshops through your SuperHi dashboard whenever you’d like, and learn at your own pace with lifetime access to your purchases!" },
+                    { "q": "Do you provide a certificate of completion?", "a": "Yes..." },
+                    { "q": "What will I be able to create after taking your courses?", "a": "Yes..." }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "playgroup": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Playgroup",
+              "breadcrumb": [
+                { "label": "Home", "href": "/" },
+                { "label": "Programs", "href": "program" },
+                { "label": "Playgroup" }
+              ],
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
+            }
+          },
+          {
+            "type": "programIntroSplit",
+            "props": {
+              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
+              "title": "Best Playgroup in\nHyderabad",
+              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
+              "media": {
+                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
+                "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
+                "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
+              }
+            }
+          },
+          {
+          "type": "AreasofDevelopment",
+          "props": {
+            "bg": "#F3E3CF",
+            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
+            "title": "Areas of Development",
+            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
+            "headerAlign": "center",
+
+            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "maxWidth": "max-w-6xl",
+            "gap": "gap-6",
+
+            "cardBg": "#273C75",
+            "cardRadius": "rounded-[18px]",
+            "cardPadding": "px-6 py-7",
+            "cardMinHeight": 220,
+
+            "iconSize": "60",
+            "iconWrapClassName": "h-10 w-10",
+
+            "items": [
+              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+
+              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
+            ]
+          }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "title": "Experience Learning\nthe Blue Blocks Way.",
+              "text": "Seats are filled on a first-come basis.",
+              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+              "image": "/building-image-01.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "customTopSpacing":"sm:pt-70",
+              "align": "left",
+              "theme": "dark"
+            }
+          }
+        ]
+      }
     },
     "academics": {
       "sections": [
@@ -896,7 +1165,7 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Programs",
+              "title": "Playgroup",
               "breadcrumb": [
                 { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
@@ -978,7 +1247,7 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Programs",
+              "title": "Nursery, PP1, PP2",
               "breadcrumb": [
                 { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
@@ -1060,7 +1329,7 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Programs",
+              "title": "Primary School – Class 1 to 6",
               "breadcrumb": [
                 { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
@@ -1142,7 +1411,7 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Programs",
+              "title": "Secondary School – Class 7 to 10",
               "breadcrumb": [
                 { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },

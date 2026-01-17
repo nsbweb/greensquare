@@ -41,9 +41,6 @@ export default function TabbedFaq({
 
   const onTabChange = (i) => setActive(i);
 
-  // Normalize data so rendering is consistent:
-  // If sections exist -> use them
-  // else fallback to a single implicit section using current.items
   const sections = useMemo(() => {
     if (Array.isArray(current.sections) && current.sections.length) {
       return current.sections
@@ -59,7 +56,6 @@ export default function TabbedFaq({
       ? current.items.filter(Boolean)
       : [];
 
-    // Only return a fallback section if items exist
     if (fallbackItems.length) {
       return [{ heading: "", items: fallbackItems }];
     }

@@ -100,6 +100,16 @@ export default function Header({ variant = "dark" }) {
                 />
               );
             }
+            if (item.label === siteData.megaMenu?.whatDoWeDo?.label) {
+              return (
+                <ProgramsMegaMenu
+                  key={item.label}
+                  mega={siteData.megaMenu.whatDoWeDo}
+                  socials={siteData.footer?.socials || []}
+                  isLight={isLight}
+                />
+              );
+            }
 
             return (
               <Link key={item.label} href={item.href} className="hover:text-gray-300 transition">
@@ -197,7 +207,7 @@ function ProgramsMegaMenu({ mega, socials, isLight }) {
                 <div className="grid grid-cols-2 border-t border-slate-100">
                   {items.map((program) => (
                     <Link
-                      key={program.href}
+                      key={program.id}
                       href={program.href}
                       className="flex gap-3 p-5 sm:p-6 hover:bg-slate-50 border-r border-slate-100 last:border-r-0"
                     >
