@@ -5,10 +5,13 @@ import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
 import siteData from "@/data/site.json";
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Header({ variant = "dark" }) {
   const { site } = siteData;
+
+  const pathname = usePathname();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,9 +40,28 @@ export default function Header({ variant = "dark" }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // -------- ACTIVE HELPERS (stable + reusable) --------
+  const isActiveHref = (href) => {
+    if (!href) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
+
+  const navLinkClass = ({ active = false } = {}) => {
+    const base = isLight ? "text-white" : "text-[#131313]";
+    const hover = isLight ? "hover:text-indigo-100" : "hover:text-[#000000]";
+
+    // Active styling (tweak if you want)
+    const activeCls = isLight
+      ? "text-indigo-100 border-b border-white/70"
+      : "text-[#0F52BA] border-b border-[#0F52BA]";
+
+    return `transition ${base} ${hover} ${active ? activeCls : ""}`;
+  };
+
   return (
     <div
-      id="site-header" 
+      id="site-header"
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300 ${
         scrolled ? "bg-white shadow-sm" : "bg-transparent"
       }`}
@@ -84,45 +106,80 @@ export default function Header({ variant = "dark" }) {
               width={82}
               height={67}
               className="object-contain"
+              priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className={`hidden md:flex items-center gap-10 text-sm font-medium text-slate-800 hidden md:flex gap-8 text-sm font-medium transition-colors ${isLight ? "text-white" : "text-[#131313]"}`}>
-          {site.nav.map((item) => {
-            if (item.label === siteData.megaMenu?.programs?.label) {
-              return (
-                <ProgramsMegaMenu
-                  key={item.label}
-                  mega={siteData.megaMenu.programs}
-                  socials={siteData.footer?.socials || []}
-                  isLight={isLight}
-                />
-              );
-            }
-            if (item.label === siteData.megaMenu?.whatDoWeDo?.label) {
-              return (
-                <ProgramsMegaMenu
-                  key={item.label}
-                  mega={siteData.megaMenu.whatDoWeDo}
-                  socials={siteData.footer?.socials || []}
-                  isLight={isLight}
-                />
-              );
-            }
+          <nav className="hidden md:flex items-center gap-10 text-sm font-medium">
+            {site.nav.map((item, i) => {
+              const key = `${item.href || "nohref"}|${item.label}|${i}`;
 
-            return (
-              <Link key={item.label} href={item.href} className="hover:text-gray-300 transition">
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+              // Programs Mega
+              if (item.label === siteData.megaMenu?.programs?.label) {
+                const active =
+                  isActiveHref(item.href) || pathname.startsWith("/programs");
+
+                return (
+                  <ProgramsMegaMenu
+                    key={key}
+                    mega={siteData.megaMenu.programs}
+                    socials={siteData.footer?.socials || []}
+                    isLight={isLight}
+                    isActive={active}
+                    className={navLinkClass({ active })}
+                  />
+                );
+              }
+
+              // What do we do Mega (if present)
+              if (item.label === siteData.megaMenu?.whatDoWeDo?.label) {
+                const active = isActiveHref(item.href);
+
+                return (
+                  <ProgramsMegaMenu
+                    key={key}
+                    mega={siteData.megaMenu.whatDoWeDo}
+                    socials={siteData.footer?.socials || []}
+                    isLight={isLight}
+                    isActive={active}
+                    className={navLinkClass({ active })}
+                  />
+                );
+              }
+
+              // Innovations Mega (if present)
+              if (item.label === siteData.megaMenu?.innovations?.label) {
+                const active = isActiveHref(item.href);
+
+                return (
+                  <ProgramsMegaMenu
+                    key={key}
+                    mega={siteData.megaMenu.innovations}
+                    socials={siteData.footer?.socials || []}
+                    isLight={isLight}
+                    isActive={active}
+                    className={navLinkClass({ active })}
+                  />
+                );
+              }
+
+              // Normal link
+              const active = isActiveHref(item.href);
+
+              return (
+                <Link key={key} href={item.href} className={navLinkClass({ active })}>
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
 
           {/* Mobile Toggle */}
           <button
             className={`md:hidden ${isLight ? "text-white" : "text-[#131313]"}`}
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
             {menuOpen ? "✖" : "☰"}
           </button>
@@ -132,7 +189,7 @@ export default function Header({ variant = "dark" }) {
         {menuOpen && (
           <div className="md:hidden bg-[#1f2a44] text-white px-6 py-4 space-y-3">
             {site.nav.map((item, idx) => (
-              <div key={idx}>
+              <div key={`${item.href || "nohref"}|${item.label}|${idx}`}>
                 <Link href={item.href} className="block">
                   {item.label}
                 </Link>
@@ -140,7 +197,7 @@ export default function Header({ variant = "dark" }) {
                 {item.children && (
                   <div className="pl-4 mt-2 space-y-1 text-sm">
                     {item.children.map((child, cIdx) => (
-                      <Link key={cIdx} href={child.href} className="block">
+                      <Link key={`${child.href}|${cIdx}`} href={child.href} className="block">
                         {child.label}
                       </Link>
                     ))}
@@ -157,12 +214,21 @@ export default function Header({ variant = "dark" }) {
 
 /* ---------- PROGRAMS MEGA MENU (DESKTOP ONLY) ---------- */
 
-function ProgramsMegaMenu({ mega, socials, isLight }) {
+function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className = "" }) {
   const [open, setOpen] = useState(false);
 
   const items = mega?.items || [];
   const viewAll = mega?.viewAll;
   const ctaCard = mega?.ctaCard;
+
+  const showActive = open || isActive;
+
+  // in case you want a slightly stronger active style while open
+  const openActiveCls = showActive
+    ? isLight
+      ? "text-indigo-100 border-b border-white/70"
+      : "text-[#0F52BA] border-b border-[#0F52BA]"
+    : "";
 
   return (
     <div
@@ -172,7 +238,7 @@ function ProgramsMegaMenu({ mega, socials, isLight }) {
     >
       <button
         type="button"
-        className={`flex items-center gap-1 text-sm font-medium hover:text-indigo-100 transition ${isLight ? "text-white" : "text-[#131313]"}`}
+        className={`flex items-center gap-1 text-sm font-medium transition ${className} ${openActiveCls}`}
       >
         {mega?.label || "Programs"}
         <span className="text-lg">▾</span>
@@ -205,9 +271,9 @@ function ProgramsMegaMenu({ mega, socials, isLight }) {
                 </div>
 
                 <div className="grid grid-cols-2 border-t border-slate-100">
-                  {items.map((program) => (
+                  {items.map((program, idx) => (
                     <Link
-                      key={program.id}
+                      key={`${program.href || program.title || "item"}|${idx}`}
                       href={program.href}
                       className="flex gap-3 p-5 sm:p-6 hover:bg-slate-50 border-r border-slate-100 last:border-r-0"
                     >
@@ -260,16 +326,15 @@ function ProgramsMegaMenu({ mega, socials, isLight }) {
                 </div>
 
                 <div className="mt-2 flex flex-col gap-2">
-                  {(socials || []).map((s) => (
+                  {(socials || []).map((s, idx) => (
                     <Link
-                      key={s.label}
+                      key={`${s.label || "social"}|${idx}`}
                       href={s.href}
                       target="_blank"
                       rel="noreferrer"
                       className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#000000]/5 text-xs font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
                       aria-label={s.label}
                     >
-                      
                       <Image
                         src={s.icon}
                         alt={(s.label || "").slice(0, 2)}

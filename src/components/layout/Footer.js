@@ -14,7 +14,7 @@ export default function Footer() {
   // ✅ Map from site.json (no hardcoded arrays)
   const quickLinks = footer?.quickLinks ?? [];
   const programs = footer?.programs ?? [];
-  const intelligence = footer?.intelligence ?? [];
+  // const intelligence = footer?.intelligence ?? [];
   const connect = footer?.connect ?? [];
   const contact = footer?.contact ?? {};
   const socials = (footer?.socials ?? []).map((s) => ({
@@ -99,10 +99,10 @@ export default function Footer() {
               </div>
 
               {/* Link Columns */}
-              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <FooterColumn title="Quick Links" items={quickLinks} />
                 <FooterColumn title="Programs" items={programs} />
-                <FooterColumn title="Intelligence" items={intelligence} />
+                {/* <FooterColumn title="Intelligence" items={intelligence} /> */}
                 <FooterColumn title="Connect" items={connect} />
               </div>
 

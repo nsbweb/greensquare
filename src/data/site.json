@@ -10,8 +10,8 @@
       { "label": "Home", "href": "/" },
       { "label": "What do we do"},
       { "label": "Programs"},
-      { "label": "Innovations", "href": "/innovations" },
-      { "label": "Careers", "href": "/contact#careers" }
+      { "label": "Innovations"},
+      { "label": "Careers", "href": "/careers" }
     ]
   },
   "megaMenu": {
@@ -99,6 +99,31 @@
           "href": "/programs/secondary-school",
           "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
           "image": "/programs/thumb-secondary.png"
+        }
+      ],
+      "ctaCard": {
+        "title": "Start Your Child’s Montessori Journey",
+        "text": "Explore programs designed for independence, curiosity, and growth.",
+        "button": { "label": "Explore Programs →", "href": "/admissions" }
+      }
+    },
+    "innovations": {
+      "label": "Innovations",
+      "viewAll": { "label": "Innovation", "href": "/innovation" },
+      "items": [
+        {
+          "id": "cubesat-mission",
+          "title": "Innovation - Cubsat Mission",
+          "href": "/innovation/cubesat-mission",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "image": "/programs/thumb-playgroup.png"
+        },
+        {
+          "id": "nursery-school",
+          "title": "Nursery, PP1, PP2",
+          "href": "/innovation/#",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "image": "/programs/thumb-nursery.png"
         }
       ],
       "ctaCard": {
@@ -204,6 +229,7 @@
           "props": {
             "title": "PEDAGOGICAL INSIGHTS",
             "subtitle": "Evidence-based parenting and innovation.",
+            "hasCTA":true,
             "items": [
               { "pill": "The Philosophy", "title": "Why We Stopped Teaching “Answers”", "meta": "A short read on guidance over instruction." },
               { "pill": "The Evidence", "title": "InnoVision 2050: The Unscripted Learner", "meta": "How learning evolves for the next decade." },
@@ -1650,6 +1676,64 @@
         }
       ]
     },
+    "careers": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Careers",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Careers" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "careersSection",
+          "props": {
+            "bg": "#FFFFFF",
+            "maxWidth": "max-w-6xl",
+            "topCard": {
+              "bg": "#F3E3CF",
+              "radius": "rounded-[18px]",
+              "padding": "p-8 sm:p-10",
+              "title": "Career with Blue Blocks",
+              "text": [
+                "Montessori trained educators have the unique opportunity to change the education system for the better. They can reform the thinking and perception of what should be the ideal schooling environment.",
+                "Montessori Directress: Looking for AMI Certified individuals to be directresses of the Self-Interpretive Environments (3–6 year Primary environment).",
+                "Elementary Directress: Looking for AMI Certified individuals to work with the 6–12 year old children in the elementary environment.",
+                "Assistants: Graduates in any field with good command over language and keen interest in working with children."
+              ],
+              "image": {
+                "src": "/careers/building.jpg",
+                "alt": "Blue Blocks campus building"
+              }
+            },
+            "eligibilityCard": {
+              "bg": "#EAF4FF",
+              "radius": "rounded-[18px]",
+              "padding": "p-8 sm:p-10",
+              "title": "Eligibility Criteria",
+              "items": [
+                { "icon": "hand", "iconImage" : "/icon/icon-e-hand.png", "label": "Motivated to work with Children" },
+                { "icon": "book", "iconImage" : "/icon/icon-book.png",  "label": "Open to learning." },
+                { "icon": "heart", "iconImage" : "/icon/icon-soft-heart.png",  "label": "Pleasant personality and soft demeanour" },
+                { "icon": "brain", "iconImage" : "/icon/icon-brain.png",  "label": "Good logical and analytical skills" },
+                { "icon": "chat", "iconImage" : "/icon/icon-chat.png",  "label": "Good communication skills" },
+                { "icon": "desktop", "iconImage" : "/icon/icon-desktop.png",  "label": "Basic computer skills" },
+                { "icon": "age", "iconImage" : "/icon/icon-age.png",  "label": "Age 20 years and above" },
+                { "icon": "cap", "iconImage" : "/icon/icon-cap.png",  "label": "Graduate in any stream" }
+              ]
+            }
+          }
+        }
+      ]
+    },
     "researchInstitute": {
       "sections": [
         {
@@ -2226,6 +2310,264 @@
           }
         }
       ]
+    },
+    "innovationDetail":{
+      "cubesat-mission": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Innovation - Cubsat Mission ",
+              "breadcrumb": [
+                { "label": "Innovation", "href": "/innovation" },
+                { "label": "Innovation - Cubsat Mission " }
+              ],
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
+            }
+          },
+          {
+            "type": "innovationMediaHero",
+            "props": {
+              "be=title":"ISRO · PSLV-CXX · LEO MISSION",
+              "title": "PROJECT SBB-1:MISSION DASHBOARD",
+              "subtitle": "Validating “First Principles” in Low Earth Orbit.",
+              "bgImageUrl": "/innovation/innov-cube-hero.jpg",
+              "primaryCta": "",
+              "secondaryCta": "",
+
+              "align": "center",
+              "height": "innovation",
+              "overlay": "dark",
+              "showArcs": true
+            }
+          },
+          {
+            "type": "innovationHabitSplit",
+            "props": {
+              "bg": "#F7E7D5",
+              "className": "inline",
+              "image": "#",
+              "eyebrow": "",
+              "title": "Mission Profile",
+              "description":"Project SBB-1 is not a simulation. It is a fully functional CubeSat designed, built, and tested by students under the mentorship of aerospace professionals. The payload was fully flight-qualified and integrated for Low Earth Orbit operations, while validating core educational methodology. This mission represents the culmination of rigorous engineering, academic discipline, and real-world space systems experience.",
+              "subdescription":"",
+              "images": [
+                {
+                  "icon": "/innovation/satelite-image.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/innovation/slider-image-2.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/innovation/slider-image-3.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/innovation/slider-image-4.jpg",
+                  "title": "",
+                  "text": ""
+                }
+              ]
+            }
+          },
+          {
+            "type": "insights",
+            "props": {
+              "bg": "#FFFFFF",
+              "eyebrow": "SYSTEM ARCHITECTURE",
+              "title": "System Overview",
+              "subtitle": "",
+              "variant": "auto",
+              "items": [
+                {
+                  "id": "brain",
+                  "pill": "Onboard Compute Unit",
+                  "title": "The Brain",
+                  "meta": "Custom-designed flight computer managing all satellite operations, fault processes, and autonomous decision-making.",
+                  "bullets": ["ARM Cortex-M7 Core", "Fault-tolerant logic", "Real-time OS"],
+                  "cardBg": "#95D6ED",
+                  "pillBg": "rgba(255,255,255,0.35)"
+                },
+                {
+                  "id": "senses",
+                  "pill": "Payload Systems",
+                  "title": "The Senses",
+                  "meta": "Integrated sensor suite capturing environmental data across multiple parameters for in-orbit validation.",
+                  "bullets": ["9-DOF IMU array", "Thermal monitoring", "Environmental sensors"],
+                  "cardBg": "#F9A78F",
+                  "pillBg": "rgba(255,255,255,0.35)"
+                },
+                {
+                  "id": "voice",
+                  "pill": "Telemetry & Comm",
+                  "title": "The Voice",
+                  "meta": "UHF/VHF communication system enabling reliable ground station contact and beacon transmissions.",
+                  "bullets": ["UHF downlink", "VHF uplink", "Packet & sync"],
+                  "cardBg": "#F9E48F",
+                  "pillBg": "rgba(255,255,255,0.35)"
+                }
+              ]
+            }
+          },
+          {
+            "type": "AreasofDevelopment",
+            "props": {
+              "bg": "#EEF7FD",
+              "eyebrow": "MISSION COMPLIANCE",
+              "title": "Institutional Framework & Compliance",
+              "description": "A mission is only as credible as the institutions that authorize and support it. SBB-1 is embedded within a rigorous regulatory and mentorship ecosystem.",
+              "subdescription":"",
+              "subtitle":"",
+              "headerAlign": "center",
+
+              "cols": { "base": 1, "sm": 2, "lg": 3 },
+              "maxWidth": "place-content-center",
+              "gap": "gap-6",
+              "referenceColsDesktop": 4,
+              "desktopSpan": 3,
+
+              "cardBg": "#273C75",
+              "cardRadius": "rounded-[18px]",
+              "cardPadding": "px-6 py-7",
+              "cardMinHeight": 220,
+
+              "overLap": false,
+              "iconSize": "60",
+              "iconWrapClassName": "h-10 w-10",
+
+              "items": [
+                { "icon": "", "num" : "01", "title": "Authorized by IN-SPACE", "text": "Project SBB-1 operates under official authorization from IN-SPACe." },
+                { "icon": "", "num" : "02","title": "Mentored by Industry", "text": "Guidance provided by aerospace partners, ensuring flight-ready standards." },
+                { "icon": "", "num" : "03", "title": "Data Integrity", "text": "Mission data is processed, validated, and archived for research-grade outputs." }
+              ]
+            }
+          },
+          {
+            "type": "simpleImageSection",
+            "props": {
+              "bg": "#FFFFFF",
+              "image": { "src": "/innovation/lab-image.jpg", "alt": "Lab" },
+              "height": 720,
+              "objectFit": "cover",
+              "fullBleed": true,
+              "overlayText": false
+            }
+          },
+          {
+            "type": "systemOverview",
+            "props": {
+              "bg": "#FFFFFF",
+              "maxWidth": "max-w-6xl",
+              "paddingY": "py-14 sm:py-16",
+              "header": {
+                "eyebrow": "SYSTEM ARCHITECTURE",
+                "title": "System Overview",
+                "align": "center"
+              },
+              "layout": {
+                "gap": "gap-10",
+                "leftWidth": "lg:col-span-7",
+                "rightWidth": "lg:col-span-5"
+              },
+              "media": {
+                "type": "image",
+                "src": "/innovation/system-overview-video-snap.jpg",
+                "alt": "System overview",
+                "radius": "rounded-3xl",
+                "showPlay": true,
+                "playButton": {
+                  "size": 66,
+                  "bgImage": "/icon/play-transparent.png",
+                  "bg": "rgba(255,255,255,0.9)",
+                  "iconColor": "#111827"
+                }
+              },
+              "steps": {
+                "cardBg": "#EAF4FF",
+                "cardRadius": "rounded-2xl",
+                "cardPadding": "p-6",
+                "cardGap": "gap-4",
+                "numberColor": "rgba(15,23,42,0.55)",
+                "titleColor": "#0F172A",
+                "textColor": "rgba(15,23,42,0.65)",
+                "startAt": 1,
+                "pad": 2
+              },
+              "items": [
+                {
+                  "title": "Conceptualization",
+                  "text": "Mission definition, feasibility studies, and initial system architecture design."
+                },
+                {
+                  "title": "Prototyping",
+                  "text": "Breadboard models, component selection, and early integration testing."
+                },
+                {
+                  "title": "Engineering Model",
+                  "text": "Full-scale functional prototype with flight representative components."
+                },
+                {
+                  "title": "Qualification",
+                  "text": "Vibration, thermal vacuum, and EMC testing to space-grade standards."
+                },
+                {
+                  "title": "Launch Integration",
+                  "text": "Final assembly, pre-flight checkout, and integration with PSLV."
+                },
+                {
+                  "title": "Mission Conclusion",
+                  "text": "Payload successfully integrated. Mission concluded due to launch vehicle anomaly (Jan 12, 2026)."
+                }
+              ]
+            }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "titlefont":"text-3xl sm:text-4xl",
+              "title": "We didn't just teach them about space. We gave them a ticket to go there.",
+              "text": "",
+              "cta": "",
+              "image": "/satelight.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "imagePositionTopRight":"sm:-right-10 sm:-top-40",
+              "customTopSpacing":"sm:pt-00",
+              "align": "left",
+              "theme": "dark"
+            }
+          },
+          {
+            "type": "benchmarkBanner",
+            "props": {
+              "bg": "",
+              "title": "",
+              "text": "",
+              "cta": "",
+              "logos": [
+                { "src": "/logos/nobel-peace-center.png", "alt": "Nobel Peace Center" },
+                { "src": "/logos/unesco.png", "alt": "UNESCO" },
+                { "src": "/logos/ami.png", "alt": "AMI" },
+                { "src": "/logos/us-dept-of-state.png", "alt": "US Department of State" },
+                { "src": "/logos/seal.png", "alt": "Seal" },
+                { "src": "/logos/nobel-peace-center.png", "alt": "Nobel Peace Center" },
+                { "src": "/logos/unesco.png", "alt": "UNESCO" },
+                { "src": "/logos/ami.png", "alt": "AMI" }
+              ]
+            }
+          }
+        ]
+      }
     },
     "faq":{
       "sections":[

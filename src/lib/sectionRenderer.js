@@ -51,6 +51,9 @@ import SeekVsDeliver from "@/components/blocks/SeekVsDeliver";
 import BenchmarkBanner from "@/components/blocks/BenchmarkBanner";
 import HexaInfrastructure from "@/components/blocks/HexaInfrastructure";
 import MontessoriForSuccess from "@/components/blocks/montessoriForSuccessSlider.js";
+import CareersSection from "@/components/blocks/CareersSection";
+import SystemOverview from "@/components/blocks/SystemOverview";
+import SimpleImageSection from "@/components/blocks/StaticImageBanner";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -61,6 +64,14 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          case "simpleImageSection":
+            return <SimpleImageSection key={key} {...section.props} />;
+          case "systemOverview":
+            return <SystemOverview key={key} {...section.props} />;
+
+          case "careersSection":
+            return <CareersSection key={key} {...section.props} />;
+
           //About US > Montessori For Success 
           case "montessoriForSuccess":
             return <MontessoriForSuccess key={key} {...props} />;

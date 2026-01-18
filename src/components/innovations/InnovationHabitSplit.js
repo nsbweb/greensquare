@@ -21,8 +21,8 @@ export default function InnovationHabitSplit({
   return (
     <section className={`bg-${bg} relative`}>
       {/* Background cut-out effect */}
-      <div className="absolute inset-0 bg-[#F7E7D5] -z-10">
-        <div className="h-full w-full bg-[#F7E7D5] before:content-[''] before:absolute before:left-0 before:top-0 before:w-[50%] before:h-full before:bg-[#F7E7D5] before:clip-path-polygon-[0_0%,0_100%,100%_100%]"></div>
+      <div className={`bg-${bg} absolute inset-0 -z-10`}>
+        <div className={`absolute inset-0 -z-10 h-full w-full bg-${bg} before:content-[''] before:absolute before:left-0 before:top-0 before:w-[50%] before:h-full before:bg-${bg} before:clip-path-polygon-[0_0%,0_100%,100%_100%]`}></div>
       </div>
 
       <Container className="py-12 sm:py-16">

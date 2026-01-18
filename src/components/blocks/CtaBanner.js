@@ -8,6 +8,7 @@ export default function CtaBanner({
   cta,
   image,
 
+  titlefont="text-2xl sm:text-3xl font-semibold",
   align = "left", // "left" | "center"
   theme = "dark", // "dark" | "light"
   imageAlt,
@@ -39,7 +40,7 @@ export default function CtaBanner({
           >
             {/* TEXT */}
             <div className={isCenter ? "max-w-2xl" : "max-w-xl"}>
-              <h3 className="text-2xl sm:text-3xl font-semibold whitespace-pre-line leading-tight">
+              <h3 className={`${titlefont} whitespace-pre-line leading-tight`}>
                 {title}
               </h3>
 

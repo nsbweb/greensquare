@@ -13,7 +13,7 @@ export default function BenchmarkBanner({
     <section className="bg-white">
       <div className={`mx-auto w-full ${maxWidth} px-4 sm:px-6 py-10 sm:py-14`}>
         {/* Blue banner */}
-        <div
+        {text ? (<div
           className="rounded-xl px-6 sm:px-8 py-6 sm:py-7 text-white"
           style={{ backgroundColor: bg }}
         >
@@ -38,7 +38,7 @@ export default function BenchmarkBanner({
               </a>
             </div>
           ) : null}
-        </div>
+        </div>) : null}
 
         {/* Logo strip */}
         {logos?.length ? (

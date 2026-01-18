@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "@/components/layout/Container";
-import PyramidTiersRounded from "../ui/PyramidTiersRounded";
+import PyramidTiersRounded from "../../components/ui/PyramidTiersRounded";
 
 function cx(...classes) {
   return classes.filter(Boolean).join(" ");
