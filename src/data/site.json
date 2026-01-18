@@ -2355,6 +2355,13 @@
               "title": "Mission Profile",
               "description":"Project SBB-1 is not a simulation. It is a fully functional CubeSat designed, built, and tested by students under the mentorship of aerospace professionals. The payload was fully flight-qualified and integrated for Low Earth Orbit operations, while validating core educational methodology. This mission represents the culmination of rigorous engineering, academic discipline, and real-world space systems experience.",
               "subdescription":"",
+              "details": [
+                { "label": "MISSION TYPE", "value": "Technology Demonstration" },
+                { "label": "ORBIT", "value": "Low Earth Orbit (LEO)" },
+                { "label": "PRIMARY GOAL", "value": "Validate “First Principles” Learning" },
+                { "label": "SECONDARY GOAL", "value": "On-Orbit Sensor Data Acquisition" },
+                { "label": "DOI", "value": "10.5281/zenodo.18195108" }
+              ],
               "images": [
                 {
                   "icon": "/innovation/satelite-image.jpg",
