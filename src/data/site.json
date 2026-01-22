@@ -119,11 +119,18 @@
           "image": "/programs/thumb-playgroup.png"
         },
         {
-          "id": "nursery-school",
-          "title": "Nursery, PP1, PP2",
-          "href": "/innovation/#",
+          "id": "biomimicry-hive",
+          "title": "Biomimicry Hive",
+          "href": "/innovation/biomimicry-hive",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "image": "/programs/thumb-nursery.png"
+        },
+        {
+          "id": "space-program",
+          "title": "Space Program",
+          "href": "/innovation/space-program",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "image": "/programs/thumb-playgroup.png"
         }
       ],
       "ctaCard": {
@@ -1186,7 +1193,7 @@
       ]
     },
     "programDetails": {
-      "playgroup": {
+      "playgroup": { 
         "sections": [
           {
             "type": "pageHero",
@@ -2570,6 +2577,316 @@
                 { "src": "/logos/nobel-peace-center.png", "alt": "Nobel Peace Center" },
                 { "src": "/logos/unesco.png", "alt": "UNESCO" },
                 { "src": "/logos/ami.png", "alt": "AMI" }
+              ]
+            }
+          }
+        ]
+      },
+      "biomimicry-hive": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Biomimicry Hive",
+              "breadcrumb": [
+                { "label": "Home", "href": "/" },
+                { "label": "Innovation", "href": "/innovation" },
+                { "label": "Biomimicry Hive", "href": "/innovation/biomimicry-hive" }
+              ],
+              "bg": "#F7E7D5"
+            }
+          },
+
+          {
+            "type": "billionYears",
+            "props": {
+              "eyebrow": "BIOMIMICRY HIVE",
+              "title": "Biomimicry Hive\nInnovation — a way of life",
+              "subtitle": "How children observe nature, extract patterns, and turn them into real-world solutions.",
+              "hexImages1": {
+                "src": "/innovation/hive-architecture.jpg",
+                "alt": "The Hive Architecture"
+              },
+              "hexImages2": {
+                "src": "/innovation/curriculum-nature-mentor.jpg",
+                "alt": "Nature as Mentor"
+              },
+              "hexImages3": {
+                "src": "/innovation/student-case-studies.jpg",
+                "alt": "Student Case Studies"
+              },
+              "bulletPoints": [
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "The ‘Hive’ Architecture",
+                  "text": "Hexagonal structures and hands-on spaces that encourage naturalistic thinking and deep observation."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Nature as Mentor",
+                  "text": "From nature walks to scientific observation — sound maps, texture hunts, pattern recognition, and hypothesis building."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Student Case Studies",
+                  "text": "Projects inspired by real phenomena — regenerative design ideas, prototypes, and child-led experiments."
+                }
+              ],
+              "footerText": "NATURE: Biomimicry starts with one habit — notice how nature solves problems, then translate those patterns into designs, systems, or solutions."
+            }
+          },
+
+          {
+            "type": "innovationLogoStrip",
+            "props": {
+              "text": "Media Mentions",
+              "logos": [
+                { "src": "/icon/IIT_Hyderabad_Insignia-color.svg", "alt": "IIT" },
+                { "src": "/icon/ISRO-color.svg", "alt": "ISRO" },
+                { "src": "/icon/google-color.svg", "alt": "Google" }
+              ]
+            }
+          },
+
+          {
+            "type": "innovationHabitSplit",
+            "props": {
+              "bg": "#EEF7FD",
+              "className": "inline",
+              "eyebrow": "",
+              "title": "Our Young Innovators",
+              "description": "In the Biomimicry Hive, children don’t just learn concepts — they practice how innovators think. They observe, ask better questions, test ideas, and refine their work over time. The space is designed to make curiosity visible and structured — so invention feels natural, not forced.",
+              "subdescription": "LEARNINGS: Observation → pattern → principle → prototype. This is how children learn to connect nature with invention.",
+              "images": [
+                "/innovation/classroom-1.jpg",
+                "/innovation/classroom-2.jpg",
+                "/innovation/classroom-3.jpg",
+                "/innovation/classroom-4.jpg"
+              ],
+              "bullets": [
+                "Observation-based learning (before instruction)",
+                "Pattern recognition and first-principles thinking",
+                "Prototype mindset — test, learn, iterate"
+              ]
+            }
+          },
+
+          {
+            "type": "montessoriForSuccess",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "EXPERTS SPEAK",
+              "items": [
+                {
+                  "name": "SANDIPIKA ROY",
+                  "role": "Aerospace Engineer",
+                  "quote": "A space like this helps children build the habit of thinking in systems — observing, connecting, and applying ideas rather than memorizing them."
+                },
+                {
+                  "name": "RESEARCH MENTOR",
+                  "role": "Innovation & Design",
+                  "quote": "Biomimicry is one of the most powerful bridges between curiosity and real-world problem solving — especially when children learn it early."
+                }
+              ]
+            }
+          },
+
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Gallery",
+              "images": [
+                "/innovation/classroom-1.jpg",
+                "/innovation/classroom-2.jpg",
+                "/innovation/classroom-3.jpg",
+                "/innovation/classroom-4.jpg",
+                "/innovation/classroom-5.jpg",
+                "/innovation/classroom-6.jpg",
+                "/innovation/classroom-7.jpg",
+                "/innovation/classroom-8.jpg",
+                "/innovation/classroom-9.jpg",
+                "/innovation/classroom-10.jpg",
+                "/innovation/classroom-11.jpg",
+                "/innovation/classroom-12.jpg"
+              ]
+            }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "title": "Experience Learning\nthe Blue Blocks Way.",
+              "text": "Seats are filled on a first-come basis.",
+              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+              "image": "/innovation/drone.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "imagePositionTopRight":"sm:-right-10 sm:-top-40",
+              "customTopSpacing":"sm:pt-00",
+              "align": "left",
+              "theme": "dark"
+            }
+          }
+        ]
+      },
+      "space-program": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Space Program",
+              "breadcrumb": [
+                { "label": "Home", "href": "/" },
+                { "label": "Innovation", "href": "/innovation" },
+                { "label": "Space Program", "href": "/innovation/space-program" }
+              ],
+              "bg": "#F7E7D5"
+            }
+          },
+
+          {
+            "type": "innovationHabitSplit",
+            "props": {
+              "bg": "#FFFFFF",
+              "eyebrow": "",
+              "title": "BlueBlocks Space Lab Montessori School for\nThe Space Age",
+              "description": "At BlueBlocks Montessori, we believe children are not just preparing for the future—they are already shaping it. Our Space Lab is a living expression of that belief: a dedicated environment where adolescents explore the mysteries of the universe through hands-on, real-world scientific inquiry.",
+              "subdescription": "VISION: Through the Space Lab and CubeSat program, we aim to nurture a generation of curious, capable, and compassionate explorers—children who not only dream of the stars, but know how to reach them. This is what it means to be a Montessori school for the space age.",
+              "image": "/innovation/space-program/hero-left.jpg",
+              "images": [
+                "/innovation/space-program/hero-left.jpg",
+                "/innovation/space-program/lab-1.jpg",
+                "/innovation/space-program/lab-2.jpg",
+                "/innovation/space-program/lab-3.jpg"
+              ],
+              "bullets": [
+                "Freedom with responsibility",
+                "Self-directed learning",
+                "Cosmic education in action"
+              ]
+            }
+          },
+
+          {
+            "type": "billionYears",
+            "props": {
+              "eyebrow": "THE SPACE AGE",
+              "title": "The CubeSat Program",
+              "subtitle": "The CubeSat program is the culminating experience of the adolescent journey in the Space Lab. In collaboration with Take Me 2 Space, students are now designing and preparing to launch a real satellite into low Earth orbit.",
+              "bulletPoints": [
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Real research sensors",
+                  "text": "Equipped with sensors such as a gyroscope, accelerometer, magnetometer, radiation sensor, Geiger counter, and spectrometer."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Real research themes",
+                  "text": "Students explore motion in microgravity, Earth’s magnetic field, space radiation, and atmospheric properties."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Student-led mission",
+                  "text": "Every design decision, experiment, and mission goal reflects the questions and ideas of the children themselves—this is not a simulation."
+                }
+              ],
+              "footerText": "NATURE OF LEARNING: Big questions → meaningful projects → real-world validation.",
+              "hexImages1": { "src": "/innovation/space-program/cubesat-1.jpg", "alt": "CubeSat components" },
+              "hexImages2": { "src": "/innovation/space-program/cubesat-2.jpg", "alt": "Students working on CubeSat" },
+              "hexImages3": { "src": "/innovation/space-program/cubesat-3.jpg", "alt": "Testing and assembly" }
+            }
+          },
+
+          {
+            "type": "cardsGridSection",
+            "props": {
+              "bg": "#EEF7FD",
+              "eyebrow": "PROJECT SBB-1",
+              "title": "Student Satellite Mission",
+              "cols": { "base": 1, "sm": 2, "lg": 3 },
+              "cards": [
+                { "title": "Mission Status", "description": "Flight Ready", "num": "01" },
+                { "title": "Launch Vehicle", "description": "ISRO PSLV C62", "num": "02" },
+                { "title": "Date", "description": "Jan 12, 2026", "num": "03" }
+              ],
+              "cta": {
+                "label": "Read PDF →",
+                "href": "/pdf/Space-Program.pdf"
+              }
+            }
+          },
+
+          {
+            "type": "innovationLogoStrip",
+            "props": {
+              "text": "Media Mentions",
+              "logos": [
+                { "src": "/logos/cision.svg", "alt": "Cision" },
+                { "src": "/logos/one-news-page.svg", "alt": "One News Page" },
+                { "src": "/logos/webindia123.svg", "alt": "WebIndia123" },
+                { "src": "/logos/india-today.svg", "alt": "India Today" }
+              ]
+            }
+          },
+
+          {
+            "type": "innovationHabitSplit",
+            "props": {
+              "bg": "#FFFFFF",
+              "eyebrow": "",
+              "title": "The BlueBlocks Space Program",
+              "description": "Rooted in the Montessori principles of freedom with responsibility, self-directed learning, and cosmic education, the Space Lab empowers students to ask big questions, build meaningful projects, and connect classroom knowledge with the universe beyond.",
+              "image": "/innovation/space-program/space-program-1.jpg",
+              "images": [
+                "/innovation/space-program/space-program-1.jpg",
+                "/innovation/space-program/space-program-2.jpg",
+                "/innovation/space-program/space-program-3.jpg",
+                "/innovation/space-program/space-program-4.jpg"
+              ]
+            }
+          },
+
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Gallery",
+              "images": [
+                "/innovation/space-program/gallery-1.jpg",
+                "/innovation/space-program/gallery-2.jpg",
+                "/innovation/space-program/gallery-3.jpg",
+                "/innovation/space-program/gallery-4.jpg",
+                "/innovation/space-program/gallery-5.jpg",
+                "/innovation/space-program/gallery-6.jpg",
+                "/innovation/space-program/gallery-7.jpg",
+                "/innovation/space-program/gallery-8.jpg"
+              ]
+            }
+          },
+
+          {
+            "type": "highStakes",
+            "props": {
+              "title": "Drone Research and\nInnovation Center",
+              "subheading": "DRONE LAB",
+              "droneImage": "/innovation/drone.png",
+              "featureSections": [
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Build + Test Mindset",
+                  "text": "Hands-on engineering tasks that reward iteration and real-world testing."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Resilience Through Systems",
+                  "text": "Children learn that complex builds fail sometimes—and that’s part of learning."
+                },
+                {
+                  "icon": "/icon/bulb.svg",
+                  "title": "Practical Innovation",
+                  "text": "Projects connect observation + design + execution, not theory alone."
+                }
               ]
             }
           }
