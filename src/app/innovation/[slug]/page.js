@@ -2,9 +2,15 @@ import siteData from "@/data/site.json";
 import SectionRenderer from "@/lib/sectionRenderer";
 import { notFound } from "next/navigation";
 
-export default async function InnovationDetailPage({ params }) {
-  const resolvedParams = await params;
-  const slug = resolvedParams?.slug;
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const pages = siteData?.pages?.innovationDetail ?? {};
+  return Object.keys(pages).map((slug) => ({ slug }));
+}
+
+export default function InnovationDetailPage({ params }) {
+  const slug = params?.slug;
 
   const page = siteData?.pages?.innovationDetail?.[slug];
 
