@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 24.11.1
 
       - name: Install dependencies
         run: npm install
@@ -25,7 +25,8 @@ jobs:
         run: npm run build && npm run export
 
       - name: Deploy to cPanel via FTP
-        uses: samkirkland/FTP-Deploy-Action@v4
+        uses: samkirkland/ftp-deploy-action@v4.3.5
+
         with:
           server: ${{ secrets.CPANEL_FTP_SERVER }}
           username: ${{ secrets.CPANEL_FTP_USERNAME }}
