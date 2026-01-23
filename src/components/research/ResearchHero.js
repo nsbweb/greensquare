@@ -4,6 +4,10 @@ import Container from "@/components/layout/Container";
 
 export default function ResearchHero({
   image,
+  eyebrow = "Research Institute",
+  imageBg = "bg-slate-100",
+  contentBg = "",
+  contentSpacing = "",
   title,
   subtitle,
   description,
@@ -21,7 +25,7 @@ export default function ResearchHero({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT: image */}
           <div className="lg:col-span-6">
-            <div className="relative w-full overflow-hidden rounded-3xl bg-slate-100 aspect-[16/12] sm:aspect-[16/11] lg:aspect-[16/12]">
+            <div className={`relative w-full overflow-hidden rounded-3xl aspect-[16/12] sm:aspect-[16/11] lg:aspect-[16/12] ${imageBg}`}>
               <Image
                 src={image}
                 alt={title || "Research institute"}
@@ -35,10 +39,10 @@ export default function ResearchHero({
 
           {/* RIGHT: content */}
           <div className="lg:col-span-6">
-            <div className="max-w-xl">
-              <p className="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-slate-500">
-                Research Institute
-              </p>
+            <div className={`max-w-xl ${contentBg} ${contentSpacing}`}>
+              {eyebrow ? (<p className="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-slate-500">
+                {eyebrow}
+              </p>) : null}
 
               <h1 className="mt-3 text-[2rem] sm:text-[2.6rem] lg:text-[3.1rem] font-medium text-[#131313] leading-[1.1]">
                 {title}
