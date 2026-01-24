@@ -470,33 +470,68 @@
           }
         },
         {
-        "type": "foundersGuides",
-        "props": {
-          "pill": "OUR FOUNDERS",
-          "title": "GUIDES, NOT JUST TEACHERS",
-          "description": "We do not view teaching as instruction, but as a scientific discipline...",
-          "items": [
-            {
-              "name": "Pavan Goyal",
-              "roleLabel": "Founder, Lead - Innovation Program",
-              "roleColor": "#E08B64",
-              "image": "/team/pavan.png",
-              "imageAlt": "Pavan Goyal",
-              "bio": "AMI, Netherlands certified for 0–3, 3–6, 6–12. Currently pursuing 12–15 Erd Kinder training.",
-              "readMoreHref": "/founders/pavan-goyal"
-            },
-            {
-              "name": "Munira Hussain",
-              "roleLabel": "Co-founder & Director",
-              "roleColor": "#57B3CE",
-              "image": "/team/munira.png",
-              "imageAlt": "Munira Hussain",
-              "bio": "Graduate in Psychology, AMI, Netherlands certified for 3–6 and 6–12.",
-              "readMoreHref": "/founders/munira-hussain"
-            }
-          ]
-        }
-      },
+          "type": "foundersGuides",
+          "props": {
+            "pill": "OUR FOUNDERS",
+            "title": "GUIDES, NOT JUST TEACHERS",
+            "description": "We do not view teaching as instruction, but as a scientific discipline...",
+            "items": [
+              {
+                "name": "Pavan Goyal",
+                "roleLabel": "Founder, Lead - Innovation Program",
+                "roleColor": "#E08B64",
+                "image": "/team/pavan.png",
+                "imageAlt": "Pavan Goyal",
+                "bio": "AMI, Netherlands certified for 0–3, 3–6, 6–12. Currently pursuing 12–15 Erd Kinder training.",
+                "readMoreHref": "/founders/pavan-goyal",
+
+                "modal": {
+                  "title": "Founder’s Note",
+                  "content": [
+                    "Pavan’s journey into Montessori education is rooted in a deep respect for the child’s innate intelligence and capacity for self-construction.",
+                    "Through the Innovation Program, his work focuses on bridging classical Montessori principles with modern scientific and technological exploration."
+                  ],
+                  "social": [
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://linkedin.com/in/pavan-goyal"
+                    },
+                    {
+                      "label": "Email",
+                      "href": "mailto:pavan@blueblocks.com"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "Munira Hussain",
+                "roleLabel": "Co-founder & Director",
+                "roleColor": "#57B3CE",
+                "image": "/team/munira.png",
+                "imageAlt": "Munira Hussain",
+                "bio": "Graduate in Psychology, AMI, Netherlands certified for 3–6 and 6–12.",
+                "readMoreHref": "/founders/munira-hussain",
+                "modal": {
+                  "title": "Founder’s Note",
+                  "content": [
+                    "Munira Hussain's journey into Montessori education is rooted in a deep respect for the child’s innate intelligence and capacity for self-construction.",
+                    "Through the Innovation Program, his work focuses on bridging classical Montessori principles with modern scientific and technological exploration."
+                  ],
+                  "social": [
+                    {
+                      "label": "LinkedIn",
+                      "href": "https://linkedin.com/in/munira-hussain"
+                    },
+                    {
+                      "label": "Email",
+                      "href": "mailto:munirahssain@blueblocks.com"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
         {
           "type": "councilCarousel",
           "props": {
