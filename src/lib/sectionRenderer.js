@@ -56,6 +56,9 @@ import SystemOverview from "@/components/blocks/SystemOverview";
 import SimpleImageSection from "@/components/blocks/StaticImageBanner";
 import CenteredTextBlock from "@/components/blocks/CenteredTextBlock";
 import OutcomesPills from "@/components/blocks/OutcomesPills";
+import YoungInnovatorsGrid from "@/components/blocks/YoungInnovatorsGrid";
+import ImpactCollageSplit from "@/components/blocks/ImpactCollageSplit";
+import FounderVisionSplit from "@/components/blocks/FounderVisionSplit";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -66,6 +69,13 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          case "founderVisionSplit":
+            return <FounderVisionSplit key={key} {...props} />;
+          case "impactCollageSplit":
+            return <ImpactCollageSplit key={key} {...props} />;
+          case "youngInnovatorsGrid":
+            return <YoungInnovatorsGrid key={key} {...props} />;
+
           case "outcomesPills":
             return <OutcomesPills key={key} {...props} />;
 

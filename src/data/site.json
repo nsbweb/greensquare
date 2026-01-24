@@ -112,6 +112,13 @@
       "viewAll": { "label": "Innovation", "href": "/innovation" },
       "items": [
         {
+          "id": "drone",
+          "title": "Drone",
+          "href": "/innovation/drone",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "image": "/programs/thumb-playgroup.png"
+        },
+        {
           "id": "cubesat-mission",
           "title": "Innovation - Cubsat Mission",
           "href": "/innovation/cubesat-mission",
@@ -237,6 +244,7 @@
             "title": "PEDAGOGICAL INSIGHTS",
             "subtitle": "Evidence-based parenting and innovation.",
             "hasCTA":true,
+            "cols":{"base":3, "md":3},
             "items": [
               { "pill": "The Philosophy", "title": "Why We Stopped Teaching “Answers”", "meta": "A short read on guidance over instruction." },
               { "pill": "The Evidence", "title": "InnoVision 2050: The Unscripted Learner", "meta": "How learning evolves for the next decade." },
@@ -2695,6 +2703,253 @@
       ]
     },
     "innovationDetail":{
+      "drone":{
+        "sections":[
+          {
+            "type": "founderVisionSplit",
+            "props": {
+              "bg": "#FFFFFF",
+              "py": "py-14 sm:py-16",
+
+              "leftArcs": {
+                "enabled": true,
+                "arcs": [
+                  { "color": "#95D6ED", "width": 220, "offsetX": -90 },
+                  { "color": "#F9A78F", "width": 210, "offsetX": -45 },
+                  { "color": "#F9E48F", "width": 200, "offsetX": 0 }
+                ]
+              },
+
+              "founder": {
+                "image": "/team/pavan.png",
+                "imageAlt": "Pavan Goyal",
+                "roleTag": "Founder, Lead – Innovation Program",
+                "name": "Pavan Goyal",
+                "nameColor": "#2B66F6",
+                "bio": "AMI, Netherlands certified for 0–3, 3–6, 6–12. Currently pursuing 12–15 Erdkinder training."
+              },
+
+              "content": {
+                "eyebrow": "FOUNDER'S VISION",
+                "title": "The Spark That\nIgnited Young\nInnovators",
+                "text": "Less than a year ago, our founder Pavan Goyal stepped into a new role — leading the Innovation Programme. His goal was simple yet powerful: unlock the limitlessness of 6–12 year-olds and give them the knowledge to innovate fearlessly."
+              }
+            }
+          },
+          {
+            "type": "impactCollageSplit",
+            "props": {
+              "bg": "#F3E3CF",
+              "py": "py-16 sm:py-20",
+
+              "left": {
+                "eyebrow": "THE RESULT",
+                "eyebrowBg": "#E7E8FF",
+                "eyebrowText": "#2C2F8F",
+
+                "title": "Young Innovators.\nReal Impact.",
+                "text": "Nine months later, the results were extraordinary. Children aged 6–11 filed five drone patents — each designed to solve real-world problems."
+              },
+
+              "decor": {
+                "enabled": true,
+                "image": "drone.png",
+                "alt": "Drone",
+                "width": 930,
+                "height": 530,
+                "position": "bottom-left",
+                "opacity": 1
+              },
+
+              "right": {
+                "collage": {
+                  "main": { "src": "/innovation/innov_collage-4.jpg", "alt": "Innovation team", "showPlay": true },
+                  "left": { "src": "/innovation/innov_collage-1.jpg", "alt": "Students" },
+                  "right": { "src": "/innovation/innov_collage-2.jpg", "alt": "Students with drones" }
+                },
+
+                "below": {
+                  "title": "The Tribute",
+                  "titleColor": "#2B66F6",
+                  "text": "Our students dedicated these innovations to Dr Montessori on her 150th Birth Anniversary, honoring her belief in the potential of every child."
+                }
+              }
+            }
+          },
+          {
+            "type": "innovationLogoStrip",
+            "props": {
+              "sectionBg": "",
+              "sectionClass": "",
+              "sectionTitleClass":"text-[1.5rem] sm:text-base md:text-[2.8rem] text-[#4F4F4F] font-medium text-center pb-16",
+              "text": "Media Mentions",
+              "logoWrapClass": "flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10",
+              "logos": [
+                { "src": "/icon/media/cision.png", "alt": "Cision", "width":"169", "height": "76" },
+                { "src": "/icon/media/business-today.png", "alt": "Business Today", "width":"234", "height": "42" },
+                { "src": "/icon/media/disha.png", "alt": "Disha", "width":"234", "height": "76" },
+                { "src": "/icon/media/ew.png", "alt": "Cision", "width":"83", "height": "76" },
+                { "src": "/icon/media/one-news-page.png", "alt": "Business Today", "width":"234", "height": "76" },
+                { "src": "/icon/media/web-india.png", "alt": "Disha", "width":"234", "height": "76" },
+                { "src": "/icon/media/upturn.png", "alt": "Cision", "width":"186", "height": "76" },
+                { "src": "/icon/media/sanvad.png", "alt": "Business Today", "width":"155", "height": "76" },
+                { "src": "/icon/media/socialNews.png", "alt": "Disha", "width":"234", "height": "76" },
+                { "src": "/icon/media/manglorean.png", "alt": "Cision", "width":"234", "height": "76" },
+                { "src": "/icon/media/five.png", "alt": "Business Today", "width":"52", "height": "76" },
+                { "src": "/icon/media/varindia.png", "alt": "Disha", "width":"234", "height": "76" },
+                { "src": "/icon/media/pti.png", "alt": "Cision", "width":"234", "height": "76" },
+                { "src": "/icon/media/tmc.png", "alt": "Business Today", "width":"234", "height": "76" },
+                { "src": "/icon/media/ground.png", "alt": "Disha", "width":"234", "height": "76" },
+                { "src": "/icon/media/newDelhi.png", "alt": "Cision", "width":"74", "height": "76" },
+                { "src": "/icon/media/business-news.png", "alt": "Business Today", "width":"234", "height": "76" },
+                { "src": "/icon/media/india-today.png", "alt": "Disha", "width":"141", "height": "76" }
+              ]
+            }
+          },
+          {
+            "type": "youngInnovatorsGrid",
+            "props": {
+              "bg": "#F3E3CF",
+              "title": "Meet Our Young Innovators",
+              "subtitle": "A celebration of hands-on learning, discovery, and fearless innovation.",
+              "maxWidth": "max-w-6xl",
+
+              "cols": { "base": 1, "md": 2 },
+              "gap": "gap-8",
+
+              "cardRadius": "rounded-2xl",
+              "cardPadding": "p-5",
+              "cardBg": "#FFFFFF",
+              "imageRadius": "rounded-xl",
+              "imageAspect": "aspect-[4/3]",
+
+              "items": [
+                {
+                  "layout": "card",
+                  "image": "/innovation/drone/innovator-01.jpg",
+                  "alt": "Team photo 1",
+                  "text": "“These three young men are Ayushman, Sanshray and Dhairya who came up with the idea of a rescue drone to save children who may have fallen into open bore wells. They have been reading/hearing about this unfortunate tragedy that seems to befall us more often than not and decided to not just empathise but aide in providing a solution.”"
+                },
+                {
+                  "layout": "card",
+                  "image": "/innovation/drone/innovator-02.jpg",
+                  "alt": "Team photo 2",
+                  "text": "“Meet Nayonika, Uma, Aditi and Akira- the young girls team that created a drone to deliver essential services to the homes of people. An idea that took shape in the early days of the Covid pandemic, the girls were eager to help out people unable to step out for essentials.”"
+                },
+                {
+                  "layout": "card",
+                  "image": "/innovation/drone/innovator-03.jpg",
+                  "alt": "Team photo 2",
+                  "text": "“The team of Shourya, Anshul, Nihal and Vivaswath came up with a drone design to aide in the detection of covid patients in public places- especially railway stations and bus stops. The drone will do everything from taking the temperature of the suspected case to alert doctors.”"
+                },
+                {
+                  "layout": "card",
+                  "image": "/innovation/drone/innovator-04.jpg",
+                  "alt": "Team photo 2",
+                  "text": "“The team of Shourya, Anshul, Nihal and Vivaswath came up with a drone design to aide in the detection of covid patients in public places- especially railway stations and bus stops. The drone will do everything from taking the temperature of the suspected case to alert doctors.”"
+                },
+
+                {
+                  "layout": "split",
+                  "span": { "md": 2 },
+                  "image": "/innovation/drone/innovator-05.jpg",
+                  "alt": "Team photo 3",
+                  "text": "“This is the team of Aryan, Hasith and Akshat who took no time at all to come up with the idea of a security drone that will raise an alarm at burglaries, deter perpetrators with pepper spray and also douse fires apart from alerting the police.”"
+                },
+
+                {
+                  "layout": "textOnly",
+                  "span": { "md": 2 },
+                  "textParts": [
+                    "These children will grow into a world that you and me cannot even begin to imagine. It is high time school education equipped them to not just survive but to thrive in their future. We believe that children need to be ready and relevant as they grow and for that critical thinking skills need to be nurtured. Experiential learning is the way forward, where we develop innovative mindset that will make these children problem solvers as adults. By creating innovation zones we encourage children to think creatively and apply technology in their solutions,” - said Pavan Goyal, Founder and Chief Innovator, Blue Blocks",
+                    "“We are hoping to revolutionize the thinking and working of the school education system by our approach where outcomes are not realised in the distant future but right here and now. We hope the start we have made will encourage other young innovators and set up the roadmap for the country to follow,” Pavan added.",
+                    "The Drone Research and Innovation Centre is a first of its kind in the country where research oriented learning is encouraged through observation, exploration, 3d modelling, experimentation, innovating, prototyping, and building. All this come as a natural extension to the work children do in their classroom as part of the Montessori programme right from ages 3 and upwards."
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "montessoriForSuccess",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "EXPERTS SPEAK",
+              "items": [
+                {
+                  "name": "SANDIPIKA ROY",
+                  "role": "Aerospace Engineer",
+                  "quote": "A space like this helps children build the habit of thinking in systems — observing, connecting, and applying ideas rather than memorizing them."
+                },
+                {
+                  "name": "RESEARCH MENTOR",
+                  "role": "Innovation & Design",
+                  "quote": "Biomimicry is one of the most powerful bridges between curiosity and real-world problem solving — especially when children learn it early."
+                }
+              ]
+            }
+          },
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Voices of Young Innovators",
+              "cols": { "base": 1, "sm": 2, "lg": 2 },
+              "tileMinHeight": 410,
+              "tileMaxHeight": 410,
+              "showThumbnails": true,
+              "videoAutoplay": false,
+              "videoMuted": false,
+              "videoControls": true,
+              "videoLoop": false,
+              "items": [
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-01.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-02.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-03.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-04.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-05.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-06.jpg" }
+              ]
+            }
+          },
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Gallery",
+              "images": [
+                "/innovation/classroom-1.jpg",
+                "/innovation/classroom-2.jpg",
+                "/innovation/classroom-3.jpg",
+                "/innovation/classroom-4.jpg",
+                "/innovation/classroom-5.jpg",
+                "/innovation/classroom-6.jpg",
+                "/innovation/classroom-7.jpg",
+                "/innovation/classroom-8.jpg",
+                "/innovation/classroom-9.jpg",
+                "/innovation/classroom-10.jpg",
+                "/innovation/classroom-11.jpg",
+                "/innovation/classroom-12.jpg"
+              ]
+            }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "title": "Experience Learning\nthe Blue Blocks Way.",
+              "text": "Seats are filled on a first-come basis.",
+              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+              "image": "/innovation/drone.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "imagePositionTopRight":"sm:-right-10 sm:-top-40",
+              "customTopSpacing":"sm:pt-00",
+              "align": "left",
+              "theme": "dark"
+            }
+          }
+        ]
+      },
       "cubesat-mission": {
         "sections": [
           {
@@ -3553,55 +3808,6 @@
           ]
         }
       }
-      ]
-    },
-    "drone":{
-      "sections":[
-        {
-          "type": "pageHero",
-          "props": {
-            "title": "Drone",
-            "breadcrumb": [
-              { "label": "Home", "href": "/" },
-              { "label": "Drone" }
-            ],
-            "bg": {
-              "base": "#F3E3CF",
-              "leftArc": "/ui/arc-left.png",
-              "rightArc": "/ui/arc-right.png"
-            }
-          }
-        },
-        {
-          "type": "innovationLogoStrip",
-          "props": {
-            "sectionBg": "",
-            "sectionClass": "",
-            "sectionTitleClass":"text-[1.5rem] sm:text-base md:text-[2.8rem] text-[#4F4F4F] font-medium text-center pb-16",
-            "text": "Media Mentions",
-            "logoWrapClass": "flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10",
-            "logos": [
-              { "src": "/icon/media/cision.png", "alt": "Cision", "width":"169", "height": "76" },
-              { "src": "/icon/media/business-today.png", "alt": "Business Today", "width":"234", "height": "42" },
-              { "src": "/icon/media/disha.png", "alt": "Disha", "width":"234", "height": "76" },
-              { "src": "/icon/media/ew.png", "alt": "Cision", "width":"83", "height": "76" },
-              { "src": "/icon/media/one-news-page.png", "alt": "Business Today", "width":"234", "height": "76" },
-              { "src": "/icon/media/web-india.png", "alt": "Disha", "width":"234", "height": "76" },
-              { "src": "/icon/media/upturn.png", "alt": "Cision", "width":"186", "height": "76" },
-              { "src": "/icon/media/sanvad.png", "alt": "Business Today", "width":"155", "height": "76" },
-              { "src": "/icon/media/socialNews.png", "alt": "Disha", "width":"234", "height": "76" },
-              { "src": "/icon/media/manglorean.png", "alt": "Cision", "width":"234", "height": "76" },
-              { "src": "/icon/media/five.png", "alt": "Business Today", "width":"52", "height": "76" },
-              { "src": "/icon/media/varindia.png", "alt": "Disha", "width":"234", "height": "76" },
-              { "src": "/icon/media/pti.png", "alt": "Cision", "width":"234", "height": "76" },
-              { "src": "/icon/media/tmc.png", "alt": "Business Today", "width":"234", "height": "76" },
-              { "src": "/icon/media/ground.png", "alt": "Disha", "width":"234", "height": "76" },
-              { "src": "/icon/media/newDelhi.png", "alt": "Cision", "width":"74", "height": "76" },
-              { "src": "/icon/media/business-news.png", "alt": "Business Today", "width":"234", "height": "76" },
-              { "src": "/icon/media/india-today.png", "alt": "Disha", "width":"141", "height": "76" }
-            ]
-          }
-          }
       ]
     }
   }
