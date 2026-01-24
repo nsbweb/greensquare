@@ -54,6 +54,8 @@ import MontessoriForSuccess from "@/components/blocks/montessoriForSuccessSlider
 import CareersSection from "@/components/blocks/CareersSection";
 import SystemOverview from "@/components/blocks/SystemOverview";
 import SimpleImageSection from "@/components/blocks/StaticImageBanner";
+import CenteredTextBlock from "@/components/blocks/CenteredTextBlock";
+import OutcomesPills from "@/components/blocks/OutcomesPills";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -64,6 +66,12 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          case "outcomesPills":
+            return <OutcomesPills key={key} {...props} />;
+
+          case "CenteredTextBlock":
+            return <CenteredTextBlock key={key} {...section.props} />;
+
           case "simpleImageSection":
             return <SimpleImageSection key={key} {...section.props} />;
           case "systemOverview":

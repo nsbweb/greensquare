@@ -1,31 +1,120 @@
 import Container from "@/components/layout/Container";
 import Image from "next/image";
 
-export default function ImageText({ bgClass = "bg-white", SecBg, title, text = [], imageUrl = "" }) {
-  const gridColsClass = imageUrl
-    ? "grid-cols-1 md:grid-cols-2"
-    : "grid-cols-1 md:grid-cols-1";
+export default function ImageText({
+  // existing
+  bgClass = "bg-white",
+  SecBg = "",
+  title,
+  text = [],
+  imageUrl = "",
+
+  // ✅ new optional props (non-breaking)
+  variant = "default", // "default" | "card"
+  cardBg = "#EEF7FD",
+  cardRadius = "rounded-2xl",
+  cardPadding = "p-8 sm:p-10",
+  imageSide = "left", // "left" | "right"
+  imageClassName = "",
+  imageFit = "contain", // "contain" | "cover"
+  imageAspect = "aspect-[16/10]",
+  titleClassName = "",
+  textClassName = "",
+}) {
+  const hasImage = Boolean(imageUrl);
+
+  const gridColsClass = hasImage ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-1";
+
+  // When variant = card, we render a rounded "panel" wrapping the whole grid
+  const isCard = variant === "card";
+
+  const wrapClass = isCard
+    ? `${cardRadius} ${cardPadding}`
+    : SecBg; // keep old behavior: SecBg stays on grid wrapper
+
+  const wrapStyle = isCard ? { backgroundColor: cardBg } : undefined;
+
+  // Image position control (optional)
+  const imageOrderClass =
+    hasImage && imageSide === "right"
+      ? "md:order-2"
+      : "";
+
+  const contentOrderClass =
+    hasImage && imageSide === "right"
+      ? "md:order-1"
+      : "";
+
+  // Old UI (default) image wrapper keeps border + bg-slate-100
+  // New card UI removes border and uses cover
+  const imgOuterClass = isCard
+    ? `overflow-hidden ${imageClassName || "rounded-2xl"}`
+    : "rounded-2xl overflow-hidden bg-slate-100 border";
+
+  const imgInnerClass = isCard
+    ? `${imageAspect} relative`
+    : "aspect-[16/10] flex items-center justify-center text-sm text-slate-500";
+
+  const imgFitClass = imageFit === "cover" ? "object-cover" : "object-contain";
+
+  const finalTitleClass = titleClassName
+    ? titleClassName
+    : isCard
+      ? "text-3xl sm:text-4xl font-medium text-[#131313] whitespace-pre-line"
+      : "text-2xl sm:text-3xl font-semibold whitespace-pre-line";
+
+  const finalTextWrapClass = textClassName
+    ? textClassName
+    : isCard
+      ? "mt-4 space-y-3 text-slate-600 leading-relaxed text-[0.95rem]"
+      : `${title ? "mt-4" : "p-5"} space-y-3 text-slate-700 leading-relaxed`;
 
   return (
-    <section className={`${bgClass}`}>
+    <section className={bgClass}>
       <Container className="py-12">
-        <div className={`grid ${gridColsClass} ${SecBg} gap-8 items-center`}>
-          {imageUrl ? (<div className="rounded-2xl overflow-hidden bg-slate-100 border">
-            <div className="aspect-[16/10] flex items-center justify-center text-sm text-slate-500">
-              {imageUrl ? <Image src={imageUrl}  alt="" width={815} height={555} className="object-contain" /> : "Image Placeholder"}
+        <div
+          className={[
+            "grid",
+            gridColsClass,
+            "gap-8 items-center",
+            wrapClass,
+          ].join(" ")}
+          style={wrapStyle}
+        >
+          {hasImage ? (
+            <div className={`${imgOuterClass} ${imageOrderClass}`}>
+              <div className={imgInnerClass}>
+                {isCard ? (
+                  <Image
+                    src={imageUrl}
+                    alt={title || ""}
+                    fill
+                    className={imgFitClass}
+                    sizes="(min-width: 768px) 40vw, 100vw"
+                  />
+                ) : (
+                  <Image
+                    src={imageUrl}
+                    alt={title || ""}
+                    width={815}
+                    height={555}
+                    className={imgFitClass}
+                  />
+                )}
+              </div>
             </div>
-          </div>) : null}
+          ) : null}
 
-          <div>
-            {title ? (<h2 className="text-2xl sm:text-3xl font-semibold whitespace-pre-line">
-              {title}
-            </h2>) : null}
+          <div className={contentOrderClass}>
+            {title ? <h2 className={finalTitleClass}>{title}</h2> : null}
 
-            {text ? (<div className={`${title ? "mt-4" : "p-5"} space-y-3 text-slate-700 leading-relaxed`}>
-              {text.map((p, idx) => (
-                <p key={idx}>{p}</p>
-              ))}
-            </div>) : null}
+            {Array.isArray(text) && text.length ? (
+              <div className={finalTextWrapClass}>
+                {text.map((p, idx) => (
+                  <p key={idx}>{p}</p>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
       </Container>

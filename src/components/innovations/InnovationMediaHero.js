@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 
 export default function InnovationMediaHero({
+  spacingTop,
   image,
   title,
   subtitle,
@@ -10,7 +11,7 @@ export default function InnovationMediaHero({
   secondaryCta,
 }) {
   return (
-    <section className="bg-white">
+    <section className={`bg-white ${spacingTop}`}>
       <Container className="pb-10 sm:pb-14">
         <div className="relative overflow-hidden rounded-3xl bg-slate-100">
           <div className="relative aspect-[16/10] sm:aspect-[16/8]">

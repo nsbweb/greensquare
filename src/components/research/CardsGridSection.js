@@ -10,47 +10,45 @@ function splitTitleToTwoLines(title = "") {
 
 function toColsClass(cols) {
   switch (cols) {
-    case 1:
-      return "grid-cols-1";
-    case 2:
-      return "grid-cols-2";
-    case 3:
-      return "grid-cols-3";
-    case 4:
-      return "grid-cols-4";
-    case 5:
-      return "grid-cols-5";
-    case 6:
-      return "grid-cols-6";
-    default:
-      return "grid-cols-1";
+    case 1: return "grid-cols-1";
+    case 2: return "grid-cols-2";
+    case 3: return "grid-cols-3";
+    case 4: return "grid-cols-4";
+    case 5: return "grid-cols-5";
+    case 6: return "grid-cols-6";
+    default: return "grid-cols-1";
   }
 }
 
 function maxWidthClassToPx(maxWidthClass = "") {
-  const token = String(maxWidthClass)
-    .split(" ")
-    .find((x) => x.startsWith("max-w-"));
+  const token = String(maxWidthClass).split(" ").find((x) => x.startsWith("max-w-"));
   switch (token) {
-    case "max-w-2xl":
-      return 672;
-    case "max-w-3xl":
-      return 768;
-    case "max-w-4xl":
-      return 896;
-    case "max-w-5xl":
-      return 1024;
-    case "max-w-6xl":
-      return 1152;
-    case "max-w-7xl":
-      return 1280;
-    default:
-      return null;
+    case "max-w-2xl": return 672;
+    case "max-w-3xl": return 768;
+    case "max-w-4xl": return 896;
+    case "max-w-5xl": return 1024;
+    case "max-w-6xl": return 1152;
+    case "max-w-7xl": return 1280;
+    default: return null;
   }
 }
 
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
+}
+
+function numOrFallback(v, fallback) {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : fallback;
+}
+
+function stripMtClass(className = "") {
+  // removes any "mt-*" tokens (keeps everything else)
+  return String(className)
+    .split(" ")
+    .filter((t) => !/^mt-\[.*\]$/.test(t) && !/^mt-\d+$/.test(t))
+    .join(" ")
+    .trim();
 }
 
 export default function CardsGridSection({
@@ -66,7 +64,7 @@ export default function CardsGridSection({
   description,
   subdescription,
   subtitle,
-  headerAlign = "center", // "center" | "left"
+  headerAlign = "center",
   eyebrowBg = "#E7E8FF",
   eyebrowText = "#2C2F8F",
 
@@ -80,7 +78,7 @@ export default function CardsGridSection({
   gridClassName = "",
 
   referenceColsDesktop = 4,
-  desktopSpan, // if undefined -> uses cols.lg
+  desktopSpan,
   centerWhenShrunk = true,
 
   // Card styling
@@ -94,11 +92,24 @@ export default function CardsGridSection({
   iconSize = 40,
   iconWrapClassName = "h-10 w-10",
   titleSplit = true,
-  cardTitleClassName = "mt-5 text-[1.05rem] sm:text-[1.1rem] font-medium leading-[1.18] text-white",
+  cardTitleClassName = "mt-5 text-[1.05rem] sm:text-[1.1rem] font-medium leading-[1.18] text-white whitespace-pre-line",
   cardTextClassName = "mt-4 text-[0.8125rem] leading-6 text-white/75",
 
   showNum = true,
   numClassName = "text-[3rem] sm:text-[3.2rem] font-semibold leading-none text-white/20",
+
+  // Existing optional (in-card strip) – still supported
+  cardRightTabs,
+
+  // ✅ NEW optional (behind card strip)
+  cardBehindTabs,
+
+  // Divider inside card
+  cardDivider,
+
+  // ✅ NEW optional behaviors (opt-in)
+  equalHeight = false,
+  tightTitleWhenNoIcon = false,
 
   // Data
   items = [],
@@ -116,14 +127,38 @@ export default function CardsGridSection({
 
   const maxPx = maxWidthClassToPx(maxWidth);
   const shouldShrink = Boolean(maxPx && refCols > 0 && span < refCols);
-
-  // Example: max-w-6xl=1152px, span=3, ref=4 => 864px
   const shrinkPx = shouldShrink ? Math.round(maxPx * (span / refCols)) : null;
 
   const gridWrapStyle =
     shrinkPx && centerWhenShrunk
       ? { maxWidth: `${shrinkPx}px` }
       : undefined;
+
+  // ----- In-card strip (old feature) -----
+  const tabsEnabled = Boolean(cardRightTabs?.enabled);
+  const tabsWidth = numOrFallback(cardRightTabs?.width, 10);
+  const tabsRadius = numOrFallback(cardRightTabs?.radius, 14);
+  const tabsInset = numOrFallback(cardRightTabs?.inset, 8);
+  const defaultTabColors = Array.isArray(cardRightTabs?.colors) ? cardRightTabs.colors : [];
+
+  // ----- Behind-card strip (new feature) -----
+  const behindEnabled = Boolean(cardBehindTabs?.enabled);
+  const behindWidth = numOrFallback(cardBehindTabs?.width, 14);
+  const behindOffsetX = numOrFallback(cardBehindTabs?.offsetX, 10);
+  const behindOffsetY = numOrFallback(cardBehindTabs?.offsetY, 0);
+  const behindRadius = numOrFallback(cardBehindTabs?.radius, 18);
+  const behindInsetTop = numOrFallback(cardBehindTabs?.insetTop, 0);
+  const behindInsetBottom = numOrFallback(cardBehindTabs?.insetBottom, 0);
+  const behindColorsDefault = Array.isArray(cardBehindTabs?.colors) ? cardBehindTabs.colors : [];
+  const behindBorderColor = String(cardBehindTabs?.borderColor || "#131313");
+  const behindBorderWidth = numOrFallback(cardBehindTabs?.borderWidth, 2);
+
+  // ----- Divider -----
+  const dividerEnabled = Boolean(cardDivider?.enabled);
+  const dividerStyle = String(cardDivider?.style || "dotted");
+  const dividerColor = String(cardDivider?.color || "rgba(255,255,255,0.35)");
+  const dividerMt = numOrFallback(cardDivider?.marginTop, 16);
+  const dividerMb = numOrFallback(cardDivider?.marginBottom, 0);
 
   return (
     <section className={sectionClassName} style={{ backgroundColor: bg }}>
@@ -155,20 +190,16 @@ export default function CardsGridSection({
           </div>
         ) : null}
 
-        <div
-          className={[
-            "mt-10 sm:mt-12 mx-auto",
-            centerWhenShrunk ? "flex justify-center" : "",
-          ].join(" ")}
-        >
+        <div className={`mt-10 sm:mt-12 mx-auto ${centerWhenShrunk ? "flex justify-center" : ""}`}>
           <div
             className={[
               "grid w-full",
-              maxWidth, // keeps old behavior if no shrink computed
+              maxWidth,
               gap,
               baseColsClass,
               `sm:${smColsClass}`,
               `lg:${lgColsClass}`,
+              equalHeight ? "items-stretch" : "",
               gridClassName,
             ].join(" ")}
             style={gridWrapStyle}
@@ -177,57 +208,142 @@ export default function CardsGridSection({
               const rawTitle = it?.title ?? "";
               const t = titleSplit ? splitTitleToTwoLines(rawTitle) : null;
               const num = it?.num ? String(it.num) : "";
+              const hasIcon = Boolean(it?.icon);
+              const perCardColors =
+                Array.isArray(it?.tabColors) && it.tabColors.length ? it.tabColors : null;
+              const inCardColors = perCardColors || defaultTabColors;
+              const behindColors = perCardColors || behindColorsDefault;
+              const showBehind = behindEnabled && behindColors.length > 0;
+              const showInCard = tabsEnabled && inCardColors.length > 0 && !showBehind;
+              const needsPadForInCard = showInCard && tabsInset > 0;
+              const wrapClass = equalHeight ? "relative h-full" : "relative";
+              const cardOuterClass = equalHeight ? "h-full" : "";
+              const titleCls =
+                tightTitleWhenNoIcon && !hasIcon
+                  ? stripMtClass(cardTitleClassName)
+                  : cardTitleClassName;
 
               return (
-                <div
-                  key={`${rawTitle || "item"}-${idx}`}
-                  className={[
-                    "relative overflow-hidden",
-                    cardRadius,
-                    cardPadding,
-                    cardClassName,
-                  ].join(" ")}
-                  style={{
-                    backgroundColor: cardBg,
-                    minHeight: cardMinHeight ? `${cardMinHeight}px` : undefined,
-                  }}
-                >
-                  {/* ✅ BIG NUMBER (if provided) */}
-                  {showNum && num ? (
-                    <div className="absolute left-6 top-6 pointer-events-none select-none">
-                      <div className={numClassName}>{num}</div>
+                <div key={`${rawTitle || "item"}-${idx}`} className={wrapClass}>
+                  {showBehind ? (
+                    <div
+                      className="absolute overflow-hidden"
+                      style={{
+                        zIndex: 0,
+                        top: `${behindInsetTop + behindOffsetY}px`,
+                        bottom: `${behindInsetBottom - behindOffsetY}px`,
+                        right: `${-behindOffsetX}px`,
+                        width: `${behindWidth}px`,
+                        borderTopRightRadius: `${behindRadius}px`,
+                        borderBottomRightRadius: `${behindRadius}px`,
+                        borderTopLeftRadius: 0,
+                        borderBottomLeftRadius: 0,
+                      }}
+                      aria-hidden="true"
+                    >
+                      <div className="h-full w-full flex flex-col">
+                        {behindColors.slice(0, 3).map((c, i) => (
+                          <div
+                            key={i}
+                            className="flex-1"
+                            style={{
+                              backgroundColor: c,
+                              borderTop:
+                                i === 0 ? "none" : `${behindBorderWidth}px solid ${behindBorderColor}`,
+                            }}
+                          />
+                        ))}
+                      </div>
                     </div>
                   ) : null}
 
-                  {/* Icon */}
-                  {it?.icon ? (
-                    <div className={iconWrapClassName}>
-                      <Image
-                        src={it.icon}
-                        alt=""
-                        width={iconSize}
-                        height={iconSize}
-                        className="object-contain opacity-95"
+                  <div
+                    className={[
+                      "relative overflow-hidden flex flex-col", // flex-col helps with consistent internal spacing
+                      cardOuterClass,
+                      cardRadius,
+                      cardPadding,
+                      needsPadForInCard ? "pr-10" : "",
+                      cardClassName,
+                    ].join(" ")}
+                    style={{
+                      zIndex: 1,
+                      backgroundColor: cardBg,
+                      minHeight: cardMinHeight ? `${cardMinHeight}px` : undefined,
+                    }}
+                  >
+                    {/* Optional: in-card strip (legacy) */}
+                    {showInCard ? (
+                      <div
+                        className="absolute overflow-hidden"
+                        style={{
+                          top: `${tabsInset}px`,
+                          bottom: `${tabsInset}px`,
+                          right: `${tabsInset}px`,
+                          width: `${tabsWidth}px`,
+                          borderRadius: `${tabsRadius}px`,
+                        }}
+                        aria-hidden="true"
+                      >
+                        <div className="h-full w-full flex flex-col">
+                          {inCardColors.slice(0, 3).map((c, i) => (
+                            <div key={i} className="flex-1" style={{ backgroundColor: c }} />
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {/* BIG NUMBER */}
+                    {showNum && num ? (
+                      <div className="absolute left-6 top-6 pointer-events-none select-none">
+                        <div className={numClassName}>{num}</div>
+                      </div>
+                    ) : null}
+
+                    {/* Icon */}
+                    {hasIcon ? (
+                      <div className={iconWrapClassName}>
+                        <Image
+                          src={it.icon}
+                          alt=""
+                          width={iconSize}
+                          height={iconSize}
+                          className="object-contain opacity-95"
+                        />
+                      </div>
+                    ) : null}
+
+                    {/* Title */}
+                    {rawTitle ? (
+                      <h3 className={titleCls}>
+                        {titleSplit ? (
+                          <>
+                            <span className="block">{t.first}</span>
+                            {t.second ? <span className="block">{t.second}</span> : null}
+                          </>
+                        ) : (
+                          rawTitle
+                        )}
+                      </h3>
+                    ) : null}
+
+                    {/* Divider */}
+                    {dividerEnabled ? (
+                      <div
+                        style={{
+                          marginTop: `${dividerMt}px`,
+                          marginBottom: `${dividerMb}px`,
+                          borderTop: `1px ${dividerStyle} ${dividerColor}`,
+                        }}
                       />
-                    </div>
-                  ) : null}
+                    ) : null}
 
-                  {/* Title */}
-                  {rawTitle ? (
-                    <h3 className={cardTitleClassName}>
-                      {titleSplit ? (
-                        <>
-                          <span className="block">{t.first}</span>
-                          {t.second ? <span className="block">{t.second}</span> : null}
-                        </>
-                      ) : (
-                        rawTitle
-                      )}
-                    </h3>
-                  ) : null}
+                    {/* Text */}
+                    {it?.text ? <p className={cardTextClassName}>{it.text}</p> : null}
 
-                  {/* Text */}
-                  {it?.text ? <p className={cardTextClassName}>{it.text}</p> : null}
+                    {/* (optional) Spacer to keep footer-alignment if you ever add CTA */}
+                    {equalHeight ? <div className="mt-auto" /> : null}
+                  </div>
                 </div>
               );
             })}

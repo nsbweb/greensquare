@@ -4,6 +4,7 @@ import Container from "@/components/layout/Container";
 export default function AcademicsIntro({
   image, // { src, alt }
   eyebrow,
+  spacingTop,
   title,
   subtitle,
   promiseTitle = "The Promise",
@@ -13,7 +14,7 @@ export default function AcademicsIntro({
   promiseCardBg = "#F7EADB",
 }) {
   return (
-    <section style={{ backgroundColor: bg }}>
+    <section style={{ backgroundColor: bg }} className={`${spacingTop}`}>
       <Container className="py-14 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           {/* Left image */}

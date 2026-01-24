@@ -80,9 +80,9 @@ function ProgramCard({ item }) {
     >
       {/* Badge (top-right pill) */}
       {badge ? (
-        <div className="absolute right-5 top-5">
+        <div className="flex justify-end pb-2">
           <span
-            className="inline-flex items-center rounded-full px-4 py-2 text-[0.625rem] font-medium"
+            className="flex items-center rounded-full px-4 py-2 text-[0.625rem] font-medium"
             style={{
               backgroundColor: theme.pillBg,
               color: theme.pillText,

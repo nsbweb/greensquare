@@ -1000,6 +1000,7 @@
         {
           "type": "academicsIntro",
           "props": {
+            "spacingTop":"pt-28",
             "image": { "src": "/academics/hero.jpg", "alt": "Academics" },
             "eyebrow": "OUR PROGRAMS",
             "title": "THE COGNITIVE\nCONTINUUM",
@@ -1195,84 +1196,178 @@
     "programDetails": {
       "playgroup": { 
         "sections": [
-          {
-            "type": "pageHero",
-            "props": {
-              "title": "Playgroup",
-              "breadcrumb": [
-                { "label": "Home", "href": "/" },
-                { "label": "Programs", "href": "program" },
-                { "label": "Playgroup" }
-              ],
-              "bg": {
-                "base": "#F3E3CF",
-                "leftArc": "/ui/arc-left.png",
-                "rightArc": "/ui/arc-right.png"
+            {
+              "type": "pageHero",
+              "props": {
+                "title": "Programs",
+                "breadcrumb": [
+                  { "label": "Programs", "href": "program" },
+                  { "label": "Playgroup" }
+                ],
+                "bg": {
+                  "base": "#F3E3CF",
+                  "leftArc": "/ui/arc-left.png",
+                  "rightArc": "/ui/arc-right.png"
+                }
+              }
+            },
+            {
+              "type": "programIntroSplit",
+              "props": {
+                "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
+                "title": "The Absorbent Mind\n(Unconscious)",
+                "subTitle": "",
+                "text": "",
+                "metaRows": [
+                  {
+                    "label": "Sub-head",
+                    "value": "\"Help Me To Do It\nMyself.\"",
+                    "bg": {
+                      "label": "#F3D8CF",
+                      "value": "#F3D8CF"
+                    }
+                  },
+                  {
+                    "label": "Age",
+                    "value": "15 Months – 2.5\nYears",
+                    "bg": {
+                      "label": "#DFE7DA",
+                      "value": "#DFE7DA"
+                    }
+                  },
+                  {
+                    "label": "Theme",
+                    "value": "Functional\nIndependence",
+                    "bg": {
+                      "label": "#D9E7EA",
+                      "value": "#D9E7EA"
+                    }
+                  }
+                ],
+                "media": {
+                  "main": {
+                    "src": "/programs/playgroup/main.jpg",
+                    "alt": "Playgroup classroom",
+                    "showPlay": true
+                  },
+                  "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
+                  "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
+                }
+              }
+            },
+            {
+              "type": "CenteredTextBlock",
+              "props": {
+                "bg": "#EEF7FD",
+                "title": "The Psychological Phase",
+                "textParts": [
+                  "At this stage, the child is not being taught; they are absorbing. Their primary developmental goal is ",
+                  { "bold": "Functional Independence" },
+                  ". They are driven by an internal directive to master their own movements and bodily functions. We do not interrupt this sacred effort with unnecessary help."
+                ],
+                "maxWidth": "56rem"
+              }
+            },
+            {
+              "type": "AreasofDevelopment",
+              "props": {
+                "bg": "#F3E3CF",
+                "title": "The Prepared Environment",
+                "description": "This is not a classroom; it is a community. Everything—from the chairs to the sinks—is scaled to the child's size.",
+                "headerAlign": "center",
+
+                "cols": { "base": 1, "sm": 2, "lg": 2 },
+                "maxWidth": "max-w-5xl",
+                "gap": "gap-8",
+
+                "cardBg": "#273C75",
+                "cardRadius": "rounded-[18px]",
+                "cardPadding": "px-6 py-7",
+                "cardMinHeight": 260,
+
+                "equalHeight": true,
+                "tightTitleWhenNoIcon": true,
+
+                "cardBehindTabs": {
+                  "enabled": true,
+                  "width": 28,
+                  "offsetX": 10,
+                  "offsetY": 0,
+                  "radius": 18,
+                  "insetTop": 0,
+                  "insetBottom": 0,
+                  "colors": ["#78D6F3", "#F5A48D", "#F9E27C"],
+                  "borderColor": "#131313",
+                  "borderWidth": 2
+                },
+
+                "cardDivider": {
+                  "enabled": true,
+                  "style": "dotted",
+                  "color": "rgba(255,255,255,0.35)",
+                  "marginTop": 18,
+                  "marginBottom": 0
+                },
+
+                "items": [
+                  { "title": "The Conquest of Space", "text": " The child has a biological imperative to move. Our environment is designed for maximum activity—heavy objects to carry, stairs to climb, and washing stands to use. This is not 'burning energy'; it is the coordination of the mind and body.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                  { "title": "The Explosion of Words", "text": "We do not use 'baby talk.' We immerse the child in rich, precise language. We name feelings, objects, and actions. Real conversations happen here, feeding the child's rapidly growing vocabulary.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                  { "title": "Self-Care", "text": "Toilet learning, dressing, and grooming are not chores—they are the curriculum. We use collaborative toileting (no diapers) and clothing that is easy to manage, empowering the child to say, 'I can take care of myself.'", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                  { "title": "Social Grace", "text": "Children set the table, serve themselves, and eat from real ceramic plates. It is a ritual of community where they learn patience, sharing, and the joy of eating together.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] }
+                ]
+              }
+            },
+            {
+              "type": "imageText",
+              "props": {
+                "title": "Expert Guidance",
+                "text": [
+                  "Our AMI-trained guides are observers first. The Anchor of Safety. Our guides provide \"psychological safety\"—a calm, unhurried presence. They do not entertain the child. They link the child to the activity and then fade into the background, allowing the child to discover their own capability."
+                ],
+                "imageUrl": "/programs/playgroup/expert-guidance.jpg",
+
+                "variant": "card",
+                "cardBg": "#EEF7FD",
+                "cardRadius": "rounded-2xl",
+                "cardPadding": "p-8 sm:p-10",
+                "imageSide": "right",
+                "imageClassName": "rounded-2xl",
+                "imageFit": "cover",
+                "imageAspect": "aspect-[4/3]"
+              }
+            },
+            {
+              "type": "outcomesPills",
+              "props": {
+                "bg": "#FFFFFF",
+                "title": "Outcomes",
+                "titleAlign": "center",
+                "maxWidth": "",
+                "gap": "gap-4",
+                "items": [
+                  {
+                    "icon": "/icon/gear.png",
+                    "text": "Functional Independence: Eating, dressing, and toileting alone.",
+                    "pillBg": "#F9E48F"
+                  },
+                  {
+                    "icon": "/icon/movement.png",
+                    "text": "Coordinated Movement: Grace and balance.",
+                    "pillBg": "#F9A78F"
+                  },
+                  {
+                    "icon": "/icon/chat.png",
+                    "text": "Explosion of Vocabulary: Expressing needs with words, not tears.",
+                    "pillBg": "#95D6ED"
+                  },
+                  {
+                    "icon": "/icon/emotion.png",
+                    "text": "Emotional Regulation: The confidence of self-reliance.",
+                    "pillBg": "#F9E48F"
+                  }
+                ]
               }
             }
-          },
-          {
-            "type": "programIntroSplit",
-            "props": {
-              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
-              "title": "Best Playgroup in\nHyderabad",
-              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
-              "media": {
-                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
-                "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
-                "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
-              }
-            }
-          },
-          {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
-          },
-          {
-            "type": "ctaBanner",
-            "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
-            }
-          }
         ]
       },
       "nursery-school": {
@@ -1280,11 +1375,10 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Nursery, PP1, PP2",
+              "title": "Programs",
               "breadcrumb": [
-                { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
-                { "label": "Nursery, PP1, PP2" }
+                { "label": "The Self-Interpretive" }
               ],
               "bg": {
                 "base": "#F3E3CF",
@@ -1296,63 +1390,158 @@
           {
             "type": "programIntroSplit",
             "props": {
-              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
-              "title": "Best Playgroup in\nHyderabad",
-              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
+              "eyebrow": "The Self-Interpretive",
+              "title": "The Absorbent Mind (Conscious)",
+              "subTitle": "",
+              "text": "",
+              "metaRows": [
+                {
+                  "label": "Sub-head",
+                  "value": "\"Help Me To Think For Myself\"",
+                  "bg": {
+                    "label": "#F3D8CF",
+                    "value": "#F3D8CF"
+                  }
+                },
+                {
+                  "label": "Age",
+                  "value": "2.5 Years – 6 Years",
+                  "bg": {
+                    "label": "#DFE7DA",
+                    "value": "#DFE7DA"
+                  }
+                },
+                {
+                  "label": "Theme",
+                  "value": "Conscious Construction",
+                  "bg": {
+                    "label": "#D9E7EA",
+                    "value": "#D9E7EA"
+                  }
+                }
+              ],
               "media": {
-                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
-                "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
-                "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
+                "main": {
+                  "src": "/programs/nursery/main.jpg",
+                  "alt": "Playgroup classroom",
+                  "showPlay": true
+                },
+                "left": { "src": "/programs/nursery/small-thumb-1.jpg", "alt": "Play activity" },
+                "right": { "src": "/programs/nursery/small-thumb-2.jpg", "alt": "Montessori materials" }
               }
             }
           },
           {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
+            "type": "CenteredTextBlock",
+            "props": {
+              "bg": "#EEF7FD",
+              "title": "The Psychological Phase",
+              "textParts": [
+                "The child moves from 'unconscious absorption' to  ",
+                { "bold": "Conscious Construction." },
+                ". The hands become the instruments of the brain. Through touching, moving, and organizing, the child literally constructs their intellect.They are driven by a desire for order, precision, and repetition."
+              ],
+              "maxWidth": "56rem"
+            }
           },
           {
-            "type": "ctaBanner",
+            "type": "AreasofDevelopment",
             "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
+              "bg": "#F3E3CF",
+              "title": "The Prepared Environment",
+              "description": "A space of order and beauty where materials are scientifically designed to isolate specific concepts.",
+              "headerAlign": "center",
+
+              "cols": { "base": 1, "sm": 2, "lg": 2 },
+              "maxWidth": "max-w-5xl",
+              "gap": "gap-8",
+
+              "cardBg": "#273C75",
+              "cardRadius": "rounded-[18px]",
+              "cardPadding": "px-6 py-7",
+              "cardMinHeight": 260,
+
+              "equalHeight": true,
+              "tightTitleWhenNoIcon": true,
+
+              "cardBehindTabs": {
+                "enabled": true,
+                "width": 28,
+                "offsetX": 10,
+                "offsetY": 0,
+                "radius": 18,
+                "insetTop": 0,
+                "insetBottom": 0,
+                "colors": ["#78D6F3", "#F5A48D", "#F9E27C"],
+                "borderColor": "#131313",
+                "borderWidth": 2
+              },
+
+              "cardDivider": {
+                "enabled": true,
+                "style": "dotted",
+                "color": "rgba(255,255,255,0.35)",
+                "marginTop": 18,
+                "marginBottom": 0
+              },
+
+              "items": [
+                { "title": "Practical Life", "text": "These are not chores; they are the foundation of focus. Washing, polishing, and sweeping build coordination, the will, and the ability to complete a cycle of activity.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Sensorial", "text": "Refining the senses to perceive differences in the world. Using scientifically designed materials, the child learns to classify dimension, color, shape, and texture.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Language", "text": "A rich explosion of vocabulary. Through the 'Sandpaper Letters' and 'Moveable Alphabet,' the child discovers that sounds have symbols, leading to an explosion into writing and reading.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Mathematics", "text": "Making the abstract physically graspable. The child handles the 'Golden Beads' to understand the decimal system concretely before ever seeing a number on a page.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "props": {
+              "title": "Expert Guidance",
+              "text": [
+                "The guide does not lecture to the whole class. Instead, they give individual 'presentations,' offering a key to the world, and then leave the child to work freely. This protects the child's concentration from interruption."
+              ],
+              "imageUrl": "/programs/nursery/expert-guidance.jpg",
+
+              "variant": "card",
+              "cardBg": "#EEF7FD",
+              "cardRadius": "rounded-2xl",
+              "cardPadding": "p-8 sm:p-10",
+              "imageSide": "right",
+              "imageClassName": "rounded-2xl",
+              "imageFit": "cover",
+              "imageAspect": "aspect-[4/3]"
+            }
+          },
+          {
+            "type": "outcomesPills",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "Outcomes",
+              "titleAlign": "center",
+              "maxWidth": "",
+              "gap": "gap-4",
+              "items": [
+                {
+                  "icon": "/icon/brain.png",
+                  "text": "Extended Concentration: The ability to focus deeply.",
+                  "pillBg": "#F9E48F"
+                },
+                {
+                  "icon": "/icon/heart-box.png",
+                  "text": "Love of Order: Internalizing structure",
+                  "pillBg": "#F9A78F"
+                },
+                {
+                  "icon": "/icon/brain-b.png",
+                  "text": "Mathematical Mind: Concrete understanding of the decimal system.",
+                  "pillBg": "#95D6ED"
+                },
+                {
+                  "icon": "/icon/community-b.png",
+                  "text": "Social Cohesion: Grace and Courtesy.",
+                  "pillBg": "#F9E48F"
+                }
+              ]
             }
           }
         ]
@@ -1362,11 +1551,10 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Primary School – Class 1 to 6",
+              "title": "Programs",
               "breadcrumb": [
-                { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
-                { "label": "Primary School – Class 1 to 6" }
+                { "label": "The Elementary" }
               ],
               "bg": {
                 "base": "#F3E3CF",
@@ -1378,63 +1566,157 @@
           {
             "type": "programIntroSplit",
             "props": {
-              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
-              "title": "Best Playgroup in\nHyderabad",
-              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
+              "eyebrow": "The Elementary",
+              "title": "The Reasoning Mind",
+              "subTitle": "",
+              "text": "",
+              "metaRows": [
+                {
+                  "label": "Sub-head",
+                  "value": "\"Help Me To Think With You\"",
+                  "bg": {
+                    "label": "#F3D8CF",
+                    "value": "#F3D8CF"
+                  }
+                },
+                {
+                  "label": "Age",
+                  "value": "6 Years – 12 Years",
+                  "bg": {
+                    "label": "#DFE7DA",
+                    "value": "#DFE7DA"
+                  }
+                },
+                {
+                  "label": "Theme",
+                  "value": "Intellectual Independence",
+                  "bg": {
+                    "label": "#D9E7EA",
+                    "value": "#D9E7EA"
+                  }
+                }
+              ],
               "media": {
-                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
+                "main": {
+                  "src": "/programs/playgroup/main.jpg",
+                  "alt": "The Psychological Phase",
+                  "showPlay": true
+                },
                 "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
                 "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
               }
             }
           },
           {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
+            "type": "CenteredTextBlock",
+            "props": {
+              "bg": "#EEF7FD",
+              "title": "The Psychological Phase",
+              "textParts": [
+                " The child has entered the age of the 'Reasoning Mind' and ' ",
+                { "bold": "Social Imagination" },
+                " .' They are no longer satisfied with 'what' is happening; they demand to know 'why' and 'how.' They are driven to understand the universe and their place within it."
+              ],
+              "maxWidth": "56rem"
+            }
           },
           {
-            "type": "ctaBanner",
+            "type": "AreasofDevelopment",
             "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
+              "bg": "#F3E3CF",
+              "title": "The Prepared Environment",
+              "description": "The classroom is no longer enough; the library and the outside world become the environment.",
+              "headerAlign": "center",
+
+              "cols": { "base": 1, "sm": 2, "lg": 3 },
+              "maxWidth": "max-w-6xl",
+              "gap": "gap-8",
+
+              "cardBg": "#273C75",
+              "cardRadius": "rounded-[18px]",
+              "cardPadding": "px-6 py-7",
+              "cardMinHeight": 260,
+
+              "equalHeight": true,
+              "tightTitleWhenNoIcon": true,
+
+              "cardBehindTabs": {
+                "enabled": true,
+                "width": 28,
+                "offsetX": 10,
+                "offsetY": 0,
+                "radius": 18,
+                "insetTop": 0,
+                "insetBottom": 0,
+                "colors": ["#78D6F3", "#F5A48D", "#F9E27C"],
+                "borderColor": "#131313",
+                "borderWidth": 2
+              },
+
+              "cardDivider": {
+                "enabled": true,
+                "style": "dotted",
+                "color": "rgba(255,255,255,0.35)",
+                "marginTop": 18,
+                "marginBottom": 0
+              },
+
+              "items": [
+                { "title": "The Great Stories", "text": "Dramatic narratives about the Universe, Life, and Numbers that spark the imagination and provide a framework for all future learning.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Going Out", "text": "Small groups of students plan and execute field trips entirely on their own to find answers, building real-world logistics skills and independence.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Collaborative Work", "text": "Children work in groups, navigating social dynamics and learning to debate and agree.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "props": {
+              "title": "Expert Guidance",
+              "text": [
+                "They strike the imagination with the 'Great Lessons' to ignite curiosity. They are not the source of all knowledge but the facilitator who points the child toward research resources."
+              ],
+              "imageUrl": "/programs/the-elementary/expert-guidance.jpg",
+
+              "variant": "card",
+              "cardBg": "#EEF7FD",
+              "cardRadius": "rounded-2xl",
+              "cardPadding": "p-8 sm:p-10",
+              "imageSide": "right",
+              "imageClassName": "rounded-2xl",
+              "imageFit": "cover",
+              "imageAspect": "aspect-[4/3]"
+            }
+          },
+          {
+            "type": "outcomesPills",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "Outcomes",
+              "titleAlign": "center",
+              "maxWidth": "",
+              "gap": "gap-4",
+              "items": [
+                {
+                  "icon": "/icon/heart-certificate.png",
+                  "text": "Moral Agency: Understanding justice and fairness",
+                  "pillBg": "#F9E48F"
+                },
+                {
+                  "icon": "/icon/magnific.png",
+                  "text": "Research Skills: Independent inquiry.",
+                  "pillBg": "#F9A78F"
+                },
+                {
+                  "icon": "/icon/chat-b.png",
+                  "text": "Big Picture Thinking: Interconnectedness of subjects",
+                  "pillBg": "#95D6ED"
+                },
+                {
+                  "icon": "/icon/emotion.png",
+                  "text": "Social Collaboration: Working in teams.",
+                  "pillBg": "#F9E48F"
+                }
+              ]
             }
           }
         ]
@@ -1444,11 +1726,10 @@
           {
             "type": "pageHero",
             "props": {
-              "title": "Secondary School – Class 7 to 10",
+              "title": "Programs",
               "breadcrumb": [
-                { "label": "Home", "href": "/" },
                 { "label": "Programs", "href": "program" },
-                { "label": "Secondary School – Class 7 to 10" }
+                { "label": "The Adolescent Community" }
               ],
               "bg": {
                 "base": "#F3E3CF",
@@ -1460,63 +1741,158 @@
           {
             "type": "programIntroSplit",
             "props": {
-              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
-              "title": "Best Playgroup in\nHyderabad",
-              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
+              "eyebrow": "The Adolescent Community",
+              "title": "The Social Self",
+              "subTitle": "",
+              "text": "",
+              "metaRows": [
+                {
+                  "label": "Sub-head",
+                  "value": "\"Help Me To Think With Society\"",
+                  "bg": {
+                    "label": "#F3D8CF",
+                    "value": "#F3D8CF"
+                  }
+                },
+                {
+                  "label": "Age",
+                  "value": "12 Years – 16 Years",
+                  "bg": {
+                    "label": "#DFE7DA",
+                    "value": "#DFE7DA"
+                  }
+                },
+                {
+                  "label": "Theme",
+                  "value": "Social Independence",
+                  "bg": {
+                    "label": "#D9E7EA",
+                    "value": "#D9E7EA"
+                  }
+                }
+              ],
               "media": {
-                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
-                "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
-                "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
+                "main": {
+                  "src": "/programs/the-adolescent-community/main.jpg",
+                  "alt": "Playgroup classroom",
+                  "showPlay": true
+                },
+                "left": { "src": "/programs/the-adolescent-community/small-thumb-1.jpg", "alt": "Play activity" },
+                "right": { "src": "/programs/the-adolescent-community/small-thumb-2.jpg", "alt": "Montessori materials" }
               }
             }
           },
           {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
+            "type": "CenteredTextBlock",
+            "props": {
+              "bg": "#EEF7FD",
+              "title": "The Psychological Phase",
+              "textParts": [
+                "Adolescence is a 'rebirth.' The student is leaving childhood and entering society. They require ",
+                { "bold": "Valorization" },
+                "'. —the feeling that they are capable, strong, and their work has value to others. They need to understand economic mechanisms and social structures."
+              ],
+              "maxWidth": "56rem"
+            }
           },
           {
-            "type": "ctaBanner",
+            "type": "AreasofDevelopment",
             "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
+              "bg": "#F3E3CF",
+              "title": "The Prepared Environment",
+              "description": "A space of order and beauty where materials are scientifically designed to isolate specific concepts.",
+              "headerAlign": "center",
+
+              "cols": { "base": 1, "sm": 2, "lg": 2 },
+              "maxWidth": "max-w-5xl",
+              "gap": "gap-8",
+
+              "cardBg": "#273C75",
+              "cardRadius": "rounded-[18px]",
+              "cardPadding": "px-6 py-7",
+              "cardMinHeight": 260,
+
+              "equalHeight": true,
+              "tightTitleWhenNoIcon": true,
+
+              "cardBehindTabs": {
+                "enabled": true,
+                "width": 28,
+                "offsetX": 10,
+                "offsetY": 0,
+                "radius": 18,
+                "insetTop": 0,
+                "insetBottom": 0,
+                "colors": ["#78D6F3", "#F5A48D", "#F9E27C"],
+                "borderColor": "#131313",
+                "borderWidth": 2
+              },
+
+              "cardDivider": {
+                "enabled": true,
+                "style": "dotted",
+                "color": "rgba(255,255,255,0.35)",
+                "marginTop": 18,
+                "marginBottom": 0
+              },
+
+              "items": [
+                { "title": "Occupation (Work)", "text": "Students run real ventures (e.g., farming, workshops, kitchens). They do not just study biology; they cultivate the soil. They do not just study chemistry; they manage water systems. This is learning through 'doing.'", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Micro-Economy", "text": "The community functions as a small economy. Students create budgets, manage profits, market products, and transact with the outside world. This builds financial literacy and ethical responsibility.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "The History of Humanity", "text": "Adolescents are driven by justice. We study the history of human progress—not as dates to memorize, but as a struggle for survival and civilization—to help them understand where they fit in the story of humanity.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                { "title": "Residency / Community Life", "text": "Managing the needs of the community—cooking for the group, cleaning, and maintenance. This builds interdependence and the realization that their contribution matters to the group's survival.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "props": {
+              "title": "Expert Guidance",
+              "text": [
+                "The adult shifts from 'Teacher' to 'Mentor.' They are experts (scientists, artists, entrepreneurs) who walk alongside the adolescent. They model integrity, work ethic, and intellectual curiosity, treating the student as an emerging adult."
+              ],
+              "imageUrl": "/programs/the-adolescent-community/expert-guidance.jpg",
+
+              "variant": "card",
+              "cardBg": "#EEF7FD",
+              "cardRadius": "rounded-2xl",
+              "cardPadding": "p-8 sm:p-10",
+              "imageSide": "right",
+              "imageClassName": "rounded-2xl",
+              "imageFit": "cover",
+              "imageAspect": "aspect-[4/3]"
+            }
+          },
+          {
+            "type": "outcomesPills",
+            "props": {
+              "bg": "#FFFFFF",
+              "title": "Outcomes",
+              "titleAlign": "center",
+              "maxWidth": "",
+              "gap": "gap-4",
+              "items": [
+                {
+                  "icon": "/icon/gear.png",
+                  "text": "Economic Capability: A practical understanding of value and money.",
+                  "pillBg": "#F9E48F"
+                },
+                {
+                  "icon": "/icon/emotion.png",
+                  "text": "Emotional Resilience: Facing real consequences, not artificial punishments.",
+                  "pillBg": "#F9A78F"
+                },
+                {
+                  "icon": "/icon/community-b.png",
+                  "text": "Social Grace: Navigating complex social hierarchies with empathy.",
+                  "pillBg": "#95D6ED"
+                },
+                {
+                  "icon": "/icon/emotion.png",
+                  "text": "A Vision of the Future: A clear sense of purpose.",
+                  "pillBg": "#F9E48F"
+                }
+              ]
             }
           }
         ]
@@ -2588,7 +2964,11 @@
                 { "label": "Innovation", "href": "/innovation" },
                 { "label": "Biomimicry Hive", "href": "/innovation/biomimicry-hive" }
               ],
-              "bg": "#F7E7D5"
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
             }
           },
           {
@@ -3173,7 +3553,55 @@
           ]
         }
       }
-
+      ]
+    },
+    "drone":{
+      "sections":[
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Drone",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Drone" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "innovationLogoStrip",
+          "props": {
+            "sectionBg": "",
+            "sectionClass": "",
+            "sectionTitleClass":"text-[1.5rem] sm:text-base md:text-[2.8rem] text-[#4F4F4F] font-medium text-center pb-16",
+            "text": "Media Mentions",
+            "logoWrapClass": "flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10",
+            "logos": [
+              { "src": "/icon/media/cision.png", "alt": "Cision", "width":"169", "height": "76" },
+              { "src": "/icon/media/business-today.png", "alt": "Business Today", "width":"234", "height": "42" },
+              { "src": "/icon/media/disha.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/ew.png", "alt": "Cision", "width":"83", "height": "76" },
+              { "src": "/icon/media/one-news-page.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/web-india.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/upturn.png", "alt": "Cision", "width":"186", "height": "76" },
+              { "src": "/icon/media/sanvad.png", "alt": "Business Today", "width":"155", "height": "76" },
+              { "src": "/icon/media/socialNews.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/manglorean.png", "alt": "Cision", "width":"234", "height": "76" },
+              { "src": "/icon/media/five.png", "alt": "Business Today", "width":"52", "height": "76" },
+              { "src": "/icon/media/varindia.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/pti.png", "alt": "Cision", "width":"234", "height": "76" },
+              { "src": "/icon/media/tmc.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/ground.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/newDelhi.png", "alt": "Cision", "width":"74", "height": "76" },
+              { "src": "/icon/media/business-news.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/india-today.png", "alt": "Disha", "width":"141", "height": "76" }
+            ]
+          }
+          }
       ]
     }
   }
