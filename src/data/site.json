@@ -8,9 +8,9 @@
     ],
     "nav": [
       { "label": "Home", "href": "/" },
-      { "label": "What do we do"},
-      { "label": "Programs"},
-      { "label": "Innovations"},
+      { "label": "What do we do", "href": "/about-us"},
+      { "label": "Programs", "href": "/academics"},
+      { "label": "Innovations", "href": "/innovation"},
       { "label": "Careers", "href": "/careers" }
     ]
   },
@@ -260,7 +260,7 @@
             "title": "LIFE AT BLUE BLOCKS",
             "subtitle": "Stories of independence, innovation, and community.",
             "hasCTA":false,
-            "cols":{"base":3, "md":3},
+            "cols":{"base":1, "md":3},
             "items": [
               { "tone": "sky", "pill": "The Philosophy", "pillSec": "The Guide", "title": "Lining the Nest", "meta": "The definitive guide to the First Plane of Development (0-6). A handbook for parents navigating the “Absorbent Mind.”" },
               { "tone": "peach", "pill": "The Student Innovation", "pillSec": "The Outcome", "title": "The Unscripted Learner", "meta": "Witness how our adolescents (Ages 12-16) are solving real-world agricultural problems—not because we told them to, but because they chose to." },

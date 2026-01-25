@@ -233,8 +233,8 @@ export default function Footer() {
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex flex-wrap items-center gap-3 text-[0.75rem] text-white/70">
                     <span aria-hidden className="text-white/60">☎</span>
-                    <span className="whitespace-nowrap">{footer?.contact?.phone}</span>
-                    <span className="whitespace-nowrap">{footer?.contact?.whatsapp}</span>
+                    <Link className="whitespace-nowrap" href={`tel:${footer?.contact?.phone}`}>{footer?.contact?.phone}</Link>
+                    <Link className="whitespace-nowrap" href="https://wa.link/vohpxj">{footer?.contact?.whatsapp}</Link>
                   </div>
 
                   <div className="flex items-center gap-2 text-[0.75rem] text-white/70">
