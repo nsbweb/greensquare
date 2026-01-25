@@ -8,13 +8,14 @@ const toneClass = {
   navy: "bg-[#1f2a44] text-white"
 };
 
-export default function JourneyCards({ title, cards = [] }) {
+export default function JourneyCards({ title, subText, cards = [] }) {
   return (
     <section className="bg-[#f5efe6]">
       <Container className="py-14">
-        <h2 className="text-center text-2xl sm:text-3xl font-semibold tracking-wide">
+        {title ? (<h2 className="text-center text-2xl sm:text-3xl font-semibold tracking-wide">
           {title}
-        </h2>
+        </h2>) : null}
+        {subText ? (<h3 className="text-center text-xl sm:text-2xl ">{subText}</h3>) : null}
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {cards.map((c) => (

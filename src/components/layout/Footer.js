@@ -221,7 +221,7 @@ export default function Footer() {
 
               {/* LINKS GRID */}
               <div className="mt-5 rounded-[1.25rem] bg-transparent">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   <FooterColumn title="Quick Links" items={footer?.quickLinks || []} />
                   <FooterColumn title="Programs" items={footer?.programs || []} />
                   <FooterColumn title="Connect" items={footer?.connect || []} />

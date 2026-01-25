@@ -1,11 +1,12 @@
 import Container from "@/components/layout/Container";
 import Image from "next/image";
 
-export default function FeatureGrid({ headline, items = [] }) {
+export default function FeatureGrid({ headline, subText, items = [] }) {
   return (
     <section className="bg-[#ffffff]">
       <Container className="py-14">
-        <h2 className="text-3xl sm:text-4xl font-semibold whitespace-pre-line">{headline}</h2>
+        {headline ? (<h2 className="text-center text-3xl sm:text-4xl font-semibold whitespace-pre-line">{headline}</h2>) : null}
+        {subText ? (<h3 className="text-center text-xl sm:text-2xl mt-4">{subText}</h3>) : null}
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
           {items.map((it) => (
@@ -13,6 +14,13 @@ export default function FeatureGrid({ headline, items = [] }) {
               key={it.title}
               className="rounded-2xl bg-[#273C75]/5 border border-black/5 p-6"
             >
+              <div className="flex justify-end gap-3 pb-1">
+                {it.tag ? (
+                  <span className="text-xs rounded-full px-3 py-1 bg-white/60 text-slate-700">
+                    {it.tag}
+                  </span>
+                ) : null}
+              </div>
               <div className="icon mb-4">
                 <Image 
                   src={it.icon} 

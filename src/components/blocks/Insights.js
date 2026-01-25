@@ -1,9 +1,9 @@
 import Container from "@/components/layout/Container";
 
 const pillClass = {
-  "The Philosophy": "bg-[#95D6ED]",
-  "The Evidence": "bg-[#F9A78F]",
-  "The Handbook": "bg-[#F9E48F]",
+  "sky": "bg-[#95D6ED]",
+  "peach": "bg-[#F9A78F]",
+  "yellow": "bg-[#F9E48F]",
 };
 
 function isHexColor(v) {
@@ -60,7 +60,7 @@ export default function Insights({
             const key = it?.id || it?.title || idx;
             const hasBullets = Array.isArray(it?.bullets) && it.bullets.length > 0;
             const cardInlineStyle = it?.cardBg && isHexColor(it.cardBg) ? { backgroundColor: it.cardBg } : undefined;
-            const cardBgClass = cardInlineStyle ? "" : pillClass[it?.pill] || "bg-slate-200";
+            const cardBgClass = cardInlineStyle ? "" : pillClass[it?.tone] || "bg-slate-200";
             const pillInlineStyle = it?.pillBg ? { backgroundColor: it.pillBg } : undefined;
             const ctaLabel = it?.cta?.label ?? "Read this guide →";
 
@@ -70,16 +70,29 @@ export default function Insights({
                 className={`rounded-2xl p-6 border border-black/5 ${cardBgClass}`}
                 style={cardInlineStyle}
               >
-                {/* pill top-right */}
-                <div className="flex justify-end">
-                  {it?.pill ? (
-                    <div
-                      className="inline-flex rounded-lg px-3 py-1 text-xs font-medium bg-white/30"
-                      style={pillInlineStyle}
-                    >
-                      {it.pill}
-                    </div>
-                  ) : null}
+                
+                <div className="flex justify-space-between">
+                  {/* pill top-right */}
+                  <div className="w-full flex justify-start">
+                    {it?.pillSec ? (
+                      <div
+                        className="inline-flex rounded-lg px-3 py-1 text-xs font-medium bg-white/30 whitespace-nowrap"
+                        style={pillInlineStyle}
+                      >
+                        {it.pillSec}
+                      </div>
+                    ) : null}
+                  </div>{/* pill top-right */}
+                  <div className="flex justify-end">
+                    {it?.pill ? (
+                      <div
+                        className="inline-flex rounded-lg px-3 py-1 text-xs font-medium bg-white/30 whitespace-nowrap"
+                        style={pillInlineStyle}
+                      >
+                        {it.pill}
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
 
                 {/* title */}
