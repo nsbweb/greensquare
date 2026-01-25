@@ -36,7 +36,7 @@
         {
           "id": "campus",
           "title": "Campus",
-          "href": "",
+          "href": "/about-us/campus",
           "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
           "image": "/programs/thumb-primary.png"
         },
@@ -50,7 +50,7 @@
         {
           "id": "videos",
           "title": "Videos",
-          "href": "",
+          "href": "/about-us/videos",
           "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
           "image": "/programs/thumb-secondary.png"
         },
@@ -171,6 +171,7 @@
     "quickLinks": [
       { "label": "About Us", "href": "/about-us" },
       { "label": "The Research Institute", "href": "/research-institute" },
+      { "label": "Campus", "href": "/campus" },
       { "label": "Careers", "href": "/careers" }
     ],
     "programs": [
@@ -190,10 +191,10 @@
       "email": "info@blueblocks.in"
     },
     "socials": [
-      { "label": "Instagram", "href": "#", "icon":"/icon/icon-insta.svg"},
-      { "label": "Facebook", "href": "#", "icon":"/icon/icon-fb.svg"},
-      { "label": "YouTube", "href": "#", "icon":"/icon/icon-youtube.svg"},
-      { "label": "LinkedIn", "href": "#", "icon":"/icon/icon-linkdin.svg"}
+      { "label": "Instagram", "href": "https://www.instagram.com/blueblocksmontessorischool/", "icon":"/icon/icon-insta.svg"},
+      { "label": "Facebook", "href": "https://www.facebook.com/blueblockspreschool", "icon":"/icon/icon-fb.svg"},
+      { "label": "YouTube", "href": "https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ", "icon":"/icon/icon-youtube.svg"},
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/school/blue-blocks-school", "icon":"/icon/icon-linkdin.svg"}
     ]
   },
   "pages": { 
@@ -1017,6 +1018,181 @@
               { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
             ]
           }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "title": "Experience Learning\nthe Blue Blocks Way.",
+              "text": "Seats are filled on a first-come basis.",
+              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+              "image": "/building-image-01.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "customTopSpacing":"sm:pt-70",
+              "align": "left",
+              "theme": "dark"
+            }
+          }
+        ]
+      },
+      "campus": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Campus",
+              "breadcrumb": [
+                { "label": "Home", "href": "/" },
+                { "label": "Campus" }
+              ],
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
+            }
+          },
+          {
+            "type": "innovationHabitSplit",
+            "props": {
+              "bg": "#FFFFFF",
+              "className": "inline",
+              "image": "#",
+              "eyebrow": "",
+              "title": "Blueblocks Campus",
+              "description":"Blue Blocks campuses are designed as calm, spacious, and purpose-led learning environments where children feel safe to explore, move, and grow with independence. Every space—whether indoors or outdoors—is planned to support self-learning, curiosity, and meaningful social interaction, so children don’t just sit and follow instructions but actively discover, collaborate, and build confidence through hands-on experiences. From well-prepared classroom settings that encourage focus and choice, to open outdoor zones that strengthen coordination, resilience, and problem-solving, the campus becomes an extension of the child’s natural development journey. The overall atmosphere is warm, structured, and child-first—helping every learner develop not only academic foundations, but also real-world skills like responsibility, communication, and self-reliance.",
+              "subdescription":"",
+              "bullets": [
+                {
+                  "icon":"",
+                  "title": "",
+                  "text": ""
+                }
+              ],
+              "images": [
+                {
+                  "icon": "/campus/campus4-min.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/campus/campus1-min.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/campus/campus2-min.jpg",
+                  "title": "",
+                  "text": ""
+                },
+                {
+                  "icon": "/campus/campus3-min.jpg",
+                  "title": "",
+                  "text": ""
+                }
+              ]
+            }
+          },
+          {
+            "type": "imageText",
+            "props": {
+              "title": "",
+              "text": [
+                "<b>Blue Blocks Gachibowli Campus</b>",
+                "The Blue Blocks Self-learning Pre-school is a self sufficient spacious learning ground for children. The campus at Gachibowli has four environments that function in two shifts. While three of these environments are dedicated to the Self Interpretive Programme, two environments are dedicated to the Toddler Programme. The outdoors include sand pits, play area with swings, slides and monkey bars.",
+                "&nbsp;",
+                "<b>Blue Blocks Complete School</b>",
+                "The Blue Blocks Complete School is a sprawling campus in a one and half acre land at Osman Nagar, Tellapur. The school has two environments one each for Self Interpretive and Elementary Programme. The outdoors include Basketball court, Music Room, Art Room, Amphitheatre and a play area with sand pits and swing.",
+                "The outdoors include a Basket Ball Court, Music Room, Art Room, Amphitheatre, Play area including a sand pit, and swing."
+              ],
+              "imageUrl": "/campus/blueblocks-building-pic-min.jpg",
+
+              "variant": "card",
+              "cardBg": "#EEF7FD",
+              "cardRadius": "rounded-2xl",
+              "cardPadding": "p-8 sm:p-10",
+              "imageSide": "right",
+              "imageClassName": "rounded-2xl",
+              "imageFit": "cover",
+              "imageAspect": "aspect-[4/3]"
+            }
+          },
+          {
+            "type": "ctaBanner",
+            "props": {
+              "title": "Experience Learning\nthe Blue Blocks Way.",
+              "text": "Seats are filled on a first-come basis.",
+              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+              "image": "/building-image-01.png",
+              "imageAlt": "Campus building",
+              "imageWidth": "566",
+              "imageHeight": "506",
+              "customTopSpacing":"sm:pt-70",
+              "align": "left",
+              "theme": "dark"
+            }
+          }
+        ]
+      },
+      "videos": {
+        "sections": [
+          {
+            "type": "pageHero",
+            "props": {
+              "title": "Videos",
+              "breadcrumb": [
+                { "label": "Home", "href": "/" },
+                { "label": "Videos" }
+              ],
+              "bg": {
+                "base": "#F3E3CF",
+                "leftArc": "/ui/arc-left.png",
+                "rightArc": "/ui/arc-right.png"
+              }
+            }
+          },
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Voices of Young Innovators",
+              "cols": { "base": 1, "sm": 2, "lg": 2 },
+              "tileMinHeight": 410,
+              "tileMaxHeight": 410,
+              "showThumbnails": true,
+              "videoAutoplay": false,
+              "videoMuted": false,
+              "videoControls": true,
+              "videoLoop": false,
+              "items": [
+                { "type": "video", "src": "https://www.youtube.com/embed/LvsfUvhrWFM", "poster": "/innovation/innovators-voice-01.jpg" },
+                { "type": "video", "src": "https://www.youtube.com/embed/LvsfUvhrWFM", "poster": "/innovation/innovators-voice-02.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-03.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-04.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-05.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-06.jpg" }
+              ]
+            }
+          },
+          {
+            "type": "innovationGallery",
+            "props": {
+              "eyebrow": "",
+              "title": "Voices of Young Innovators",
+              "cols": { "base": 1, "sm": 2, "lg": 2 },
+              "tileMinHeight": 410,
+              "tileMaxHeight": 410,
+              "showThumbnails": true,
+              "videoAutoplay": false,
+              "videoMuted": false,
+              "videoControls": true,
+              "videoLoop": false,
+              "items": [
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-01.jpg" },
+                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-02.jpg" }
+              ]
+            }
           },
           {
             "type": "ctaBanner",

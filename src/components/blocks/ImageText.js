@@ -110,9 +110,17 @@ export default function ImageText({
 
             {Array.isArray(text) && text.length ? (
               <div className={finalTextWrapClass}>
-                {text.map((p, idx) => (
+                {/* {text.map((p, idx) => (
                   <p key={idx}>{p}</p>
-                ))}
+                ))} */}
+                {text.map((p, idx) =>
+                  typeof p === "string" ? (
+                    <p
+                      key={idx}
+                      dangerouslySetInnerHTML={{ __html: p }}
+                    />
+                  ) : null
+                )}
               </div>
             ) : null}
           </div>
