@@ -41,7 +41,7 @@ export default function OutcomesPills({
               ) : null}
 
               {it?.text ? (
-                <p className="text-[1.5rem] leading-6 text-[#131313]">
+                <p className="text-[1rem] sm:text-[1.5rem] leading-6 text-[#131313]">
                   {it.text}
                 </p>
               ) : null}

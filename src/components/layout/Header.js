@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,14 +8,32 @@ import siteData from "@/data/site.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
+/* ------------------------- helpers ------------------------- */
+
+const normalizeHref = (href) => {
+  const h = String(href || "").trim();
+  if (!h) return "";
+  // allow # anchors and external links
+  if (h.startsWith("#") || /^https?:\/\//i.test(h)) return h;
+  // ensure internal paths start with "/"
+  return h.startsWith("/") ? h : `/${h}`;
+};
+
+const isValidLinkHref = (href) => {
+  const h = String(href || "").trim();
+  return Boolean(h);
+};
+
 export default function Header({ variant = "dark" }) {
   const { site } = siteData;
-
   const pathname = usePathname();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isAnnouncementClosed, setIsAnnouncementClosed] = useState(true);
+
+  // Mobile accordion open key (one open at a time)
+  const [mobileOpenKey, setMobileOpenKey] = useState("");
 
   // Read announcement close state
   useEffect(() => {
@@ -25,14 +43,12 @@ export default function Header({ variant = "dark" }) {
 
   const isLight = variant === "light" && !scrolled;
 
-  const toggleMenu = () => setMenuOpen((v) => !v);
-
   const closeAnnouncementBar = () => {
     setIsAnnouncementClosed(true);
     sessionStorage.setItem("announcementClosed", "true");
   };
 
-  // Scroll background change (simple + stable)
+  // Scroll background change
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
@@ -40,24 +56,52 @@ export default function Header({ variant = "dark" }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // -------- ACTIVE HELPERS (stable + reusable) --------
+  // lock body scroll when mobile menu open
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev || "";
+    };
+  }, [menuOpen]);
+
+  // close on route change
+  useEffect(() => {
+    setMenuOpen(false);
+    setMobileOpenKey("");
+  }, [pathname]);
+
+  // -------- ACTIVE HELPERS --------
   const isActiveHref = (href) => {
-    if (!href) return false;
-    if (href === "/") return pathname === "/";
-    return pathname === href || pathname.startsWith(href + "/");
+    const h = normalizeHref(href);
+    if (!h) return false;
+    if (h === "/") return pathname === "/";
+    return pathname === h || pathname.startsWith(h + "/");
   };
 
   const navLinkClass = ({ active = false } = {}) => {
     const base = isLight ? "text-white" : "text-[#131313]";
     const hover = isLight ? "hover:text-indigo-100" : "hover:text-[#000000]";
-
-    // Active styling (tweak if you want)
     const activeCls = isLight
       ? "text-indigo-100 border-b border-white/70"
       : "text-[#0F52BA] border-b border-[#0F52BA]";
-
     return `transition ${base} ${hover} ${active ? activeCls : ""}`;
   };
+
+  const megaByLabel = useMemo(() => {
+    const mm = siteData?.megaMenu || {};
+    // map label => mega config
+    const map = {};
+    if (mm.programs?.label) map[mm.programs.label] = mm.programs;
+    if (mm.whatDoWeDo?.label) map[mm.whatDoWeDo.label] = mm.whatDoWeDo;
+    if (mm.innovations?.label) map[mm.innovations.label] = mm.innovations;
+    return map;
+  }, []);
+
+  const socials = siteData?.footer?.socials || [];
+
+  const toggleMenu = () => setMenuOpen((v) => !v);
 
   return (
     <div
@@ -72,7 +116,7 @@ export default function Header({ variant = "dark" }) {
           <Container className="py-2">
             <div className="flex items-center gap-3">
               <div className="flex-1 overflow-hidden">
-                {site.announcements?.length ? (
+                {site?.announcements?.length ? (
                   <marquee direction="left">
                     {site.announcements.map((item, idx) => (
                       <span key={idx} className="mr-10">
@@ -101,8 +145,8 @@ export default function Header({ variant = "dark" }) {
           {/* Logo */}
           <Link href="/">
             <Image
-              src={site.logo}
-              alt={site.name}
+              src={site?.logo || "/icon/logo.svg"}
+              alt={site?.name || "Logo"}
               width={82}
               height={67}
               className="object-contain"
@@ -112,51 +156,24 @@ export default function Header({ variant = "dark" }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium">
-            {site.nav.map((item, i) => {
-              const key = `${item.href || "nohref"}|${item.label}|${i}`;
+            {(site?.nav || []).map((item, i) => {
+              const key = `${item?.href || "nohref"}|${item?.label || "nolabel"}|${i}`;
+              const label = item?.label || "";
+              const mega = megaByLabel[label];
 
-              // Programs Mega
-              if (item.label === siteData.megaMenu?.programs?.label) {
+              // Mega entries (desktop)
+              if (mega) {
                 const active =
-                  isActiveHref(item.href) || pathname.startsWith("/programs");
+                  isActiveHref(item?.href) ||
+                  (label === megaByLabel?.programs?.label
+                    ? pathname.startsWith("/programs")
+                    : false);
 
                 return (
                   <ProgramsMegaMenu
                     key={key}
-                    mega={siteData.megaMenu.programs}
-                    socials={siteData.footer?.socials || []}
-                    isLight={isLight}
-                    isActive={active}
-                    className={navLinkClass({ active })}
-                  />
-                );
-              }
-
-              // What do we do Mega (if present)
-              if (item.label === siteData.megaMenu?.whatDoWeDo?.label) {
-                const active = isActiveHref(item.href);
-
-                return (
-                  <ProgramsMegaMenu
-                    key={key}
-                    mega={siteData.megaMenu.whatDoWeDo}
-                    socials={siteData.footer?.socials || []}
-                    isLight={isLight}
-                    isActive={active}
-                    className={navLinkClass({ active })}
-                  />
-                );
-              }
-
-              // Innovations Mega (if present)
-              if (item.label === siteData.megaMenu?.innovations?.label) {
-                const active = isActiveHref(item.href);
-
-                return (
-                  <ProgramsMegaMenu
-                    key={key}
-                    mega={siteData.megaMenu.innovations}
-                    socials={siteData.footer?.socials || []}
+                    mega={mega}
+                    socials={socials}
                     isLight={isLight}
                     isActive={active}
                     className={navLinkClass({ active })}
@@ -165,11 +182,21 @@ export default function Header({ variant = "dark" }) {
               }
 
               // Normal link
-              const active = isActiveHref(item.href);
+              const active = isActiveHref(item?.href);
+              const href = normalizeHref(item?.href);
+
+              // If href missing, render as plain text (prevents Next <Link> crash)
+              if (!isValidLinkHref(href)) {
+                return (
+                  <span key={key} className={navLinkClass({ active: false })}>
+                    {label}
+                  </span>
+                );
+              }
 
               return (
-                <Link key={key} href={item.href} className={navLinkClass({ active })}>
-                  {item.label}
+                <Link key={key} href={href} className={navLinkClass({ active })}>
+                  {label}
                 </Link>
               );
             })}
@@ -180,33 +207,64 @@ export default function Header({ variant = "dark" }) {
             className={`md:hidden ${isLight ? "text-white" : "text-[#131313]"}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             {menuOpen ? "✖" : "☰"}
           </button>
         </Container>
 
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-[#1f2a44] text-white px-6 py-4 space-y-3">
-            {site.nav.map((item, idx) => (
-              <div key={`${item.href || "nohref"}|${item.label}|${idx}`}>
-                <Link href={item.href} className="block">
-                  {item.label}
-                </Link>
-
-                {item.children && (
-                  <div className="pl-4 mt-2 space-y-1 text-sm">
-                    {item.children.map((child, cIdx) => (
-                      <Link key={`${child.href}|${cIdx}`} href={child.href} className="block">
-                        {child.label}
-                      </Link>
-                    ))}
+        {/* ✅ MOBILE FULL-VIEWPORT DRAWER (scrollable) */}
+        <AnimatePresence>
+          {menuOpen ? (
+            <motion.div
+              className="fixed inset-0 z-[60] md:hidden bg-black/35 h-[100vh]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMenuOpen(false)}
+            >
+              <motion.div
+                className="fixed inset-0 bg-[#141c2f] h-[100vh]"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.22, ease: "easeOut" }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Keep header space so it doesn't go under your fixed header */}
+                <div className="h-full w-full pt-[72px]">
+                  {/* Scroll container */}
+                  <div className="h-full overflow-y-auto overscroll-contain">
+                    <div className="mx-3 my-3 rounded-2xl bg-[#1f2a44] text-white shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
+                      <div className="px-5 py-6 pb-10">
+                        <MobileNav
+                          nav={site?.nav || []}
+                          megaByLabel={megaByLabel}
+                          pathname={pathname}
+                          isActiveHref={isActiveHref}
+                          openKey={mobileOpenKey}
+                          setOpenKey={setMobileOpenKey}
+                          socials={socials}
+                          onNavigate={() => setMenuOpen(false)}
+                        />
+                      </div>
+                    </div>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+                </div>
+
+                {/* Close button (optional, nicer UX) */}
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  className="absolute top-5 right-5 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white hover:bg-white/15"
+                  aria-label="Close menu"
+                >
+                  ✕
+                </button>
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </header>
     </div>
   );
@@ -223,7 +281,6 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
 
   const showActive = open || isActive;
 
-  // in case you want a slightly stronger active style while open
   const openActiveCls = showActive
     ? isLight
       ? "text-indigo-100 border-b border-white/70"
@@ -240,7 +297,7 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
         type="button"
         className={`flex items-center gap-1 text-sm font-medium transition ${className} ${openActiveCls}`}
       >
-        {mega?.label || "Programs"}
+        {mega?.label || "Menu"}
         <span className="text-lg">▾</span>
       </button>
 
@@ -258,10 +315,10 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
               <div>
                 <div className="mb-2 p-5 pb-0 flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                    {viewAll?.label || "Our Programs"}{" "}
+                    {viewAll?.label || "View All"}{" "}
                     {viewAll?.href ? (
                       <Link
-                        href={viewAll.href}
+                        href={normalizeHref(viewAll.href)}
                         className="text-xs font-medium text-[#0E4AA2] hover:underline"
                       >
                         →
@@ -273,18 +330,13 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
                 <div className="grid grid-cols-2 border-t border-slate-100">
                   {items.map((program, idx) => (
                     <Link
-                      key={`${program.href || program.title || "item"}|${idx}`}
-                      href={program.href}
+                      key={`${program?.href || program?.title || "item"}|${idx}`}
+                      href={normalizeHref(program?.href)}
                       className="flex gap-3 p-5 sm:p-6 hover:bg-slate-50 border-r border-slate-100 last:border-r-0"
                     >
                       <div className="relative h-16 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-slate-200">
-                        {program.image ? (
-                          <Image
-                            src={program.image}
-                            alt={program.title}
-                            fill
-                            className="object-cover"
-                          />
+                        {program?.image ? (
+                          <Image src={program.image} alt={program.title || ""} fill className="object-cover" />
                         ) : (
                           <span className="flex h-full w-full items-center justify-center text-xs text-slate-500">
                             img
@@ -293,12 +345,8 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
                       </div>
 
                       <div className="space-y-1">
-                        <div className="text-sm font-semibold text-slate-900">
-                          {program.title}
-                        </div>
-                        <p className="line-clamp-2 text-xs text-slate-600">
-                          {program.description}
-                        </p>
+                        <div className="text-sm font-semibold text-slate-900">{program?.title}</div>
+                        <p className="line-clamp-2 text-xs text-slate-600">{program?.description}</p>
                       </div>
                     </Link>
                   ))}
@@ -317,7 +365,7 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
 
                   {ctaCard?.button?.href ? (
                     <Link
-                      href={ctaCard.button.href}
+                      href={normalizeHref(ctaCard.button.href)}
                       className="inline-flex w-full items-center justify-center rounded-full bg-[#0F52BA] px-4 py-2 text-xs font-medium text-white hover:bg-[#0D47A1]"
                     >
                       {ctaCard.button.label}
@@ -326,30 +374,202 @@ function ProgramsMegaMenu({ mega, socials, isLight, isActive = false, className 
                 </div>
 
                 <div className="mt-2 flex flex-col gap-2">
-                  {(socials || []).map((s, idx) => (
-                    <Link
-                      key={`${s.label || "social"}|${idx}`}
-                      href={s.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#000000]/5 text-xs font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
-                      aria-label={s.label}
-                    >
-                      <Image
-                        src={s.icon}
-                        alt={(s.label || "").slice(0, 2)}
-                        width={34}
-                        height={34}
-                        className="object-cover"
-                      />
-                    </Link>
-                  ))}
+                  {(socials || []).map((s, idx) => {
+                    const href = normalizeHref(s?.href);
+                    if (!isValidLinkHref(href)) return null;
+
+                    return (
+                      <Link
+                        key={`${s?.label || "social"}|${idx}`}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#000000]/5 text-xs font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
+                        aria-label={s?.label}
+                      >
+                        <Image
+                          src={s?.icon}
+                          alt={(s?.label || "").slice(0, 2)}
+                          width={34}
+                          height={34}
+                          className="object-contain"
+                        />
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+  );
+}
+
+/* ---------- MOBILE NAV (MEGA + NORMAL, SAFE HREF) ---------- */
+
+function MobileNav({
+  nav,
+  megaByLabel,
+  pathname,
+  isActiveHref,
+  openKey,
+  setOpenKey,
+  socials,
+  onNavigate,
+}) {
+  return (
+    <div className="space-y-2">
+      {(nav || []).map((item, idx) => {
+        const label = item?.label || "";
+        const mega = megaByLabel?.[label];
+        const key = `${label}|${idx}`;
+        const href = normalizeHref(item?.href);
+
+        // Mega groups (accordion)
+        if (mega) {
+          const isOpen = openKey === key;
+
+          return (
+            <div key={key} className="rounded-xl bg-white/5">
+              <button
+                type="button"
+                onClick={() => setOpenKey(isOpen ? "" : key)}
+                className="flex w-full items-center justify-between px-4 py-4 text-left"
+              >
+                <span className="text-sm font-semibold">{label}</span>
+                <span className="text-lg">{isOpen ? "−" : "+"}</span>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {isOpen ? (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    className="overflow-hidden border-t border-white/10"
+                  >
+                    <div className="px-4 py-3 space-y-3">
+                      {/* View all */}
+                      {mega?.viewAll?.href ? (
+                        <Link
+                          href={normalizeHref(mega.viewAll.href)}
+                          onClick={onNavigate}
+                          className="block rounded-lg bg-white/10 px-4 py-3 text-sm font-medium hover:bg-white/15"
+                        >
+                          {mega.viewAll.label || "View All"} →
+                        </Link>
+                      ) : null}
+
+                      {/* Mega items */}
+                      <div className="space-y-2">
+                        {(mega?.items || []).map((m, i) => {
+                          const mhref = normalizeHref(m?.href);
+                          if (!isValidLinkHref(mhref)) return null;
+
+                          return (
+                            <Link
+                              key={`${mhref}|${i}`}
+                              href={mhref}
+                              onClick={onNavigate}
+                              className="flex items-center gap-3 rounded-xl bg-white/5 px-3 py-3 hover:bg-white/10"
+                            >
+                              <div className="relative h-12 w-14 overflow-hidden rounded-lg bg-white/10">
+                                {m?.image ? (
+                                  <Image
+                                    src={m.image}
+                                    alt={m.title || ""}
+                                    fill
+                                    className="object-cover"
+                                    sizes="56px"
+                                  />
+                                ) : null}
+                              </div>
+                              <div>
+                                <div className="text-sm font-semibold">{m?.title}</div>
+                                {m?.description ? (
+                                  <div className="text-xs text-white/65 line-clamp-2">{m.description}</div>
+                                ) : null}
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+
+                      {/* CTA */}
+                      {mega?.ctaCard?.button?.href ? (
+                        <Link
+                          href={normalizeHref(mega.ctaCard.button.href)}
+                          onClick={onNavigate}
+                          className="mt-2 block rounded-xl bg-[#0F52BA] px-4 py-3 text-center text-sm font-semibold text-white hover:bg-[#0D47A1]"
+                        >
+                          {mega.ctaCard.button.label}
+                        </Link>
+                      ) : null}
+                    </div>
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
+            </div>
+          );
+        }
+
+        // Normal link (safe)
+        const active = isActiveHref(href);
+
+        // If href missing, render label as non-click item (prevents Link crash)
+        if (!isValidLinkHref(href)) {
+          return (
+            <div key={key} className="px-4 py-3 text-sm font-semibold text-white/70">
+              {label}
+            </div>
+          );
+        }
+
+        return (
+          <Link
+            key={key}
+            href={href}
+            onClick={onNavigate}
+            className={[
+              "block rounded-xl px-4 py-4 text-sm font-semibold",
+              active ? "bg-white/10 text-white" : "bg-white/5 hover:bg-white/10",
+            ].join(" ")}
+          >
+            {label}
+          </Link>
+        );
+      })}
+
+      {/* Socials */}
+      {(socials || []).length ? (
+        <div className="pt-3">
+          <div className="px-2 text-xs font-semibold tracking-[0.18em] uppercase text-white/55">
+            Follow
+          </div>
+          <div className="mt-3 grid grid-cols-4 gap-3">
+            {(socials || []).map((s, i) => {
+              const href = normalizeHref(s?.href);
+              if (!isValidLinkHref(href)) return null;
+
+              return (
+                <a
+                  key={`${s?.label || "social"}|${i}`}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-12 items-center justify-center rounded-xl bg-white/5 hover:bg-white/10"
+                  aria-label={s?.label}
+                >
+                  <Image src={s?.icon} alt="" width={22} height={22} className="object-contain" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -260,7 +260,7 @@
             "title": "LIFE AT BLUE BLOCKS",
             "subtitle": "Stories of independence, innovation, and community.",
             "hasCTA":false,
-            "cols":{"base":1, "md":3},
+            "cols":{"base":1, "sm":3, "md":3},
             "items": [
               { "tone": "sky", "pill": "The Philosophy", "pillSec": "The Guide", "title": "Lining the Nest", "meta": "The definitive guide to the First Plane of Development (0-6). A handbook for parents navigating the “Absorbent Mind.”" },
               { "tone": "peach", "pill": "The Student Innovation", "pillSec": "The Outcome", "title": "The Unscripted Learner", "meta": "Witness how our adolescents (Ages 12-16) are solving real-world agricultural problems—not because we told them to, but because they chose to." },
@@ -331,11 +331,11 @@
         {
           "type": "innovationMediaHero",
           "props": {
-            "title": "A Montessori Home for the Curious. A Research Institute for the Future. ",
-            "subtitle": "At Blue Blocks, children are not prepared for school — they are prepared for life. Founded in 2009 in Hyderabad, we are a warm and deeply authentic Montessori community for ages 0–18, rooted in one timeless belief:",
+            "title": "An Environment for Life",
+            "subtitle": "Education is not the filling of a bucket, but the lighting of a fire. Since 2009, Blue Blocks has stood as a sanctuary of Authentic Montessori practice, offering a continuous developmental journey from infancy through adolescence (0-18).",
             "bgImageUrl": "/about-us/hero.jpg",
-            "primaryCta": { "label": "Watch Our Story", "href": "/about-us" },
-            "secondaryCta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "primaryCta": "",
+            "secondaryCta": "",
 
             "align": "center",
             "height": "innovation",
@@ -350,9 +350,9 @@
             "className": "inline",
             "image": "#",
             "eyebrow": "",
-            "title": "WHO WE ARE",
-            "description":"Every child carries an inner spark. Our work is to protect it, observe it, and help it flourish. From the quiet concentration of our toddler environments to the bustling collaboration of our adolescent engineering labs, Blue Blocks is where children find their voice, their passion, and their purpose.",
-            "subdescription":"We are not a factory for grades. We are a greenhouse for character — where independence, resilience, curiosity, and empathy take root naturally.",
+            "title": "WHO WE ARE - More Than a School",
+            "description":"Blue Blocks is a 'Children's House' in the truest sense. We are a community of 847 students, families, and guides committed to a single truth: the child is their own teacher. We do not believe in forcing children into molds. We believe in the prepared environment—a space where a 3-year-old finds focus scrubbing a table, and a 14-year-old finds purpose building a satellite. We offer the complete 0-18 Continuum, ensuring your child’s transition from toddlerhood to university is seamless, coherent, and grounded in deep self-knowledge",
+            "subdescription":"",
             "bullets": [
               {
                 "icon":"/icon/certificate.svg",
@@ -397,29 +397,38 @@
         {
           "type": "ourStory",
           "props": {
-            "eyebrow": "OUR STORY",
-            "title": "A Journey of Observation and Possibility (2009–Present)",
+            "eyebrow": "OUR HISTORY",
+            "title": "The 2009 Origin",
             "paragraphs": [
-              "Blue Blocks began with a single commitment: understand the child before teaching the child.",
-              "For 15 years, we have followed children with care, respect, and scientific precision. What started as one classroom has grown into one of India's few complete 0–18 Montessori environments.",
-              "As the children grew, our vision expanded with them. Their questions became prototypes. Their explorations became projects. Their curiosity became innovation."
+              "It started with a simple observation: Hyderabad needed an environment that trusted the child completely. In 2009, Pavan Goyal and Munira Hussain founded Blue Blocks with a small group of students and a rigid commitment to pure AMI (Association Montessori Internationale) standards.",
+              "We didn't start with grand buildings. We started with the materials. Over the last 15 years, that single classroom has grown into a campus housing innovation labs and a thriving adolescent community. But our core remains unchanged: we observe the child to understand their needs, just as Dr. Maria Montessori did."
             ],
-            "cta": { "label": "Explore", "href": "/about" },
+            "cta": "",
             "timeline": [
               {
                 "year": "2009",
                 "colorClass": "text-orange-300",
-                "text": "Founded in Hyderabad with first Montessori environment"
+                "text": "The Seed Founded in a rented bungalow with just <b>12 students</b> and a complete set of Nienhuis materials. The goal was simple: adherence to AMI standards without compromise."
               },
               {
-                "year": "2012",
+                "year": "2013",
                 "colorClass": "text-sky-300",
-                "text": "Expanded to full 3–12 program"
+                "text": "The Expansion Launched the Elementary (6-12) environment. While other schools added desks and exams, we added a library and a garden, committing to the 'Cosmic Education' curriculum."
               },
               {
-                "year": "2015",
+                "year": "2017",
                 "colorClass": "text-yellow-300",
-                "text": "Established adolescent program (12–18)"
+                "text": "The Innovation Pivot Observed a gap in adolescent engagement. Pavan Goyal introduced the 'Innovation Logic,' leading to the construction of the first on-campus prototyping lab."
+              },
+              {
+                "year": "2019",
+                "colorClass": "text-orange-300",
+                "text": "The Space Lab Blue Blocks became the first school in Hyderabad to install a simulation environment for avionics."
+              },
+              {
+                "year": "2024",
+                "colorClass": "text-sky-300",
+                "text": "The Expansion Launched the Elementary (6-12) environment. While other schools added desks and exams, we added a library and a garden, committing to the 'Cosmic Education' curriculum."
               }
             ]
           }
@@ -429,11 +438,14 @@
           "props": {
             "bg": "#F3E3CF",
             "eyebrow": "",
-            "title": "THE BLUE BLOCKS ADVANTAGE",
+            "title": "Why Blue Blocks?",
             "paragraphs": [
-              "DEVELOPMENTAL INNOVATION PEDAGOGY (DIP)",
-              "Our Core Intellectual Framework\nOver eight years of systematic observation, Blue Blocks has developed a proprietary pedagogical framework: Developmental Innovation Pedagogy (DIP). ",
-              "The Core Insight: Innovation is not a single skill taught at age 16. It is the integration of multiple thinking capacities that develop across childhood. "
+              "The Authentic Continuum (0-18)",
+              "Most schools fragment a child's life. At Blue Blocks, the journey is one continuous arc. The nurturing independence of the early years transitions organically into the academic rigor of the Cambridge (IGCSE) years (Grades 7-10), without the jarring culture shocks that derail potential.",
+              "The Guide, Not the Boss ",
+              "Our teachers are AMI-Certified Guides. They do not lecture from a podium; they work on the floor with the child. They are trained to observe rather than judge, knowing exactly when to step in with a new challenge and—more importantly—when to step back and let the child succeed on their own.",
+              "Applied Montessori",
+              "We believe Montessori principals apply to the future as much as the past. Our campus includes specialized spaces like the Space Lab and Drone Centre, where students apply their natural focus to real-world engineering."
             ],
             "pyramidImage":"/about-us/pyramid.png",
             "pyramid": {
@@ -489,12 +501,12 @@
           "type": "foundersGuides",
           "props": {
             "pill": "OUR FOUNDERS",
-            "title": "GUIDES, NOT JUST TEACHERS",
+            "title": "The Custodians",
             "description": "We do not view teaching as instruction, but as a scientific discipline...",
             "items": [
               {
                 "name": "Pavan Goyal",
-                "roleLabel": "Founder, Lead - Innovation Program",
+                "roleLabel": "Founder & Principal",
                 "roleColor": "#E08B64",
                 "image": "/team/pavan.png",
                 "imageAlt": "Pavan Goyal",
@@ -504,8 +516,10 @@
                 "modal": {
                   "title": "Founder’s Note",
                   "content": [
-                    "Pavan’s journey into Montessori education is rooted in a deep respect for the child’s innate intelligence and capacity for self-construction.",
-                    "Through the Innovation Program, his work focuses on bridging classical Montessori principles with modern scientific and technological exploration."
+                    "Pavan holds the rare complete AMI Diploma (0-18). He bridges the gap between Montessori philosophy and future-ready innovation, ensuring that Blue Blocks remains a place where the 'Scientific Method' is a way of life.",
+                    "The Architect of Learning: Pavan is not a traditional principal. With a background that merges systems thinking with pedagogy, he approaches the school as a 'living organism.'",
+                    "The AMI Journey: Holding the rare 0-18 AMI Certification, Pavan has spent over two decades studying the arc of human development. He doesn't just run the school; he designs the systems that allow innovation to flourish.",
+                    "The Research Focus: Pavan serves as the Principal Investigator for the Micro-Research Institute, leading the longitudinal study on how 'sovereign ownership' of ideas affects adolescent confidence."
                   ],
                   "social": [
                     {
@@ -521,7 +535,7 @@
               },
               {
                 "name": "Munira Hussain",
-                "roleLabel": "Co-founder & Director",
+                "roleLabel": "Director of Pedagogy",
                 "roleColor": "#57B3CE",
                 "image": "/team/munira.png",
                 "imageAlt": "Munira Hussain",
@@ -530,8 +544,10 @@
                 "modal": {
                   "title": "Founder’s Note",
                   "content": [
-                    "Munira Hussain's journey into Montessori education is rooted in a deep respect for the child’s innate intelligence and capacity for self-construction.",
-                    "Through the Innovation Program, his work focuses on bridging classical Montessori principles with modern scientific and technological exploration."
+                    "Munira is the 'Protector of the Environment.' With strict AMI certification, she ensures that every classroom—from the Infant Community to the High School—remains a psychological sanctuary for the child, protecting the intimacy of the work cycle.",
+                    "The Pedagogical Anchor: Munira ensures that Blue Blocks remains a 'psychological sanctuary.' She strictly audits every environment to ensure it meets the psychological needs of the child, not the convenience of the adult.",
+                    "The Mentor: She runs the internal 'Guide Training' program, mentoring new teachers on the art of observation. Her philosophy is simple: 'If the child is failing, the environment is failing.'",
+                    "The Parent Partner: Munira leads the Parent Education Program, helping families bridge the gap between the freedom of the classroom and the structure of the home."
                   ],
                   "social": [
                     {
@@ -554,7 +570,8 @@
             "bg":"bg-[#FFFFFF]",
             "eyebrow": "OUR Teams",
             "title": "The Teaching Team",
-            "description": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+            "description": "In a traditional school, the teacher transmits information. At Blue Blocks, the Guide links the child to the environment.",
+            "subdescription":"Our educators are masters of patience. They know that a child tying their own shoelaces is a victory for independence. Because our guides stay with the same children for three-year cycles, they know your child’s history, their temperament, and the precise moment they fell in love with reading. They are not just teachers; they are witnesses to your child's development.",
             "items": [
               { "name": "Ms Krishnaveni", "role": "", "position": "Program Director – Innovation", "image": "/team/krishnaveni.jpg", "tag": "Program Director" },
               { "name": "Ms Kiranmayee", "role": "", "position": "Senior Manager – Innovation & Growth", "image": "/team/kiran.jpg", "tag": "Senior Manager" },
@@ -571,6 +588,7 @@
         {
           "type": "innovationHabitSplit",
           "props": {
+            "bg" : "#F3E3CF",
             "image": "#",
             "eyebrow": "",
             "title": "THE SCIENCE BEHIND THE SUCCESS",
@@ -777,34 +795,26 @@
           "type": "faq",
           "props": {
             "bg": "#F3E3CF",
-            "title": "Frequently asked questions",
+            "title": "Common Questions",
             "subtitle": "Decoding the Culture of Blue Blocks.",
             "defaultOpenIndex": 0,
             "panelMaxWidth": "",
             "items": [
               {
-                "q": "Why is Blue Blocks called a \"Research Institute\" and not just a school?",
-                "a": "A traditional school focuses on delivering a curriculum to a child. A Research Institute focuses on discovering the child. At Blue Blocks, we operate like a scientific lab—observing, documenting, and refining learning over time."
+                "q": "Is Montessori rigorous enough?",
+                "a": "Montessori is more rigorous than traditional schooling because it demands active engagement. A child cannot 'zone out' here; they must actively construct their knowledge. This builds the discipline required for university and life."
               },
               {
-                "q": "Why do you hire PhDs and industry professionals as guides?",
-                "a": "Because Montessori education demands precision, observation, and deep subject knowledge. Our guides bring real-world expertise while remaining faithful to AMI pedagogy."
+                "q": "How do you handle exams?",
+                "a": "We introduce the Cambridge (IGCSE) framework in Grade 7. By this age, the Montessori child has developed deep concentration. We treat exams as just another 'practical life' challenge to be mastered."
               },
               {
-                "q": "Does 'Stepping Back' mean the teachers don't teach?",
-                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+                "q": "Can I enroll my child at any age?",
+                "a": "Admissions are open at the entry points (Age 3, Age 6). Joining later is possible but requires a discussion to ensure the child can adapt to the freedom of our environment."
               },
               {
-                "q": "How does a Montessori education prepare my child for Board Exams (IGCSE)?",
-                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
-              },
-              {
-                "q": "Why are children of different ages grouped together?",
-                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
-              },
-              {
-                "q": " What is an 'Unscripted Learner'?",
-                "a": "We use longitudinal observation, portfolios, and real-world project outcomes instead of rote testing."
+                "q": "Is the research intrusive?",
+                "a": "Never. Our observation is passive and invisible. We prioritize the child's privacy and comfort above all else. To the child, we are simply their teachers and guides."
               }
             ]
           }
@@ -1045,14 +1055,14 @@
             {
               "type": "programIntroSplit",
               "props": {
-                "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
+                "eyebrow": "THE TODDLER COMMUNITY",
                 "title": "The Absorbent Mind\n(Unconscious)",
                 "subTitle": "",
                 "text": "",
                 "metaRows": [
                   {
                     "label": "Sub-head",
-                    "value": "\"Help Me To Do It\nMyself.\"",
+                    "value": "Help Me To Do It Myself.",
                     "bg": {
                       "label": "#F3D8CF",
                       "value": "#F3D8CF"
@@ -1060,7 +1070,7 @@
                   },
                   {
                     "label": "Age",
-                    "value": "15 Months – 2.5\nYears",
+                    "value": "15 Months – 2.5 Years",
                     "bg": {
                       "label": "#DFE7DA",
                       "value": "#DFE7DA"
@@ -1068,7 +1078,7 @@
                   },
                   {
                     "label": "Theme",
-                    "value": "Functional\nIndependence",
+                    "value": "Functional Independence",
                     "bg": {
                       "label": "#D9E7EA",
                       "value": "#D9E7EA"
@@ -1090,11 +1100,13 @@
               "type": "CenteredTextBlock",
               "props": {
                 "bg": "#EEF7FD",
-                "title": "The Psychological Phase",
+                "title": "THE DEVELOPMENTAL STAGE",
+                "subtitle":"The Awakening of the Will",
                 "textParts": [
-                  "At this stage, the child is not being taught; they are absorbing. Their primary developmental goal is ",
-                  { "bold": "Functional Independence" },
-                  ". They are driven by an internal directive to master their own movements and bodily functions. We do not interrupt this sacred effort with unnecessary help."
+                  "At this age, your child is driven by a fierce internal directive: ",
+                  { "bold": "I must do it." },
+                  ". They are not being stubborn; they are asserting their existence.",
+                  "In a traditional daycare, adults do everything for the child. Here, we slow down. We give them the time and the tools to master their own movements. We do not interrupt this sacred effort with unnecessary help, because we know that every time we do it for them, we steal a moment of their independence."
                 ],
                 "maxWidth": "56rem"
               }
@@ -1104,7 +1116,7 @@
               "props": {
                 "bg": "#F3E3CF",
                 "title": "The Prepared Environment",
-                "description": "This is not a classroom; it is a community. Everything—from the chairs to the sinks—is scaled to the child's size.",
+                "description": "This is not a classroom; it is a community. Everything—from the height of the chairs to the size of the spoons—is scaled strictly to the child’s size, telling them: 'This place belongs to you.'",
                 "headerAlign": "center",
 
                 "cols": { "base": 1, "sm": 2, "lg": 2 },
@@ -1141,19 +1153,56 @@
                 },
 
                 "items": [
-                  { "title": "The Conquest of Space", "text": " The child has a biological imperative to move. Our environment is designed for maximum activity—heavy objects to carry, stairs to climb, and washing stands to use. This is not 'burning energy'; it is the coordination of the mind and body.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
-                  { "title": "The Explosion of Words", "text": "We do not use 'baby talk.' We immerse the child in rich, precise language. We name feelings, objects, and actions. Real conversations happen here, feeding the child's rapidly growing vocabulary.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
-                  { "title": "Self-Care", "text": "Toilet learning, dressing, and grooming are not chores—they are the curriculum. We use collaborative toileting (no diapers) and clothing that is easy to manage, empowering the child to say, 'I can take care of myself.'", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
-                  { "title": "Social Grace", "text": "Children set the table, serve themselves, and eat from real ceramic plates. It is a ritual of community where they learn patience, sharing, and the joy of eating together.", "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] }
+                  { 
+                    "title": "Movement with Purpose", 
+                    "text": [
+                      "Toddlers have a biological imperative to move against resistance. We don't just have 'playtime'; we have 'Heavy Work.'",
+                      "The Activity: Carrying water jugs, climbing stairs, scrubbing tables.",
+                      "The Goal: This isn't just burning energy. It is coordinating the mind and the hand. A child carrying a heavy tray is a child learning focus."
+                    ], 
+                    "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] 
+                  },
+                  { 
+                    "title": "Language Immersion", 
+                    "text": [
+                        "Maximum Effort",
+                        "Toddlers have a biological imperative to move against resistance. We don't just have 'playtime'; we have 'Heavy Work.'",
+                        "The Activity: Carrying water jugs, climbing stairs, scrubbing tables.",
+                        "The Goal: This isn't just burning energy. It is coordinating the mind and the hand. A child carrying a heavy tray is a child learning focus."
+                    ], 
+                    "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] 
+                  },
+                  { 
+                    "title": "Care of Self", 
+                    "text": [
+                      "Dignity in Routine",
+                      "Toilet learning, dressing, and grooming are not chores—they are the curriculum. We use collaborative toileting (no diapers) and clothing that is easy to manage, empowering the child to say, 'I can take care of myself.'",
+                      "Toilet learning, dressing, and grooming are not chores to be rushed; they are the core curriculum.",
+                      "Collaborative Toileting: We move away from diapers to 'learning pants' and child-sized toilets, working in partnership with the child.",
+                      "Self-Dressing: Using clothing with elastic waistbands and velcro, enabling the child to say, 'I put my shoes on.'"
+                    ], 
+                    "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] },
+                  { 
+                    "title": "Social Grace", 
+                    "text": [
+                      "Community Rituals",
+                      "Mealtime is not a 'feeding schedule'; it is a social occasion.",
+                      "The Ritual: Children set their own table with real ceramic plates and glass tumblers.",
+                      "The Lesson: They learn to serve themselves, wait for their friends, and handle fragile objects with care. They learn that they are trusted."
+                    ], 
+                    "tabColors": ["#78D6F3", "#F5A48D", "#F9E27C"] 
+                  }
                 ]
               }
             },
             {
               "type": "imageText",
               "props": {
-                "title": "Expert Guidance",
+                "title": "THE GUIDE",
+                "subtitle":"The Anchor",
                 "text": [
-                  "Our AMI-trained guides are observers first. The Anchor of Safety. Our guides provide \"psychological safety\"—a calm, unhurried presence. They do not entertain the child. They link the child to the activity and then fade into the background, allowing the child to discover their own capability."
+                  "Our AMI-trained guides are not 'entertainers.' They provide Psychological Safety—a calm, unhurried presence.",
+                  "They do not hover. They link the child to an activity (like slicing a banana) and then fade into the background. This invisibility is intentional. It allows the child to feel that they achieved the result, not the teacher. The Guide is the safety net that allows the child to take risks."
                 ],
                 "imageUrl": "/programs/playgroup/expert-guidance.jpg",
 
@@ -1171,29 +1220,29 @@
               "type": "outcomesPills",
               "props": {
                 "bg": "#FFFFFF",
-                "title": "Outcomes",
+                "title": "What You Will See",
                 "titleAlign": "center",
                 "maxWidth": "",
                 "gap": "gap-4",
                 "items": [
                   {
                     "icon": "/icon/gear.png",
-                    "text": "Functional Independence: Eating, dressing, and toileting alone.",
+                    "text": "Functional Independence: The ability to eat, dress, and use the toilet with minimal assistance.",
                     "pillBg": "#F9E48F"
                   },
                   {
                     "icon": "/icon/movement.png",
-                    "text": "Coordinated Movement: Grace and balance.",
+                    "text": "Coordinated Movement: A noticeable grace and balance in how they carry objects and navigate space.",
                     "pillBg": "#F9A78F"
                   },
                   {
                     "icon": "/icon/chat.png",
-                    "text": "Explosion of Vocabulary: Expressing needs with words, not tears.",
+                    "text": "Verbal Expression: Using words, rather than screaming, to express needs.",
                     "pillBg": "#95D6ED"
                   },
                   {
                     "icon": "/icon/emotion.png",
-                    "text": "Emotional Regulation: The confidence of self-reliance.",
+                    "text": "Emotional Confidence: The deep satisfaction of a child who knows they are capable.",
                     "pillBg": "#F9E48F"
                   }
                 ]

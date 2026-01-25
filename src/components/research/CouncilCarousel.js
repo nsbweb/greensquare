@@ -11,7 +11,8 @@ export default function CouncilCarousel({
   eyebrowText = "#2C2F8F", 
   title, 
   description, 
-  descriptionClassName = "mt-4 max-w-2xl text-[0.875rem] sm:text-[0.9375rem] leading-6 text-slate-500",
+  descriptionClassName = "text-center mt-4 text-[0.875rem] sm:text-[0.9375rem] leading-6 text-slate-500",
+  subdescription,
   items = [] 
 }) {
   const total = items?.length || 0;
@@ -20,21 +21,29 @@ export default function CouncilCarousel({
     <section className={`${bg}`}>
       <Container className="py-16 sm:py-20">
         {eyebrow ? (
-          <div
-            className="inline-flex rounded-full px-4 py-1 text-[0.625rem] font-semibold tracking-[0.18em] uppercase"
-            style={{ backgroundColor: eyebrowBg, color: eyebrowText }}
-          >
-            {eyebrow}
+          <div className="text-center ">
+            <div
+              className="inline-flex align-center rounded-full px-4 py-1 text-[0.625rem] font-semibold tracking-[0.18em] uppercase mb-5"
+              style={{ backgroundColor: eyebrowBg, color: eyebrowText }}
+            >
+              {eyebrow}
+            </div>
           </div>
         ) : null}
 
-        <h2 className="text-[2.25rem] sm:text-[3rem] leading-[1.08] font-medium text-[#131313]">
+        {title ? (<h2 className="text-center text-[2.25rem] sm:text-[3rem] leading-[1.08] font-medium text-[#131313]">
           {title}
-        </h2>
+        </h2>) : null}
 
         {description ? (
           <p className={`${descriptionClassName}`}>
             {description}
+          </p>
+        ) : null}
+
+        {subdescription ? (
+          <p className={`${descriptionClassName}`}>
+            {subdescription}
           </p>
         ) : null}
 

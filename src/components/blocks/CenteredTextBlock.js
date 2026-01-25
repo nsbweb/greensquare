@@ -3,6 +3,7 @@ import Container from "@/components/layout/Container";
 export default function CenteredTextBlock({
   bg = "#EEF7FD",
   title,
+  subtitle,
   text,
   textParts,
   maxWidth = "56rem"
@@ -15,6 +16,12 @@ export default function CenteredTextBlock({
             <h2 className="text-[2.25rem] sm:text-[3rem] leading-[1.1] font-medium text-[#131313]">
               {title}
             </h2>
+          ) : null}
+
+          {subtitle ? (
+            <h3 className="text-[1.25rem] sm:text-[2rem] leading-[1.1] text-[#131313] mt-5">
+              {subtitle}
+            </h3>
           ) : null}
 
           {Array.isArray(textParts) && textParts.length ? (

@@ -22,13 +22,13 @@ export default function Insights({
   items = [],
 
   containerClassName = "py-14",
-  cols = { base: 1, md: 3 },
+  cols = { base: 1, sm: 3, md: 3 },
   gapClassName = "gap-5",
 }) {
   const sectionStyle = bg && isHexColor(bg) ? { backgroundColor: bg } : undefined;
   const sectionClassName = sectionStyle ? "" : bgClassName;
 
-  const gridColsClass = `grid grid-cols-${cols.base} md:grid-cols-${cols.md}`;
+  const gridColsClass = `grid grid-cols-${cols.base} sm:grid-cols-${cols.sm} md:grid-cols-${cols.md}`;
 
   return (
     <section className={sectionClassName} style={sectionStyle}>

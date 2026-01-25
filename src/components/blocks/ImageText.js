@@ -6,10 +6,10 @@ export default function ImageText({
   bgClass = "bg-white",
   SecBg = "",
   title,
+  subtitle,
   text = [],
   imageUrl = "",
 
-  // ✅ new optional props (non-breaking)
   variant = "default", // "default" | "card"
   cardBg = "#EEF7FD",
   cardRadius = "rounded-2xl",
@@ -25,7 +25,6 @@ export default function ImageText({
 
   const gridColsClass = hasImage ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-1";
 
-  // When variant = card, we render a rounded "panel" wrapping the whole grid
   const isCard = variant === "card";
 
   const wrapClass = isCard
@@ -34,7 +33,6 @@ export default function ImageText({
 
   const wrapStyle = isCard ? { backgroundColor: cardBg } : undefined;
 
-  // Image position control (optional)
   const imageOrderClass =
     hasImage && imageSide === "right"
       ? "md:order-2"
@@ -45,8 +43,6 @@ export default function ImageText({
       ? "md:order-1"
       : "";
 
-  // Old UI (default) image wrapper keeps border + bg-slate-100
-  // New card UI removes border and uses cover
   const imgOuterClass = isCard
     ? `overflow-hidden ${imageClassName || "rounded-2xl"}`
     : "rounded-2xl overflow-hidden bg-slate-100 border";
@@ -107,12 +103,10 @@ export default function ImageText({
 
           <div className={contentOrderClass}>
             {title ? <h2 className={finalTitleClass}>{title}</h2> : null}
+            {subtitle ? <h3 className="text-[1.2rem] sm:text-3xl whitespace-pre-line mt-3">{subtitle}</h3> : null}
 
             {Array.isArray(text) && text.length ? (
               <div className={finalTextWrapClass}>
-                {/* {text.map((p, idx) => (
-                  <p key={idx}>{p}</p>
-                ))} */}
                 {text.map((p, idx) =>
                   typeof p === "string" ? (
                     <p

@@ -339,7 +339,26 @@ export default function CardsGridSection({
                     ) : null}
 
                     {/* Text */}
-                    {it?.text ? <p className={cardTextClassName}>{it.text}</p> : null}
+                    {Array.isArray(it?.text) && it?.text.length ? (
+                      <div>
+                        {/* {text.map((p, idx) => (
+                          <p key={idx}>{p}</p>
+                        ))} */}
+                        {it?.text.map((p, idx) =>
+                          typeof p === "string" ? (
+                            <p
+                              className={cardTextClassName}
+                              key={idx}
+                              dangerouslySetInnerHTML={{ __html: p }}
+                            />
+                          ) : null
+                        )}
+                      </div>
+                    ) : typeof it?.text === "string" ? (
+                    <p
+                      className={cardTextClassName}
+                      dangerouslySetInnerHTML={{ __html: it.text }}
+                    />) : null}
 
                     {/* (optional) Spacer to keep footer-alignment if you ever add CTA */}
                     {equalHeight ? <div className="mt-auto" /> : null}

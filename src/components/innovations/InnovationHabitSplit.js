@@ -18,8 +18,6 @@ export default function InnovationHabitSplit({
   bullets = [],
   images = [],
 
-  // ✅ NEW (optional): rows under description
-  // [{ label: "MISSION TYPE", value: "Technology Demonstration" }, ...]
   details = [],
   detailsClassName = "",
   detailsLabelClassName = "text-[1.3rem] tracking-[0.12em] uppercase text-[#9A9A9A]",
@@ -121,19 +119,19 @@ export default function InnovationHabitSplit({
                         <Image
                           src={b.icon}
                           alt={b.title || ""}
-                          width={62}
-                          height={62}
+                          width={52}
+                          height={52}
                           className="object-contain"
                         />
                       </span>
                     ) : null}
 
                     <div className={`${className || ""}`}>
-                      <div className="text-[1.5rem] text-[#1B1B1B]">
+                      <div className="text-[1.2rem] text-[#1B1B1B]">
                         {b.title}
                       </div>
                       {b.text ? (
-                        <div className="mt-2 text-[1.5rem] text-[#1B1B1B]/50 leading-relaxed">
+                        <div className="mt-1 text-[1.2rem] text-[#1B1B1B]/50 leading-relaxed">
                           {b.text}
                         </div>
                       ) : null}
