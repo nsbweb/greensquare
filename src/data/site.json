@@ -154,7 +154,20 @@
       { "src": "/footer/footer-3.png", "alt": "Learning spaces" }
     ],
     "aboutText": "Blue Blocks is a research-led learning ecosystem focused on authentic Montessori and child development.",
-    "newsletter": { "placeholder": "Enter Your E-mail", "buttonLabel": "Submit" },
+    "newsletter": {
+      "placeholder": "Enter Your E-mail",
+      "buttonLabel": "Submit",
+      "emailFieldName": "email",
+      "successMessage": "Subscribed successfully.",
+      "submittingLabel": "Submitting",
+      "hubspot": {
+        "region": "na2",
+        "portalId": "244973316",
+        "formId": "b9701056-562d-4f41-abbf-960dcd4a908e",
+        "pageName": "Footer Newsletter",
+        "pageUri": "https://blueblocks.in/"
+      }
+    },
     "quickLinks": [
       { "label": "About Us", "href": "/about-us" },
       { "label": "The Research Institute", "href": "/research-institute" },
@@ -2036,26 +2049,34 @@
           }
         },
         {
-          "type": "contactDetails",
-          "props": {
-            "eyebrow": "Have A Question?",
-            "heading": "Contact Details",
-            "items": [
-              { "label": "EMAIL", "value": "info@blueblocks.in", "href": "mailto:info@blueblocks.in" },
-              { "label": "PHONE", "value": "+91 9000955050", "href": "tel:+919000955050" },
-              { "label": "WHATSAPP", "value": "+91 9000955053", "href": "https://wa.me/919000955053" }
-            ],
-            "form": {
-              "fields": [
-                { "name": "name", "placeholder": "Name", "type": "text" },
-                { "name": "email", "placeholder": "Email", "type": "email" },
-                { "name": "phone", "placeholder": "Contact Number", "type": "text" },
-                { "name": "message", "placeholder": "Message", "type": "textarea" }
-              ],
-              "buttonLabel": "Submit →"
-            }
+        "type": "contactDetails",
+        "props": {
+          "eyebrow": "CONTACT",
+          "heading": "Get in touch",
+          "items": [
+            { "icon": "/icon/email.svg", "label": "EMAIL", "value": "info@blueblocks.in", "href": "mailto:info@blueblocks.in" },
+            { "icon": "/icon/phone.svg", "label": "PHONE", "value": "+91 9000955050", "href": "tel:+919000955050" },
+            { "icon": "/icon/chat.svg", "label": "WHATSAPP", "value": "+91 9000955053", "href": "https://wa.me/919000955053" }
+          ],
+          "form": {
+            "buttonLabel": "Submit →",
+            "successMessage": "Thanks! We’ll get back to you shortly.",
+            "submittingLabel": "Submitting...",
+            "hubspot": {
+              "portalId": "244973316",
+              "formId": "0af97cac-4550-47e6-9f2c-6a91e78b16d4",
+              "pageName": "Contact Page",
+              "pageUri": "https://js-na2.hsforms.net/forms/embed/244973316.js"
+            },
+            "fields": [
+              { "name": "name", "type": "text", "placeholder": "Name", "required": true },
+              { "name": "email", "type": "email", "placeholder": "Email", "required": true, "validate": "email" },
+              { "name": "phone", "type": "text", "placeholder": "Contact Number" },
+              { "name": "message", "type": "textarea", "placeholder": "Message", "required": true }
+            ]
           }
-        },
+        }
+      },
         {
           "type": "locationsGrid",
           "props": {
