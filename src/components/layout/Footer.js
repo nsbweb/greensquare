@@ -7,55 +7,156 @@ import Container from "@/components/layout/Container";
 import CarouselTrack from "@/components/ui/carousel/CarouselTrack";
 import siteData from "@/data/site.json";
 
+/* ------------------------- helpers ------------------------- */
+
+function isEmail(v = "") {
+  const s = String(v || "").trim();
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+}
+
+function getHutkCookie() {
+  if (typeof document === "undefined") return "";
+  const match = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
+// ✅ HubSpot endpoint depends on region (na1/na2/eu1, etc.)
+function hsBaseUrl(region = "") {
+  const r = String(region || "").toLowerCase().trim();
+  if (!r) return "https://api.hsforms.com";
+  return `https://api-${r}.hsforms.com`;
+}
+
+async function submitToHubSpot({ portalId, formId, fields, context, region }) {
+  const base = hsBaseUrl(region);
+  const url = `${base}/submissions/v3/integration/submit/${portalId}/${formId}`;
+
+  const payload = {
+    fields: fields.map((f) => ({ name: f.name, value: f.value })),
+    context: {
+      hutk: getHutkCookie() || undefined,
+      pageUri:
+        context?.pageUri ||
+        (typeof window !== "undefined" ? window.location.href : ""),
+      pageName: context?.pageName || undefined,
+    },
+  };
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    let msg = "Unable to submit. Please try again.";
+    try {
+      const j = await res.json();
+      msg =
+        j?.message ||
+        j?.errors?.[0]?.message ||
+        j?.errors?.[0]?.error ||
+        msg;
+      // Helpful debug
+      // eslint-disable-next-line no-console
+      console.error("HubSpot newsletter error:", j);
+    } catch (e) {}
+    throw new Error(msg);
+  }
+
+  return true;
+}
+
 export default function Footer() {
-  const footer = siteData?.footer ?? {};
+  const { footer } = siteData;
+
   const [email, setEmail] = useState("");
+  const [newsStatus, setNewsStatus] = useState({ type: "", msg: "" });
+  const [newsSubmitting, setNewsSubmitting] = useState(false);
 
-  // ✅ Map from site.json (no hardcoded arrays)
-  const quickLinks = footer?.quickLinks ?? [];
-  const programs = footer?.programs ?? [];
-  // const intelligence = footer?.intelligence ?? [];
-  const connect = footer?.connect ?? [];
-  const contact = footer?.contact ?? {};
-  const socials = (footer?.socials ?? []).map((s) => ({
-    id: (s.label || "").toLowerCase().replace(/\s+/g, "-"),
-    label: s.label,
-    href: s.href,
-    icon: s.icon,
-  }));
-
-  // ✅ Gallery (add footer.gallery in site.json; fallback keeps footer safe)
   const gallery = useMemo(() => {
     if (Array.isArray(footer?.gallery) && footer.gallery.length) return footer.gallery;
     return [{ src: "/footer-map-img.png", alt: "Campus" }];
   }, [footer]);
 
+  async function onNewsletterSubmit(e) {
+    e.preventDefault();
+    setNewsStatus({ type: "", msg: "" });
+
+    const v = String(email || "").trim();
+    if (!v) {
+      setNewsStatus({ type: "error", msg: "Please enter your email." });
+      return;
+    }
+    if (!isEmail(v)) {
+      setNewsStatus({ type: "error", msg: "Please enter a valid email address." });
+      return;
+    }
+
+    const hs = footer?.newsletter?.hubspot;
+    if (!hs?.portalId || !hs?.formId) {
+      setNewsStatus({
+        type: "error",
+        msg: "Newsletter is not configured yet (missing HubSpot portalId/formId).",
+      });
+      return;
+    }
+
+    try {
+      setNewsSubmitting(true);
+
+      // HubSpot field name must match your form property (usually: "email")
+      const fieldName = footer?.newsletter?.emailFieldName || "email";
+
+      await submitToHubSpot({
+        region: hs?.region, // ✅ add region from JSON (ex: "na2")
+        portalId: hs.portalId,
+        formId: hs.formId,
+        fields: [{ name: fieldName, value: v }],
+        context: { pageUri: hs.pageUri, pageName: hs.pageName },
+      });
+
+      setNewsStatus({
+        type: "success",
+        msg: footer?.newsletter?.successMessage || "Subscribed successfully.",
+      });
+      setEmail("");
+    } catch (err) {
+      setNewsStatus({
+        type: "error",
+        msg: err?.message || "Unable to subscribe. Please try again.",
+      });
+    } finally {
+      setNewsSubmitting(false);
+    }
+  }
+
   return (
     <footer className="bg-[#141414] text-white">
       <Container>
-        <div className="pb-10 pt-8 sm:pt-10 lg:pt-12">
+        <div className="pt-8 sm:pt-10 lg:pt-12 pb-10">
           {/* MAIN GRID */}
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-6">
-            {/* LEFT: Gallery Slider */}
+            {/* LEFT: GALLERY SLIDER */}
             <div className="overflow-hidden rounded-[1.75rem] bg-[#1c1c1c]">
               <FooterGallerySlider slides={gallery} />
-              {/* soft green strip like figma */}
               <div className="h-10 bg-gradient-to-r from-lime-200/30 via-amber-200/25 to-lime-200/30" />
             </div>
 
-            {/* RIGHT: Panel */}
+            {/* RIGHT: PANEL */}
             <div className="rounded-[1.75rem] bg-[#1c1c1c] p-4 sm:p-5 lg:p-6">
-              {/* Top row: About/Newsletter + Socials (desktop) */}
+              {/* TOP ROW: about/newsletter + socials */}
               <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_14rem]">
-                <div className="rounded-[1.25rem] bg-[#232323] p-4 sm:p-5">
-                  <div className="flex flex-col items-start gap-3 pb-[2rem] mb-[1.2rem] border-b border-slate-100">
+                {/* About + Newsletter card */}
+                <div className="rounded-[1.25rem] bg-[#232323] p-4 sm:p-5 relative z-10">
+                  <div className="flex flex-col items-start gap-3">
                     <div className="relative h-10 w-12 overflow-hidden rounded-md bg-white">
                       <Image
-                        src={siteData?.site?.logo || "/icon/logo.svg"}
+                        src="/icon/logo.svg"
                         alt={siteData?.site?.name || "Blue Blocks"}
                         fill
                         className="object-contain p-1"
-                        sizes="48px"
+                        sizes="94px"
                       />
                     </div>
 
@@ -66,83 +167,98 @@ export default function Footer() {
 
                   {/* Newsletter */}
                   <form
-                    onSubmit={(e) => e.preventDefault()}
-                    className="mt-4 grid grid-cols-[1fr_auto] gap-3"
+                    onSubmit={onNewsletterSubmit}
+                    className="mt-4 grid grid-cols-[1fr_auto] gap-3 relative z-10"
+                    noValidate
                   >
                     <input
-                      type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      type="email"
                       placeholder={footer?.newsletter?.placeholder || "Enter Your E-mail"}
-                      className="h-11 w-full rounded-2xl bg-[#3a3a3a] px-4 text-[0.8125rem] text-white placeholder:text-white/45 outline-none ring-1 ring-transparent focus:ring-white/20"
+                      className="h-11 w-full rounded-xl bg-[#3a3a3a] px-4 text-[0.8125rem] text-white placeholder:text-white/45 outline-none ring-1 ring-transparent focus:ring-white/20"
+                      disabled={newsSubmitting}
                     />
 
-                    {/* Desktop shows text+arrow, mobile shows only arrow (still same button) */}
                     <button
                       type="submit"
-                      className="h-11 rounded-xl bg-white px-4 text-[0.8125rem] font-medium text-[#111] hover:bg-white/90"
+                      disabled={newsSubmitting}
+                      className={[
+                        "h-11 rounded-xl bg-white px-4 text-[0.8125rem] font-medium text-[#111] hover:bg-white/90",
+                        newsSubmitting ? "opacity-70 cursor-not-allowed" : "",
+                      ].join(" ")}
                     >
                       <span className="hidden sm:inline">
-                        {footer?.newsletter?.buttonLabel || "Submit"}{" "}
+                        {newsSubmitting
+                          ? footer?.newsletter?.submittingLabel || "Submitting"
+                          : footer?.newsletter?.buttonLabel || "Submit"}{" "}
                       </span>
                       <span aria-hidden>↗</span>
                     </button>
                   </form>
+
+                  {newsStatus?.msg ? (
+                    <div
+                      className={[
+                        "mt-3 rounded-xl px-4 py-3 text-[0.8125rem]",
+                        newsStatus.type === "success"
+                          ? "bg-green-50 text-green-700"
+                          : "bg-red-50 text-red-700",
+                      ].join(" ")}
+                    >
+                      {newsStatus.msg}
+                    </div>
+                  ) : null}
                 </div>
 
-                {/* Socials (desktop right stack) */}
+                {/* Social stack */}
                 <div className="hidden lg:flex lg:flex-col lg:gap-3">
-                  {socials.map((s) => (
-                    <SocialButton key={s.id} item={s} />
+                  {footer?.socials?.map((s) => (
+                    <SocialButton key={s.label} item={s} />
                   ))}
                 </div>
               </div>
 
-              {/* Link Columns */}
-              <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <FooterColumn title="Quick Links" items={quickLinks} />
-                <FooterColumn title="Programs" items={programs} />
-                {/* <FooterColumn title="Intelligence" items={intelligence} /> */}
-                <FooterColumn title="Connect" items={connect} />
+              {/* LINKS GRID */}
+              <div className="mt-5 rounded-[1.25rem] bg-transparent">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  <FooterColumn title="Quick Links" items={footer?.quickLinks || []} />
+                  <FooterColumn title="Programs" items={footer?.programs || []} />
+                  <FooterColumn title="Connect" items={footer?.connect || []} />
+                </div>
               </div>
 
-              {/* Contact pill */}
+              {/* CONTACT PILL */}
               <div className="mt-6 rounded-[1rem] bg-[#2a2a2a] px-4 py-3">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex flex-wrap items-center gap-3 text-[0.75rem] text-white/70">
-                    <span aria-hidden className="text-white/60">
-                      ☎
-                    </span>
-                    <span className="whitespace-nowrap">{contact?.phone}</span>
-                    <span className="whitespace-nowrap">{contact?.whatsapp}</span>
+                    <span aria-hidden className="text-white/60">☎</span>
+                    <span className="whitespace-nowrap">{footer?.contact?.phone}</span>
+                    <span className="whitespace-nowrap">{footer?.contact?.whatsapp}</span>
                   </div>
 
                   <div className="flex items-center gap-2 text-[0.75rem] text-white/70">
-                    <span aria-hidden className="text-white/60">
-                      ✉
-                    </span>
-                    {contact?.email ? (
-                      <a
-                        className="underline-offset-4 hover:underline"
-                        href={`mailto:${contact.email}`}
-                      >
-                        {contact.email}
-                      </a>
-                    ) : null}
+                    <span aria-hidden className="text-white/60">✉</span>
+                    <a
+                      className="underline-offset-4 hover:underline"
+                      href={`mailto:${footer?.contact?.email}`}
+                    >
+                      {footer?.contact?.email}
+                    </a>
                   </div>
                 </div>
               </div>
 
-              {/* Socials (mobile stacked at bottom like figma mobile) */}
+              {/* Mobile socials */}
               <div className="mt-5 grid grid-cols-1 gap-3 lg:hidden">
-                {socials.map((s) => (
-                  <SocialButton key={s.id} item={s} />
+                {footer?.socials?.map((s) => (
+                  <SocialButton key={s.label} item={s} />
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Bottom row */}
+          {/* BOTTOM LEGAL ROW */}
           <div className="mt-6 flex flex-col gap-3 text-[0.75rem] text-white/45 lg:flex-row lg:items-center lg:justify-between">
             <div>© 2025 Blue Blocks Research Institute</div>
 
@@ -162,7 +278,7 @@ export default function Footer() {
   );
 }
 
-/* -------------------- sub components -------------------- */
+/* ------------------------- Sub Components ------------------------- */
 
 function FooterGallerySlider({ slides }) {
   return (
@@ -234,11 +350,7 @@ function SocialButton({ item }) {
     >
       <span className="flex items-center gap-3">
         <span className="relative h-5 w-5">
-          {item.icon ? (
-            <Image src={item.icon} alt="" fill className="object-contain" sizes="20px" />
-          ) : (
-            <span className="block h-5 w-5 rounded bg-white/20" />
-          )}
+          <Image src={item.icon} alt="" fill className="object-contain" sizes="20px" />
         </span>
         {item.label}
       </span>
