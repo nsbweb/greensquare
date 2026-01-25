@@ -7,6 +7,7 @@ export default function InnovationMediaHero({
   image,
   title,
   subtitle,
+  cardTextClassName = "mt-3 text-white/85 text-xs sm:text-sm leading-relaxed",
   primaryCta,
   secondaryCta,
 }) {
@@ -32,11 +33,24 @@ export default function InnovationMediaHero({
                 <h2 className="text-white text-2xl sm:text-4xl font-semibold leading-tight">
                   {title}
                 </h2>
-                {subtitle ? (
-                  <p className="mt-3 text-white/85 text-xs sm:text-sm leading-relaxed">
-                    {subtitle}
-                  </p>
-                ) : null}
+
+                {Array.isArray(subtitle) && subtitle.length ? (
+                  <div>
+                    {subtitle.map((p, idx) =>
+                      typeof p === "string" ? (
+                        <p
+                          className={cardTextClassName}
+                          key={idx}
+                          dangerouslySetInnerHTML={{ __html: p }}
+                        />
+                      ) : null
+                    )}
+                  </div>
+                ) : typeof subtitle === "string" ? (
+                <p
+                  className={cardTextClassName}
+                  dangerouslySetInnerHTML={{ __html: subtitle }}
+                />) : null}
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                   {primaryCta?.href ? (

@@ -68,7 +68,7 @@ export default function CardsGridSection({
   eyebrowBg = "#E7E8FF",
   eyebrowText = "#2C2F8F",
 
-  titleClassName = "text-[2.25rem] sm:text-[3rem] leading-[1.08] font-medium text-[#131313]",
+  titleClassName = "text-center text-[2.25rem] sm:text-[3rem] leading-[1.08] font-medium text-[#131313]",
   descriptionClassName = "mt-4 max-w-2xl text-[0.875rem] sm:text-[0.9375rem] leading-6 text-slate-500",
 
   // Grid behavior
@@ -97,21 +97,11 @@ export default function CardsGridSection({
 
   showNum = true,
   numClassName = "text-[3rem] sm:text-[3.2rem] font-semibold leading-none text-white/20",
-
-  // Existing optional (in-card strip) – still supported
   cardRightTabs,
-
-  // ✅ NEW optional (behind card strip)
   cardBehindTabs,
-
-  // Divider inside card
   cardDivider,
-
-  // ✅ NEW optional behaviors (opt-in)
   equalHeight = false,
   tightTitleWhenNoIcon = false,
-
-  // Data
   items = [],
 }) {
   const headerAlignClass = headerAlign === "left" ? "text-left" : "text-center";

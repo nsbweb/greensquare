@@ -5,7 +5,11 @@ import Container from "@/components/layout/Container";
 import Image from "next/image";
 import CarouselTrack from "@/components/ui/carousel/CarouselTrack";
 
-export default function AdmissionsJourney({ eyebrow, title, items = [] }) {
+export default function AdmissionsJourney({ 
+  eyebrow, 
+  title, 
+  items = [],
+}) {
   const safeItems = useMemo(() => items.filter(Boolean), [items]);
   const total = safeItems.length;
 
@@ -76,7 +80,8 @@ export default function AdmissionsJourney({ eyebrow, title, items = [] }) {
   );
 }
 
-function JourneyCard({ icon, title, text }) {
+  
+function JourneyCard({ icon, title, text, cardTextClassName = "mt-2 text-xs leading-5 text-slate-600"}) {
   return (
     <div className="rounded-2xl bg-[#F3E3CF] px-6 py-6 h-full w-full flex flex-col justify-between">
       <div className="flex items-center justify-center">
@@ -94,7 +99,24 @@ function JourneyCard({ icon, title, text }) {
 
       <div className="text-center">
         <div className="mt-2 text-sm font-semibold text-slate-800">{title}</div>
-        <p className="mt-2 text-xs leading-5 text-slate-600">{text}</p>
+        {/* <p className="">{text}</p> */}
+        {Array.isArray(text) && text.length ? (
+          <div>
+            {text.map((p, idx) =>
+              typeof p === "string" ? (
+                <p
+                  className={cardTextClassName}
+                  key={idx}
+                  dangerouslySetInnerHTML={{ __html: p }}
+                />
+              ) : null
+            )}
+          </div>
+        ) : typeof text === "string" ? (
+        <p
+          className={cardTextClassName}
+          dangerouslySetInnerHTML={{ __html: text }}
+        />) : null}
       </div>
     </div>
   );

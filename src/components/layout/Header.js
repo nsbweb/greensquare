@@ -232,11 +232,11 @@ export default function Header({ variant = "dark" }) {
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Keep header space so it doesn't go under your fixed header */}
-                <div className="h-full w-full pt-[72px]">
+                <div className="h-[90vh] w-full pt-[72px]">
                   {/* Scroll container */}
-                  <div className="h-full overflow-y-auto overscroll-contain">
-                    <div className="mx-3 my-3 rounded-2xl bg-[#1f2a44] text-white shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
-                      <div className="px-5 py-6 pb-10">
+                  <div className="h-full ">
+                    <div className="h-full mx-3 my-3 rounded-2xl bg-[#273C75] text-white shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
+                      <div className="h-full px-5 py-6 pb-10">
                         <MobileNav
                           nav={site?.nav || []}
                           megaByLabel={megaByLabel}
@@ -420,7 +420,7 @@ function MobileNav({
   onNavigate,
 }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 h-full overflow-y-auto overscroll-contain">
       {(nav || []).map((item, idx) => {
         const label = item?.label || "";
         const mega = megaByLabel?.[label];
@@ -545,7 +545,7 @@ function MobileNav({
 
       {/* Socials */}
       {(socials || []).length ? (
-        <div className="pt-3">
+        <div className="pt-3 sticky bottom-0 bg-[#273C75]">
           <div className="px-2 text-xs font-semibold tracking-[0.18em] uppercase text-white/55">
             Follow
           </div>

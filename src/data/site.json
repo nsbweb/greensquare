@@ -845,7 +845,7 @@
             "image": { "src": "/academics/hero.jpg", "alt": "Academics" },
             "eyebrow": "OUR PROGRAMS",
             "title": "THE COGNITIVE\nCONTINUUM",
-            "subtitle": "A Scientifically Mapped Journey from Infancy to Adolescence (0–16 Years)",
+            "subtitle": ["A Scientifically Mapped Journey from Infancy to Adolescence (0–16 Years)", "A scientifically mapped journey from infancy to adolescence, designed to follow the natural laws of human development."],
             "promiseTitle": "The Promise",
             "promiseItems": [
               {
@@ -876,8 +876,7 @@
             "eyebrow": "PHILOSOPHY",
             "title": "EDUCATION AS AN AID\nTO LIFE",
             "paragraphs": [
-              "At Blue Blocks, we do not group children by age strictly for convenience; we group them by Psychological Phase. Dr. Maria Montessori observed that human beings go through distinct \"Planes of Development,\" each requiring a different environment and a different approach.",
-              "We have designed our campus to mirror these natural stages. It is not a school; it is a Living Ecosystem that evolves as your child evolves."
+              "We do not group children by age; we group them by psychological phase. Dr. Maria Montessori observed that human beings pass through distinct ‘Planes of Development,’ each requiring a specific environment to unlock their potential. This is not just a school; it is a living ecosystem that evolves as your child evolves."
             ],
             "pyramidImage":"/academics/pyramid.png",
             "pyramid": {
@@ -903,12 +902,12 @@
           "type": "programsGrid",
           "props": {
             "eyebrow": "OUR PROGRAMS",
-            "title": "THE PROGRAMS",
+            "title": "ACADEMIC PROGRAMS",
             "subtitle": "Discover structured learning experiences tailored to each age group — Playgroup, Nursery, Primary, and Secondary.",
             "items": [
               {
                 "id": "toddler",
-                "badge": "Nido (15 Months – 3 Years)",
+                "badge": "Nido (15 Months – 2.5 Years)",
                 "cardTitle": "THE TODDLER COMMUNITY",
                 "focusLabel": "Focus",
                 "focusText": "Functional Independence",
@@ -998,7 +997,7 @@
           "description": "",
           "headerAlign": "left",
 
-          "cols": { "base": 1, "sm": 2, "lg": 4 },
+          "cols": { "base": 1, "sm": 2, "lg": 3 },
           "maxWidth": "max-w-6xl",
           "gap": "gap-6",
 
@@ -1020,9 +1019,9 @@
         {
           "type": "ctaBanner",
           "props": {
-            "title": "Ready to start the conversation?",
-            "text": "If our philosophy resonates with you, we’d love to learn more about your family and your child.",
-            "cta": { "label": "Register Interest", "href": "/contact" },
+            "title": "Witness the Community in Action.",
+            "text": "To understand the dignity of the child, you must see them at work.",
+            "cta": { "label": "Book a Campus Tour", "href": "/campus" },
             "image": "/building-image-01.png",
             "imageAlt": "Campus building",
             "imageWidth": "566",
@@ -1030,6 +1029,46 @@
             "customTopSpacing":"sm:pt-70",
             "align": "left",
             "theme": "dark"
+          }
+        },
+        {
+          "type": "tabbedFaq",
+          "props": {
+            "bg": "#F3E3CF",
+            "title": "Frequently asked questions",
+            "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+            "tabs": [
+              {
+                "label": "The Methodology",
+                "items": [
+                  { "q": "Why are the classes mixed-age?", "a": "Life is not stratified by age. The mixed-age environment allows younger children to learn from older peers, while older children master concepts by teaching. It creates a natural, family-like community." },
+                  { "q": "Do the children just play all day?", "a": "To the untrained eye, it looks like play; to the Montessori eye, it is 'work.' When a child washes a table or builds a tower, they are building concentration and logical structure. We call this 'constructive activity.'" },
+                  { "q": "What if my child avoids a subject (like Math)?", "a": "The Guide is trained to spot this. We do not force the child; we ignite their interest. The Guide will link Math to something the child loves (e.g., measuring plants in biology), triggering an internal desire to learn." },
+                  { "q": "Does 'Freedom' mean chaos?", "a": "No. Freedom is not doing 'whatever you want'; it is the freedom to do what is right. A child is free to choose their work, but they must complete it and return it. The result is 'Active Discipline', a calm, productive human. " }
+                ]
+              },
+              {
+                "label": "The Assessment",
+                "items": [
+                  { "q": "How do you track progress without exams?", "a": "We use Scientific Observation. We don't need a test to know what a child knows because we watch them work every day. In the Adolescent years, we introduce 'Testing as a Life Skill' for Cambridge/IGCSE preparation." },
+                  { "q": "Is there homework?", "a": "Rarely in the traditional sense. After 6-7 hours of cognitive work, a child needs downtime. 'Homework' happens naturally when a student is so inspired by a lesson they choose to continue researching it at home." }
+                ]
+              },
+              {
+                "label": "The Future",
+                "items": [
+                  { "q": "Does the curriculum cover the standard syllabus (CBSE/IGCSE)?", "a": "It goes beyond it. The Montessori 'Cosmic Education' covers high-school level biology and geometry by age 12. We meet all national requirements, but the route we take is non-linear and depth-focused." },
+                  { "q": "How do they transition to traditional college?", "a": "Excellently. They possess 'Executive Function', the ability to plan and self-motivate. While other students wait to be told what to study, Montessori students manage their own schedules. A child who knows how to learn can master any system." }
+                ]
+              },
+              {
+                "label": "Logistics",
+                "items": [
+                  { "q": "Does my child need to be potty trained?", "a": "For the Toddler Community (15mo+), no. Toilet learning is part of our curriculum. For the Primary (3-6), we prefer the child to have started the process, but we work in partnership with you." },
+                  { "q": "What is the adult-to-child ratio?", "a": "It varies by age. But remember, the adult is not the only teacher, the older children are also teachers. The true ratio includes the peer community." }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -1799,10 +1838,11 @@
           "type": "admissionsIntro",
           "props": {
             "eyebrow": "ADMISSIONS",
-            "title": "A Partnership, Not\nJust a Placement",
+            "title": "A Partnership, Not Just A Placement.",
+            "subtitle":"Why We Are Selective",
             "text": [
-              "Choosing a Montessori school is not a transaction — it is a long-term relationship.",
-              "We take time to understand families who align with our philosophy, values, and commitment to childhood as a formative journey, not a race.",
+              "At Blue Blocks, we do not admit a student; we admit a family. Education is not a transaction where you pay fees and we deliver a product. It is a 15-year collaboration.",
+              "Because we do not operate like a factory (no bells, no ranks, no rows), we need to ensure you are ready for a different way of life. We invest significant time upfront to find 'Conscious Parents' who are ready to trust the child, even when it looks messy.",
               "Our admissions process is designed to ensure that every child, family, and educator grows together — intentionally and authentically."
             ],
             "sideHeadline": {
@@ -1822,23 +1862,44 @@
             "items": [
               {
                 "icon": "/icon/journey-discovery.svg",
-                "title": "Discovery",
-                "text": "Begin with an interactive workshop where we explore Montessori principles, our approach, and what learning looks like at Blue Blocks."
+                "title": "The Discovery Workshop",
+                "text": [
+                  "3 Hours (In-Person). Don't just tour. Work.",
+                  "The Tactile Test: Standard school tours are passive walking. Ours is active working. You cannot understand Montessori by looking at it; you must feel it.",
+                  "The 'Adult' Work Cycle: You will handle the materials—feeling the weight of the Binomial Cube or the texture of the Touch Boards. You will see how a simple wooden tool isolates a complex mathematical concept.",
+                  "Observation: We teach you the difference between 'watching' (passive) and 'observing' (scientific). You will leave understanding how your child learns, not just where they sit."
+                ]
               },
               {
                 "icon": "/icon/journey-observe.svg",
-                "title": "Observe",
-                "text": "Spend time understanding the environment, guides, and materials to see how independence is nurtured daily."
+                "title": "The Child's Narrative",
+                "text": [
+                  "We don't want data. We want the story.",
+                  "Beyond the Form: Vaccination records tell us nothing about who your child is. We ask for the details that matter.",
+                  "Sensory Habits: Does your child cover their ears at loud noises? Do they touch everything they walk past? Do they observe for 20 minutes before joining a game?",
+                  "The Obsessions: What captures their attention for hours? Is it water? Stacking? Insects?",
+                  "The Welcome: By the time your child walks in, the Guide (teacher) already knows them. There is no 'adjustment period'—only a continuation of home."
+                ]
               },
               {
                 "icon": "/icon/journey-interact.svg",
-                "title": "Interact",
-                "text": "A family interaction helps us align on expectations, readiness, and how we partner in the child’s growth."
+                "title": "The Honest Talk",
+                "text": [
+                  "2-Hour Discussion. The safe space for hard questions.",
+                  "Deconstructing Fear: We tackle the elephant in the room. 'Will they survive in the real world without exams?'' 'What if they just play all day?'",
+                  "The Parent Shift: We discuss the habits you might need to break. (Example: The urge to correct a child instantly when they spill water, rather than letting them clean it up).",
+                  "Freedom vs. License: We clarify the difference. Your child will have freedom, but they will not have license to be destructive. You need to know the boundary before you sign."
+                ]
               },
               {
                 "icon": "/icon/journey-onboard.svg",
-                "title": "Onboard",
-                "text": "We guide you through the transition with clarity and support — so the child begins with confidence."
+                "title": "The Alliance",
+                "text": [
+                  "1-Hour Founder Meeting. The 15-Year Commitment",
+                  "The Custodians: You are not meeting a sales rep. You are meeting the people who built the environment.",
+                  "The Long View: We look at the trajectory from Age 3 to Age 16. We are not preparing your child for 'First Grade.' We are preparing them for adulthood.",
+                  "The Pact: We agree that when (not if) challenges arise, we communicate with transparency. No blame. Just solutions."
+                ]
               }
             ]
           }
@@ -1846,9 +1907,9 @@
         {
           "type": "ctaBanner",
           "props": {
-            "title": "Experience Learning\nthe Blue Blocks Way.",
-            "text": "Book Admission Workshop",
-            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "title": "READY TO START THE CONVERSATION?",
+            "text": "Our admissions process is high-touch and our ratios are strictly low (AMI Standard). Seats are limited and filled on a first-aligned, first-served basis.",
+            "cta": { "label": "BEGIN YOUR JOURNEY", "href": "/contact" },
             "align": "center",
             "theme": "dark"
           }
@@ -2409,9 +2470,9 @@
           "props": {
             "text": "Mentorship from industry leaders (IIT, ISRO, NID) rather than just textbooks.",
             "logos": [
-              { "src": "/icon/IIT_Hyderabad_Insignia-color.svg", "alt": "IIT" },
-              { "src": "/icon/ISRO-color.svg", "alt": "ISRO" },
-              { "src": "/icon/google-color.svg", "alt": "Google" }
+              { "src": "/icon/IIT_Hyderabad_Insignia-color.svg", "alt": "IIT", "width":"125","height":"138" },
+              { "src": "/icon/ISRO-color.svg", "alt": "ISRO", "width":"120","height":"74"},
+              { "src": "/icon/google-color.svg", "alt": "Google", "width":"217","height":"74" }
             ]
           }
         },
