@@ -23,49 +23,49 @@
           "id": "about-us",
           "title": "About Us",
           "href": "/about-us",
-          "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
+          "description": "Child-first Montessori community nurturing confidence, independence, curiosity, and joyful learning.",
           "image": "/programs/thumb-playgroup.png"
         },
         {
           "id": "montessori",
           "title": "Montessori",
-          "href": "/about-us/montessori-system",
-          "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
+          "href": "/montessori-system",
+          "description": "Hands-on Montessori method building focus, creativity, discipline, and lifelong skills.",
           "image": "/programs/thumb-nursery.png"
         },
         {
           "id": "campus",
           "title": "Campus",
-          "href": "/about-us/campus",
-          "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
+          "href": "/campus",
+          "description": "Thoughtfully designed campuses supporting safe exploration, movement, and meaningful learning.",
           "image": "/programs/thumb-primary.png"
         },
         {
           "id": "faq",
           "title": "FAQs",
           "href": "/faq",
-          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "description": "Quick answers about programs, routine, admissions, learning approach, and support.",
           "image": "/programs/thumb-secondary.png"
         },
         {
           "id": "videos",
           "title": "Videos",
-          "href": "/about-us/videos",
-          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "href": "/videos",
+          "description": "Watch real moments from classrooms, campus life, children, and educators.",
           "image": "/programs/thumb-secondary.png"
         },
         {
           "id": "pdfs",
           "title": "PDFs",
           "href": "",
-          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "description": "Download brochures, program guides, calendars, policies, and learning resources.",
           "image": "/programs/thumb-secondary.png"
         }
       ],
       "ctaCard": {
         "title": "Start Your Child’s Montessori Journey",
         "text": "Explore programs designed for independence, curiosity, and growth.",
-        "button": { "label": "Explore Programs →", "href": "/admissions" }
+        "button": { "label": "Explore Programs →", "href": "/academics" }
       }
     },
     "programs": {
@@ -76,35 +76,35 @@
           "id": "playgroup-school",
           "title": "Playgroup",
           "href": "/programs/playgroup",
-          "description": "Our Toddler Community (1–2.5 years) helps children build independence, language, and coordination through everyday guided activities.",
+          "description": "Toddlers build independence, language, coordination, and confidence through guided play.",
           "image": "/programs/thumb-playgroup.png"
         },
         {
           "id": "nursery-school",
           "title": "Nursery, PP1, PP2",
           "href": "/programs/nursery-school",
-          "description": "Our Primary program (2.6–6 years) offers a joyful start to lifelong learning in a carefully prepared Montessori environment.",
+          "description": "Primary Montessori builds curiosity, focus, creativity, and strong early foundations.",
           "image": "/programs/thumb-nursery.png"
         },
         {
           "id": "primary-school",
           "title": "Primary School – Class 1 to 6",
           "href": "/programs/primary-school-elementary",
-          "description": "Children experience hands-on learning with the Cambridge curriculum, combining academics with creative, practical work.",
+          "description": "Cambridge learning with hands-on projects, creativity, and structured academics.",
           "image": "/programs/thumb-primary.png"
         },
         {
           "id": "secondary-school",
           "title": "Secondary School – Class 7 to 10",
           "href": "/programs/secondary-school",
-          "description": "Our Adolescent Community (12–15 years) blends Montessori principles with the Cambridge curriculum and real-life projects.",
+          "description": "Teen years guided through real-life projects, leadership, and Cambridge learning.",
           "image": "/programs/thumb-secondary.png"
         }
       ],
       "ctaCard": {
         "title": "Start Your Child’s Montessori Journey",
         "text": "Explore programs designed for independence, curiosity, and growth.",
-        "button": { "label": "Explore Programs →", "href": "/admissions" }
+        "button": { "label": "Enroll →", "href": "/admissions" }
       }
     },
     "innovations": {
@@ -115,28 +115,28 @@
           "id": "drone",
           "title": "Drone",
           "href": "/innovation/drone",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "description": "Hands-on drone learning builds creativity, engineering thinking, and problem-solving skills.",
           "image": "/programs/thumb-playgroup.png"
         },
         {
           "id": "cubesat-mission",
           "title": "Innovation - Cubsat Mission",
           "href": "/innovation/cubesat-mission",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "description": "Students explore space science through CubSat missions, design, and teamwork",
           "image": "/programs/thumb-playgroup.png"
         },
         {
           "id": "biomimicry-hive",
           "title": "Biomimicry Hive",
           "href": "/innovation/biomimicry-hive",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "description": "Nature-inspired learning helps students solve problems through observation and design.",
           "image": "/programs/thumb-nursery.png"
         },
         {
           "id": "space-program",
           "title": "Space Program",
           "href": "/innovation/space-program",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "description": "Space learning builds curiosity through astronomy, rockets, experiments, and innovation.",
           "image": "/programs/thumb-playgroup.png"
         }
       ],
@@ -209,11 +209,11 @@
         {
           "type": "homeHero",
           "props": {
-            "title": "THE UNSCRIPTED CHILD.",
-            "subtitle": "Authentic Montessori Education | 15 Months – 18 Years",
-            "note": "Powered by the Blue Blocks Research Institute.",
+            "title": "THE CHILD, UNDERSTOOD",
+            "subtitle": "Authentic Montessori. The 0–16 Continuum. Education designed for the human spirit.",
+            "note": "At Blue Blocks, we do not view children as empty vessels to be filled. We view them as complete human beings unfolding. While most schools rush to 'teach,' we take the time to observe. By understanding your child's natural development—without interference or pressure—we create the precise environment they need to construct themselves.",
             "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
-            "secondaryCta": { "label": "Book a Campus Tour", "href": "/contact" },
+            "secondaryCta": { "label": "Visit the Campus", "href": "/about-us/campus" },
             "bgImageUrl": "/home/homepage-banner-01.jpg"
           }
         },
@@ -810,407 +810,7 @@
       ]
     },
     "aboutUsDetail":{
-      "montessori-system": {
-        "sections": [
-          {
-            "type": "pageHero",
-            "props": {
-              "title": "Montessori System",
-              "breadcrumb": [
-                { "label": "About Us", "href": "/about" },
-                { "label": "Montessori System" }
-              ],
-              "bg": {
-                "base": "#F3E3CF",
-                "leftArc": "/ui/arc-left.png",
-                "rightArc": "/ui/arc-right.png"
-              }
-            }
-          },
-          {
-            "type": "innovationMediaHero",
-            "props": {
-              "title": "“One test of the correctness of educational procedure is the happiness of the child.”",
-              "subtitle": "-Maria Montessori",
-              "bgImageUrl": "/innovation/innov_hero.jpg",
-              "primaryCta": "",
-              "secondaryCta": "",
-
-              "align": "center",
-              "height": "innovation",
-              "overlay": "dark",
-              "showArcs": true
-            }
-          },
-          {
-            "type": "imageText",
-            "props": {
-              "title": "",
-              "text": [
-                "Maria Montessori was a visionary who disabused the traditional methods of education for being too constrictive and non child friendly. In her lifelong work with children first as a pediatric doctor and then as researcher and educator Maria Montessori stumbled up on the secret to not just retaining children’s attention but to successfully divert it for productive work.",
-                "Maria Montessori believed that education is an aid for life. Her education philosophy can be summed up in her own words- Never help a child with a task at which he feels he can succeed. She believed the happiness you see in a child is directly proportional to the education he received. She spread her schooling philosophy far and wide to ensure that the first six years of every child lay the best possible foundations for an enriching future."
-              ],
-              "imageUrl": "/home/kids-being-part-sunday-school.jpg"
-            }
-          },
-          {
-            "type": "researchMission",
-            "props": {
-              "bgClassName":"bg-[#FFFFFF]",
-              "sectionTopPadd":"sm:pb-20",
-              "calloutWidth":"",
-              "calloutTitleClass" : "text-[1.2rem] sm:text-[1.4rem] font-medium",
-              "calloutClass": "text-[0.95rem] sm:text-[1rem] leading-relaxed text-slate-700",
-              "id": "mission",
-              "title": "",
-              "text": [],
-              "calloutTitle":"HOW DOES MONTESSORI WORK",
-              "callout": "The Montessori philosophy believes that every child is born with a creative mind and a drive to learn. These qualities can be best developed in a free environment. A constructive and proactive methodology, Montessori gives your child the freedom to develop varied interests and the competence needed to get her ready for life."
-            }
-          },
-          {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
-          },
-          {
-            "type": "montessoriForSuccess",
-            "props": {
-              "bg": "#FFFFFF",
-              "title": "MONTESSORI FOR\nSUCCESS",
-              "items": [
-                {
-                  "name": "LARRY PAGE AND\nSERGEY BRIN",
-                  "role": "Founders, Google",
-                  "quote": "Both went to Montessori schools and credit the Montessori education of “being self motivated, questioning what’s going on in the world, doing things a bit differently,” for being responsible for their success to a large extent."
-                },
-                {
-                  "name": "JEFF BEZOS",
-                  "role": "Founder, Amazon",
-                  "quote": "Montessori is often referenced for encouraging independence and long-term thinking early."
-                }
-              ]
-            }
-          },
-          {
-            "type": "tabbedFaq",
-            "props": {
-              "bg": "#F3E3CF",
-              "title": "Frequently asked questions",
-              "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
-              "tabs": [
-                {
-                  "label": "School Facilities",
-                  "items": [
-                    { "q": "When can I start my course or workshop?", "a": "You can start..." },
-                    { "q": "Do you provide a certificate of completion?", "a": "Yes..." }
-                  ]
-                },
-                {
-                  "label": "School Recognition",
-                  "items": [
-                    { "q": "Is Montessori recognized globally?", "a": "Yes..." }
-                  ]
-                },
-                {
-                  "label": "Team",
-                  "items": [
-                    { "q": "When can I start my course or workshop?", "a": "You can start your course or workshop instantly after completing your purchase. Our free course can be started directly after signing up to SuperHi. You can then access your courses and workshops through your SuperHi dashboard whenever you’d like, and learn at your own pace with lifetime access to your purchases!" },
-                    { "q": "Do you provide a certificate of completion?", "a": "Yes..." },
-                    { "q": "What will I be able to create after taking your courses?", "a": "Yes..." }
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      },
-      "playgroup": {
-        "sections": [
-          {
-            "type": "pageHero",
-            "props": {
-              "title": "Playgroup",
-              "breadcrumb": [
-                { "label": "Home", "href": "/" },
-                { "label": "Programs", "href": "program" },
-                { "label": "Playgroup" }
-              ],
-              "bg": {
-                "base": "#F3E3CF",
-                "leftArc": "/ui/arc-left.png",
-                "rightArc": "/ui/arc-right.png"
-              }
-            }
-          },
-          {
-            "type": "programIntroSplit",
-            "props": {
-              "eyebrow": "PLAYGROUP (THE TODDLER COMMUNITY)",
-              "title": "Best Playgroup in\nHyderabad",
-              "text": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth. Here, little ones build independence through everyday activities like caring for themselves, exploring language and movement, and interacting with others with grace and joy. Guided by AMI-trained Montessori adults, children gain confidence, order, and a sense of belonging—laying the foundation for lifelong curiosity and self-reliance.",
-              "media": {
-                "main": { "src": "/programs/playgroup/main.jpg", "alt": "Playgroup classroom" },
-                "left": { "src": "/programs/playgroup/left.jpg", "alt": "Play activity" },
-                "right": { "src": "/programs/playgroup/right.jpg", "alt": "Montessori materials" }
-              }
-            }
-          },
-          {
-          "type": "AreasofDevelopment",
-          "props": {
-            "bg": "#F3E3CF",
-            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
-            "title": "Areas of Development",
-            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
-            "headerAlign": "center",
-
-            "cols": { "base": 1, "sm": 2, "lg": 4 },
-            "maxWidth": "max-w-6xl",
-            "gap": "gap-6",
-
-            "cardBg": "#273C75",
-            "cardRadius": "rounded-[18px]",
-            "cardPadding": "px-6 py-7",
-            "cardMinHeight": 220,
-
-            "iconSize": "60",
-            "iconWrapClassName": "h-10 w-10",
-
-            "items": [
-              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-
-              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
-              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
-            ]
-          }
-          },
-          {
-            "type": "ctaBanner",
-            "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
-            }
-          }
-        ]
-      },
-      "campus": {
-        "sections": [
-          {
-            "type": "pageHero",
-            "props": {
-              "title": "Campus",
-              "breadcrumb": [
-                { "label": "Home", "href": "/" },
-                { "label": "Campus" }
-              ],
-              "bg": {
-                "base": "#F3E3CF",
-                "leftArc": "/ui/arc-left.png",
-                "rightArc": "/ui/arc-right.png"
-              }
-            }
-          },
-          {
-            "type": "innovationHabitSplit",
-            "props": {
-              "bg": "#FFFFFF",
-              "className": "inline",
-              "image": "#",
-              "eyebrow": "",
-              "title": "Blueblocks Campus",
-              "description":"Blue Blocks campuses are designed as calm, spacious, and purpose-led learning environments where children feel safe to explore, move, and grow with independence. Every space—whether indoors or outdoors—is planned to support self-learning, curiosity, and meaningful social interaction, so children don’t just sit and follow instructions but actively discover, collaborate, and build confidence through hands-on experiences. From well-prepared classroom settings that encourage focus and choice, to open outdoor zones that strengthen coordination, resilience, and problem-solving, the campus becomes an extension of the child’s natural development journey. The overall atmosphere is warm, structured, and child-first—helping every learner develop not only academic foundations, but also real-world skills like responsibility, communication, and self-reliance.",
-              "subdescription":"",
-              "bullets": [
-                {
-                  "icon":"",
-                  "title": "",
-                  "text": ""
-                }
-              ],
-              "images": [
-                {
-                  "icon": "/campus/campus4-min.jpg",
-                  "title": "",
-                  "text": ""
-                },
-                {
-                  "icon": "/campus/campus1-min.jpg",
-                  "title": "",
-                  "text": ""
-                },
-                {
-                  "icon": "/campus/campus2-min.jpg",
-                  "title": "",
-                  "text": ""
-                },
-                {
-                  "icon": "/campus/campus3-min.jpg",
-                  "title": "",
-                  "text": ""
-                }
-              ]
-            }
-          },
-          {
-            "type": "imageText",
-            "props": {
-              "title": "",
-              "text": [
-                "<b>Blue Blocks Gachibowli Campus</b>",
-                "The Blue Blocks Self-learning Pre-school is a self sufficient spacious learning ground for children. The campus at Gachibowli has four environments that function in two shifts. While three of these environments are dedicated to the Self Interpretive Programme, two environments are dedicated to the Toddler Programme. The outdoors include sand pits, play area with swings, slides and monkey bars.",
-                "&nbsp;",
-                "<b>Blue Blocks Complete School</b>",
-                "The Blue Blocks Complete School is a sprawling campus in a one and half acre land at Osman Nagar, Tellapur. The school has two environments one each for Self Interpretive and Elementary Programme. The outdoors include Basketball court, Music Room, Art Room, Amphitheatre and a play area with sand pits and swing.",
-                "The outdoors include a Basket Ball Court, Music Room, Art Room, Amphitheatre, Play area including a sand pit, and swing."
-              ],
-              "imageUrl": "/campus/blueblocks-building-pic-min.jpg",
-
-              "variant": "card",
-              "cardBg": "#EEF7FD",
-              "cardRadius": "rounded-2xl",
-              "cardPadding": "p-8 sm:p-10",
-              "imageSide": "right",
-              "imageClassName": "rounded-2xl",
-              "imageFit": "cover",
-              "imageAspect": "aspect-[4/3]"
-            }
-          },
-          {
-            "type": "ctaBanner",
-            "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
-            }
-          }
-        ]
-      },
-      "videos": {
-        "sections": [
-          {
-            "type": "pageHero",
-            "props": {
-              "title": "Videos",
-              "breadcrumb": [
-                { "label": "Home", "href": "/" },
-                { "label": "Videos" }
-              ],
-              "bg": {
-                "base": "#F3E3CF",
-                "leftArc": "/ui/arc-left.png",
-                "rightArc": "/ui/arc-right.png"
-              }
-            }
-          },
-          {
-            "type": "innovationGallery",
-            "props": {
-              "eyebrow": "",
-              "title": "Voices of Young Innovators",
-              "cols": { "base": 1, "sm": 2, "lg": 2 },
-              "tileMinHeight": 410,
-              "tileMaxHeight": 410,
-              "showThumbnails": true,
-              "videoAutoplay": false,
-              "videoMuted": false,
-              "videoControls": true,
-              "videoLoop": false,
-              "items": [
-                { "type": "video", "src": "https://www.youtube.com/embed/LvsfUvhrWFM", "poster": "/innovation/innovators-voice-01.jpg" },
-                { "type": "video", "src": "https://www.youtube.com/embed/LvsfUvhrWFM", "poster": "/innovation/innovators-voice-02.jpg" },
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-03.jpg" },
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-04.jpg" },
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-05.jpg" },
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-06.jpg" }
-              ]
-            }
-          },
-          {
-            "type": "innovationGallery",
-            "props": {
-              "eyebrow": "",
-              "title": "Voices of Young Innovators",
-              "cols": { "base": 1, "sm": 2, "lg": 2 },
-              "tileMinHeight": 410,
-              "tileMaxHeight": 410,
-              "showThumbnails": true,
-              "videoAutoplay": false,
-              "videoMuted": false,
-              "videoControls": true,
-              "videoLoop": false,
-              "items": [
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-01.jpg" },
-                { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-02.jpg" }
-              ]
-            }
-          },
-          {
-            "type": "ctaBanner",
-            "props": {
-              "title": "Experience Learning\nthe Blue Blocks Way.",
-              "text": "Seats are filled on a first-come basis.",
-              "cta": { "label": "Book Admission Workshop", "href": "/contact" },
-              "image": "/building-image-01.png",
-              "imageAlt": "Campus building",
-              "imageWidth": "566",
-              "imageHeight": "506",
-              "customTopSpacing":"sm:pt-70",
-              "align": "left",
-              "theme": "dark"
-            }
-          }
-        ]
-      }
+      
     },
     "academics": {
       "sections": [
@@ -3800,6 +3400,323 @@
           }
         ]
       }
+    },
+    "montessoriSystem": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Montessori System",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Montessori System" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "innovationMediaHero",
+          "props": {
+            "title": "“One test of the correctness of educational procedure is the happiness of the child.”",
+            "subtitle": "-Maria Montessori",
+            "bgImageUrl": "/innovation/innov_hero.jpg",
+            "primaryCta": "",
+            "secondaryCta": "",
+
+            "align": "center",
+            "height": "innovation",
+            "overlay": "dark",
+            "showArcs": true
+          }
+        },
+        {
+          "type": "imageText",
+          "props": {
+            "title": "",
+            "text": [
+              "Maria Montessori was a visionary who disabused the traditional methods of education for being too constrictive and non child friendly. In her lifelong work with children first as a pediatric doctor and then as researcher and educator Maria Montessori stumbled up on the secret to not just retaining children’s attention but to successfully divert it for productive work.",
+              "Maria Montessori believed that education is an aid for life. Her education philosophy can be summed up in her own words- Never help a child with a task at which he feels he can succeed. She believed the happiness you see in a child is directly proportional to the education he received. She spread her schooling philosophy far and wide to ensure that the first six years of every child lay the best possible foundations for an enriching future."
+            ],
+            "imageUrl": "/home/kids-being-part-sunday-school.jpg"
+          }
+        },
+        {
+          "type": "researchMission",
+          "props": {
+            "bgClassName":"bg-[#FFFFFF]",
+            "sectionTopPadd":"sm:pb-20",
+            "calloutWidth":"",
+            "calloutTitleClass" : "text-[1.2rem] sm:text-[1.4rem] font-medium",
+            "calloutClass": "text-[0.95rem] sm:text-[1rem] leading-relaxed text-slate-700",
+            "id": "mission",
+            "title": "",
+            "text": [],
+            "calloutTitle":"HOW DOES MONTESSORI WORK",
+            "callout": "The Montessori philosophy believes that every child is born with a creative mind and a drive to learn. These qualities can be best developed in a free environment. A constructive and proactive methodology, Montessori gives your child the freedom to develop varied interests and the competence needed to get her ready for life."
+          }
+        },
+        {
+        "type": "AreasofDevelopment",
+        "props": {
+            "bg": "#F3E3CF",
+            "eyebrow": "PLAYGROUP (1 TO 2½ YEARS)",
+            "title": "Areas of Development",
+            "description": "At Blue Blocks, our Montessori Toddler Community welcomes children from 1 to 2½ years into a warm, purposeful environment designed for exploration and growth.",
+            "headerAlign": "center",
+
+            "cols": { "base": 1, "sm": 2, "lg": 4 },
+            "maxWidth": "max-w-6xl",
+            "gap": "gap-6",
+
+            "cardBg": "#273C75",
+            "cardRadius": "rounded-[18px]",
+            "cardPadding": "px-6 py-7",
+            "cardMinHeight": 220,
+
+            "iconSize": "60",
+            "iconWrapClassName": "h-10 w-10",
+
+            "items": [
+              { "icon": "/icon/brain.svg", "title": "Brain Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/movement.svg", "title": "Movement Development", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/leaf.svg", "title": "Care for Environment", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/food.svg", "title": "Food Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+
+              { "icon": "/icon/heart.svg", "title": "Care For Self", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/toilet.svg", "title": "Toilet Training", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/art.svg", "title": "Art Activities", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." },
+              { "icon": "/icon/music.svg", "title": "Songs and Stories", "text": "At this age, children learn through observation and imitation. As they begin to talk, we nurture language by modeling clear, grammatically correct speech—introducing up to seven languages to build a strong linguistic foundation." }
+            ]
+          }
+        },
+        {
+          "type": "montessoriForSuccess",
+          "props": {
+            "bg": "#FFFFFF",
+            "title": "MONTESSORI FOR\nSUCCESS",
+            "items": [
+              {
+                "name": "LARRY PAGE AND\nSERGEY BRIN",
+                "role": "Founders, Google",
+                "quote": "Both went to Montessori schools and credit the Montessori education of “being self motivated, questioning what’s going on in the world, doing things a bit differently,” for being responsible for their success to a large extent."
+              },
+              {
+                "name": "JEFF BEZOS",
+                "role": "Founder, Amazon",
+                "quote": "Montessori is often referenced for encouraging independence and long-term thinking early."
+              }
+            ]
+          }
+        },
+        {
+          "type": "tabbedFaq",
+          "props": {
+            "bg": "#F3E3CF",
+            "title": "Frequently asked questions",
+            "subtitle": "Our guides are more than teachers — they are observers, facilitators, and partners in each child’s developmental journey.",
+            "tabs": [
+              {
+                "label": "School Facilities",
+                "items": [
+                  { "q": "When can I start my course or workshop?", "a": "You can start..." },
+                  { "q": "Do you provide a certificate of completion?", "a": "Yes..." }
+                ]
+              },
+              {
+                "label": "School Recognition",
+                "items": [
+                  { "q": "Is Montessori recognized globally?", "a": "Yes..." }
+                ]
+              },
+              {
+                "label": "Team",
+                "items": [
+                  { "q": "When can I start my course or workshop?", "a": "You can start your course or workshop instantly after completing your purchase. Our free course can be started directly after signing up to SuperHi. You can then access your courses and workshops through your SuperHi dashboard whenever you’d like, and learn at your own pace with lifetime access to your purchases!" },
+                  { "q": "Do you provide a certificate of completion?", "a": "Yes..." },
+                  { "q": "What will I be able to create after taking your courses?", "a": "Yes..." }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "campus": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Campus",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Campus" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "innovationHabitSplit",
+          "props": {
+            "bg": "#FFFFFF",
+            "className": "inline",
+            "image": "#",
+            "eyebrow": "",
+            "title": "Blueblocks Campus",
+            "description":"Blue Blocks campuses are designed as calm, spacious, and purpose-led learning environments where children feel safe to explore, move, and grow with independence. Every space—whether indoors or outdoors—is planned to support self-learning, curiosity, and meaningful social interaction, so children don’t just sit and follow instructions but actively discover, collaborate, and build confidence through hands-on experiences. From well-prepared classroom settings that encourage focus and choice, to open outdoor zones that strengthen coordination, resilience, and problem-solving, the campus becomes an extension of the child’s natural development journey. The overall atmosphere is warm, structured, and child-first—helping every learner develop not only academic foundations, but also real-world skills like responsibility, communication, and self-reliance.",
+            "subdescription":"",
+            "bullets": [
+              {
+                "icon":"",
+                "title": "",
+                "text": ""
+              }
+            ],
+            "images": [
+              {
+                "icon": "/campus/campus4-min.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/campus/campus1-min.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/campus/campus2-min.jpg",
+                "title": "",
+                "text": ""
+              },
+              {
+                "icon": "/campus/campus3-min.jpg",
+                "title": "",
+                "text": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "imageText",
+          "props": {
+            "title": "",
+            "text": [
+              "<b>Blue Blocks Gachibowli Campus</b>",
+              "The Blue Blocks Self-learning Pre-school is a self sufficient spacious learning ground for children. The campus at Gachibowli has four environments that function in two shifts. While three of these environments are dedicated to the Self Interpretive Programme, two environments are dedicated to the Toddler Programme. The outdoors include sand pits, play area with swings, slides and monkey bars.",
+              "&nbsp;",
+              "<b>Blue Blocks Complete School</b>",
+              "The Blue Blocks Complete School is a sprawling campus in a one and half acre land at Osman Nagar, Tellapur. The school has two environments one each for Self Interpretive and Elementary Programme. The outdoors include Basketball court, Music Room, Art Room, Amphitheatre and a play area with sand pits and swing.",
+              "The outdoors include a Basket Ball Court, Music Room, Art Room, Amphitheatre, Play area including a sand pit, and swing."
+            ],
+            "imageUrl": "/campus/blueblocks-building-pic-min.jpg",
+
+            "variant": "card",
+            "cardBg": "#EEF7FD",
+            "cardRadius": "rounded-2xl",
+            "cardPadding": "p-8 sm:p-10",
+            "imageSide": "right",
+            "imageClassName": "rounded-2xl",
+            "imageFit": "cover",
+            "imageAspect": "aspect-[4/3]"
+          }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Seats are filled on a first-come basis.",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "image": "/building-image-01.png",
+            "imageAlt": "Campus building",
+            "imageWidth": "566",
+            "imageHeight": "506",
+            "customTopSpacing":"sm:pt-70",
+            "align": "left",
+            "theme": "dark"
+          }
+        }
+      ]
+    },
+    "videos": {
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Videos",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Videos" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "innovationGallery",
+          "props": {
+            "eyebrow": "",
+            "title": "Life And Times At Blue Blocks",
+            "cols": { "base": 1, "sm": 2, "lg": 2 },
+            "tileMinHeight": 410,
+            "tileMaxHeight": 410,
+            "showThumbnails": true,
+            "videoAutoplay": false,
+            "videoMuted": false,
+            "videoControls": true,
+            "videoLoop": false,
+            "items": [
+              { "type": "youtube", "src": "https://youtu.be/LvsfUvhrWFM", "poster": "/innovation/innovators-voice-01.jpg" },
+              { "type": "youtube", "src": "https://youtu.be/-XYSBIQQXDM", "poster": "/innovation/innovators-voice-02.jpg" },
+              { "type": "youtube", "src": "https://youtu.be/qUExb6IjsFM", "poster": "/innovation/innovators-voice-03.jpg" },
+              { "type": "youtube", "src": "https://youtu.be/vqBNeK1P25k", "poster": "/innovation/innovators-voice-04.jpg" }
+            ]
+          }
+        },
+        {
+          "type": "innovationGallery",
+          "props": {
+            "eyebrow": "",
+            "title": "Children Speak - Drone Ideas",
+            "cols": { "base": 1, "sm": 2, "lg": 2 },
+            "tileMinHeight": 410,
+            "tileMaxHeight": 410,
+            "showThumbnails": true,
+            "videoAutoplay": false,
+            "videoMuted": false,
+            "videoControls": true,
+            "videoLoop": false,
+            "items": [
+              { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-01.jpg" },
+              { "type": "video", "src": "/videos/demo.mp4", "poster": "/innovation/innovators-voice-02.jpg" }
+            ]
+          }
+        },
+        {
+          "type": "ctaBanner",
+          "props": {
+            "title": "Experience Learning\nthe Blue Blocks Way.",
+            "text": "Seats are filled on a first-come basis.",
+            "cta": { "label": "Book Admission Workshop", "href": "/contact" },
+            "image": "/building-image-01.png",
+            "imageAlt": "Campus building",
+            "imageWidth": "566",
+            "imageHeight": "506",
+            "customTopSpacing":"sm:pt-70",
+            "align": "left",
+            "theme": "dark"
+          }
+        }
+      ]
     },
     "faq":{
       "sections":[
