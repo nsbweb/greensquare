@@ -4,6 +4,8 @@ import HeaderShell from "@/components/layout/HeaderShell";
 import Footer from "@/components/layout/Footer";
 import NavigationLoader from "@/components/ui/NavigationLoader";
 import HashScrollFix from "@/components/ui/HashScrollFix";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import siteData from "@/data/site.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
 
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat config={siteData?.whatsapp} />
       </body>
     </html>
   );

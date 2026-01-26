@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useMemo } from "react";
 import Container from "@/components/layout/Container";
 import CarouselTrack from "@/components/ui/carousel/CarouselTrack";
+import Link from "next/link";
 
 export default function InnovationHabitSplit({
   image,
@@ -102,7 +103,13 @@ export default function InnovationHabitSplit({
                       className={`grid grid-cols-[300px_1fr] items-center gap-6 py-4 border-b ${detailsDividerClassName}`}
                     >
                       <div className={detailsLabelClassName}>{row?.label}</div>
-                      <div className={detailsValueClassName}>{row?.value}</div>
+                      <div className={detailsValueClassName}>
+                        {row?.href ? (
+                          <Link href={row.href}>{row.value}</Link>
+                        ) : (
+                          row?.value
+                        )}
+                      </div>                      
                     </div>
                   ))}
                 </div>

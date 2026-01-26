@@ -59,6 +59,7 @@ import OutcomesPills from "@/components/blocks/OutcomesPills";
 import YoungInnovatorsGrid from "@/components/blocks/YoungInnovatorsGrid";
 import ImpactCollageSplit from "@/components/blocks/ImpactCollageSplit";
 import FounderVisionSplit from "@/components/blocks/FounderVisionSplit";
+import LegalDocument from "@/components/blocks/LegalDocument";
 
 export default function SectionRenderer({ sections = [] }) {
   return (
@@ -69,6 +70,9 @@ export default function SectionRenderer({ sections = [] }) {
 
         switch (type) {
           // ADD:
+          case "legalDocument": 
+            return <LegalDocument key={key} {...props} />;
+
           case "founderVisionSplit":
             return <FounderVisionSplit key={key} {...props} />;
           case "impactCollageSplit":

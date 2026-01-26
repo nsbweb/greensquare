@@ -9,9 +9,9 @@
     "nav": [
       { "label": "Home", "href": "/" },
       { "label": "What do we do", "href": "/about-us"},
-      { "label": "Programs", "href": "/academics"},
+      { "label": "Programs", "href": "/programs"},
       { "label": "Innovations", "href": "/innovation"},
-      { "label": "Careers", "href": "/careers" }
+      { "label": "Contact", "href": "/contact-us" }
     ]
   },
   "megaMenu": {
@@ -65,12 +65,12 @@
       "ctaCard": {
         "title": "Start Your Child’s Montessori Journey",
         "text": "Explore programs designed for independence, curiosity, and growth.",
-        "button": { "label": "Explore Programs →", "href": "/academics" }
+        "button": { "label": "Explore Programs →", "href": "/programs" }
       }
     },
     "programs": {
       "label": "Programs",
-      "viewAll": { "label": "Our Programs", "href": "/academics" },
+      "viewAll": { "label": "Our Programs", "href": "/programs" },
       "items": [
         {
           "id": "playgroup-school",
@@ -181,9 +181,8 @@
       { "label": "Secondary School – Class 7 to 10", "href": "/programs/secondary-school" }
     ],
     "connect": [
-      { "label": "Admissions Enquiry", "href": "/contact" },
-      { "label": "School Observations", "href": "/contact#observe" },
-      { "label": "Alumni Network", "href": "/contact#alumni" }
+      { "label": "Admissions Enquiry", "href": "/admissions" },
+      { "label": "Contact", "href": "/contact-us" }
     ],
     "contact": {
       "phone": "+91 9000955050",
@@ -196,6 +195,15 @@
       { "label": "YouTube", "href": "https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ", "icon":"/icon/icon-youtube.svg"},
       { "label": "LinkedIn", "href": "https://www.linkedin.com/school/blue-blocks-school", "icon":"/icon/icon-linkdin.svg"}
     ]
+  },
+  "whatsapp": {
+    "enabled": true,
+    "phone": "+91 9000955053",
+    "message": "Hi! I want to know more about Blue Blocks.",
+    "bottom": 20,
+    "right": 20,
+    "size": 56,
+    "label": ""
   },
   "pages": { 
     "site": {
@@ -212,7 +220,7 @@
             "title": "THE CHILD, UNDERSTOOD",
             "subtitle": "Authentic Montessori. The 0–16 Continuum. Education designed for the human spirit.",
             "note": "At Blue Blocks, we do not view children as empty vessels to be filled. We view them as complete human beings unfolding. While most schools rush to 'teach,' we take the time to observe. By understanding your child's natural development—without interference or pressure—we create the precise environment they need to construct themselves.",
-            "primaryCta": { "label": "Explore Our Programs", "href": "/academics" },
+            "primaryCta": { "label": "Explore Our Programs", "href": "/programs" },
             "secondaryCta": { "label": "Visit the Campus", "href": "/about-us/campus" },
             "bgImageUrl": "/home/homepage-banner-01.jpg"
           }
@@ -251,6 +259,62 @@
               { "tag": "", "title": "Interdisciplinary Minds", "icon":"/icon/icon-synaptic-fusion.svg", "text": "We don't teach subjects in silos. Biology meets History; Math meets Art. It creates “System Thinkers” for 2050." },
               { "tag": "", "title": "The Prepared Adult", "icon":"/icon/icon-AMI.svg", "text": "Our Guides are AMI-Trained observers. Their job is not to 'command' the room, but to remove obstacles so your child can conquer it themselves." },
               { "tag": "","title": "Scientific Observation", "icon":"/icon/icon-documented.svg", "text": "We don't guess. We observe. Our unique internal research helps us tailor the environment to your child's specific needs, ensuring no one falls through the cracks." }
+            ]
+          }
+        },
+        {
+        "type": "AreasofDevelopment",
+        "props": {
+            "bg": "#F3E3CF",
+            "eyebrow": "Awarded the Best Pre-school in Hyderabad by",
+            "title": "TIMES OF INDIA for three consecutive years",
+            "description": "",
+            "headerAlign": "center",
+
+            "cols": { "base": 1, "sm": 2, "lg": 2 },
+            "maxWidth": "max-w-6xl",
+            "gap": "gap-6",
+
+            "cardBg": "#273C75",
+            "cardRadius": "rounded-[18px]",
+            "cardPadding": "px-3 py-3",
+            "cardMinHeight": 290,
+
+            "imageSize": "100%",
+
+            "items": [
+              { "icon": "", "image": "/home/awards-01-min.jpg", "title": "", "text": "Blue Blocks founders Pavan Goyal and Munira Hussain receiving the award" },
+              { "icon": "", "image": "/home/awards-02-min.jpg", "title": "", "text": "Times School Certificate Awards earned by Blue Blocks for topping the list of the Best Schools." }
+            ]
+          }
+        },
+        {
+          "type": "innovationLogoStrip",
+          "props": {
+            "sectionBg": "",
+            "sectionClass": "",
+            "sectionTitleClass":"text-[1.5rem] sm:text-base md:text-[2.8rem] text-[#4F4F4F] font-medium text-center pb-16",
+            "text": "Media Mentions",
+            "logoWrapClass": "flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10",
+            "logos": [
+              { "src": "/icon/media/cision.png", "alt": "Cision", "width":"169", "height": "76" },
+              { "src": "/icon/media/business-today.png", "alt": "Business Today", "width":"234", "height": "42" },
+              { "src": "/icon/media/disha.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/ew.png", "alt": "Cision", "width":"83", "height": "76" },
+              { "src": "/icon/media/one-news-page.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/web-india.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/upturn.png", "alt": "Cision", "width":"186", "height": "76" },
+              { "src": "/icon/media/sanvad.png", "alt": "Business Today", "width":"155", "height": "76" },
+              { "src": "/icon/media/socialNews.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/manglorean.png", "alt": "Cision", "width":"234", "height": "76" },
+              { "src": "/icon/media/five.png", "alt": "Business Today", "width":"52", "height": "76" },
+              { "src": "/icon/media/varindia.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/pti.png", "alt": "Cision", "width":"234", "height": "76" },
+              { "src": "/icon/media/tmc.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/ground.png", "alt": "Disha", "width":"234", "height": "76" },
+              { "src": "/icon/media/newDelhi.png", "alt": "Cision", "width":"74", "height": "76" },
+              { "src": "/icon/media/business-news.png", "alt": "Business Today", "width":"234", "height": "76" },
+              { "src": "/icon/media/india-today.png", "alt": "Disha", "width":"141", "height": "76" }
             ]
           }
         },
@@ -842,7 +906,7 @@
           "type": "academicsIntro",
           "props": {
             "spacingTop":"pt-28",
-            "image": { "src": "/academics/hero.jpg", "alt": "Academics" },
+            "image": { "src": "/programs/hero.jpg", "alt": "Academics" },
             "eyebrow": "OUR PROGRAMS",
             "title": "THE COGNITIVE\nCONTINUUM",
             "subtitle": ["A Scientifically Mapped Journey from Infancy to Adolescence (0–16 Years)", "A scientifically mapped journey from infancy to adolescence, designed to follow the natural laws of human development."],
@@ -878,7 +942,7 @@
             "paragraphs": [
               "We do not group children by age; we group them by psychological phase. Dr. Maria Montessori observed that human beings pass through distinct ‘Planes of Development,’ each requiring a specific environment to unlock their potential. This is not just a school; it is a living ecosystem that evolves as your child evolves."
             ],
-            "pyramidImage":"/academics/pyramid.png",
+            "pyramidImage":"/programs/pyramid.png",
             "pyramid": {
               "top": {
                 "age": "0-6",
@@ -2939,7 +3003,7 @@
                 { "label": "ORBIT", "value": "Low Earth Orbit (LEO)" },
                 { "label": "PRIMARY GOAL", "value": "Validate “First Principles” Learning" },
                 { "label": "SECONDARY GOAL", "value": "On-Orbit Sensor Data Acquisition" },
-                { "label": "DOI", "value": "10.5281/zenodo.18195108" }
+                { "label": "DOI", "value": "10.5281/zenodo.18195108", "href":"https://zenodo.org/records/18195108" }
               ],
               "images": [
                 {
@@ -4066,6 +4130,336 @@
           ]
         }
       }
+      ]
+    },
+    "privacyPolicy": {
+      "seo": {
+        "title": "Privacy Policy | Blue Blocks",
+        "description": "How Blue Blocks collects, uses, stores, and protects personal information."
+      },
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Privacy Policy",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Privacy Policy" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "legalDocument",
+          "props": {
+            "effectiveDate": "01/01/2026",
+            "intro": [
+              "Blue Blocks (<b>“Blue Blocks”, “we”, “our”, “us”</b>) respects your privacy and is committed to protecting the personal information you share with us.",
+              "This Privacy Policy explains how we collect, use, disclose, store, and protect your information when you visit our website or engage with us through online forms, calls, emails, or other communication channels.",
+              "By using our website, you confirm that you have read and understood this Privacy Policy and agree to the practices described below."
+            ],
+            "sections": [
+              {
+                "id": "scope",
+                "title": "1) Scope of This Privacy Policy",
+                "paragraphs": ["This Privacy Policy applies to information collected through:"],
+                "bullets": [
+                  "Our official website and its pages",
+                  "Admission enquiry forms and contact forms",
+                  "Call/WhatsApp/email communications initiated through the website",
+                  "Website tracking technologies such as cookies and analytics"
+                ]
+              },
+              {
+                "id": "not-apply",
+                "title": "This policy does not apply to:",
+                "bullets": [
+                  "Third-party websites linked from our website",
+                  "External social media platforms (Instagram, Facebook, YouTube) where privacy rules are governed by those platforms"
+                ]
+              },
+              {
+                "id": "audience",
+                "title": "2) Who This Policy is For (Audience)",
+                "paragraphs": [
+                  "This website is primarily intended for parents and guardians, and adult visitors researching schools, programs, admissions, and campus details.",
+                  "<b>Children’s Privacy:</b> Blue Blocks does not knowingly collect personal data directly from children without parental/guardian involvement.",
+                  "If a child’s information is submitted through our forms, it is assumed it has been done by the parent/guardian for admission purposes.",
+                  "If you believe that information about a child has been submitted without consent, please contact us and we will take appropriate steps to delete it."
+                ]
+              },
+              {
+                "id": "collect",
+                "title": "3) What Information We Collect",
+                "paragraphs": ["A) Information You Provide Voluntarily"],
+                "bullets": [
+                  "Parent/guardian name",
+                  "Phone number",
+                  "Email address",
+                  "City / locality",
+                  "Child’s name (if provided)",
+                  "Child’s age / grade/program preference (if provided)",
+                  "Campus preference (if applicable)",
+                  "Any message or details you submit in the enquiry form"
+                ]
+              },
+              {
+                "id": "auto",
+                "title": "Information We Collect Automatically (Website Usage Data)",
+                "bullets": [
+                  "IP address",
+                  "Browser type and device type",
+                  "Operating system",
+                  "Date and time of visit",
+                  "Pages visited and time spent",
+                  "Clicks and navigation paths",
+                  "Referral source (Google search, social media, ads, etc.)",
+                  "Approximate geographic location (city-level)"
+                ]
+              },
+              {
+                "id": "cookies",
+                "title": "Cookies and Similar Technologies",
+                "bullets": ["Cookies", "Tracking pixels", "Analytics scripts"],
+                "paragraphs": [
+                  "You can control cookies through browser settings. Disabling cookies may impact certain website features."
+                ]
+              },
+              {
+                "id": "use",
+                "title": "4) How We Use Your Information",
+                "bullets": [
+                  "Respond to admission enquiries and provide requested information",
+                  "Coordinate campus visits, counselling calls, or meetings",
+                  "Contact you via phone, WhatsApp, email, and SMS for enquiry responses and relevant admission updates",
+                  "Improve website navigation and performance using analytics and usage insights",
+                  "Maintain security and prevent spam, misuse, and suspicious activity"
+                ]
+              },
+              {
+                "id": "sharing",
+                "title": "5) Data Sharing & Disclosure",
+                "paragraphs": ["We do not sell, rent, or trade personal data."],
+                "bullets": [
+                  "Admissions/admin teams may access data only to respond to your enquiry",
+                  "Trusted service providers may process data (hosting, forms/CRM, analytics) under confidentiality obligations",
+                  "We may disclose information if required by law, court orders, or legal enforcement agencies"
+                ]
+              },
+              {
+                "id": "retention",
+                "title": "6) Data Retention",
+                "paragraphs": [
+                  "We retain information only as long as needed for enquiry processing, follow-ups, internal analysis, and compliance requirements (if any).",
+                  "If you request deletion, we will delete your information unless retention is required for legal reasons."
+                ]
+              },
+              {
+                "id": "rights",
+                "title": "7) Your Rights",
+                "paragraphs": ["You have the right to:"],
+                "bullets": [
+                  "Request access to personal information you shared",
+                  "Request correction of inaccurate information",
+                  "Withdraw consent (where applicable)",
+                  "Request deletion/removal of your personal data"
+                ]
+              },
+              {
+                "id": "updates",
+                "title": "8) Updates to This Privacy Policy",
+                "paragraphs": [
+                  "We may update this Privacy Policy periodically to reflect operational changes, website changes, or legal/regulatory updates.",
+                  "The updated version will be posted here with revised dates."
+                ]
+              },
+              {
+                "id": "contact",
+                "title": "9) Contact Details",
+                "paragraphs": [
+                  "Email: info@blueblocks.in",
+                  "Phone: +91-9000955053",
+                  "Address: MIG 3, Lane opposite to DLF, Gachibowli. Hyderabad. Telangana"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "terms": {
+      "seo": {
+        "title": "Terms of Use | Blue Blocks",
+        "description": "Terms governing your access and use of the Blue Blocks website."
+      },
+      "sections": [
+        {
+          "type": "pageHero",
+          "props": {
+            "title": "Terms of Use",
+            "breadcrumb": [
+              { "label": "Home", "href": "/" },
+              { "label": "Terms of Use" }
+            ],
+            "bg": {
+              "base": "#F3E3CF",
+              "leftArc": "/ui/arc-left.png",
+              "rightArc": "/ui/arc-right.png"
+            }
+          }
+        },
+        {
+          "type": "legalDocument",
+          "props": {
+            "effectiveDate": "01/01/2026",
+            "intro": [
+              "Welcome to the Blue Blocks website (<b>“Website”</b>). These Terms of Use (<b>“Terms”</b>) govern your access and use of this Website and its content.",
+              "By accessing the Website, you agree to these Terms. If you do not agree, please do not use the Website."
+            ],
+            "sections": [
+              {
+                "id": "purpose",
+                "title": "1) Purpose of the Website",
+                "paragraphs": ["This website exists to:"],
+                "bullets": [
+                  "Share information about Blue Blocks programs, philosophy, admissions, and campus life",
+                  "Allow parents/guardians to enquire about admissions",
+                  "Share announcements, updates, and educational content"
+                ]
+              },
+              {
+                "id": "informational",
+                "title": "",
+                "paragraphs": ["The Website is for general informational purposes only."]
+              },
+              {
+                "id": "eligibility",
+                "title": "2) Website Access & Eligibility",
+                "paragraphs": [
+                  "This Website is intended for parents/guardians and adult visitors.",
+                  "If you are under 18 years old, please use this Website only under parental/guardian guidance."
+                ]
+              },
+              {
+                "id": "accuracy",
+                "title": "3) Accuracy of Information",
+                "paragraphs": ["We make reasonable efforts to maintain accurate and updated information. However:"],
+                "bullets": [
+                  "Content may change without notice",
+                  "Program offerings, schedules, and admission criteria may evolve",
+                  "Images are indicative and may differ depending on academic year/campus changes"
+                ],
+                "paragraphs2": ["For confirmation, please contact the Blue Blocks admissions team."]
+              },
+              {
+                "id": "ip",
+                "title": "4) Intellectual Property & Copyright",
+                "paragraphs": ["All website content is owned by or licensed to Blue Blocks, including:"],
+                "bullets": [
+                  "Text content, illustrations, and graphics",
+                  "Logos, brand identity, and designs",
+                  "Photos, videos, animations",
+                  "Layout, UI style, and code elements"
+                ]
+              },
+              {
+                "id": "allowed",
+                "title": "You may:",
+                "bullets": [
+                  "Browse the website",
+                  "Print/download content for personal non-commercial use"
+                ]
+              },
+              {
+                "id": "not-allowed",
+                "title": "You may not:",
+                "bullets": [
+                  "Copy, reproduce, republish, or distribute content without permission",
+                  "Use content to create derivative commercial material",
+                  "Misrepresent Blue Blocks content as your own"
+                ]
+              },
+              {
+                "id": "acceptable",
+                "title": "5) Acceptable Use Policy",
+                "paragraphs": ["By using this Website, you agree not to:"],
+                "bullets": [
+                  "Attempt unauthorised access to any system or server",
+                  "Upload harmful files, viruses, or malicious code",
+                  "Misuse contact forms for spam, fake data, or abusive messages",
+                  "Scrape or harvest website content using bots",
+                  "Interfere with website performance or security"
+                ]
+              },
+              {
+                "id": "consent",
+                "title": "6) Enquiry Submissions and Communication Consent",
+                "paragraphs": [
+                  "When you submit an enquiry form or contact Blue Blocks, you agree that the information submitted is accurate and truthful.",
+                  "Blue Blocks may contact you through phone calls, WhatsApp, email, and SMS for admission follow-ups and related communication.",
+                  "You may request at any time to stop non-essential communications."
+                ]
+              },
+              {
+                "id": "thirdparty",
+                "title": "7) Third-Party Links",
+                "paragraphs": [
+                  "The Website may include links to third-party websites or services.",
+                  "Blue Blocks does not control external websites and is not responsible for their content, privacy practices, or service availability."
+                ]
+              },
+              {
+                "id": "disclaimer",
+                "title": "8) Disclaimer",
+                "paragraphs": ["The Website is provided “as is” and “as available”. We do not guarantee that:"],
+                "bullets": [
+                  "All information will always be complete/updated",
+                  "The website will be uninterrupted",
+                  "The website will be error-free"
+                ]
+              },
+              {
+                "id": "liability",
+                "title": "9) Limitation of Liability",
+                "paragraphs": ["Blue Blocks shall not be liable for:"],
+                "bullets": [
+                  "Indirect or incidental damages",
+                  "Losses due to misuse of website content",
+                  "Technical issues, downtime, or delays",
+                  "Decisions taken based on website information alone"
+                ]
+              },
+              {
+                "id": "termination",
+                "title": "10) Suspension / Termination of Access",
+                "paragraphs": [
+                  "We reserve the right to restrict or terminate access if misuse, spam, harmful activity, Terms violations, or security risks arise."
+                ]
+              },
+              {
+                "id": "law",
+                "title": "11) Governing Law & Jurisdiction",
+                "paragraphs": [
+                  "These Terms are governed by the laws of India.",
+                  "Any disputes will be subject to jurisdiction of the courts in Hyderabad, Telangana."
+                ]
+              },
+              {
+                "id": "contact",
+                "title": "12) Contact Us",
+                "paragraphs": [
+                  "Email: info@blueblocks.in",
+                  "Phone: +91-9000955053",
+                  "Address: MIG 3, Lane opposite to DLF, Gachibowli. Hyderabad. Telangana"
+                ]
+              }
+            ]
+          }
+        }
       ]
     }
   }

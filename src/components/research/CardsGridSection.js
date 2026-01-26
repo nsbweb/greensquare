@@ -91,6 +91,7 @@ export default function CardsGridSection({
   // Card content styling
   iconSize = 40,
   iconWrapClassName = "h-10 w-10",
+  imageWrapClassName = "h-45 w-full relative",
   titleSplit = true,
   cardTitleClassName = "mt-5 text-[1.05rem] sm:text-[1.1rem] font-medium leading-[1.18] text-white whitespace-pre-line",
   cardTextClassName = "mt-4 text-[0.8125rem] leading-6 text-white/75",
@@ -199,6 +200,7 @@ export default function CardsGridSection({
               const t = titleSplit ? splitTitleToTwoLines(rawTitle) : null;
               const num = it?.num ? String(it.num) : "";
               const hasIcon = Boolean(it?.icon);
+              const hasImage = Boolean(it?.image);
               const perCardColors =
                 Array.isArray(it?.tabColors) && it.tabColors.length ? it.tabColors : null;
               const inCardColors = perCardColors || defaultTabColors;
@@ -299,6 +301,18 @@ export default function CardsGridSection({
                           width={iconSize}
                           height={iconSize}
                           className="object-contain opacity-95"
+                        />
+                      </div>
+                    ) : null}
+
+                    {/* Image */}
+                    {hasImage ? (
+                      <div className={imageWrapClassName}>
+                        <Image
+                          src={it.image}
+                          alt=""
+                          fill
+                          className="object-cover"
                         />
                       </div>
                     ) : null}
